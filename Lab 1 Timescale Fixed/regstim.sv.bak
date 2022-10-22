@@ -1,0 +1,22 @@
+//write_reg: 5-bit address of register to write to
+//write_data: 64-bit data to write to register
+//read_reg1, read_reg2: 5-bit addresses of registers to read from
+	//register file supports 2 read channels
+//read_data1, read_data2: 64-bit data output
+
+module regstim (write_reg, write_data, read_reg1, read_reg2, read_data1, read_data2);
+
+	//addresses to pass to decoders and muxes
+	input logic [4:0] write_reg, read_reg1, read_reg2;
+	
+	//64-bit data to write
+	input logic [63:0] write_data;
+	
+	//64-bit data to read out
+	output logic [63:0] read_data1, read_data2;
+
+	
+
+	
+
+endmodule 

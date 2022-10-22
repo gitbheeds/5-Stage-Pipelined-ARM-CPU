@@ -1,0 +1,25 @@
+module decoder3_8 (en, sel2, sel1, sel0, o7, o6, o5, o4, o3, o2, o1, o0);
+
+	`timescale 10ps/1ps
+	
+	input logic en, sel2, sel1, sel0;
+	output logic o7, o6, o5, o4, o3, o2, o1;
+	
+	logic  inv2, inv1, inv0;
+	
+	not#(5) i2(inv2, sel2);
+	not#(5) i1(inv1, sel1);
+	not#(5) i0(inv0, sel0);
+		
+	and #(5) g1(o7, en, inv2, inv1, inv0);
+	and #(5) g2(o6, en, inv2, inv1, sel0);
+	and #(5) g3(o5, en, inv2, sel1, inv0);
+	and #(5) g4(o4, en, inv2, sel1, sel0);
+	and #(5) g5(o3, en, sel2, inv1, inv0);
+	and #(5) g6(o2, en, sel2, inv1, sel0);
+	and #(5) g7(o1, en, sel2, sel1, inv0);
+	and #(5) g8(o0, en, sel2, sel1, sel0);
+	
+	
+
+endmodule 

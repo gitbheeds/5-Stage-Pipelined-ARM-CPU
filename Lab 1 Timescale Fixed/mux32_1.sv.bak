@@ -1,0 +1,35 @@
+
+
+//generate a 32:1 mux out of 31 2:1 muxes
+
+module mux32_1 (addr, file, dataout);
+
+	//5 bit address line
+	input logic [5:0] addr;
+	
+	//register file
+	input logic [31:0][63:0] file;
+	
+	logic [15:0] s0_out;
+	
+	logic [7:0][63:0] s1_out;
+	
+
+	//output from read command
+	output logic [63:0] dataout;
+	
+	genvar i;
+	
+	generate
+	
+		for(i = 0; i < 16; i++) begin
+		
+			mux2_1[i]
+		
+		end
+	
+	
+	endgenerate
+
+
+endmodule 

@@ -1,0 +1,23 @@
+//creates a 64 bit input 32x1 mux from a 1 bit input 32x1 mux (bit slice)
+module mux64x32_1(addr, in, out);
+
+	//5bit addr line
+	input logic [4:0] addr;
+	
+	//input, 32 64bit inputs
+	input logic [0:31] [63:0] in;
+	
+	//64bit output 
+	output logic [63:0] out; 
+	
+	genvar i; 
+	
+	generate
+	
+	
+		for(i = 0; i < 32; i += 2) begin
+	
+	
+	endgenerate
+
+endmodule 

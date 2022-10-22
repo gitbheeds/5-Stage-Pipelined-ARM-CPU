@@ -1,0 +1,2 @@
+module register64 (clk, rst, q, d);
+endmodule 

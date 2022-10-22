@@ -1,0 +1,41 @@
+module regfile (ReadData1, ReadData2, WriteData, 
+					 ReadRegister1, ReadRegister2, WriteRegister,
+					 RegWrite, clk);
+					 
+
+		output logic [63:0] ReadData1, ReadData2;
+		
+		input logic [4:0] ReadRegister1, ReadRegister2, WriteRegister;
+		
+		input logic [63:0] WriteData; 
+		
+		input logic clk, RegWrite; //RegWrite: enables the decoder. When RegWrite is low, register address inputs will not enable writing 
+											//to that register. When RegWrite is high, data from WriteData can be written to a register
+		
+		
+		logic [31:0] file [63:0]; //stores output in same format required for mux
+		
+		logic [63:0] registerOut [31:0];
+		
+		logic [31:0] write_en; //output of decoder, enables writing for a specific register
+		
+		
+		decoder5_32 writeEnable (RegWrite, WriteRegister, write_en);
+		
+		genvar i, j, k;
+		
+		generate
+		
+			for(i = 0; i < 32; i++) begin : outputGen
+			
+				register64 (clk, 1'b0, write_en, WriteData, registerOut[i]);
+			
+			end
+		
+		
+		endgenerate
+		
+
+
+		
+endmodule 

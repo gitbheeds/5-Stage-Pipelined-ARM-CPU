@@ -1,0 +1,14 @@
+module decoder2_4 (sel1, sel0, o3, o2, o1, o0);
+	
+	`timescale 10ps/1ps
+
+	input logic sel1, sel0;
+	
+	output logic o3, o2, o1, o0;
+	
+	nand #(5) out3 (o3, sel1, sel0);
+	and #(5) out2(o2, not #(5)(sel1), sel0);
+	and #(5) out1(o1, sel1, not#(5)(sel0));
+	and #(5) out0 (o0, sel1, sel0);
+	
+endmodule 

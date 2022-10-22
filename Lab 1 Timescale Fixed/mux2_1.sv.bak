@@ -1,0 +1,15 @@
+module mux2_1(out, i0, i1, sel);
+	
+	`timescale 10ps/1ps;
+	
+	input  logic i0, i1, sel;
+	output logic out;
+	
+	logic im1, im2, im3;
+	
+	and #(5) int1 (im1, i1, sel);
+	not #(5) int2 (im2, sel);
+	and #(5) int3 (im3, i0, im2);
+	or #(5) 	last (out, im1, im3);
+	
+endmodule
