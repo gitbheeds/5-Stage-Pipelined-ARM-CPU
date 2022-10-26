@@ -15,7 +15,7 @@ module or_64_bit(A, B, out);
 	generate 
 	    
 	    for(i = 0; i < 64; i++) begin : theBigAnd
-            or(#50)(out[i], A[i], B[i]);
+            or #(50) (out[i], A[i], B[i]);
         end	    
 	endgenerate
 	

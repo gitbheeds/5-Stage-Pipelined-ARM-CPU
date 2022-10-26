@@ -16,7 +16,7 @@ module and_64_bit (A, B, out);
 	generate 
 	    
 	    for(i = 0; i < 64; i++) begin : theBigAnd
-            and(#50)(out[i], A[i], B[i]);
+            and #(50) (out[i], A[i], B[i]);
         end	    
 	endgenerate
 	

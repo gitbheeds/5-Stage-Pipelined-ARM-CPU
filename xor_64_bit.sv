@@ -15,7 +15,7 @@ module xor_64_bit(A, B, out);
 	generate 
 	    
 	    for(i = 0; i < 64; i++) begin : theBigAnd
-            xor(#50)(out[i], A[i], B[i]);
+            xor #(50) (out[i], A[i], B[i]);
         end	    
 	endgenerate
 	
