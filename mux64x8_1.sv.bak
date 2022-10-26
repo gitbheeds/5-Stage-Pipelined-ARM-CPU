@@ -1,0 +1,29 @@
+//64 bit 8x1 mux
+//used for ALU op selection
+module mux64x8_1 (in, out, ctrl);
+
+	//8 64 bit inputs
+	input logic [7:0][63:0] in;
+	
+	//64 bit output
+	output logic [63:0] out;
+	
+	//3 bit control line
+	input logic [2:0] ctrl;
+	
+	genvar i;
+	
+	generate 
+	
+		for(i = 0; i < 64; i++) begin : muxMaker
+		
+			mux8_1 midboi (.out(out[i]), .in(in[7:0][i]), .sel(ctrl));
+		
+		end
+	
+	
+	endgenerate 
+
+
+
+endmodule 

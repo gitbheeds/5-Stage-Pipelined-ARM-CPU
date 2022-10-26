@@ -1,3 +1,63 @@
 # Reading C:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do run
+# Cannot open macro file: run
 do runlab.do
-# Cannot open macro file: runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:00:45 on Oct 26,2022
+# vlog -reportprogress 300 ./zeroCheck.sv 
+# -- Compiling module zeroCheck
+# -- Compiling module zeroCheck_tb
+# 
+# Top level modules:
+# 	zeroCheck_tb
+# End time: 06:00:45 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work zeroCheck_tb 
+# Start time: 06:00:45 on Oct 26,2022
+# Loading sv_std.std
+# Loading work.zeroCheck_tb
+# Loading work.zeroCheck
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
+#           Attempting to use alternate WLF file "./wlftmsfnge".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmsfnge
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+add wave -position 1  sim:/zeroCheck_tb/dut/norOut
+add wave -position 2  sim:/zeroCheck_tb/dut/andOut
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/wave.do}
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zc_wave.do}
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 06:01:21 on Oct 26,2022
+# vlog -reportprogress 300 ./zeroCheck.sv 
+# -- Compiling module zeroCheck
+# -- Compiling module zeroCheck_tb
+# 
+# Top level modules:
+# 	zeroCheck_tb
+# End time: 06:01:21 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 06:01:23 on Oct 26,2022, Elapsed time: 0:00:38
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work zeroCheck_tb 
+# Start time: 06:01:23 on Oct 26,2022
+# Loading sv_std.std
+# Loading work.zeroCheck_tb
+# Loading work.zeroCheck
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
+#           Attempting to use alternate WLF file "./wlftd8i2y5".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftd8i2y5
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 06:02:38 on Oct 26,2022, Elapsed time: 0:01:15
+# Errors: 0, Warnings: 3

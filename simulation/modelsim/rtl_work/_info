@@ -1,0 +1,112 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Gerin/Documents/GitHub/EE469_Labs/simulation/modelsim
+vadder64_bit
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1666769734
+!i10b 1
+!s100 XPXghH6d>zPn5oGOaKjOU2
+IDYHmR4kl:ba56JSSaPO=V2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 adder64_bit_sv_unit
+S1
+R0
+Z5 w1666769725
+Z6 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv
+Z7 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv
+L0 2
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1666769734.000000
+Z10 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs
+Z14 tCvgOpt 0
+vadder64_bit_testbench
+R1
+R2
+!i10b 1
+!s100 P15aoUK@Wa3[[azP;ZDYR0
+I[Z=K:=;MR@Red_GZA:4NO1
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 41
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+vfullAdder
+R1
+R2
+!i10b 1
+!s100 R3UbkAKe_e>:A=8oCFR:83
+IWF_YXNP?g>h4bX^ob7mGT3
+R3
+Z15 !s105 fullAdder_sv_unit
+S1
+R0
+Z16 w1666765693
+Z17 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv
+Z18 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+Z19 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv|
+Z20 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv|
+!i113 1
+R12
+R13
+R14
+nfull@adder
+vfullAdder_testbench
+R1
+R2
+!i10b 1
+!s100 G^7IbXkI6WkR9L;TG6k640
+ILH56[?K]LImeM1NbWl1AX2
+R3
+R15
+S1
+R0
+R16
+R17
+R18
+L0 28
+R8
+r1
+!s85 0
+31
+R9
+R19
+R20
+!i113 1
+R12
+R13
+R14
+nfull@adder_testbench

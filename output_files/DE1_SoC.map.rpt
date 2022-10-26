@@ -1,0 +1,592 @@
+Analysis & Synthesis report for DE1_SoC
+Wed Oct 26 06:26:22 2022
+Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: adder64_bit:add_sub
+ 11. Port Connectivity Checks: "mux64x8_1:ALU_opSel"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
+ 15. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Intel and sold by Intel or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Oct 26 06:26:22 2022       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; ALU                                         ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 199                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; ALU                ; DE1_SoC            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; State Machine Processing                                                        ; User-Encoded       ; Auto               ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; OpenCore Plus hardware evaluation                                               ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux2_1.sv      ;         ;
+; fullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/fullAdder.sv   ;         ;
+; adder64_bit.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv ;         ;
+; mux4_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux4_1.sv      ;         ;
+; mux8_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux8_1.sv      ;         ;
+; mux64x8_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x8_1.sv   ;         ;
+; mux64x2_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x2_1.sv   ;         ;
+; zeroCheck.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zeroCheck.sv   ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv         ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                  ;
++---------------------------------------------+----------------+
+; Resource                                    ; Usage          ;
++---------------------------------------------+----------------+
+; Estimate of Logic utilization (ALMs needed) ; 151            ;
+;                                             ;                ;
+; Combinational ALUT usage for logic          ; 230            ;
+;     -- 7 input functions                    ; 6              ;
+;     -- 6 input functions                    ; 65             ;
+;     -- 5 input functions                    ; 26             ;
+;     -- 4 input functions                    ; 39             ;
+;     -- <=3 input functions                  ; 94             ;
+;                                             ;                ;
+; Dedicated logic registers                   ; 0              ;
+;                                             ;                ;
+; I/O pins                                    ; 199            ;
+;                                             ;                ;
+; Total DSP Blocks                            ; 0              ;
+;                                             ;                ;
+; Maximum fan-out node                        ; cntrl[0]~input ;
+; Maximum fan-out                             ; 112            ;
+; Total fan-out                               ; 1206           ;
+; Average fan-out                             ; 1.92           ;
++---------------------------------------------+----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                    ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
+; |ALU                                           ; 230 (1)             ; 0 (0)                     ; 0                 ; 0          ; 199  ; 0            ; |ALU                                                            ; ALU         ; work         ;
+;    |adder64_bit:add_sub|                       ; 97 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub                                        ; adder64_bit ; work         ;
+;       |fullAdder:generate_64_bit_adder[10].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[10].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[11].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[11].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[12].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[12].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[14].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[14].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[16].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[16].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[17].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[17].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[19].fA| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[19].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[1].fA|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[1].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[21].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[21].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[22].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[22].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[24].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[24].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[25].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[25].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[26].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[26].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[28].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[28].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[29].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[29].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[2].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[2].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[30].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[30].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[31].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[31].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[32].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[32].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[34].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[34].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[35].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[35].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[36].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[36].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[38].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[38].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[39].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[39].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[40].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[40].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[41].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[41].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[43].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[43].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[44].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[44].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[45].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[45].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[46].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[46].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[48].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[48].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[49].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[49].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[4].fA|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[4].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[50].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[50].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[51].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[51].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[53].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[53].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[54].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[54].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[55].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[55].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[56].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[56].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[58].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[58].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[59].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[59].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[5].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[5].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[60].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[60].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[61].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[61].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[63].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[63].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[6].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[6].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[7].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[7].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[9].fA|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[9].fA  ; fullAdder   ; work         ;
+;    |mux64x2_1:twos|                            ; 50 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos                                             ; mux64x2_1   ; work         ;
+;       |mux2_1:muxy[10].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[10].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[11].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[11].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[12].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[12].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[13].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[13].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[15].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[15].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[16].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[16].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[17].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[17].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[18].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[18].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[20].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[20].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[21].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[21].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[22].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[22].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[23].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[23].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[25].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[25].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[26].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[26].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[27].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[27].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[28].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[28].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[2].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[2].miniboi                      ; mux2_1      ; work         ;
+;       |mux2_1:muxy[30].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[30].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[31].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[31].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[32].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[32].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[33].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[33].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[35].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[35].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[36].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[36].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[37].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[37].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[38].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[38].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[3].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[3].miniboi                      ; mux2_1      ; work         ;
+;       |mux2_1:muxy[40].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[40].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[41].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[41].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[42].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[42].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[43].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[43].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[45].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[45].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[46].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[46].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[47].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[47].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[48].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[48].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[50].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[50].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[51].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[51].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[52].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[52].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[53].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[53].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[55].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[55].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[56].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[56].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[57].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[57].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[58].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[58].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[59].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[59].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[5].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[5].miniboi                      ; mux2_1      ; work         ;
+;       |mux2_1:muxy[60].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[60].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[61].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[61].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[62].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[62].miniboi                     ; mux2_1      ; work         ;
+;       |mux2_1:muxy[6].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[6].miniboi                      ; mux2_1      ; work         ;
+;       |mux2_1:muxy[7].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[7].miniboi                      ; mux2_1      ; work         ;
+;       |mux2_1:muxy[8].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[8].miniboi                      ; mux2_1      ; work         ;
+;    |mux64x8_1:ALU_opSel|                       ; 64 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel                                        ; mux64x8_1   ; work         ;
+;       |mux8_1:muxMaker[0].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[10].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[10].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[10].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[11].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[11].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[11].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[12].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[12].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[12].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[13].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[13].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[13].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[14].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[14].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[14].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[15].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[15].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[15].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[16].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[16].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[16].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[17].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[17].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[17].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[18].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[18].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[18].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[19].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[19].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[19].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[1].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[1].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[1].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[20].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[20].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[20].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[21].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[21].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[21].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[22].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[22].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[22].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[23].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[23].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[23].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[24].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[24].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[24].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[25].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[25].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[25].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[26].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[26].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[26].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[27].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[27].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[27].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[28].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[28].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[28].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[29].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[29].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[29].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[2].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[2].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[2].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[30].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[30].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[30].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[31].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[31].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[31].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[32].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[32].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[32].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[33].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[33].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[33].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[34].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[34].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[34].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[35].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[35].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[35].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[36].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[36].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[36].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[37].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[37].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[37].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[38].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[38].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[38].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[39].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[39].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[39].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[3].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[3].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[3].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[40].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[40].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[40].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[41].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[41].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[41].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[42].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[42].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[42].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[43].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[43].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[43].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[44].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[44].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[44].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[45].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[45].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[45].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[46].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[46].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[46].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[47].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[47].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[47].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[48].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[48].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[48].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[49].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[49].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[49].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[4].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[4].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[4].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[50].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[50].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[50].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[51].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[51].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[51].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[52].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[52].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[52].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[53].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[53].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[53].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[54].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[54].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[54].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[55].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[55].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[55].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[56].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[56].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[56].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[57].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[57].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[57].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[58].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[58].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[58].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[59].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[59].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[59].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[5].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[5].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[5].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[60].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[60].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[60].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[61].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[61].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[61].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[62].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[62].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[62].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[63].midboi|             ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[63].midboi             ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[63].midboi|mux2_1:mux3 ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[6].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[6].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[6].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[7].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[7].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[7].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[8].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[8].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[8].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;       |mux8_1:muxMaker[9].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[9].midboi              ; mux8_1      ; work         ;
+;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[9].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
+;    |zeroCheck:flag|                            ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|zeroCheck:flag                                             ; zeroCheck   ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+; 3:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux2_1:mux3|last ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder64_bit:add_sub ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; N              ; 64    ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "mux64x8_1:ALU_opSel" ;
++----------+-------+----------+-------------------+
+; Port     ; Type  ; Severity ; Details           ;
++----------+-------+----------+-------------------+
+; in[6..4] ; Input ; Info     ; Stuck at GND      ;
++----------+-------+----------+-------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_lcell_comb     ; 230                         ;
+;     extend            ; 6                           ;
+;         7 data inputs ; 6                           ;
+;     normal            ; 224                         ;
+;         2 data inputs ; 61                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 39                          ;
+;         5 data inputs ; 26                          ;
+;         6 data inputs ; 65                          ;
+; boundary_port         ; 199                         ;
+;                       ;                             ;
+; Max LUT depth         ; 27.00                       ;
+; Average LUT depth     ; 18.90                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Oct 26 06:26:12 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.sv
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux2_1.sv Line: 7
+Info (12021): Found 2 design units, including 2 entities, in source file fulladder.sv
+    Info (12023): Found entity 1: fullAdder File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/fullAdder.sv Line: 2
+    Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/fullAdder.sv Line: 29
+Info (12021): Found 2 design units, including 2 entities, in source file adder64_bit.sv
+    Info (12023): Found entity 1: adder64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv Line: 8
+    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv Line: 59
+Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux4_1.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.sv
+    Info (12023): Found entity 1: mux8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux8_1.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file mux64x8_1.sv
+    Info (12023): Found entity 1: mux64x8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x8_1.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file mux64x2_1.sv
+    Info (12023): Found entity 1: mux64x2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x2_1.sv Line: 4
+Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
+    Info (12023): Found entity 1: zeroCheck File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zeroCheck.sv Line: 7
+    Info (12023): Found entity 2: zeroCheck_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zeroCheck.sv Line: 45
+Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 9
+Info (12127): Elaborating entity "ALU" for the top level hierarchy
+Warning (10858): Verilog HDL warning at ALU.sv(35): object ANDtoALU used but never assigned File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 35
+Warning (10858): Verilog HDL warning at ALU.sv(35): object ORtoALU used but never assigned File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 35
+Warning (10858): Verilog HDL warning at ALU.sv(35): object XORtoALU used but never assigned File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 35
+Info (12128): Elaborating entity "mux64x2_1" for hierarchy "mux64x2_1:twos" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 40
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux64x2_1:twos|mux2_1:muxy[0].miniboi" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x2_1.sv Line: 26
+Info (12128): Elaborating entity "adder64_bit" for hierarchy "adder64_bit:add_sub" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 45
+Info (12128): Elaborating entity "fullAdder" for hierarchy "adder64_bit:add_sub|fullAdder:generate_64_bit_adder[0].fA" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv Line: 43
+Info (12128): Elaborating entity "zeroCheck" for hierarchy "zeroCheck:flag" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 59
+Info (12128): Elaborating entity "mux64x8_1" for hierarchy "mux64x8_1:ALU_opSel" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 90
+Info (12128): Elaborating entity "mux8_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x8_1.sv Line: 36
+Info (12128): Elaborating entity "mux4_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux4_1:mux0" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux8_1.sv Line: 14
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/output_files/DE1_SoC.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 429 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 131 input pins
+    Info (21059): Implemented 68 output pins
+    Info (21061): Implemented 230 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Wed Oct 26 06:26:22 2022
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:23
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/output_files/DE1_SoC.map.smsg.
+
+
