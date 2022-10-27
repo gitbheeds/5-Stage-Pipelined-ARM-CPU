@@ -1,19 +1,16 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate -radix decimal /ALUmini/A
-add wave -noupdate -radix decimal /ALUmini/B
-add wave -noupdate /ALUmini/cntrl
-add wave -noupdate -radix decimal /ALUmini/result
-add wave -noupdate /ALUmini/negative
-add wave -noupdate /ALUmini/zero
-add wave -noupdate /ALUmini/overflow
-add wave -noupdate /ALUmini/carry_out
-add wave -noupdate -childformat {{{/ALUmini/dut/ALU_inputs[3]} -radix decimal} {{/ALUmini/dut/ALU_inputs[2]} -radix decimal}} -expand -subitemconfig {{/ALUmini/dut/ALU_inputs[3]} {-radix decimal} {/ALUmini/dut/ALU_inputs[2]} {-radix decimal}} /ALUmini/dut/ALU_inputs
-add wave -noupdate /ALUmini/dut/ALU_opSel/in
-add wave -noupdate /ALUmini/dut/ALU_opSel/temp
+add wave -noupdate -radix hexadecimal /alustim/A
+add wave -noupdate -radix hexadecimal /alustim/B
+add wave -noupdate -radix hexadecimal /alustim/result
+add wave -noupdate /alustim/cntrl
+add wave -noupdate /alustim/negative
+add wave -noupdate /alustim/zero
+add wave -noupdate /alustim/overflow
+add wave -noupdate /alustim/carry_out
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 2} {261434 ps} 0} {{Cursor 3} {260196 ps} 0} {{Cursor 4} {466094 ps} 0} {{Cursor 5} {460190 ps} 0}
-quietly wave cursor active 4
+WaveRestoreCursors {{Cursor 2} {800476575 ps} 1} {{Cursor 3} {1605363489 ps} 1} {{Cursor 4} {1098174475 ps} 1} {{Cursor 5} {500000600 ps} 1} {{Cursor 5} {2103731826 ps} 1} {{Cursor 6} {747552504 ps} 0}
+quietly wave cursor active 6
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -28,4 +25,4 @@ configure wave -griddelta 2
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {458486 ps} {468519 ps}
+WaveRestoreZoom {0 ps} {2730 us}
