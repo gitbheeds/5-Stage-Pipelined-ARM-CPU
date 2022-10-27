@@ -35,17 +35,21 @@ module adder64_bit(input1, input2, sub_control, out, of_flag, co_flag);
 	//overflow is defined as: MSB carryout xor MSB carry in
 	xor #(50) overflow(of_flag, carry_out, c[N-2]);
 	
+	logic [63:0] delayOut;
+	
 	genvar i;
 	
 	generate 
 		for(i = 0; i < N; i++) begin : generate_64_bit_adder
 		
 			if(i == 0) begin
-				fullAdder fA(.a(input1[0]), .b(input2[0]), .cin(sub_control), .sum(out[0]), .cout(c[0]));
+				fullAdder fA(.a(input1[0]), .b(input2[0]), .cin(sub_control), .sum(delayOut[0]), .cout(c[0]));
 			end
 			else begin
-				fullAdder fA(.a(input1[i]), .b(input2[i]), .cin(c[i-1]), .sum(out[i]), .cout(c[i]));
+				fullAdder fA(.a(input1[i]), .b(input2[i]), .cin(c[i-1]), .sum(delayOut[i]), .cout(c[i]));
 			end
+			
+			buf #(6000) (out[i], delayOut[i]);
 			
 		end
 		

@@ -10,15 +10,15 @@ cModel Technology
 Z0 dC:/Users/Gerin/Documents/GitHub/EE469_Labs/simulation/modelsim
 vadder64_bit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1666845725
+Z2 !s110 1666847870
 !i10b 1
-!s100 allMjo4]j2U8HcQ@N7K_42
-I@Sd_G0DI[1>og:WcAdWDk0
+!s100 X^VNTm8f:UQ21_1K2m<m81
+IQ]dX<dBP2BUi?C?m=8[6m0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 !s105 adder64_bit_sv_unit
 S1
 R0
-Z5 w1666845528
+Z5 w1666847699
 Z6 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv
 Z7 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv
 L0 8
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1666845725.000000
+Z9 !s108 1666847870.000000
 Z10 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
 Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
 !i113 1
@@ -37,8 +37,8 @@ vadder64_bit_testbench
 R1
 R2
 !i10b 1
-!s100 9TgVL_S`d6bI?F64C7H:22
-I?Jl=[>C]QDc^4;I<5NoFF1
+!s100 W:>eS[adYICIZJ_4CJjP`3
+IkW?7JT`P7?1@2MSh:M4mW1
 R3
 R4
 S1
@@ -46,7 +46,7 @@ R0
 R5
 R6
 R7
-L0 60
+L0 64
 R8
 r1
 !s85 0
@@ -62,13 +62,13 @@ vALU
 R1
 R2
 !i10b 1
-!s100 7DQUQQECVhaeR]P==oHFl2
-Il6OP2>UN;R]bIDnA4fOU43
+!s100 AE4Q0d50eNOc@J1P34MaF3
+IYV9NW9GgXKnzQE:1:7?493
 R3
 Z15 !s105 ALU_sv_unit
 S1
 R0
-Z16 w1666845167
+Z16 w1666847858
 Z17 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv
 Z18 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv
 L0 9
@@ -266,13 +266,13 @@ vmux64x2_1
 R1
 R2
 !i10b 1
-!s100 RZe<<bVMII[CWMTP_l9g@3
-I4T<JKcVc:K]l<D>;eBm[n1
+!s100 ngM6HnKFAfdSN@dbEQOB@2
+I:;7oiRciL<R3F4dX8jfKl3
 R3
 !s105 mux64x2_1_sv_unit
 S1
 R0
-R28
+w1666847642
 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv
 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv
 L0 4
@@ -447,17 +447,17 @@ R3
 Z47 !s105 zeroCheck_sv_unit
 S1
 R0
-R28
-Z48 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv
-Z49 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv
+Z48 w1666847852
+Z49 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv
+Z50 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv
 L0 7
 R8
 r1
 !s85 0
 31
 R9
-Z50 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv|
-Z51 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv|
+Z51 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv|
+Z52 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv|
 !i113 1
 R12
 R13
@@ -473,17 +473,17 @@ R3
 R47
 S1
 R0
-R28
 R48
 R49
+R50
 L0 45
 R8
 r1
 !s85 0
 31
 R9
-R50
 R51
+R52
 !i113 1
 R12
 R13

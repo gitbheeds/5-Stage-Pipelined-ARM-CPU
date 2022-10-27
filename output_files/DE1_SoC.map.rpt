@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Wed Oct 26 21:41:57 2022
+Wed Oct 26 22:05:45 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 26 21:41:57 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 26 22:05:45 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; ALU                                         ;
@@ -538,7 +538,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 26 21:41:48 2022
+    Info: Processing started: Wed Oct 26 22:05:37 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file xor_64_bit.sv
@@ -557,7 +557,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file fulladd
     Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv Line: 29
 Info (12021): Found 2 design units, including 2 entities, in source file adder64_bit.sv
     Info (12023): Found entity 1: adder64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 8
-    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 60
+    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 64
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
     Info (12023): Found entity 1: mux4_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux4_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.sv
@@ -576,7 +576,7 @@ Info (12127): Elaborating entity "ALU" for the top level hierarchy
 Info (12128): Elaborating entity "mux64x2_1" for hierarchy "mux64x2_1:twos" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 61
 Info (12128): Elaborating entity "mux2_1" for hierarchy "mux64x2_1:twos|mux2_1:muxy[0].miniboi" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 26
 Info (12128): Elaborating entity "adder64_bit" for hierarchy "adder64_bit:add_sub" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 66
-Info (12128): Elaborating entity "fullAdder" for hierarchy "adder64_bit:add_sub|fullAdder:generate_64_bit_adder[0].fA" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 44
+Info (12128): Elaborating entity "fullAdder" for hierarchy "adder64_bit:add_sub|fullAdder:generate_64_bit_adder[0].fA" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 46
 Info (12128): Elaborating entity "and_64_bit" for hierarchy "and_64_bit:AND" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 69
 Info (12128): Elaborating entity "or_64_bit" for hierarchy "or_64_bit:OR" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 72
 Info (12128): Elaborating entity "xor_64_bit" for hierarchy "xor_64_bit:XOR" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 75
@@ -584,6 +584,8 @@ Info (12128): Elaborating entity "zeroCheck" for hierarchy "zeroCheck:flag" File
 Info (12128): Elaborating entity "mux64x8_1" for hierarchy "mux64x8_1:ALU_opSel" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 99
 Info (12128): Elaborating entity "mux8_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 36
 Info (12128): Elaborating entity "mux4_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux4_1:mux0" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux8_1.sv Line: 14
+Info (13014): Ignored 64 buffer(s)
+    Info (13019): Ignored 64 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/Gerin/Documents/GitHub/EE469_Labs/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -594,9 +596,9 @@ Info (21057): Implemented 429 device resources after synthesis - the final resou
     Info (21061): Implemented 230 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Wed Oct 26 21:41:57 2022
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Processing ended: Wed Oct 26 22:05:45 2022
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

@@ -15,7 +15,6 @@ module mux64x2_1 (sel, i0, i1, out);
 	//64 bit output
 	output logic [63:0] out;
 	
-	
 	genvar i;
 	
 	generate
@@ -25,6 +24,7 @@ module mux64x2_1 (sel, i0, i1, out);
 			not #(50) (not_i1[i], i1[i]);
 			
 			mux2_1 miniboi (.out(out[i]), .i0(i0[i]), .i1(not_i1[i]), .sel);
+		
 		
 		end
 	
