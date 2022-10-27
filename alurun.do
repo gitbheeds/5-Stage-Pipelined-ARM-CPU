@@ -6,12 +6,14 @@ vlib work
 #     their own "vlog" line below.
 
 vlog "./alustim.sv"
-vlog "./ALU.sv"
+vlog "./alu.sv"
 vlog "./mux2_1.sv"
 vlog "./mux4_1.sv"
 vlog "./mux8_1.sv"
 vlog "./mux64x8_1.sv"
+vlog "./mux64x4_1.sv"
 vlog "./mux64x2_1.sv"
+vlog "./mux64x2_1_2scomp.sv"
 vlog "./fullAdder.sv"
 vlog "./adder64_bit.sv"
 vlog "./zeroCheck.sv"
