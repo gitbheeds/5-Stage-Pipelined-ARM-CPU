@@ -1,5 +1,4 @@
 //specific 64x2_1 mux
-//in1 = ~in1
 `timescale 1ps/1ps
 module mux64x2_1 (sel, i0, i1, out);
 
@@ -9,8 +8,6 @@ module mux64x2_1 (sel, i0, i1, out);
 	//select line
 	input logic sel;
 	
-	//inverted i1 wire
-	wire [63:0] not_i1;
 	
 	//64 bit output
 	output logic [63:0] out;
@@ -22,12 +19,12 @@ module mux64x2_1 (sel, i0, i1, out);
 	
 		for(i = 0; i < 64; i++) begin : muxy
 		
-			not #(50) (not_i1[i], i1[i]);
 			
-			mux2_1 miniboi (.out(out[i]), .i0(i0[i]), .i1(not_i1[i]), .sel);
+			mux2_1 miniboi (.out(out[i]), .i0(i0[i]), .i1(i1[i]), .sel(sel));
 		
 		end
 	
 	endgenerate
 
 endmodule 
+

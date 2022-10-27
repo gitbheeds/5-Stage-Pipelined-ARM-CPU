@@ -1,0 +1,42 @@
+module mux64x4_1(in0, in1, in2, in3, out, sel);
+
+	input logic [63:0] in0, in1, in2, in3;
+	
+	output logic [63:0] out;
+	
+	input logic [1:0] sel;
+	
+	wire [63:0] int1, int2;
+	
+	mux64x2_1 first(.sel(sel), .i0(in0), .i1(in1), .out(int1));
+	
+	mux64x2_1 second(.sel(sel), .i0(in2), .i1(in3), .out(int2));
+	
+	
+	mux64x2_1 third(.sel(sel), .i0(int1), .i1(int2), .out(out));
+
+endmodule
+
+module mux64x4_1_testbench();
+
+	logic [63:0] in0, in1, in2, in3, out;
+	
+	logic [1:0] sel;
+	
+	mux64x4_1 dut(in0, in1, in2, in3, out, sel);
+	
+	
+	initial begin
+		
+		in0 = 4'hfood; in1 = 4'hdada; in2 = 4'bebe; in3 = 4'hdead; sel = 2'b00; #10;
+		
+		in0 = 4'hfood; in1 = 4'hdada; in2 = 4'bebe; in3 = 4'hdead; sel = 2'b01; #10;
+		
+		in0 = 4'hfood; in1 = 4'hdada; in2 = 4'bebe; in3 = 4'hdead; sel = 2'b10; #10;
+		
+		in0 = 4'hfood; in1 = 4'hdada; in2 = 4'bebe; in3 = 4'hdead; sel = 2'b11; #10;
+		
+	end
+
+
+endmodule

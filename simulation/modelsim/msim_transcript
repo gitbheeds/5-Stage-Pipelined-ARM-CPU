@@ -10,168 +10,73 @@
 # Copying C:/Users/Gerin/Desktop/Quartus Complete Folder/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/xor_64_bit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/xor_64_bit.sv 
-# -- Compiling module xor_64_bit
-# -- Compiling module xor_64_bit_testbench
-# 
-# Top level modules:
-# 	xor_64_bit_testbench
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv 
-# -- Compiling module or_64_bit
-# -- Compiling module or_64_bit_testbench
-# 
-# Top level modules:
-# 	or_64_bit_testbench
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/and_64_bit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/and_64_bit.sv 
-# -- Compiling module and_64_bit
-# -- Compiling module and_64_bit_testbench
-# 
-# Top level modules:
-# 	and_64_bit_testbench
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
+# Start time: 00:20:21 on Oct 27,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv 
 # -- Compiling module mux2_1
 # 
 # Top level modules:
 # 	mux2_1
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv 
-# -- Compiling module fullAdder
-# -- Compiling module fullAdder_testbench
-# 
-# Top level modules:
-# 	fullAdder_testbench
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv 
-# -- Compiling module adder64_bit
-# -- Compiling module adder64_bit_testbench
-# 
-# Top level modules:
-# 	adder64_bit_testbench
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux4_1.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux4_1.sv 
-# -- Compiling module mux4_1
-# 
-# Top level modules:
-# 	mux4_1
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux8_1.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux8_1.sv 
-# -- Compiling module mux8_1
-# 
-# Top level modules:
-# 	mux8_1
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
+# End time: 00:20:21 on Oct 27,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
+# Start time: 00:20:21 on Oct 27,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv 
 # -- Compiling module mux64x8_1
+# -- Compiling module mux64x8_1_testbench
 # 
 # Top level modules:
-# 	mux64x8_1
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
+# 	mux64x8_1_testbench
+# End time: 00:20:21 on Oct 27,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv}
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv 
-# -- Compiling module zeroCheck
-# -- Compiling module zeroCheck_tb
+# Start time: 00:20:21 on Oct 27,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv 
+# -- Compiling module mux64x4_1
+# -- Compiling module mux64x4_1_testbench
 # 
 # Top level modules:
-# 	zeroCheck_tb
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
+# 	mux64x4_1_testbench
+# End time: 00:20:21 on Oct 27,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
+# Start time: 00:20:21 on Oct 27,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv 
 # -- Compiling module mux64x2_1
 # 
 # Top level modules:
 # 	mux64x2_1
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:17:50 on Oct 26,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv 
-# -- Compiling module ALU
-# -- Compiling module ALUmini
-# 
-# Top level modules:
-# 	ALUmini
-# End time: 22:17:50 on Oct 26,2022, Elapsed time: 0:00:00
+# End time: 00:20:21 on Oct 27,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.ALUmini
-# vsim work.ALUmini 
-# Start time: 22:17:57 on Oct 26,2022
+vsim work.mux64x8_1_testbench
+# vsim work.mux64x8_1_testbench 
+# Start time: 00:20:24 on Oct 27,2022
 # Loading sv_std.std
-# Loading work.ALUmini
-# Loading work.ALU
-# Loading work.mux64x2_1
-# Loading work.adder64_bit
-# Loading work.and_64_bit
-# Loading work.or_64_bit
-# Loading work.xor_64_bit
+# Loading work.mux64x8_1_testbench
 # Loading work.mux64x8_1
+# Loading work.mux64x4_1
+# Loading work.mux64x2_1
 # Loading work.mux2_1
-# Loading work.fullAdder
-# Loading work.mux8_1
-# Loading work.mux4_1
-add wave -position end  sim:/ALUmini/zero
-add wave -position end  sim:/ALUmini/result
-add wave -position end  sim:/ALUmini/overflow
-add wave -position end  sim:/ALUmini/negative
-add wave -position end  sim:/ALUmini/delay
-add wave -position end  sim:/ALUmini/cntrl
-add wave -position end  sim:/ALUmini/carry_out
-add wave -position end  sim:/ALUmini/B
-add wave -position end  sim:/ALUmini/ALU_XOR
-add wave -position end  sim:/ALUmini/ALU_SUBTRACT
-add wave -position end  sim:/ALUmini/ALU_PASS_B
-add wave -position end  sim:/ALUmini/ALU_OR
-add wave -position end  sim:/ALUmini/ALU_AND
-add wave -position end  sim:/ALUmini/ALU_ADD
-add wave -position end  sim:/ALUmini/A
+add wave -position end  sim:/mux64x8_1_testbench/sel
+add wave -position end  sim:/mux64x8_1_testbench/out
+add wave -position end  sim:/mux64x8_1_testbench/in7
+add wave -position end  sim:/mux64x8_1_testbench/in6
+add wave -position end  sim:/mux64x8_1_testbench/in5
+add wave -position end  sim:/mux64x8_1_testbench/in4
+add wave -position end  sim:/mux64x8_1_testbench/in3
+add wave -position end  sim:/mux64x8_1_testbench/in2
+add wave -position end  sim:/mux64x8_1_testbench/in1
+add wave -position end  sim:/mux64x8_1_testbench/in0
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Gerin  Hostname: ULTRA-PC  ProcessID: 41564
-#           Attempting to use alternate WLF file "./wlftqt2ncv".
+#           Attempting to use alternate WLF file "./wlftmmx5fi".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftqt2ncv
+#           Using alternate file: ./wlftmmx5fi
 run -all
+# End time: 00:21:23 on Oct 27,2022, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 2

@@ -1,45 +1,55 @@
-//64 bit 8x1 mux
-//used for ALU op selection
-module mux64x8_1 (in, out, ctrl);
 
-	//8 64 bit inputs
-	input logic [7:0][63:0] in;
+`timescale 1ps/1ps
+module mux64x8_1(in0, in1, in2, in3, in4, in5, in6, in7, out, sel);
+
+	input logic [63:0] in0, in1, in2, in3, in4, in5, in6, in7;
 	
-	//64 bit output
+	input logic [2:0] sel;
+	
 	output logic [63:0] out;
 	
-	//3 bit control line
-	input logic [2:0] ctrl;
+	wire [63:0] int1, int2; 
 	
-	//temp variable to flip input 
-	logic [63:0][7:0] temp; 
+	mux64x4_1 first(in0, in1, in2, in3, int1, sel[1:0]);
 	
-	genvar k;
+	mux64x4_1 second(in4, in5, in6, in7, int2, sel[1:0]);
 	
-	int i, j;
+	mux64x2_1 third(sel[2], int1, int2, out);
+
+
+endmodule
+
+
+module mux64x8_1_testbench();
+
+	logic [63:0] in0, in1, in2, in3, in4, in5, in6, in7, out;
 	
-	always_comb begin
-		for (i = 0; i < 64; i++) begin
+	logic [2:0] sel;
+	
+	
+	mux64x8_1 dut(in0, in1, in2, in3, in4, in5, in6, in7, out, sel);
+	
+	
+	initial begin
 		
-			for (j = 0; j < 8; j++) begin
-				temp[i][j] = in[j][i];
-			end
-			
-		end 	
+		in0 = 0; in1 = 1; in2 = 2; in3 = 3; in4 = 4; in5 = 5; in6 = 6; in7 = 7; sel = 3'b00; #500;
+		
+		sel = 3'b001; #500;
+		
+		sel = 3'b010; #500;
+		
+		sel = 3'b011; #500;
+		
+		sel = 3'b100; #500;
+		
+		sel = 3'b101; #500;
+		
+		sel = 3'b110; #500;
+		
+		sel = 3'b111; #500;
+	
 	end
 
-	
-	generate 
-	
-		for(k = 0; k < 64; k++) begin : muxMaker
-		
-			mux8_1 midboi (.out(out[k]), .in(temp[k][7:0]), .sel(ctrl));
-		
-		end
-	
-	
-	endgenerate 
 
+endmodule
 
-
-endmodule 
