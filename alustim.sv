@@ -41,17 +41,71 @@ module alustim();
 	
 		$display("%t testing PASS_B operations", $time);
 		cntrl = ALU_PASS_B;
-		for (i=0; i<100; i++) begin
+		for (i=0; i<5; i++) begin
 			A = $random(); B = $random();
 			#(delay);
 			assert(result == B && negative == B[63] && zero == (B == '0));
 		end
 		
-		$display("%t testing addition", $time);
+		$display("%t testing addition, normal", $time);
 		cntrl = ALU_ADD;
 		A = 64'h0000000000000001; B = 64'h0000000000000001;
 		#(delay);
 		assert(result == 64'h0000000000000002 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 0);
+		
+		$display("%t testing addition, overflow", $time);
+		cntrl = ALU_ADD;
+		A = 64'hFFFFFFFFFFFFFFFF; B = 64'h0000000000000001;
+		#(delay);
+		assert(result == 64'h0000000000000000 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 1);
+		
+		$display("%t testing addition, carry out high", $time);
+		cntrl = ALU_ADD;
+		A = 64'hE100000000000000; B = 64'h1100000000000000;
+		#(delay);
+		assert(result == 64'h1000000000000000 && carry_out == 1 && overflow == 0 && negative == 1 && zero == 0);
+		
+		$display("%t testing subtraction, zero", $time);
+		cntrl = ALU_SUBTRACT;
+		A = 64'h0000000000000001; B = 64'h0000000000000001;
+		#(delay);
+		assert(result == 64'h0000000000000000 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 1);
+		
+		$display("%t testing subtraction, normal", $time);
+		cntrl = ALU_SUBTRACT;
+		A = 64'h0000000000000011; B = 64'h0000000000000001;
+		#(delay);
+		assert(result == 64'h0000000000000010 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 0);
+		
+		$display("%t testing subtraction, negative", $time);
+		cntrl = ALU_SUBTRACT;
+		A = 64'h0000000000000001; B = 64'h0000000000000011;
+		#(delay);
+		assert(result == 64'h1111111111111110 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
+		
+		$display("%t testing AND operations", $time);
+		cntrl = ALU_AND;
+		for (i=0; i<5; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == (A && B) && negative == result[63] && zero == ((A && B) == '0));
+		end
+		
+		$display("%t testing OR operations", $time);
+		cntrl = ALU_OR;
+		for (i=0; i<5; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == (A || B) && negative == result[63] && zero == ((A || B) == '0));
+		end
+		
+		$display("%t testing XOR operations", $time);
+		cntrl = ALU_XOR;
+		for (i=0; i<5; i++) begin
+			A = $random(); B = $random();
+			#(delay);
+			assert(result == (A ^ B) && negative == result[63] && zero == ((A ^ B) == '0));
+		end
 		
 	end
 endmodule

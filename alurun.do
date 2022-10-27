@@ -5,6 +5,7 @@ vlib work
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
 
+vlog "./alustim.sv"
 vlog "./ALU.sv"
 vlog "./mux2_1.sv"
 vlog "./mux4_1.sv"
@@ -21,7 +22,7 @@ vlog "./xor_64_bit.sv"
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work ALUmini
+vsim -voptargs="+acc" -t 1ps -lib work alustim
 
 # Source the wave do file
 #     This should be the file that sets up the signal window for

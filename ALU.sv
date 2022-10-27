@@ -14,7 +14,7 @@
 // 100:			result = bitwise A & B		value of overflow and carry_out unimportant
 // 101:			result = bitwise A | B		value of overflow and carry_out unimportant
 // 110:			result = bitwise A XOR B	value of overflow and carry_out unimportant
-module ALU (A, B, cntrl, result, overflow, negative, zero, carry_out);
+module alu (A, B, cntrl, result, overflow, negative, zero, carry_out);
 
 //define inputs and outputs
 
@@ -99,7 +99,7 @@ module ALUmini ();
 	parameter ALU_PASS_B=3'b000, ALU_ADD=3'b010, ALU_SUBTRACT=3'b011, ALU_AND=3'b100, ALU_OR=3'b101, ALU_XOR=3'b110;
 	
 
-	ALU dut (.A, .B, .cntrl, .result, .negative, .zero, .overflow, .carry_out);
+	alu dut (.A, .B, .cntrl, .result, .negative, .zero, .overflow, .carry_out);
 	
 	initial begin
 	
