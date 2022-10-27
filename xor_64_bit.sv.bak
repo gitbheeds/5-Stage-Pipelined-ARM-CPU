@@ -1,9 +1,8 @@
 `timescale 1ps/1ps
-
-//64 bit AND
-// Takes in two 64 bit inputs A and B and does bitwise ANDing for a 64 bit
+// 64 bit XOR
+// Takes in two 64 bit inputs A and B and does bitwise XOR for a 64 bit
 // output
-module and_64_bit (A, B, out);
+module xor_64_bit(A, B, out);
 
 	//64 bit inputs
 	input logic [63:0] A, B;
@@ -16,7 +15,7 @@ module and_64_bit (A, B, out);
 	generate 
 	    
 	    for(i = 0; i < 64; i++) begin : theBigAnd
-            and #(50) (out[i], A[i], B[i]);
+            xor #(50) (out[i], A[i], B[i]);
         end	    
 	endgenerate
 	
@@ -27,7 +26,7 @@ module and_64_bit_testbench();
     
     logic [63:0] A, B, out;
     
-    and_64_bit dut(A, B, out);
+    xor_64_bit dut(A, B, out);
     
     initial begin
         A = 64'b1; B = 64'b0; #60;
@@ -38,7 +37,7 @@ module and_64_bit_testbench();
         
         A = 64'b0; B = 64'b0; #60;
         
-        A= $random(); B = $random(); #60;
+        A= $random(); B = $random(); #60
         
     end
 

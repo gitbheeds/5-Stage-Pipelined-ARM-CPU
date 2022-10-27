@@ -38,7 +38,7 @@ module and_64_bit_testbench();
         
         A = 64'b0; B = 64'b0; #60;
         
-        A= $random(); B = $random(); #60;
+        A= $random(); B = $random(); #60
         
     end
 

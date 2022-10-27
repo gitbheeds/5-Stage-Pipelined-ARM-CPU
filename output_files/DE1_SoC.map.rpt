@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Wed Oct 26 06:26:22 2022
+Wed Oct 26 21:41:57 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -16,11 +16,10 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
  10. Parameter Settings for User Entity Instance: adder64_bit:add_sub
- 11. Port Connectivity Checks: "mux64x8_1:ALU_opSel"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
- 15. Analysis & Synthesis Suppressed Messages
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -47,7 +46,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Oct 26 06:26:22 2022       ;
+; Analysis & Synthesis Status     ; Successful - Wed Oct 26 21:41:57 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
 ; Top-level Entity Name           ; ALU                                         ;
@@ -160,7 +159,7 @@ agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -170,21 +169,24 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
-; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux2_1.sv      ;         ;
-; fullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/fullAdder.sv   ;         ;
-; adder64_bit.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv ;         ;
-; mux4_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux4_1.sv      ;         ;
-; mux8_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux8_1.sv      ;         ;
-; mux64x8_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x8_1.sv   ;         ;
-; mux64x2_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x2_1.sv   ;         ;
-; zeroCheck.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zeroCheck.sv   ;         ;
-; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv         ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                              ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
+; xor_64_bit.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/xor_64_bit.sv  ;         ;
+; or_64_bit.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv   ;         ;
+; and_64_bit.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/and_64_bit.sv  ;         ;
+; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv      ;         ;
+; fullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv   ;         ;
+; adder64_bit.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv ;         ;
+; mux4_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux4_1.sv      ;         ;
+; mux8_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux8_1.sv      ;         ;
+; mux64x8_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv   ;         ;
+; mux64x2_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv   ;         ;
+; zeroCheck.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv   ;         ;
+; ALU.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv         ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -192,14 +194,14 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 151            ;
+; Estimate of Logic utilization (ALMs needed) ; 160            ;
 ;                                             ;                ;
 ; Combinational ALUT usage for logic          ; 230            ;
-;     -- 7 input functions                    ; 6              ;
-;     -- 6 input functions                    ; 65             ;
-;     -- 5 input functions                    ; 26             ;
-;     -- 4 input functions                    ; 39             ;
-;     -- <=3 input functions                  ; 94             ;
+;     -- 7 input functions                    ; 0              ;
+;     -- 6 input functions                    ; 89             ;
+;     -- 5 input functions                    ; 19             ;
+;     -- 4 input functions                    ; 5              ;
+;     -- <=3 input functions                  ; 117            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 0              ;
 ;                                             ;                ;
@@ -208,8 +210,8 @@ agreement for further details.
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; cntrl[0]~input ;
-; Maximum fan-out                             ; 112            ;
-; Total fan-out                               ; 1206           ;
+; Maximum fan-out                             ; 142            ;
+; Total fan-out                               ; 1207           ;
 ; Average fan-out                             ; 1.92           ;
 +---------------------------------------------+----------------+
 
@@ -220,56 +222,72 @@ agreement for further details.
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Entity Name ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
 ; |ALU                                           ; 230 (1)             ; 0 (0)                     ; 0                 ; 0          ; 199  ; 0            ; |ALU                                                            ; ALU         ; work         ;
-;    |adder64_bit:add_sub|                       ; 97 (1)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub                                        ; adder64_bit ; work         ;
+;    |adder64_bit:add_sub|                       ; 101 (1)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub                                        ; adder64_bit ; work         ;
+;       |fullAdder:generate_64_bit_adder[0].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[0].fA  ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[10].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[10].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[11].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[11].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[12].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[12].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[13].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[13].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[14].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[14].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[16].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[16].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[15].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[15].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[16].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[16].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[17].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[17].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[19].fA| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[19].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[1].fA|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[1].fA  ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[21].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[21].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[18].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[18].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[19].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[19].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[1].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[1].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[20].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[20].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[21].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[21].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[22].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[22].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[23].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[23].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[24].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[24].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[25].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[25].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[25].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[25].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[26].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[26].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[28].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[28].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[27].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[27].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[28].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[28].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[29].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[29].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[2].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[2].fA  ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[30].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[30].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[31].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[31].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[32].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[32].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[34].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[34].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[35].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[35].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[33].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[33].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[34].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[34].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[35].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[35].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[36].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[36].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[38].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[38].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[39].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[39].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[40].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[40].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[37].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[37].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[38].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[38].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[39].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[39].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[3].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[3].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[40].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[40].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[41].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[41].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[43].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[43].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[44].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[44].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[45].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[45].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[42].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[42].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[43].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[43].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[44].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[44].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[45].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[45].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[46].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[46].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[48].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[48].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[49].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[49].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[47].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[47].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[48].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[48].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[49].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[49].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[4].fA|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[4].fA  ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[50].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[50].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[50].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[50].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[51].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[51].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[53].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[53].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[54].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[54].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[55].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[55].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[52].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[52].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[53].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[53].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[54].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[54].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[55].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[55].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[56].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[56].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[58].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[58].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[59].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[59].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[57].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[57].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[58].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[58].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[59].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[59].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[5].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[5].fA  ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[60].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[60].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[60].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[60].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[61].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[61].fA ; fullAdder   ; work         ;
-;       |fullAdder:generate_64_bit_adder[63].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[63].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[62].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[62].fA ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[63].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[63].fA ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[6].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[6].fA  ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[7].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[7].fA  ; fullAdder   ; work         ;
+;       |fullAdder:generate_64_bit_adder[8].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[8].fA  ; fullAdder   ; work         ;
 ;       |fullAdder:generate_64_bit_adder[9].fA|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|adder64_bit:add_sub|fullAdder:generate_64_bit_adder[9].fA  ; fullAdder   ; work         ;
-;    |mux64x2_1:twos|                            ; 50 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos                                             ; mux64x2_1   ; work         ;
+;    |mux64x2_1:twos|                            ; 48 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos                                             ; mux64x2_1   ; work         ;
 ;       |mux2_1:muxy[10].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[10].miniboi                     ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[11].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[11].miniboi                     ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[12].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[12].miniboi                     ; mux2_1      ; work         ;
@@ -312,11 +330,9 @@ agreement for further details.
 ;       |mux2_1:muxy[56].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[56].miniboi                     ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[57].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[57].miniboi                     ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[58].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[58].miniboi                     ; mux2_1      ; work         ;
-;       |mux2_1:muxy[59].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[59].miniboi                     ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[5].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[5].miniboi                      ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[60].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[60].miniboi                     ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[61].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[61].miniboi                     ; mux2_1      ; work         ;
-;       |mux2_1:muxy[62].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[62].miniboi                     ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[6].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[6].miniboi                      ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[7].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[7].miniboi                      ; mux2_1      ; work         ;
 ;       |mux2_1:muxy[8].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x2_1:twos|mux2_1:muxy[8].miniboi                      ; mux2_1      ; work         ;
@@ -449,7 +465,7 @@ agreement for further details.
 ;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[8].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
 ;       |mux8_1:muxMaker[9].midboi|              ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[9].midboi              ; mux8_1      ; work         ;
 ;          |mux2_1:mux3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[9].midboi|mux2_1:mux3  ; mux2_1      ; work         ;
-;    |zeroCheck:flag|                            ; 18 (18)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|zeroCheck:flag                                             ; zeroCheck   ; work         ;
+;    |zeroCheck:flag|                            ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |ALU|zeroCheck:flag                                             ; zeroCheck   ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -474,7 +490,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
-; 3:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux2_1:mux3|last ;
+; 5:1                ; 64 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |ALU|mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux2_1:mux3|last ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------+
 
 
@@ -488,33 +504,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------+
-; Port Connectivity Checks: "mux64x8_1:ALU_opSel" ;
-+----------+-------+----------+-------------------+
-; Port     ; Type  ; Severity ; Details           ;
-+----------+-------+----------+-------------------+
-; in[6..4] ; Input ; Info     ; Stuck at GND      ;
-+----------+-------+----------+-------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_lcell_comb     ; 230                         ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 224                         ;
-;         2 data inputs ; 61                          ;
-;         3 data inputs ; 33                          ;
-;         4 data inputs ; 39                          ;
-;         5 data inputs ; 26                          ;
-;         6 data inputs ; 65                          ;
+;     normal            ; 230                         ;
+;         2 data inputs ; 60                          ;
+;         3 data inputs ; 57                          ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 19                          ;
+;         6 data inputs ; 89                          ;
 ; boundary_port         ; 199                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 27.00                       ;
-; Average LUT depth     ; 18.90                       ;
+; Max LUT depth         ; 28.00                       ;
+; Average LUT depth     ; 19.73                       ;
 +-----------------------+-----------------------------+
 
 
@@ -533,60 +538,70 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Oct 26 06:26:12 2022
+    Info: Processing started: Wed Oct 26 21:41:48 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 2 entities, in source file xor_64_bit.sv
+    Info (12023): Found entity 1: xor_64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/xor_64_bit.sv Line: 5
+    Info (12023): Found entity 2: xor_64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/xor_64_bit.sv Line: 25
+Info (12021): Found 2 design units, including 2 entities, in source file or_64_bit.sv
+    Info (12023): Found entity 1: or_64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 5
+    Info (12023): Found entity 2: or_64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 25
+Info (12021): Found 2 design units, including 2 entities, in source file and_64_bit.sv
+    Info (12023): Found entity 1: and_64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 6
+    Info (12023): Found entity 2: and_64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.sv
-    Info (12023): Found entity 1: mux2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux2_1.sv Line: 7
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv Line: 7
 Info (12021): Found 2 design units, including 2 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: fullAdder File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/fullAdder.sv Line: 2
-    Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/fullAdder.sv Line: 29
+    Info (12023): Found entity 1: fullAdder File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv Line: 2
+    Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv Line: 29
 Info (12021): Found 2 design units, including 2 entities, in source file adder64_bit.sv
-    Info (12023): Found entity 1: adder64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv Line: 8
-    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv Line: 59
+    Info (12023): Found entity 1: adder64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 8
+    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 60
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
-    Info (12023): Found entity 1: mux4_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux4_1.sv Line: 5
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux4_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.sv
-    Info (12023): Found entity 1: mux8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux8_1.sv Line: 5
+    Info (12023): Found entity 1: mux8_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux8_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux64x8_1.sv
-    Info (12023): Found entity 1: mux64x8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x8_1.sv Line: 3
+    Info (12023): Found entity 1: mux64x8_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file mux64x2_1.sv
-    Info (12023): Found entity 1: mux64x2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x2_1.sv Line: 4
+    Info (12023): Found entity 1: mux64x2_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 4
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
-    Info (12023): Found entity 1: zeroCheck File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zeroCheck.sv Line: 7
-    Info (12023): Found entity 2: zeroCheck_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zeroCheck.sv Line: 45
-Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: ALU File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 9
+    Info (12023): Found entity 1: zeroCheck File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv Line: 7
+    Info (12023): Found entity 2: zeroCheck_tb File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv Line: 45
+Info (12021): Found 2 design units, including 2 entities, in source file alu.sv
+    Info (12023): Found entity 1: ALU File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 9
+    Info (12023): Found entity 2: ALUmini File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 103
 Info (12127): Elaborating entity "ALU" for the top level hierarchy
-Warning (10858): Verilog HDL warning at ALU.sv(35): object ANDtoALU used but never assigned File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 35
-Warning (10858): Verilog HDL warning at ALU.sv(35): object ORtoALU used but never assigned File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 35
-Warning (10858): Verilog HDL warning at ALU.sv(35): object XORtoALU used but never assigned File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 35
-Info (12128): Elaborating entity "mux64x2_1" for hierarchy "mux64x2_1:twos" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 40
-Info (12128): Elaborating entity "mux2_1" for hierarchy "mux64x2_1:twos|mux2_1:muxy[0].miniboi" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x2_1.sv Line: 26
-Info (12128): Elaborating entity "adder64_bit" for hierarchy "adder64_bit:add_sub" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 45
-Info (12128): Elaborating entity "fullAdder" for hierarchy "adder64_bit:add_sub|fullAdder:generate_64_bit_adder[0].fA" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/adder64_bit.sv Line: 43
-Info (12128): Elaborating entity "zeroCheck" for hierarchy "zeroCheck:flag" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 59
-Info (12128): Elaborating entity "mux64x8_1" for hierarchy "mux64x8_1:ALU_opSel" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/ALU.sv Line: 90
-Info (12128): Elaborating entity "mux8_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux64x8_1.sv Line: 36
-Info (12128): Elaborating entity "mux4_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux4_1:mux0" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/mux8_1.sv Line: 14
+Info (12128): Elaborating entity "mux64x2_1" for hierarchy "mux64x2_1:twos" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 61
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux64x2_1:twos|mux2_1:muxy[0].miniboi" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 26
+Info (12128): Elaborating entity "adder64_bit" for hierarchy "adder64_bit:add_sub" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 66
+Info (12128): Elaborating entity "fullAdder" for hierarchy "adder64_bit:add_sub|fullAdder:generate_64_bit_adder[0].fA" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 44
+Info (12128): Elaborating entity "and_64_bit" for hierarchy "and_64_bit:AND" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 69
+Info (12128): Elaborating entity "or_64_bit" for hierarchy "or_64_bit:OR" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 72
+Info (12128): Elaborating entity "xor_64_bit" for hierarchy "xor_64_bit:XOR" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 75
+Info (12128): Elaborating entity "zeroCheck" for hierarchy "zeroCheck:flag" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 87
+Info (12128): Elaborating entity "mux64x8_1" for hierarchy "mux64x8_1:ALU_opSel" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU.sv Line: 99
+Info (12128): Elaborating entity "mux8_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 36
+Info (12128): Elaborating entity "mux4_1" for hierarchy "mux64x8_1:ALU_opSel|mux8_1:muxMaker[0].midboi|mux4_1:mux0" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux8_1.sv Line: 14
 Info (286030): Timing-Driven Synthesis is running
-Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/output_files/DE1_SoC.map.smsg
+Info (144001): Generated suppressed messages file C:/Users/Gerin/Documents/GitHub/EE469_Labs/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 429 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 131 input pins
     Info (21059): Implemented 68 output pins
     Info (21061): Implemented 230 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4843 megabytes
-    Info: Processing ended: Wed Oct 26 06:26:22 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4831 megabytes
+    Info: Processing ended: Wed Oct 26 21:41:57 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:16
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/output_files/DE1_SoC.map.smsg.
+The suppressed messages can be found in C:/Users/Gerin/Documents/GitHub/EE469_Labs/output_files/DE1_SoC.map.smsg.
 
 

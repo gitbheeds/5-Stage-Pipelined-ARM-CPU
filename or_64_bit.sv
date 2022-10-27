@@ -22,7 +22,7 @@ module or_64_bit(A, B, out);
 
 endmodule
 
-module and_64_bit_testbench();
+module or_64_bit_testbench();
     
     logic [63:0] A, B, out;
     
@@ -37,7 +37,7 @@ module and_64_bit_testbench();
         
         A = 64'b0; B = 64'b0; #60;
         
-        A= $random(); B = $random(); #60
+        A= $random(); B = $random(); #60;
         
     end
 

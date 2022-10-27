@@ -26,13 +26,14 @@ module adder64_bit(input1, input2, sub_control, out, of_flag, co_flag);
 	
 	wire carry_out;
 	
-	//overflow is defined as: MSB carryout xor MSB carry in
-	xor #(50) overflow(of_flag, carry_out, c[N-2]);
 	
 	//carry out flag
 	assign co_flag = carry_out;
 	
 	wire [N-1:0] c;
+	
+	//overflow is defined as: MSB carryout xor MSB carry in
+	xor #(50) overflow(of_flag, carry_out, c[N-2]);
 	
 	genvar i;
 	
@@ -71,13 +72,13 @@ module adder64_bit_testbench();
 	initial begin
 		
 		// addition test
-		in1 = 256; in2 = 100; sub_control = 0; #100;
+		in1 = 256; in2 = 100; sub_control = 0; #60;
 		
-		in1 = 20; in2 = -5; sub_control = 1; #100;
+		in1 = 20; in2 = -5; sub_control = 1; #60;
 		
-		in1 = -20; in2 = -20; sub_control = 0; #100;
+		in1 = -20; in2 = -20; sub_control = 0; #60;
 		
-		in1 = 10; in2 = -5; sub_control = 0; #100;
+		in1 = 10; in2 = -5; sub_control = 0; #60;
 	end
 	
 
