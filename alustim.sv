@@ -55,9 +55,9 @@ module alustim();
 		
 		$display("%t testing addition, overflow", $time);
 		cntrl = ALU_ADD;
-		A = 64'hFFFFFFFFFFFFFFFF; B = 64'h0000000000000001;
+		A = 64'hFFFFFFFFFFFFFFFF; B = 64'h0000000000000010;
 		#(delay);
-		assert(result == 64'h0000000000000000 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 1);
+		assert(result == 64'h0000000000000001 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 0);
 		
 		$display("%t testing addition, carry out high", $time);
 		cntrl = ALU_ADD;
@@ -69,19 +69,19 @@ module alustim();
 		cntrl = ALU_SUBTRACT;
 		A = 64'h0000000000000001; B = 64'h0000000000000001;
 		#(delay);
-		assert(result == 64'h0000000000000000 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 1);
+		assert(result == 64'h0000000000000000 && carry_out == 1 && overflow == 0 && negative == 0 && zero == 1);
 		
 		$display("%t testing subtraction, normal", $time);
 		cntrl = ALU_SUBTRACT;
 		A = 64'h0000000000000011; B = 64'h0000000000000001;
 		#(delay);
-		assert(result == 64'h0000000000000010 && carry_out == 0 && overflow == 0 && negative == 0 && zero == 0);
+		assert(result == 64'h0000000000000010 && carry_out == 1 && overflow == 0 && negative == 0 && zero == 0);
 		
 		$display("%t testing subtraction, negative", $time);
 		cntrl = ALU_SUBTRACT;
 		A = 64'h0000000000000001; B = 64'h0000000000000011;
 		#(delay);
-		assert(result == 64'h1111111111111110 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
+		assert(result == 64'hFFFFFFFFFFFFFFF0 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
 		
 		$display("%t testing AND operations", $time);
 		cntrl = ALU_AND;
