@@ -1,63 +1,436 @@
 # Reading C:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
-do run
-# Cannot open macro file: run
-do runlab.do
+do alurun.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:00:45 on Oct 26,2022
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALUmini
+# 
+# Top level modules:
+# 	ALUmini
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./mux64x8_1.sv 
+# -- Compiling module mux64x8_1
+# 
+# Top level modules:
+# 	mux64x8_1
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./mux64x2_1.sv 
+# -- Compiling module mux64x2_1
+# 
+# Top level modules:
+# 	mux64x2_1
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./fullAdder.sv 
+# -- Compiling module fullAdder
+# -- Compiling module fullAdder_testbench
+# 
+# Top level modules:
+# 	fullAdder_testbench
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./adder64_bit.sv 
+# -- Compiling module adder64_bit
+# -- Compiling module adder64_bit_testbench
+# 
+# Top level modules:
+# 	adder64_bit_testbench
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
 # vlog -reportprogress 300 ./zeroCheck.sv 
 # -- Compiling module zeroCheck
 # -- Compiling module zeroCheck_tb
 # 
 # Top level modules:
 # 	zeroCheck_tb
-# End time: 06:00:45 on Oct 26,2022, Elapsed time: 0:00:00
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work zeroCheck_tb 
-# Start time: 06:00:45 on Oct 26,2022
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./and_64_bit.sv 
+# -- Compiling module and_64_bit
+# -- Compiling module and_64_bit_testbench
+# 
+# Top level modules:
+# 	and_64_bit_testbench
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./or_64_bit.sv 
+# -- Compiling module or_64_bit
+# -- Compiling module or_64_bit_testbench
+# 
+# Top level modules:
+# 	or_64_bit_testbench
+# End time: 22:54:36 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:54:36 on Oct 26,2022
+# vlog -reportprogress 300 ./xor_64_bit.sv 
+# -- Compiling module xor_64_bit
+# -- Compiling module xor_64_bit_testbench
+# 
+# Top level modules:
+# 	xor_64_bit_testbench
+# End time: 22:54:37 on Oct 26,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work ALUmini 
+# Start time: 22:54:37 on Oct 26,2022
 # Loading sv_std.std
-# Loading work.zeroCheck_tb
+# Loading work.ALUmini
+# Loading work.ALU
+# Loading work.mux64x2_1
+# Loading work.adder64_bit
+# Loading work.and_64_bit
+# Loading work.or_64_bit
+# Loading work.xor_64_bit
 # Loading work.zeroCheck
+# Loading work.mux64x8_1
+# Loading work.mux2_1
+# Loading work.fullAdder
+# Loading work.mux8_1
+# Loading work.mux4_1
 # WARNING: No extended dataflow license exists
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftmsfnge".
+#           Attempting to use alternate WLF file "./wlftxy28xn".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftmsfnge
+#           Using alternate file: ./wlftxy28xn
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-add wave -position 1  sim:/zeroCheck_tb/dut/norOut
-add wave -position 2  sim:/zeroCheck_tb/dut/andOut
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/wave.do}
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/lab-2/zc_wave.do}
-do runlab.do
+add wave -position end  sim:/ALUmini/dut/ALU_opSel/in
+add wave -position end  sim:/ALUmini/dut/ALU_opSel/temp
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs/alu_wave.do}
+do alurun.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:01:21 on Oct 26,2022
+# Start time: 23:00:28 on Oct 26,2022
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALUmini
+# 
+# Top level modules:
+# 	ALUmini
+# End time: 23:00:28 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:28 on Oct 26,2022
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# End time: 23:00:28 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:28 on Oct 26,2022
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# End time: 23:00:28 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:28 on Oct 26,2022
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# End time: 23:00:28 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
+# vlog -reportprogress 300 ./mux64x8_1.sv 
+# -- Compiling module mux64x8_1
+# 
+# Top level modules:
+# 	mux64x8_1
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
+# vlog -reportprogress 300 ./mux64x2_1.sv 
+# -- Compiling module mux64x2_1
+# 
+# Top level modules:
+# 	mux64x2_1
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
+# vlog -reportprogress 300 ./fullAdder.sv 
+# -- Compiling module fullAdder
+# -- Compiling module fullAdder_testbench
+# 
+# Top level modules:
+# 	fullAdder_testbench
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
+# vlog -reportprogress 300 ./adder64_bit.sv 
+# -- Compiling module adder64_bit
+# -- Compiling module adder64_bit_testbench
+# 
+# Top level modules:
+# 	adder64_bit_testbench
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
 # vlog -reportprogress 300 ./zeroCheck.sv 
 # -- Compiling module zeroCheck
 # -- Compiling module zeroCheck_tb
 # 
 # Top level modules:
 # 	zeroCheck_tb
-# End time: 06:01:21 on Oct 26,2022, Elapsed time: 0:00:00
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 06:01:23 on Oct 26,2022, Elapsed time: 0:00:38
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
+# vlog -reportprogress 300 ./and_64_bit.sv 
+# -- Compiling module and_64_bit
+# -- Compiling module and_64_bit_testbench
+# 
+# Top level modules:
+# 	and_64_bit_testbench
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
+# vlog -reportprogress 300 ./or_64_bit.sv 
+# -- Compiling module or_64_bit
+# -- Compiling module or_64_bit_testbench
+# 
+# Top level modules:
+# 	or_64_bit_testbench
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:00:29 on Oct 26,2022
+# vlog -reportprogress 300 ./xor_64_bit.sv 
+# -- Compiling module xor_64_bit
+# -- Compiling module xor_64_bit_testbench
+# 
+# Top level modules:
+# 	xor_64_bit_testbench
+# End time: 23:00:29 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:00:31 on Oct 26,2022, Elapsed time: 0:05:54
 # Errors: 0, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work zeroCheck_tb 
-# Start time: 06:01:23 on Oct 26,2022
+# vsim -voptargs=""+acc"" -t 1ps -lib work ALUmini 
+# Start time: 23:00:31 on Oct 26,2022
 # Loading sv_std.std
-# Loading work.zeroCheck_tb
+# Loading work.ALUmini
+# Loading work.ALU
+# Loading work.mux64x2_1
+# Loading work.adder64_bit
+# Loading work.and_64_bit
+# Loading work.or_64_bit
+# Loading work.xor_64_bit
 # Loading work.zeroCheck
+# Loading work.mux64x8_1
+# Loading work.mux2_1
+# Loading work.fullAdder
+# Loading work.mux8_1
+# Loading work.mux4_1
 # WARNING: No extended dataflow license exists
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftd8i2y5".
+#           Attempting to use alternate WLF file "./wlftjjje6k".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftd8i2y5
+#           Using alternate file: ./wlftjjje6k
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# End time: 06:02:38 on Oct 26,2022, Elapsed time: 0:01:15
+do alurun.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module ALU
+# -- Compiling module ALUmini
+# 
+# Top level modules:
+# 	ALUmini
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./mux64x8_1.sv 
+# -- Compiling module mux64x8_1
+# 
+# Top level modules:
+# 	mux64x8_1
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./mux64x2_1.sv 
+# -- Compiling module mux64x2_1
+# 
+# Top level modules:
+# 	mux64x2_1
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./fullAdder.sv 
+# -- Compiling module fullAdder
+# -- Compiling module fullAdder_testbench
+# 
+# Top level modules:
+# 	fullAdder_testbench
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./adder64_bit.sv 
+# -- Compiling module adder64_bit
+# -- Compiling module adder64_bit_testbench
+# 
+# Top level modules:
+# 	adder64_bit_testbench
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./zeroCheck.sv 
+# -- Compiling module zeroCheck
+# -- Compiling module zeroCheck_tb
+# 
+# Top level modules:
+# 	zeroCheck_tb
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./and_64_bit.sv 
+# -- Compiling module and_64_bit
+# -- Compiling module and_64_bit_testbench
+# 
+# Top level modules:
+# 	and_64_bit_testbench
+# End time: 23:06:27 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:27 on Oct 26,2022
+# vlog -reportprogress 300 ./or_64_bit.sv 
+# -- Compiling module or_64_bit
+# -- Compiling module or_64_bit_testbench
+# 
+# Top level modules:
+# 	or_64_bit_testbench
+# End time: 23:06:28 on Oct 26,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 23:06:28 on Oct 26,2022
+# vlog -reportprogress 300 ./xor_64_bit.sv 
+# -- Compiling module xor_64_bit
+# -- Compiling module xor_64_bit_testbench
+# 
+# Top level modules:
+# 	xor_64_bit_testbench
+# End time: 23:06:28 on Oct 26,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 23:06:29 on Oct 26,2022, Elapsed time: 0:05:58
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work ALUmini 
+# Start time: 23:06:29 on Oct 26,2022
+# Loading sv_std.std
+# Loading work.ALUmini
+# Loading work.ALU
+# Loading work.mux64x2_1
+# Loading work.adder64_bit
+# Loading work.and_64_bit
+# Loading work.or_64_bit
+# Loading work.xor_64_bit
+# Loading work.zeroCheck
+# Loading work.mux64x8_1
+# Loading work.mux2_1
+# Loading work.fullAdder
+# Loading work.mux8_1
+# Loading work.mux4_1
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
+#           Attempting to use alternate WLF file "./wlftrr1y80".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftrr1y80
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 23:11:36 on Oct 26,2022, Elapsed time: 0:05:07
 # Errors: 0, Warnings: 3
