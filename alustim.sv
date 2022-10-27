@@ -85,27 +85,31 @@ module alustim();
 		
 		$display("%t testing AND operations", $time);
 		cntrl = ALU_AND;
-		for (i=0; i<5; i++) begin
-			A = $random(); B = $random();
+	
+			A = 64'b1; B = 64'b0;
 			#(delay);
-			assert(result == (A && B) && negative == result[63] && zero == ((A && B) == '0));
-		end
+			assert(result == (64'b0) && negative == result[63] && zero == 0));
+			
+			A = 64'h0000000000000001; B = 64'hF000000000000001;
+			#(delay);
+			assert(result == (64'h0000000000000001) && negative == result[63] && zero == 0));
+		
 		
 		$display("%t testing OR operations", $time);
 		cntrl = ALU_OR;
-		for (i=0; i<5; i++) begin
-			A = $random(); B = $random();
+			A = 64'hAAAAAAAAAAAAAAAA; B = 64'h0101010101010101;
 			#(delay);
-			assert(result == (A || B) && negative == result[63] && zero == ((A || B) == '0));
-		end
+			assert(result == (64'hFFFFFFFFFFFFFFFF) && negative == result[63] && zero == 0));
 		
 		$display("%t testing XOR operations", $time);
 		cntrl = ALU_XOR;
-		for (i=0; i<5; i++) begin
-			A = $random(); B = $random();
+			A = 64'hFFFFFFFFFFFFFFFF; B = 64'hFFFFFFFFFFFFFFFF;
 			#(delay);
-			assert(result == (A ^ B) && negative == result[63] && zero == ((A ^ B) == '0));
-		end
+			assert(result == 64'h0 && negative == result[63] && zero == 1));
+			
+			A = 64'hEEEEEEEEEEEEEEEE; B = 64'h2222222222222222;
+			#(delay);
+			assert(result == (64'hCCCCCCCCCCCCCCCC) && negative == result[63] && zero == 0));
 		
 	end
 endmodule
