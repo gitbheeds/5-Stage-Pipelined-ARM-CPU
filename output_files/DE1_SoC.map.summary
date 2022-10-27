@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Thu Oct 27 00:16:40 2022
+Analysis & Synthesis Status : Successful - Thu Oct 27 16:17:39 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DE1_SoC
-Top-level Entity Name : mux64x8_1
+Top-level Entity Name : alu
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 579
+Total pins : 199
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

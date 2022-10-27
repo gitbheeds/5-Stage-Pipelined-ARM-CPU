@@ -55,15 +55,15 @@ module alustim();
 		
 		$display("%t testing addition, overflow", $time);
 		cntrl = ALU_ADD;
-		A = 64'hFFFFFFFFFFFFFFFF; B = 64'h0000000000000010;
+		A = 64'hFFFFFFFFFFFFFFFF; B = 64'hFFFFFFFFFFFFFFFF;
 		#(delay);
-		assert(result == 64'h0000000000000001 && carry_out == 1 && overflow == 1 && negative == 0 && zero == 0);
+		assert(result == 64'hFFFFFFFFFFFFFFFE && carry_out == 1 && overflow == 0 && negative == 1 && zero == 0);
 		
-		$display("%t testing addition, carry out high", $time);
+		$display("%t testing addition", $time);
 		cntrl = ALU_ADD;
 		A = 64'hE100000000000000; B = 64'h1100000000000000;
 		#(delay);
-		assert(result == 64'h1000000000000000 && carry_out == 1 && overflow == 0 && negative == 1 && zero == 0);
+		assert(result == 64'hF200000000000000 && carry_out == 0 && overflow == 0 && negative == 1 && zero == 0);
 		
 		$display("%t testing subtraction, zero", $time);
 		cntrl = ALU_SUBTRACT;
@@ -86,30 +86,30 @@ module alustim();
 		$display("%t testing AND operations", $time);
 		cntrl = ALU_AND;
 	
-			A = 64'b1; B = 64'b0;
+			A = 64'hFFFFFFFFFFFFFFFF; B = 64'b0;
 			#(delay);
-			assert(result == (64'b0) && negative == result[63] && zero == 0));
+			assert(result == 64'b0 && negative == result[63] && zero == 1);
 			
 			A = 64'h0000000000000001; B = 64'hF000000000000001;
 			#(delay);
-			assert(result == (64'h0000000000000001) && negative == result[63] && zero == 0));
+			assert(result == 64'h0000000000000001 && negative == result[63] && zero == 0);
 		
 		
 		$display("%t testing OR operations", $time);
 		cntrl = ALU_OR;
 			A = 64'hAAAAAAAAAAAAAAAA; B = 64'h0101010101010101;
 			#(delay);
-			assert(result == (64'hFFFFFFFFFFFFFFFF) && negative == result[63] && zero == 0));
+			assert(result == 64'hABABABABABABABAB && negative == result[63] && zero == 0);
 		
 		$display("%t testing XOR operations", $time);
 		cntrl = ALU_XOR;
 			A = 64'hFFFFFFFFFFFFFFFF; B = 64'hFFFFFFFFFFFFFFFF;
 			#(delay);
-			assert(result == 64'h0 && negative == result[63] && zero == 1));
+			assert(result == 64'h0 && negative == result[63] && zero == 1);
 			
 			A = 64'hEEEEEEEEEEEEEEEE; B = 64'h2222222222222222;
 			#(delay);
-			assert(result == (64'hCCCCCCCCCCCCCCCC) && negative == result[63] && zero == 0));
+			assert(result == 64'hCCCCCCCCCCCCCCCC && negative == result[63] && zero == 0);
 		
 	end
 endmodule
