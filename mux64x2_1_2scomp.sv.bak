@@ -33,7 +33,7 @@ module mux64x2_1_2scomp (sel, i0, i1, out);
 endmodule 
 
 
-module mux64x2_1_2scomp_testbench();
+module mux64x2_1_testbench();
 
 	logic [63:0] i0, i1, out;
 	

@@ -1,5 +1,8 @@
 
 `timescale 1ps/1ps
+// 64 bit 8 to 1 mux that takes in 8 seperate 64 bit inputs and outputs a 64 bit output
+// sel: 3 bit signal to select which input to output
+// Built from two 64 bit 4 to 1 mux modules and one 64 bit 2 to 1 mux module
 module mux64x8_1(in0, in1, in2, in3, in4, in5, in6, in7, out, sel);
 
 	input logic [63:0] in0, in1, in2, in3, in4, in5, in6, in7;

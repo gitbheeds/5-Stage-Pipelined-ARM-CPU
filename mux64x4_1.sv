@@ -1,5 +1,9 @@
 
 `timescale 1ps/1ps
+
+// 64 bit 4 to 1 mux module
+// takes in 4 64 bit inputs and outputs a single 64 bit output
+// build from 3 64 bit 2 to 1 mux modules
 module mux64x4_1(in0, in1, in2, in3, out, sel);
 
 	input logic [63:0] in0, in1, in2, in3;

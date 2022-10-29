@@ -1,4 +1,8 @@
 `timescale 1ps/1ps
+// fullAdder module that adds two single bit signals a and b and outputs the result
+// in sum
+// cin: carry in
+// cout: carry out
 module fullAdder(a, b, cin, sum, cout);
 
 	input logic a, b, cin;
