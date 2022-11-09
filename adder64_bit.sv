@@ -36,17 +36,11 @@ module adder64_bit(input1, input2, sub_control, out, of_flag, co_flag);
 	xor #(50) overflow(of_flag, carry_out, c[N-2]);
 	
 	genvar i;
-	
+
+	fullAdder fA(.a(input1[0]), .b(input2[0]), .cin(sub_control), .sum(out[0]), .cout(c[0]));
 	generate 
-		for(i = 0; i < N; i++) begin : generate_64_bit_adder
-		
-			if(i == 0) begin
-				fullAdder fA(.a(input1[0]), .b(input2[0]), .cin(sub_control), .sum(out[0]), .cout(c[0]));
-			end
-			else begin
-				fullAdder fA(.a(input1[i]), .b(input2[i]), .cin(c[i-1]), .sum(out[i]), .cout(c[i]));
-			end
-			
+		for(i = 1; i < N; i++) begin : generate_64_bit_adder
+			fullAdder fA(.a(input1[i]), .b(input2[i]), .cin(c[i-1]), .sum(out[i]), .cout(c[i]));
 		end
 		
 		assign carry_out = c[N-1];
