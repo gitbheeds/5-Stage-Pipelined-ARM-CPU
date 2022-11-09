@@ -517,97 +517,143 @@ R75
 R76
 !i113 1
 R12
-vxor_64_bit
+vse_tb
 R1
-Z78 !s110 1667004492
+Z78 !s110 1667978218
 !i10b 1
-!s100 G>6@S4E[595koG53G:ojU3
-I@VGNefoBFZX>KA=Q<C]GQ3
+!s100 cE8gKbe7bO]P32:QBjQdI0
+I^FfRY=`zELC:G2oIj<6]T0
 R3
-Z79 !s105 xor_64_bit_sv_unit
+Z79 !s105 sign_extender_sv_unit
 S1
-R0
-Z80 w1667002822
-Z81 8./xor_64_bit.sv
-Z82 F./xor_64_bit.sv
+Z80 dC:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct
+Z81 w1667978187
+Z82 8./sign_extender.sv
+Z83 F./sign_extender.sv
+L0 30
+R8
+r1
+!s85 0
+31
+Z84 !s108 1667978218.000000
+Z85 !s107 ./sign_extender.sv|
+Z86 !s90 -reportprogress|300|./sign_extender.sv|
+!i113 1
+R12
+vsign_extender
+R1
+R78
+!i10b 1
+!s100 <U??oLX@J`m@2Z^OPS<a31
+I7f8m3_;MU79g]BgA3EMW53
+R3
+R79
+S1
+R80
+R81
+R82
+R83
 L0 5
 R8
 r1
 !s85 0
 31
-Z83 !s108 1667004491.000000
-Z84 !s107 ./xor_64_bit.sv|
-Z85 !s90 -reportprogress|300|./xor_64_bit.sv|
+R84
+R85
+R86
+!i113 1
+R12
+vxor_64_bit
+R1
+Z87 !s110 1667004492
+!i10b 1
+!s100 G>6@S4E[595koG53G:ojU3
+I@VGNefoBFZX>KA=Q<C]GQ3
+R3
+Z88 !s105 xor_64_bit_sv_unit
+S1
+R0
+Z89 w1667002822
+Z90 8./xor_64_bit.sv
+Z91 F./xor_64_bit.sv
+L0 5
+R8
+r1
+!s85 0
+31
+Z92 !s108 1667004491.000000
+Z93 !s107 ./xor_64_bit.sv|
+Z94 !s90 -reportprogress|300|./xor_64_bit.sv|
 !i113 1
 R12
 vxor_64_bit_testbench
 R1
-R78
+R87
 !i10b 1
 !s100 f>cf3d[fJ6>k==@KRQn1T2
 I<BnPb8`=LRK4UQe?b4]?B2
 R3
-R79
+R88
 S1
 R0
-R80
-R81
-R82
+R89
+R90
+R91
 R77
 R8
 r1
 !s85 0
 31
-R83
-R84
-R85
+R92
+R93
+R94
 !i113 1
 R12
 vzeroCheck
 R1
-Z86 !s110 1667004484
+Z95 !s110 1667004484
 !i10b 1
 !s100 m1cm2R@`3gPfQ=MHECbob3
 IW1S7l4^8DYoANnNM:Ic?92
 R3
-Z87 !s105 zeroCheck_sv_unit
+Z96 !s105 zeroCheck_sv_unit
 S1
 R0
-R80
-Z88 8./zeroCheck.sv
-Z89 F./zeroCheck.sv
+R89
+Z97 8./zeroCheck.sv
+Z98 F./zeroCheck.sv
 L0 7
 R8
 r1
 !s85 0
 31
-Z90 !s108 1667004483.000000
-Z91 !s107 ./zeroCheck.sv|
-Z92 !s90 -reportprogress|300|./zeroCheck.sv|
+Z99 !s108 1667004483.000000
+Z100 !s107 ./zeroCheck.sv|
+Z101 !s90 -reportprogress|300|./zeroCheck.sv|
 !i113 1
 R12
 nzero@check
 vzeroCheck_tb
 R1
-R86
+R95
 !i10b 1
 !s100 F?IZQPMXCIVS0N=C14o?d1
 IZ_^2jTcUbRTolCdT[6_7g1
 R3
-R87
+R96
 S1
 R0
-R80
-R88
 R89
+R97
+R98
 L0 45
 R8
 r1
 !s85 0
 31
-R90
-R91
-R92
+R99
+R100
+R101
 !i113 1
 R12
 nzero@check_tb

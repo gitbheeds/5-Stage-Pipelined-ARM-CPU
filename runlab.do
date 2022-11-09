@@ -5,18 +5,18 @@ vlib work
 #     All Verilog files that are part of this design should have
 #     their own "vlog" line below.
 
-vlog "./zeroCheck.sv"
+vlog "./sign_extender.sv"
 
 
 # Call vsim to invoke simulator
 #     Make sure the last item on the line is the name of the
 #     testbench module you want to execute.
-vsim -voptargs="+acc" -t 1ps -lib work zeroCheck_tb
+vsim -voptargs="+acc" -t 1ps -lib work se_tb
 
 # Source the wave do file
 #     This should be the file that sets up the signal window for
 #     the module you are testing.
-do zc_wave.do
+do se_wave.do
 
 # Set the window types
 view wave

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Tue Nov 08 21:04:20 2022
+Tue Nov 08 23:16:37 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
- 12. Analysis & Synthesis Suppressed Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |sign_extender
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
+ 13. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -44,14 +45,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Nov 08 21:04:19 2022       ;
+; Analysis & Synthesis Status     ; Successful - Tue Nov 08 23:16:37 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; DE1_SoC                                     ;
-; Top-level Entity Name           ; zero_extender                               ;
+; Top-level Entity Name           ; sign_extender                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 0                                           ;
-; Total pins                      ; 76                                          ;
+; Total pins                      ; 73                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -70,7 +71,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
-; Top-level entity name                                                           ; zero_extender      ; DE1_SoC            ;
+; Top-level entity name                                                           ; sign_extender      ; DE1_SoC            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; State Machine Processing                                                        ; User-Encoded       ; Auto               ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
@@ -157,7 +158,7 @@ agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -167,40 +168,40 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
-; zero_extender.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/Gerin/Documents/GitHub/EE469_Labs/zero_extender.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; sign_extender.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/sign_extender.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimate of Logic utilization (ALMs needed) ; 0                 ;
-;                                             ;                   ;
-; Combinational ALUT usage for logic          ; 0                 ;
-;     -- 7 input functions                    ; 0                 ;
-;     -- 6 input functions                    ; 0                 ;
-;     -- 5 input functions                    ; 0                 ;
-;     -- 4 input functions                    ; 0                 ;
-;     -- <=3 input functions                  ; 0                 ;
-;                                             ;                   ;
-; Dedicated logic registers                   ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 76                ;
-;                                             ;                   ;
-; Total DSP Blocks                            ; 0                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; dataOut[0]~output ;
-; Maximum fan-out                             ; 1                 ;
-; Total fan-out                               ; 88                ;
-; Average fan-out                             ; 0.58              ;
-+---------------------------------------------+-------------------+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimate of Logic utilization (ALMs needed) ; 0           ;
+;                                             ;             ;
+; Combinational ALUT usage for logic          ; 0           ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 0           ;
+;     -- 5 input functions                    ; 0           ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 0           ;
+;                                             ;             ;
+; Dedicated logic registers                   ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 73          ;
+;                                             ;             ;
+; Total DSP Blocks                            ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; in[8]~input ;
+; Maximum fan-out                             ; 56          ;
+; Total fan-out                               ; 137         ;
+; Average fan-out                             ; 0.94        ;
++---------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,7 +209,7 @@ agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; |zero_extender             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 76   ; 0            ; |zero_extender      ; zero_extender ; work         ;
+; |sign_extender             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 73   ; 0            ; |sign_extender      ; sign_extender ; work         ;
 +----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -228,19 +229,26 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |sign_extender ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; sizeIn         ; 9     ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-; boundary_port         ; 76                          ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
++-------------------+---------------------------------+
+; Type              ; Count                           ;
++-------------------+---------------------------------+
+; boundary_port     ; 73                              ;
+;                   ;                                 ;
+; Max LUT depth     ; 0.00                            ;
+; Average LUT depth ; 0.00                            ;
++-------------------+---------------------------------+
 
 
 +-------------------------------+
@@ -258,69 +266,73 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Nov 08 21:04:11 2022
+    Info: Processing started: Tue Nov 08 23:16:28 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/alu.sv Line: 17
-    Info (12023): Found entity 2: ALUmini File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/alu.sv Line: 90
+    Info (12023): Found entity 1: alu File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/alu.sv Line: 17
+    Info (12023): Found entity 2: ALUmini File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/alu.sv Line: 90
 Info (12021): Found 1 design units, including 1 entities, in source file alustim.sv
-    Info (12023): Found entity 1: alustim File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/alustim.sv Line: 21
+    Info (12023): Found entity 1: alustim File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/alustim.sv Line: 21
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x2_1_2scomp.sv
-    Info (12023): Found entity 1: mux64x2_1_2scomp File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1_2scomp.sv Line: 4
-    Info (12023): Found entity 2: mux64x2_1_2scomp_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1_2scomp.sv Line: 36
+    Info (12023): Found entity 1: mux64x2_1_2scomp File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1_2scomp.sv Line: 4
+    Info (12023): Found entity 2: mux64x2_1_2scomp_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1_2scomp.sv Line: 36
 Info (12021): Found 2 design units, including 2 entities, in source file xor_64_bit.sv
-    Info (12023): Found entity 1: xor_64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/xor_64_bit.sv Line: 5
-    Info (12023): Found entity 2: xor_64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/xor_64_bit.sv Line: 25
+    Info (12023): Found entity 1: xor_64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/xor_64_bit.sv Line: 5
+    Info (12023): Found entity 2: xor_64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/xor_64_bit.sv Line: 25
 Info (12021): Found 2 design units, including 2 entities, in source file or_64_bit.sv
-    Info (12023): Found entity 1: or_64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 5
-    Info (12023): Found entity 2: or_64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 25
+    Info (12023): Found entity 1: or_64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/or_64_bit.sv Line: 5
+    Info (12023): Found entity 2: or_64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/or_64_bit.sv Line: 25
 Info (12021): Found 2 design units, including 2 entities, in source file and_64_bit.sv
-    Info (12023): Found entity 1: and_64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 6
-    Info (12023): Found entity 2: and_64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 26
+    Info (12023): Found entity 1: and_64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/and_64_bit.sv Line: 6
+    Info (12023): Found entity 2: and_64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/and_64_bit.sv Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.sv
-    Info (12023): Found entity 1: mux2_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv Line: 7
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux2_1.sv Line: 7
 Info (12021): Found 2 design units, including 2 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: fullAdder File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv Line: 6
-    Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv Line: 33
+    Info (12023): Found entity 1: fullAdder File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/fullAdder.sv Line: 6
+    Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/fullAdder.sv Line: 33
 Info (12021): Found 2 design units, including 2 entities, in source file adder64_bit.sv
-    Info (12023): Found entity 1: adder64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 8
-    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 54
+    Info (12023): Found entity 1: adder64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder64_bit.sv Line: 8
+    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder64_bit.sv Line: 54
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
-    Info (12023): Found entity 1: mux4_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux4_1.sv Line: 5
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux4_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.sv
-    Info (12023): Found entity 1: mux8_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux8_1.sv Line: 5
+    Info (12023): Found entity 1: mux8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux8_1.sv Line: 5
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x8_1.sv
-    Info (12023): Found entity 1: mux64x8_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 6
-    Info (12023): Found entity 2: mux64x8_1_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 26
+    Info (12023): Found entity 1: mux64x8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x8_1.sv Line: 6
+    Info (12023): Found entity 2: mux64x8_1_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x8_1.sv Line: 26
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
-    Info (12023): Found entity 1: zeroCheck File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv Line: 7
-    Info (12023): Found entity 2: zeroCheck_tb File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/zeroCheck.sv Line: 45
+    Info (12023): Found entity 1: zeroCheck File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zeroCheck.sv Line: 7
+    Info (12023): Found entity 2: zeroCheck_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zeroCheck.sv Line: 45
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x4_1.sv
-    Info (12023): Found entity 1: mux64x4_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv Line: 7
-    Info (12023): Found entity 2: mux64x4_1_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv Line: 27
+    Info (12023): Found entity 1: mux64x4_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x4_1.sv Line: 7
+    Info (12023): Found entity 2: mux64x4_1_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x4_1.sv Line: 27
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x2_1.sv
-    Info (12023): Found entity 1: mux64x2_1 File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 6
-    Info (12023): Found entity 2: mux64x2_1_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 34
-Info (12021): Found 1 design units, including 1 entities, in source file zero_extender.sv
-    Info (12023): Found entity 1: zero_extender File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/zero_extender.sv Line: 2
-Info (12127): Elaborating entity "zero_extender" for the top level hierarchy
-Info (144001): Generated suppressed messages file C:/Users/Gerin/Documents/GitHub/EE469_Labs/output_files/DE1_SoC.map.smsg
+    Info (12023): Found entity 1: mux64x2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1.sv Line: 6
+    Info (12023): Found entity 2: mux64x2_1_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1.sv Line: 34
+Info (12021): Found 2 design units, including 2 entities, in source file zero_extender.sv
+    Info (12023): Found entity 1: zero_extender File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zero_extender.sv Line: 4
+    Info (12023): Found entity 2: zero_extender_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zero_extender.sv Line: 22
+Info (12021): Found 2 design units, including 2 entities, in source file sign_extender.sv
+    Info (12023): Found entity 1: sign_extender File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/sign_extender.sv Line: 5
+    Info (12023): Found entity 2: se_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/sign_extender.sv Line: 30
+Info (12127): Elaborating entity "sign_extender" for the top level hierarchy
+Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/output_files/DE1_SoC.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 76 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 12 input pins
+Info (21057): Implemented 73 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 9 input pins
     Info (21059): Implemented 64 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4784 megabytes
-    Info: Processing ended: Tue Nov 08 21:04:20 2022
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Tue Nov 08 23:16:37 2022
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:23
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Gerin/Documents/GitHub/EE469_Labs/output_files/DE1_SoC.map.smsg.
+The suppressed messages can be found in C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/output_files/DE1_SoC.map.smsg.
 
 
