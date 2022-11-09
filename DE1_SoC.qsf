@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY mux64x2_1
+set_global_assignment -name TOP_LEVEL_ENTITY zero_extender
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 13
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "THU JUL 11 11:26:45 2013"
 set_global_assignment -name LAST_QUARTUS_VERSION "17.0.0 Lite Edition"
@@ -313,6 +313,7 @@ set_global_assignment -name SYSTEMVERILOG_FILE mux64x8_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE zeroCheck.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux64x4_1.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux64x2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE zero_extender.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
