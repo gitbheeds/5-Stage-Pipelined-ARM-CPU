@@ -297,24 +297,6 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "SYSTEMVERILOG HDL" -section_
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name STATE_MACHINE_PROCESSING "USER-ENCODED"
-set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
-set_global_assignment -name SYSTEMVERILOG_FILE alustim.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux64x2_1_2scomp.sv
-set_global_assignment -name SYSTEMVERILOG_FILE xor_64_bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE or_64_bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE and_64_bit.sv
-set_global_assignment -name SDC_FILE DE1_SOC_golden_top.sdc
-set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE fullAdder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE adder64_bit.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux64x8_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE zeroCheck.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux64x4_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux64x2_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE zero_extender.sv
-set_global_assignment -name SYSTEMVERILOG_FILE sign_extender.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
@@ -687,3 +669,30 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_R[7]
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_SYNC_N
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE register64.sv
+set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux64x32_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux32_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux16_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder5_32.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder3_8.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder2_4.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alustim.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux64x2_1_2scomp.sv
+set_global_assignment -name SYSTEMVERILOG_FILE xor_64_bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE or_64_bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE and_64_bit.sv
+set_global_assignment -name SDC_FILE DE1_SOC_golden_top.sdc
+set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE fullAdder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE adder64_bit.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux64x8_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE zeroCheck.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux64x4_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux64x2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE zero_extender.sv
+set_global_assignment -name SYSTEMVERILOG_FILE sign_extender.sv
+set_global_assignment -name SYSTEMVERILOG_FILE math.sv
