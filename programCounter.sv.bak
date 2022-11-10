@@ -1,0 +1,14 @@
+module programCounter(clock, pc_in, pc_out);
+
+	input logic clock;
+
+	input logic [9:0] pc_in;
+	
+	output logic [9:0] pc_out;
+
+	adder_4_pc pc_increment(pc_out, pc_in);
+	
+	
+	
+	
+endmodule

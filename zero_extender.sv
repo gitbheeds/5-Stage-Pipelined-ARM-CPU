@@ -1,17 +1,17 @@
-// zero_extender module that will extend 12 bit immediate values to 64 bits
+// zero_extender module that will extend parameter sizeIn bit immediate values to 64 bits
 // imm12: the 12 bit immediate value required for a I type instruction
 // dataOut: The 64 bit zero extended data output that will be sent to the ALU
-module zero_extender(imm12, dataOut);
+module zero_extender #(parameter sizeIn = 12) (imm12, dataOut);
 
-	input logic [11:0] imm12;
+	input logic [sizeIn - 1:0] imm12;
 	output logic [63:0] dataOut;
 	
 	reg [63:0] large_boy; // 64 bit internal register
 	
 	
-	assign large_boy[11:0] = imm12; // assigns the first 12 bits to the 12 bits of imm 12
+	assign large_boy[sizeIn - 1:0] = imm12; // assigns the first sizeIn - 1 bits to the bits of imm 12
 	
-	assign large_boy[63:12] = 0; // assigns the last 52 bits to 0
+	assign large_boy[63:sizeIn] = 0; // assigns the other bits to 0
 	
 	assign dataOut = large_boy; // assigns the output to the 64 bit register large_boy
 	

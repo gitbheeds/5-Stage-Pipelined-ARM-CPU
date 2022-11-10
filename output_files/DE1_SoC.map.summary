@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Tue Nov 08 23:16:37 2022
+Analysis & Synthesis Status : Successful - Thu Nov 10 01:15:48 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DE1_SoC
-Top-level Entity Name : sign_extender
+Top-level Entity Name : programCounter
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
 Total registers : 0
-Total pins : 73
+Total pins : 175
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

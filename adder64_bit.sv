@@ -40,12 +40,29 @@ module adder64_bit(input1, input2, sub_control, out, of_flag, co_flag);
 	fullAdder fA(.a(input1[0]), .b(input2[0]), .cin(sub_control), .sum(out[0]), .cout(c[0]));
 	generate 
 		for(i = 1; i < N; i++) begin : generate_64_bit_adder
+		
 			fullAdder fA(.a(input1[i]), .b(input2[i]), .cin(c[i-1]), .sum(out[i]), .cout(c[i]));
 		end
 		
 		assign carry_out = c[N-1];
 		
 	endgenerate
+
+//	generate 
+//		for(i = 0; i < N; i++) begin : generate_64_bit_adder
+//		
+//			if (i == 0) begin
+//				fullAdder fA(.a(input1[0]), .b(input2[0]), .cin(sub_control), .sum(out[0]), .cout(c[0]));
+//			end
+//			else begin
+//				fullAdder fA(.a(input1[i]), .b(input2[i]), .cin(c[i-1]), .sum(out[i]), .cout(c[i]));
+//			end
+//		end
+//		
+//		assign carry_out = c[N-1];
+//		
+//	endgenerate
+
 
 
 endmodule
@@ -66,13 +83,13 @@ module adder64_bit_testbench();
 	initial begin
 		
 		// addition test
-		in1 = 256; in2 = 100; sub_control = 0; #60;
+		in1 = 256; in2 = 100; sub_control = 0; #800;
 		
-		in1 = 20; in2 = -5; sub_control = 1; #60;
+		in1 = 20; in2 = -5; sub_control = 1; #6500;
 		
-		in1 = -20; in2 = -20; sub_control = 0; #60;
+		in1 = -20; in2 = -20; sub_control = 0; #800;
 		
-		in1 = 10; in2 = -5; sub_control = 0; #60;
+		in1 = 10; in2 = -5; sub_control = 0; #6500;
 	end
 	
 
