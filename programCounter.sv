@@ -1,9 +1,9 @@
 `timescale 1ps/1ps
 
 
-module programCounter(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC);
+module programCounter(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, sub_control);
 
-	input logic uncondBr, brTaken;
+	input logic uncondBr, brTaken, sub_control;
 	
 	input logic [18:0] condAddr19;
 	
@@ -36,7 +36,7 @@ module programCounter(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC);
 	
 	adder_4_pc add4(currentOut, int1);
 	
-	adder64_bit branchAdd(currentOut, shiftedBranch, 1'b0, int2, of_flag, co_flag);
+	adder64_bit branchAdd(currentOut, shiftedBranch, sub_control, int2, of_flag, co_flag);
 	
 	
 	mux64x2_1 selPCNext(brTaken, int1, int2, nextOut);
@@ -61,17 +61,23 @@ module programCounter_tb();
 	
 	logic [25:0] brAddr26;
 	
-	logic uncondBr, brTaken;
+	logic uncondBr, brTaken, sub_control;
 	
-	programCounter dut(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC);
+	programCounter dut(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, sub_control);
 	
 	initial begin
 	
-		currPC = 63'h00000000000000FF; condAddr19 = 19'b0; brAddr26 = 26'b0; uncondBr = 1'b1; brTaken = 1'b0; #800;
+		currPC = 64'h00000000000000FF; condAddr19 = 19'b0; brAddr26 = 26'b0; uncondBr = 1'b1; brTaken = 1'b0; 
+		sub_control = 1'b0; #800;
 		
-		currPC = 63'h000000000000000F; condAddr19 = 19'd30; brAddr26 = 26'b0; uncondBr = 1'b0; brTaken = 1'b1; #800;
+		currPC = 64'h000000000000000F; condAddr19 = 19'd30; brAddr26 = 26'b0; uncondBr = 1'b0; brTaken = 1'b1; 
+		sub_control = 1'b0; #800;
 		
-		currPC = 63'h0000000000000000; condAddr19 = 19'd30; brAddr26 = 26'd2; uncondBr = 1'b1; brTaken = 1'b1; #800;
+		currPC = 64'h0000000000000000; condAddr19 = 19'd30; brAddr26 = 26'd2; uncondBr = 1'b1; brTaken = 1'b1;
+	   sub_control = 1'b0; #800;
+		
+		currPC = 64'd200; condAddr19 = -1; brAddr26 = -5; uncondBr = 1'b0; brTaken = 1'b1; 
+		sub_control = 1'b1; #6500;
 	
 	end
 

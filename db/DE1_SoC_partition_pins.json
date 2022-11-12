@@ -260,15 +260,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "brTaken",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[0]",
 					"strict" : false
 				},
 				{
-					"name" : "currPC[1]",
+					"name" : "sub_control",
 					"strict" : false
 				},
 				{
-					"name" : "brTaken",
+					"name" : "currPC[1]",
 					"strict" : false
 				},
 				{
@@ -292,7 +296,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[1]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[1]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[2]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[2]",
 					"strict" : false
 				},
 				{
@@ -300,7 +320,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[3]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[3]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[4]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[4]",
 					"strict" : false
 				},
 				{
@@ -308,7 +344,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[5]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[5]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[6]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[6]",
 					"strict" : false
 				},
 				{
@@ -316,7 +368,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[7]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[7]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[8]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[8]",
 					"strict" : false
 				},
 				{
@@ -324,7 +392,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[9]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[9]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[10]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[10]",
 					"strict" : false
 				},
 				{
@@ -332,7 +416,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[11]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[11]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[12]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[12]",
 					"strict" : false
 				},
 				{
@@ -340,7 +440,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[13]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[13]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[16]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[14]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[14]",
 					"strict" : false
 				},
 				{
@@ -348,7 +464,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[15]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[15]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[18]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[16]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[16]",
 					"strict" : false
 				},
 				{
@@ -356,7 +488,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[17]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[17]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[20]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[18]",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[18]",
 					"strict" : false
 				},
 				{
@@ -364,7 +512,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[19]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[22]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[20]",
 					"strict" : false
 				},
 				{
@@ -372,7 +528,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[21]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[24]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[22]",
 					"strict" : false
 				},
 				{
@@ -380,11 +544,23 @@
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[23]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[26]",
 					"strict" : false
 				},
 				{
+					"name" : "brAddr26[24]",
+					"strict" : false
+				},
+				{
 					"name" : "currPC[27]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[25]",
 					"strict" : false
 				},
 				{

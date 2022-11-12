@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/Gerin/Documents/GitHub/EE469_Labs/simulation/modelsim
 vadder64_bit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1668072624
+Z2 !s110 1668220478
 !i10b 1
 !s100 4Cb2`bKN:gla4dkISmf>]0
 IZBTc1W<`UZP^VD=<TI@CM0
@@ -26,7 +26,7 @@ Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z9 !s108 1668072624.000000
+Z9 !s108 1668220478.000000
 Z10 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
 Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
 !i113 1
@@ -287,25 +287,25 @@ R13
 R14
 vprogramCounter
 R1
-Z40 !s110 1668072625
+R2
 !i10b 1
-!s100 [RCD[L=XZhPLGZf;<^I]>1
-I@Be@^B8I274b_<<DH6X430
+!s100 THRSPlYV:f8E9a:J?:k112
+ISJ9^GYI[ON@9Lg<;44bFz0
 R3
-Z41 !s105 programCounter_sv_unit
+Z40 !s105 programCounter_sv_unit
 S1
 R0
-Z42 w1668072614
-Z43 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv
-Z44 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv
+Z41 w1668220440
+Z42 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv
+Z43 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv
 L0 4
 R8
 r1
 !s85 0
 31
 R9
-Z45 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv|
-Z46 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv|
+Z44 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv|
+Z45 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv|
 !i113 1
 R12
 R13
@@ -313,25 +313,25 @@ R14
 nprogram@counter
 vprogramCounter_tb
 R1
-R40
+R2
 !i10b 1
-!s100 QmaaF9SEKRdo8;f`0WTcd1
-IYdI<_XUoWDD1OVNg[LH3e2
+!s100 FUC2S0fb]0QN5jmQiGa<n1
+I^7amDL7hE>NGHbY2;_jIg3
 R3
-R41
+R40
 S1
 R0
+R41
 R42
 R43
-R44
 L0 56
 R8
 r1
 !s85 0
 31
 R9
+R44
 R45
-R46
 !i113 1
 R12
 R13
@@ -344,20 +344,20 @@ R2
 !s100 cE8gKbe7bO]P32:QBjQdI0
 IDI7V:4zg_S[d>5[7LCnAe1
 R3
-Z47 !s105 sign_extender_sv_unit
+Z46 !s105 sign_extender_sv_unit
 S1
 R0
 R34
-Z48 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv
-Z49 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv
+Z47 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv
+Z48 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv
 L0 30
 R8
 r1
 !s85 0
 31
 R9
-Z50 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv|
-Z51 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv|
+Z49 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv|
+Z50 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv|
 !i113 1
 R12
 R13
@@ -419,20 +419,20 @@ R2
 !s100 <U??oLX@J`m@2Z^OPS<a31
 IMHzi[3]k3RihhmjVmozfQ3
 R3
-R47
+R46
 S1
 R0
 R34
+R47
 R48
-R49
 L0 5
 R8
 r1
 !s85 0
 31
 R9
+R49
 R50
-R51
 !i113 1
 R12
 R13
