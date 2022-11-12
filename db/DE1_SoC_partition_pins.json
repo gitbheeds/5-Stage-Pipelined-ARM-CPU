@@ -268,7 +268,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "sub_control",
+					"name" : "brAddr26[25]",
+					"strict" : false
+				},
+				{
+					"name" : "uncondBr",
+					"strict" : false
+				},
+				{
+					"name" : "condAddr19[18]",
 					"strict" : false
 				},
 				{
@@ -281,10 +289,6 @@
 				},
 				{
 					"name" : "brAddr26[0]",
-					"strict" : false
-				},
-				{
-					"name" : "uncondBr",
 					"strict" : false
 				},
 				{
@@ -504,10 +508,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "condAddr19[18]",
-					"strict" : false
-				},
-				{
 					"name" : "currPC[21]",
 					"strict" : false
 				},
@@ -557,10 +557,6 @@
 				},
 				{
 					"name" : "currPC[27]",
-					"strict" : false
-				},
-				{
-					"name" : "brAddr26[25]",
 					"strict" : false
 				},
 				{
