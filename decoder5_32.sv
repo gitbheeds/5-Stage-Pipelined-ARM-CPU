@@ -11,13 +11,13 @@ module decoder5_32(RegWrite, addr, outbus);
 	
 	decoder2_4 s1d0 (.en(RegWrite), .sel(addr[4:3]), .o(en[3:0])); //stage 1 2:4 decoder. Provides enables for stage 2 decoders
 	
-	decoder3_8 s2d3 (.en(en[3]), .sel(addr[2:0]), .o(outbus[31:24])); //stage 2 1st 3:8 decoder. write_en access for registers 31:24
+	decoder3_8 s2d3 (.en(en[3]), .sel(addr[2:0]), .o(outbus[0:7])); //stage 2 1st 3:8 decoder. write_en access for registers 0:7
 	
-	decoder3_8 s2d2 (.en(en[2]), .sel(addr[2:0]), .o(outbus[23:16])); //stage 2 2nd 3:8 decoder. write_en access for registers 23:16
+	decoder3_8 s2d2 (.en(en[2]), .sel(addr[2:0]), .o(outbus[8:15])); //stage 2 2nd 3:8 decoder. write_en access for registers 8:15
 	
-	decoder3_8 s2d1 (.en(en[1]), .sel(addr[2:0]), .o(outbus[15:8]));  //stage 2 3rd 3:8 decoder. write_en access for registers 15:8
+	decoder3_8 s2d1 (.en(en[1]), .sel(addr[2:0]), .o(outbus[16:23]));  //stage 2 3rd 3:8 decoder. write_en access for registers 16:23
 	
-	decoder3_8 s2d0 (.en(en[0]), .sel(addr[2:0]), .o(outbus[7:0]));   //stage 2 4th 3:8 decoder. write_en access for registers 7:0
+	decoder3_8 s2d0 (.en(en[0]), .sel(addr[2:0]), .o(outbus[24:31]));   //stage 2 4th 3:8 decoder. write_en access for registers 24:31
 
 
 
