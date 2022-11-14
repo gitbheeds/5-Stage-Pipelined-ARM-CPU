@@ -3,7 +3,7 @@
 // the 2:4 decoder is enabled by RegWrite, which enables an output from the entire 5:32 decoder
 module decoder5_32(RegWrite, addr, outbus);
 	input logic [4:0] addr; //register address to write to
-	output logic [31:0] outbus; //holds write_en bit 
+	output logic [0:31] outbus; //holds write_en bit 
 	
 	input logic RegWrite; // RegWrite input from the top level
 	

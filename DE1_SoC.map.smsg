@@ -1,5 +1,18 @@
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (10281): Verilog HDL Declaration information at CPU_single.sv(56): object "memToReg" differs only in case from object "memtoReg" in the same scope File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 56
 Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(65): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_pass_add_sub.sv Line: 65
 Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(66): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_pass_add_sub.sv Line: 66
 Warning (10273): Verilog HDL warning at ALU.sv(85): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 85
 Warning (10273): Verilog HDL warning at ALU.sv(86): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 86
+Warning (10030): Net "currPC" at CPU_single.sv(11) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 11
+Warning (10030): Net "ALU_cntrl" at CPU_single.sv(58) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 58
+Warning (10030): Net "readB[4..0]" at CPU_single.sv(66) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 66
+Warning (10030): Net "wd" at CPU_single.sv(69) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 69
+Warning (10030): Net "ALU_B" at CPU_single.sv(81) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 81
+Warning (10030): Net "toDataMem" at CPU_single.sv(90) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 90
+Warning (10030): Net "xfer_size" at CPU_single.sv(151) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 151
+Warning (10030): Net "clk" at CPU_single.sv(8) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 8
+Warning (10030): Net "uncondBr" at CPU_single.sv(55) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 55
+Warning (10030): Net "brTaken" at CPU_single.sv(55) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 55
+Warning (10030): Net "RegWrite" at CPU_single.sv(55) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 55
+Warning (10030): Net "memWrite" at CPU_single.sv(56) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 56
