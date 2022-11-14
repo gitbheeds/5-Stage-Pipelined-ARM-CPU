@@ -114,6 +114,7 @@ module CPU_single();
 	//Reg2Loc mux goes here
 	//i0 = Rd, i1 = Rm
 	//out = readB
+	reg2locMux regToLoc(Reg2Loc, Rm, Rd, readB);
 	
 	
 	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
@@ -122,23 +123,34 @@ module CPU_single();
 	
 //Sign Extension of dAddr9
 
+	parameter daddr9Size = 9;
+	sign_extender #(daddr9Size) daddrExtender(dAddr9, SE9_out);
+
 //Zero Extension of ALU_Imm
 
+	parameter ALU_ImmSize = 12;
+	
+	zero_extender #(ALU_ImmSize) immExtender(ALU_Imm, ZE12_out);
 
-		//Imm mux goes here
-		//i0 = SE9_Out, i1 = ZE12_out
-		//out = ext_out
+	//Imm mux goes here
+	//i0 = SE9_Out, i1 = ZE12_out
+	//out = ext_out
+	
+	mux64x2_1 ImmMux(Imm, SE9_out, ZE12_out, ext_out); 
+	
 	
 //ALU instantiation
 
 	//ALU_Src mux goes here
 	//i0 = rd2, i1 = ext_out
 	//out = ALU_B
+	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, ALU_B);
 
 	alu aloo(.A(rd1), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	
 //shifter instantiation
 	
+	shifter shift(Rn, shiftDirn, shamt, shift_out);
 	
 	
 //data memory instantiation
@@ -146,6 +158,8 @@ module CPU_single();
 	//ALU_SH mux goes here
 	//i0 = ALU_out, i1 = shift_out
 	//out = toDataMem
+	
+	mux64x2_1 ALU_ShiftMux(ALU_SH, ALU_out, shift_out, toDataMem);
 	
 	//no idea what to do with xfer size, may be dependent on LDUR/STUR vs LDURB/STURB
 	logic[3:0] xfer_size;
@@ -155,6 +169,8 @@ module CPU_single();
 	//MemToReg mux here
 	//i0 = toDataMem, i1 = memDataOut
 	//out = wd
+	
+	mux64x2_1 memToRegMux(memToReg, toDataMem, memDataOut, wd);
 
 //-----------------------end Modules-----------------------//	
 	
