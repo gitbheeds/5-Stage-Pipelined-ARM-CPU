@@ -113,6 +113,9 @@ module CPU_single();
 	instructmem insts (.address(currPC), .instruction, .clk);
 	
 //CPU control unit
+	CPU_control control (.opcode, .uncondBr, .brTaken, .Reg2Loc, .ALU_Src, .RegWrite, 
+								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
+								.branchReg, .branchLink, .compZero);
 	
 //ALU control unit
 	

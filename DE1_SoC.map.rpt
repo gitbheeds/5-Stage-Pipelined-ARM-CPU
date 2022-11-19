@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Mon Nov 14 01:49:10 2022
+Fri Nov 18 22:42:16 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 14 01:49:10 2022           ;
+; Analysis & Synthesis Status ; Failed - Fri Nov 18 22:42:16 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Nov 14 01:49:04 2022
+    Info: Processing started: Fri Nov 18 22:42:09 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -183,7 +183,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
     Info (12023): Found entity 1: regfile File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/regfile.sv Line: 11
 Info (12021): Found 2 design units, including 2 entities, in source file programcounter.sv
     Info (12023): Found entity 1: programCounter File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 4
-    Info (12023): Found entity 2: programCounter_tb File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 63
+    Info (12023): Found entity 2: programCounter_tb File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 72
 Info (12021): Found 2 design units, including 2 entities, in source file or_64_bit.sv
     Info (12023): Found entity 1: or_64_bit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 5
     Info (12023): Found entity 2: or_64_bit_testbench File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 25
@@ -257,28 +257,32 @@ Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
 Info (12021): Found 2 design units, including 2 entities, in source file reg2locmux.sv
     Info (12023): Found entity 1: reg2locMux File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/reg2locMux.sv Line: 4
     Info (12023): Found entity 2: reg2locMux_tb File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/reg2locMux.sv Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file alu_control_unit.sv
+    Info (12023): Found entity 1: ALU_control_Unit File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file cpu_control.sv
+    Info (12023): Found entity 1: CPU_control File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_control.sv Line: 9
+    Info (12023): Found entity 2: CPU_control_tb File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_control.sv Line: 280
 Info (12127): Elaborating entity "CPU_single" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at CPU_single.sv(22): object "opcode" assigned a value but never read File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 22
-Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 103
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 25
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:uncondBranch" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 27
-Info (12128): Elaborating entity "mux64x2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 31
+Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 110
+Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 27
+Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:uncondBranch" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 29
+Info (12128): Elaborating entity "mux64x2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 33
 Info (12128): Elaborating entity "mux2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType|mux2_1:muxy[0].miniboi" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 26
-Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:pc|shifter:leftShift2" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 37
-Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounter:pc|adder_4_pc:add4" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 44
+Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:pc|shifter:leftShift2" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 39
+Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounter:pc|adder_4_pc:add4" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 46
 Info (12128): Elaborating entity "fullAdder" for hierarchy "programCounter:pc|adder_4_pc:add4|fullAdder:fA" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder_4_pc.sv Line: 19
-Info (12128): Elaborating entity "adder64_bit" for hierarchy "programCounter:pc|adder64_bit:branchAdd" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 46
-Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 106
+Info (12128): Elaborating entity "adder64_bit" for hierarchy "programCounter:pc|adder64_bit:branchAdd" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv Line: 48
+Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 113
 Warning (10175): Verilog HDL warning at instructmem.sv(24): ignoring unsupported system task File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/instructmem.sv Line: 24
 Error (10054): Verilog HDL File I/O error at instructmem.sv(42): can't open Verilog Design File "../benchmarks/test01_AddiB.arm" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/instructmem.sv Line: 42
 Info (10648): Verilog HDL Display System Task info at instructmem.sv(43): Running benchmark:  File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
-Error (12152): Can't elaborate user hierarchy "instructmem:insts" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 106
+Error (12152): Can't elaborate user hierarchy "instructmem:insts" File: C:/Users/Gerin/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 113
 Info (144001): Generated suppressed messages file C:/Users/Gerin/Documents/GitHub/EE469_Labs/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4761 megabytes
-    Error: Processing ended: Mon Nov 14 01:49:10 2022
-    Error: Elapsed time: 00:00:06
-    Error: Total CPU time (on all processors): 00:00:16
+    Error: Processing ended: Fri Nov 18 22:42:16 2022
+    Error: Elapsed time: 00:00:07
+    Error: Total CPU time (on all processors): 00:00:15
 
 
 +------------------------------------------+

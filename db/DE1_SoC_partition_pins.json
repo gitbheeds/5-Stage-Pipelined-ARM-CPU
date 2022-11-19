@@ -4,67 +4,99 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "out[0]",
+					"name" : "uncondBr",
 					"strict" : false
 				},
 				{
-					"name" : "out[1]",
+					"name" : "brTaken",
 					"strict" : false
 				},
 				{
-					"name" : "out[2]",
+					"name" : "Reg2Loc",
 					"strict" : false
 				},
 				{
-					"name" : "out[3]",
+					"name" : "ALU_Src",
 					"strict" : false
 				},
 				{
-					"name" : "out[4]",
+					"name" : "RegWrite",
 					"strict" : false
 				},
 				{
-					"name" : "sel",
+					"name" : "Imm",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[0]",
+					"name" : "memToReg",
 					"strict" : false
 				},
 				{
-					"name" : "Rd[0]",
+					"name" : "memWrite",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[1]",
+					"name" : "ALU_on",
 					"strict" : false
 				},
 				{
-					"name" : "Rd[1]",
+					"name" : "set_flags",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[2]",
+					"name" : "branchReg",
 					"strict" : false
 				},
 				{
-					"name" : "Rd[2]",
+					"name" : "branchLink",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[3]",
+					"name" : "compZero",
 					"strict" : false
 				},
 				{
-					"name" : "Rd[3]",
+					"name" : "opcode[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Rm[4]",
+					"name" : "opcode[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Rd[4]",
+					"name" : "opcode[4]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[3]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[5]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[6]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[7]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[8]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[0]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[2]",
+					"strict" : false
+				},
+				{
+					"name" : "opcode[1]",
 					"strict" : false
 				}
 			]

@@ -1,59 +1,111 @@
-|reg2locMux
-sel => sel.IN5
-Rm[0] => Rm[0].IN1
-Rm[1] => Rm[1].IN1
-Rm[2] => Rm[2].IN1
-Rm[3] => Rm[3].IN1
-Rm[4] => Rm[4].IN1
-Rd[0] => Rd[0].IN1
-Rd[1] => Rd[1].IN1
-Rd[2] => Rd[2].IN1
-Rd[3] => Rd[3].IN1
-Rd[4] => Rd[4].IN1
-out[0] <= mux2_1:reg2loc[0].tinyboi.out
-out[1] <= mux2_1:reg2loc[1].tinyboi.out
-out[2] <= mux2_1:reg2loc[2].tinyboi.out
-out[3] <= mux2_1:reg2loc[3].tinyboi.out
-out[4] <= mux2_1:reg2loc[4].tinyboi.out
-
-
-|reg2locMux|mux2_1:reg2loc[0].tinyboi
-out <= last.DB_MAX_OUTPUT_PORT_TYPE
-i0 => int3.IN0
-i1 => int1.IN0
-sel => int1.IN1
-sel => int3.IN1
-
-
-|reg2locMux|mux2_1:reg2loc[1].tinyboi
-out <= last.DB_MAX_OUTPUT_PORT_TYPE
-i0 => int3.IN0
-i1 => int1.IN0
-sel => int1.IN1
-sel => int3.IN1
-
-
-|reg2locMux|mux2_1:reg2loc[2].tinyboi
-out <= last.DB_MAX_OUTPUT_PORT_TYPE
-i0 => int3.IN0
-i1 => int1.IN0
-sel => int1.IN1
-sel => int3.IN1
-
-
-|reg2locMux|mux2_1:reg2loc[3].tinyboi
-out <= last.DB_MAX_OUTPUT_PORT_TYPE
-i0 => int3.IN0
-i1 => int1.IN0
-sel => int1.IN1
-sel => int3.IN1
-
-
-|reg2locMux|mux2_1:reg2loc[4].tinyboi
-out <= last.DB_MAX_OUTPUT_PORT_TYPE
-i0 => int3.IN0
-i1 => int1.IN0
-sel => int1.IN1
-sel => int3.IN1
+|CPU_control
+opcode[0] => Equal3.IN10
+opcode[0] => Equal6.IN10
+opcode[0] => Equal7.IN10
+opcode[0] => Equal8.IN10
+opcode[0] => Equal9.IN10
+opcode[1] => Equal3.IN9
+opcode[1] => Equal5.IN9
+opcode[1] => Equal6.IN9
+opcode[1] => Equal7.IN5
+opcode[1] => Equal8.IN9
+opcode[1] => Equal9.IN9
+opcode[2] => Equal3.IN8
+opcode[2] => Equal5.IN8
+opcode[2] => Equal6.IN8
+opcode[2] => Equal7.IN9
+opcode[2] => Equal8.IN8
+opcode[2] => Equal9.IN8
+opcode[3] => Equal1.IN7
+opcode[3] => Equal3.IN7
+opcode[3] => Equal4.IN7
+opcode[3] => Equal5.IN2
+opcode[3] => Equal6.IN4
+opcode[3] => Equal7.IN8
+opcode[3] => Equal8.IN7
+opcode[3] => Equal9.IN5
+opcode[4] => Equal1.IN6
+opcode[4] => Equal3.IN4
+opcode[4] => Equal4.IN6
+opcode[4] => Equal5.IN7
+opcode[4] => Equal6.IN3
+opcode[4] => Equal7.IN7
+opcode[4] => Equal8.IN6
+opcode[4] => Equal9.IN4
+opcode[5] => Equal0.IN1
+opcode[5] => Equal1.IN2
+opcode[5] => Equal2.IN2
+opcode[5] => Equal3.IN3
+opcode[5] => Equal4.IN3
+opcode[5] => Equal5.IN6
+opcode[5] => Equal6.IN7
+opcode[5] => Equal7.IN6
+opcode[5] => Equal8.IN5
+opcode[5] => Equal9.IN7
+opcode[6] => Equal0.IN5
+opcode[6] => Equal1.IN5
+opcode[6] => Equal2.IN5
+opcode[6] => Equal3.IN6
+opcode[6] => Equal4.IN5
+opcode[6] => Equal5.IN5
+opcode[6] => Equal6.IN2
+opcode[6] => Equal7.IN4
+opcode[6] => Equal8.IN4
+opcode[6] => Equal9.IN3
+opcode[7] => Equal0.IN0
+opcode[7] => Equal1.IN1
+opcode[7] => Equal2.IN1
+opcode[7] => Equal3.IN2
+opcode[7] => Equal4.IN2
+opcode[7] => Equal5.IN1
+opcode[7] => Equal6.IN6
+opcode[7] => Equal7.IN3
+opcode[7] => Equal8.IN3
+opcode[7] => Equal9.IN6
+opcode[8] => Equal0.IN4
+opcode[8] => Equal1.IN4
+opcode[8] => Equal2.IN4
+opcode[8] => Equal3.IN5
+opcode[8] => Equal4.IN1
+opcode[8] => Equal5.IN4
+opcode[8] => Equal6.IN1
+opcode[8] => Equal7.IN2
+opcode[8] => Equal8.IN2
+opcode[8] => Equal9.IN2
+opcode[9] => Equal0.IN3
+opcode[9] => Equal1.IN0
+opcode[9] => Equal2.IN3
+opcode[9] => Equal3.IN1
+opcode[9] => Equal4.IN4
+opcode[9] => Equal5.IN3
+opcode[9] => Equal6.IN5
+opcode[9] => Equal7.IN1
+opcode[9] => Equal8.IN1
+opcode[9] => Equal9.IN1
+opcode[10] => Equal0.IN2
+opcode[10] => Equal1.IN3
+opcode[10] => Equal2.IN0
+opcode[10] => Equal3.IN0
+opcode[10] => Equal4.IN0
+opcode[10] => Equal5.IN0
+opcode[10] => Equal6.IN0
+opcode[10] => Equal7.IN0
+opcode[10] => Equal8.IN0
+opcode[10] => Equal9.IN0
+uncondBr <= uncondBr.DB_MAX_OUTPUT_PORT_TYPE
+brTaken <= brTaken.DB_MAX_OUTPUT_PORT_TYPE
+Reg2Loc <= Reg2Loc.DB_MAX_OUTPUT_PORT_TYPE
+ALU_Src <= ALU_Src.DB_MAX_OUTPUT_PORT_TYPE
+RegWrite <= RegWrite.DB_MAX_OUTPUT_PORT_TYPE
+ALU_SH <= ALU_SH.DB_MAX_OUTPUT_PORT_TYPE
+Imm <= Imm.DB_MAX_OUTPUT_PORT_TYPE
+memToReg <= memToReg.DB_MAX_OUTPUT_PORT_TYPE
+memWrite <= memWrite.DB_MAX_OUTPUT_PORT_TYPE
+shiftDirn <= shiftDirn.DB_MAX_OUTPUT_PORT_TYPE
+ALU_on <= ALU_on.DB_MAX_OUTPUT_PORT_TYPE
+set_flags <= set_flags.DB_MAX_OUTPUT_PORT_TYPE
+branchReg <= branchReg.DB_MAX_OUTPUT_PORT_TYPE
+branchLink <= branchLink.DB_MAX_OUTPUT_PORT_TYPE
+compZero <= compZero.DB_MAX_OUTPUT_PORT_TYPE
 
 

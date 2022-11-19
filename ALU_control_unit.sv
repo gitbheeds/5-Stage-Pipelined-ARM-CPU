@@ -16,7 +16,7 @@ module ALU_control_Unit (opcode, ALU_on, ALU_cntrl);
 	
 	//CB-type insts 8b
 	logic [7:0] cbOp;
-	assign cbop = opcode[10:3];
+	assign cbOp = opcode[10:3];
 	
 	//I-type insts 10b
 	logic[9:0] iOp;
