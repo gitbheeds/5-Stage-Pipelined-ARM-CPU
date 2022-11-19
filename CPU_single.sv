@@ -53,7 +53,11 @@ module CPU_single();
 	
 //------------------control signals------------------------//
 	logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
-			ALU_SH, Imm, memToReg, memWrite, shiftDirn;
+			ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags,
+			branchReg, branchLink, compZero;
+			
+			
+			//
 	
 	logic[2:0] ALU_cntrl;
 //----------------end control signals----------------------//
@@ -94,13 +98,16 @@ module CPU_single();
 	
 	//output of MemToReg mux
 	logic[63:0] memtoReg;
+	
+	//for branch link
+	logic[63:0] pc_plus4;
 
 //---------------end module connections--------------------//		
 
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.currPC, .condAddr19, .brAddr26, .uncondBr, .brTaken, .nextPC);
+	programCounter pc (.currPC, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4);
 	
 //instruction memory access
 	instructmem insts (.address(currPC), .instruction, .clk);
@@ -145,6 +152,9 @@ module CPU_single();
 	//i0 = rd2, i1 = ext_out
 	//out = ALU_B
 	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, ALU_B);
+	
+	//zeroComp mux goes here
+	
 
 	alu aloo(.A(rd1), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	
@@ -171,6 +181,14 @@ module CPU_single();
 	//out = wd
 	
 	mux64x2_1 memToRegMux(memToReg, toDataMem, memDataOut, wd);
+	
+	
+	//branchLink mux here
+	//for setting link addrs
+	//i0 = wd (change name)
+	//i1 = pc_plus4
+	//out = wd
+	//BL instruction
 
 //-----------------------end Modules-----------------------//	
 	
