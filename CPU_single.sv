@@ -196,9 +196,12 @@ module CPU_single();
 	//out = toDataMem
 	
 	mux64x2_1 ALU_ShiftMux(ALU_SH, ALU_out, shift_out, toDataMem);
-	
-	//no idea what to do with xfer size, may be dependent on LDUR/STUR vs LDURB/STURB
+
+
+	//DW transfer
 	logic[3:0] xfer_size;
+	
+	assign xfer_size = 4'b1000;
 
 	datamem mems(.address(toDataMem), .write_enable(memWrite), .read_enable(1'b1), .write_data(rd2), .clk, .xfer_size, .read_data(memDataOut));
 
