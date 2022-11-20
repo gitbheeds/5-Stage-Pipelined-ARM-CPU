@@ -2,114 +2,114 @@
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./zeroCheck.sv 
 # -- Compiling module zeroCheck
 # -- Compiling module zeroCheck_tb
 # 
 # Top level modules:
 # 	zeroCheck_tb
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./zero_extender.sv 
 # -- Compiling module zero_extender
 # -- Compiling module zero_extender_tb
 # 
 # Top level modules:
 # 	zero_extender_tb
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./xor_64_bit.sv 
 # -- Compiling module xor_64_bit
 # -- Compiling module xor_64_bit_testbench
 # 
 # Top level modules:
 # 	xor_64_bit_testbench
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./sign_extender.sv 
 # -- Compiling module sign_extender
 # -- Compiling module se_tb
 # 
 # Top level modules:
 # 	se_tb
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./register64.sv 
 # -- Compiling module register64
 # 
 # Top level modules:
 # 	register64
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./programCounter.sv 
 # -- Compiling module programCounter
 # -- Compiling module programCounter_tb
 # 
 # Top level modules:
 # 	programCounter_tb
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./or_64_bit.sv 
 # -- Compiling module or_64_bit
 # -- Compiling module or_64_bit_testbench
 # 
 # Top level modules:
 # 	or_64_bit_testbench
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x32_1.sv 
 # -- Compiling module mux64x32_1
 # 
 # Top level modules:
 # 	mux64x32_1
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x8_1.sv 
 # -- Compiling module mux64x8_1
 # -- Compiling module mux64x8_1_testbench
 # 
 # Top level modules:
 # 	mux64x8_1_testbench
-# End time: 14:13:46 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:46 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x4_1.sv 
 # -- Compiling module mux64x4_1
 # -- Compiling module mux64x4_1_testbench
 # 
 # Top level modules:
 # 	mux64x4_1_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:01
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x2_1_2scomp.sv 
 # -- Compiling module mux64x2_1_2scomp
 # -- Compiling module mux64x2_1_2scomp_testbench
@@ -117,65 +117,65 @@ do runlab.do
 # Top level modules:
 # 	mux64x2_1_2scomp
 # 	mux64x2_1_2scomp_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:00 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:00 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x2_1.sv 
 # -- Compiling module mux64x2_1
 # -- Compiling module mux64x2_1_testbench
 # 
 # Top level modules:
 # 	mux64x2_1_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./mux32_1.sv 
 # -- Compiling module mux32_1
 # 
 # Top level modules:
 # 	mux32_1
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./mux16_1.sv 
 # -- Compiling module mux16_1
 # 
 # Top level modules:
 # 	mux16_1
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # 
 # Top level modules:
 # 	mux8_1
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./mux4_1.sv 
 # -- Compiling module mux4_1
 # 
 # Top level modules:
 # 	mux4_1
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # 
 # Top level modules:
 # 	mux2_1
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./math.sv 
 # -- Compiling module mult
 # -- Compiling module shifter
@@ -185,949 +185,168 @@ do runlab.do
 # Top level modules:
 # 	shifter_testbench
 # 	mult_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./instructmem.sv 
 # -- Compiling module instructmem
 # -- Compiling module instructmem_testbench
 # 
 # Top level modules:
 # 	instructmem_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./fullAdder.sv 
 # -- Compiling module fullAdder
 # -- Compiling module fullAdder_testbench
 # 
 # Top level modules:
 # 	fullAdder_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./decoder5_32.sv 
 # -- Compiling module decoder5_32
 # -- Compiling module decoder5_32_testbench
 # 
 # Top level modules:
 # 	decoder5_32_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./decoder3_8.sv 
 # -- Compiling module decoder3_8
 # -- Compiling module decoder3_8_testbench
 # 
 # Top level modules:
 # 	decoder3_8_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./decoder2_4.sv 
 # -- Compiling module decoder2_4
 # -- Compiling module decoder2_4_testbench
 # 
 # Top level modules:
 # 	decoder2_4_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./datamem.sv 
 # -- Compiling module datamem
 # -- Compiling module datamem_testbench
 # 
 # Top level modules:
 # 	datamem_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./CPU_single.sv 
 # -- Compiling module CPU_single
 # -- Compiling module CPU_single_tb
 # 
 # Top level modules:
 # 	CPU_single_tb
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./and_64_bit.sv 
 # -- Compiling module and_64_bit
 # -- Compiling module and_64_bit_testbench
 # 
 # Top level modules:
 # 	and_64_bit_testbench
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./alustim.sv 
 # -- Compiling module alustim
 # 
 # Top level modules:
 # 	alustim
-# End time: 14:13:47 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:47 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./ALU.sv 
 # -- Compiling module alu
 # -- Compiling module ALUmini
 # 
 # Top level modules:
 # 	ALUmini
-# End time: 14:13:48 on Nov 20,2022, Elapsed time: 0:00:01
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:48 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./adder64_bit.sv 
 # -- Compiling module adder64_bit
 # -- Compiling module adder64_bit_testbench
 # 
 # Top level modules:
 # 	adder64_bit_testbench
-# End time: 14:13:48 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:01 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:48 on Nov 20,2022
+# Start time: 14:30:01 on Nov 20,2022
 # vlog -reportprogress 300 ./adder_4_pc.sv 
 # -- Compiling module adder_4_pc
 # -- Compiling module adder_4_pc_tb
 # 
 # Top level modules:
 # 	adder_4_pc_tb
-# End time: 14:13:48 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:02 on Nov 20,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:48 on Nov 20,2022
+# Start time: 14:30:02 on Nov 20,2022
 # vlog -reportprogress 300 ./D_FF.sv 
 # -- Compiling module D_FF
 # 
 # Top level modules:
 # 	D_FF
-# End time: 14:13:48 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:02 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:48 on Nov 20,2022
+# Start time: 14:30:02 on Nov 20,2022
 # vlog -reportprogress 300 ./reg2locMux.sv 
 # -- Compiling module reg2locMux
 # -- Compiling module reg2locMux_tb
 # 
 # Top level modules:
 # 	reg2locMux_tb
-# End time: 14:13:48 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:02 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:48 on Nov 20,2022
+# Start time: 14:30:02 on Nov 20,2022
 # vlog -reportprogress 300 ./ALU_control_unit.sv 
 # -- Compiling module ALU_control_unit
 # -- Compiling module alu_control_unit_tb
 # 
 # Top level modules:
 # 	alu_control_unit_tb
-# End time: 14:13:48 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:02 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:13:48 on Nov 20,2022
+# Start time: 14:30:02 on Nov 20,2022
 # vlog -reportprogress 300 ./CPU_control.sv 
 # -- Compiling module CPU_control
 # -- Compiling module CPU_control_tb
 # 
 # Top level modules:
 # 	CPU_control_tb
-# End time: 14:13:48 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:30:02 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work se_tb 
-# Start time: 14:13:48 on Nov 20,2022
-# Loading sv_std.std
-# Loading work.se_tb
-# Loading work.sign_extender
-# WARNING: No extended dataflow license exists
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftfsnnfb".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftfsnnfb
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-vsim -voptargs=\"+acc\" -t 1ps -lib work work.CPU_single_tb
-# End time: 14:14:18 on Nov 20,2022, Elapsed time: 0:00:30
-# Errors: 0, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work work.CPU_single_tb 
-# Start time: 14:14:18 on Nov 20,2022
-# Loading sv_std.std
-# Loading work.CPU_single_tb
-# Loading work.CPU_single
-# Loading work.programCounter
-# Loading work.sign_extender
-# Loading work.mux64x2_1
-# Loading work.shifter
-# Loading work.adder_4_pc
-# Loading work.fullAdder
-# Loading work.adder64_bit
-# Loading work.instructmem
-# Loading work.CPU_control
-# Loading work.ALU_control_unit
-# Loading work.reg2locMux
-# Loading work.regfile
-# Loading work.decoder5_32
-# Loading work.decoder2_4
-# Loading work.decoder3_8
-# Loading work.mux64x32_1
-# Loading work.zero_extender
-# Loading work.alu
-# Loading work.mux64x2_1_2scomp
-# Loading work.and_64_bit
-# Loading work.or_64_bit
-# Loading work.xor_64_bit
-# Loading work.zeroCheck
-# Loading work.mux64x8_1
-# Loading work.mux64x4_1
-# Loading work.datamem
-# Loading work.mux2_1
-# Loading work.mux32_1
-# Loading work.mux16_1
-# Loading work.mux8_1
-# Loading work.mux4_1
-# Loading work.register64
-# Loading work.D_FF
-# ** Warning: (vsim-3015) ./CPU_single.sv(144): [PCDPC] - Port size (5) does not match connection size (64) for port 'out'. The port definition is at: ./reg2locMux.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_single_tb/dut/regToLoc File: ./reg2locMux.sv
-# ** Warning: (vsim-3839) ./CPU_single.sv(153): Variable '/CPU_single_tb/dut/rd2', driven via a port connection, is multiply driven. See ./CPU_single.sv(144).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_single_tb/dut/reggy File: ./regfile.sv
-# ** Warning: (vsim-3015) ./CPU_single.sv(189): [PCDPC] - Port size (64) does not match connection size (5) for port 'value'. The port definition is at: ./math.sv(37).
-#    Time: 0 ps  Iteration: 0  Instance: /CPU_single_tb/dut/shift File: ./math.sv
-# ** Warning: Design size of 11229 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
-# This may because you are loading cell libraries which are not recommended with
-# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
-# WARNING: No extended dataflow license exists
-# Error opening C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/(vsim-3015) ./CPU_single.sv
-# Path name 'C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/(vsim-3015) ./CPU_single.sv' doesn't exist.
-# Error opening C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/(vsim-3839) ./CPU_single.sv
-# Path name 'C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/(vsim-3839) ./CPU_single.sv' doesn't exist.
-# Error opening C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/(vsim-3015) ./CPU_single.sv
-# Path name 'C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/(vsim-3015) ./CPU_single.sv' doesn't exist.
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./zeroCheck.sv 
-# -- Compiling module zeroCheck
-# -- Compiling module zeroCheck_tb
-# 
-# Top level modules:
-# 	zeroCheck_tb
-# End time: 14:18:11 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./zero_extender.sv 
-# -- Compiling module zero_extender
-# -- Compiling module zero_extender_tb
-# 
-# Top level modules:
-# 	zero_extender_tb
-# End time: 14:18:11 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./xor_64_bit.sv 
-# -- Compiling module xor_64_bit
-# -- Compiling module xor_64_bit_testbench
-# 
-# Top level modules:
-# 	xor_64_bit_testbench
-# End time: 14:18:11 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./sign_extender.sv 
-# -- Compiling module sign_extender
-# -- Compiling module se_tb
-# 
-# Top level modules:
-# 	se_tb
-# End time: 14:18:11 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./register64.sv 
-# -- Compiling module register64
-# 
-# Top level modules:
-# 	register64
-# End time: 14:18:11 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 14:18:11 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./programCounter.sv 
-# -- Compiling module programCounter
-# -- Compiling module programCounter_tb
-# 
-# Top level modules:
-# 	programCounter_tb
-# End time: 14:18:11 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:11 on Nov 20,2022
-# vlog -reportprogress 300 ./or_64_bit.sv 
-# -- Compiling module or_64_bit
-# -- Compiling module or_64_bit_testbench
-# 
-# Top level modules:
-# 	or_64_bit_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x32_1.sv 
-# -- Compiling module mux64x32_1
-# 
-# Top level modules:
-# 	mux64x32_1
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x8_1.sv 
-# -- Compiling module mux64x8_1
-# -- Compiling module mux64x8_1_testbench
-# 
-# Top level modules:
-# 	mux64x8_1_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x4_1.sv 
-# -- Compiling module mux64x4_1
-# -- Compiling module mux64x4_1_testbench
-# 
-# Top level modules:
-# 	mux64x4_1_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x2_1_2scomp.sv 
-# -- Compiling module mux64x2_1_2scomp
-# -- Compiling module mux64x2_1_2scomp_testbench
-# 
-# Top level modules:
-# 	mux64x2_1_2scomp
-# 	mux64x2_1_2scomp_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x2_1.sv 
-# -- Compiling module mux64x2_1
-# -- Compiling module mux64x2_1_testbench
-# 
-# Top level modules:
-# 	mux64x2_1_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux32_1.sv 
-# -- Compiling module mux32_1
-# 
-# Top level modules:
-# 	mux32_1
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux16_1.sv 
-# -- Compiling module mux16_1
-# 
-# Top level modules:
-# 	mux16_1
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# 
-# Top level modules:
-# 	mux8_1
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# 
-# Top level modules:
-# 	mux4_1
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# 
-# Top level modules:
-# 	mux2_1
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./math.sv 
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./instructmem.sv 
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./fullAdder.sv 
-# -- Compiling module fullAdder
-# -- Compiling module fullAdder_testbench
-# 
-# Top level modules:
-# 	fullAdder_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./decoder5_32.sv 
-# -- Compiling module decoder5_32
-# -- Compiling module decoder5_32_testbench
-# 
-# Top level modules:
-# 	decoder5_32_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./decoder3_8.sv 
-# -- Compiling module decoder3_8
-# -- Compiling module decoder3_8_testbench
-# 
-# Top level modules:
-# 	decoder3_8_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./decoder2_4.sv 
-# -- Compiling module decoder2_4
-# -- Compiling module decoder2_4_testbench
-# 
-# Top level modules:
-# 	decoder2_4_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:12 on Nov 20,2022
-# vlog -reportprogress 300 ./datamem.sv 
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# End time: 14:18:12 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./CPU_single.sv 
-# -- Compiling module CPU_single
-# -- Compiling module CPU_single_tb
-# 
-# Top level modules:
-# 	CPU_single_tb
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./and_64_bit.sv 
-# -- Compiling module and_64_bit
-# -- Compiling module and_64_bit_testbench
-# 
-# Top level modules:
-# 	and_64_bit_testbench
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./alustim.sv 
-# -- Compiling module alustim
-# 
-# Top level modules:
-# 	alustim
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./ALU.sv 
-# -- Compiling module alu
-# -- Compiling module ALUmini
-# 
-# Top level modules:
-# 	ALUmini
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./adder64_bit.sv 
-# -- Compiling module adder64_bit
-# -- Compiling module adder64_bit_testbench
-# 
-# Top level modules:
-# 	adder64_bit_testbench
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./adder_4_pc.sv 
-# -- Compiling module adder_4_pc
-# -- Compiling module adder_4_pc_tb
-# 
-# Top level modules:
-# 	adder_4_pc_tb
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./reg2locMux.sv 
-# -- Compiling module reg2locMux
-# -- Compiling module reg2locMux_tb
-# 
-# Top level modules:
-# 	reg2locMux_tb
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./ALU_control_unit.sv 
-# -- Compiling module ALU_control_unit
-# -- Compiling module alu_control_unit_tb
-# 
-# Top level modules:
-# 	alu_control_unit_tb
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:13 on Nov 20,2022
-# vlog -reportprogress 300 ./CPU_control.sv 
-# -- Compiling module CPU_control
-# -- Compiling module CPU_control_tb
-# 
-# Top level modules:
-# 	CPU_control_tb
-# End time: 14:18:13 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:18:14 on Nov 20,2022, Elapsed time: 0:03:56
-# Errors: 3, Warnings: 5
-# vsim -voptargs=""+acc"" -t 1ps -lib work se_tb 
-# Start time: 14:18:14 on Nov 20,2022
-# Loading sv_std.std
-# Loading work.se_tb
-# Loading work.sign_extender
-# WARNING: No extended dataflow license exists
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftaxm7ss".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftaxm7ss
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:42 on Nov 20,2022
-# vlog -reportprogress 300 ./zeroCheck.sv 
-# -- Compiling module zeroCheck
-# -- Compiling module zeroCheck_tb
-# 
-# Top level modules:
-# 	zeroCheck_tb
-# End time: 14:18:42 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:42 on Nov 20,2022
-# vlog -reportprogress 300 ./zero_extender.sv 
-# -- Compiling module zero_extender
-# -- Compiling module zero_extender_tb
-# 
-# Top level modules:
-# 	zero_extender_tb
-# End time: 14:18:42 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:42 on Nov 20,2022
-# vlog -reportprogress 300 ./xor_64_bit.sv 
-# -- Compiling module xor_64_bit
-# -- Compiling module xor_64_bit_testbench
-# 
-# Top level modules:
-# 	xor_64_bit_testbench
-# End time: 14:18:42 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:42 on Nov 20,2022
-# vlog -reportprogress 300 ./sign_extender.sv 
-# -- Compiling module sign_extender
-# -- Compiling module se_tb
-# 
-# Top level modules:
-# 	se_tb
-# End time: 14:18:42 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:42 on Nov 20,2022
-# vlog -reportprogress 300 ./register64.sv 
-# -- Compiling module register64
-# 
-# Top level modules:
-# 	register64
-# End time: 14:18:42 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:42 on Nov 20,2022
-# vlog -reportprogress 300 ./regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 14:18:42 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:42 on Nov 20,2022
-# vlog -reportprogress 300 ./programCounter.sv 
-# -- Compiling module programCounter
-# -- Compiling module programCounter_tb
-# 
-# Top level modules:
-# 	programCounter_tb
-# End time: 14:18:42 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./or_64_bit.sv 
-# -- Compiling module or_64_bit
-# -- Compiling module or_64_bit_testbench
-# 
-# Top level modules:
-# 	or_64_bit_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x32_1.sv 
-# -- Compiling module mux64x32_1
-# 
-# Top level modules:
-# 	mux64x32_1
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x8_1.sv 
-# -- Compiling module mux64x8_1
-# -- Compiling module mux64x8_1_testbench
-# 
-# Top level modules:
-# 	mux64x8_1_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x4_1.sv 
-# -- Compiling module mux64x4_1
-# -- Compiling module mux64x4_1_testbench
-# 
-# Top level modules:
-# 	mux64x4_1_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x2_1_2scomp.sv 
-# -- Compiling module mux64x2_1_2scomp
-# -- Compiling module mux64x2_1_2scomp_testbench
-# 
-# Top level modules:
-# 	mux64x2_1_2scomp
-# 	mux64x2_1_2scomp_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux64x2_1.sv 
-# -- Compiling module mux64x2_1
-# -- Compiling module mux64x2_1_testbench
-# 
-# Top level modules:
-# 	mux64x2_1_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux32_1.sv 
-# -- Compiling module mux32_1
-# 
-# Top level modules:
-# 	mux32_1
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux16_1.sv 
-# -- Compiling module mux16_1
-# 
-# Top level modules:
-# 	mux16_1
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux8_1.sv 
-# -- Compiling module mux8_1
-# 
-# Top level modules:
-# 	mux8_1
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux4_1.sv 
-# -- Compiling module mux4_1
-# 
-# Top level modules:
-# 	mux4_1
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./mux2_1.sv 
-# -- Compiling module mux2_1
-# 
-# Top level modules:
-# 	mux2_1
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./math.sv 
-# -- Compiling module mult
-# -- Compiling module shifter
-# -- Compiling module shifter_testbench
-# -- Compiling module mult_testbench
-# 
-# Top level modules:
-# 	shifter_testbench
-# 	mult_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./instructmem.sv 
-# -- Compiling module instructmem
-# -- Compiling module instructmem_testbench
-# 
-# Top level modules:
-# 	instructmem_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./fullAdder.sv 
-# -- Compiling module fullAdder
-# -- Compiling module fullAdder_testbench
-# 
-# Top level modules:
-# 	fullAdder_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./decoder5_32.sv 
-# -- Compiling module decoder5_32
-# -- Compiling module decoder5_32_testbench
-# 
-# Top level modules:
-# 	decoder5_32_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./decoder3_8.sv 
-# -- Compiling module decoder3_8
-# -- Compiling module decoder3_8_testbench
-# 
-# Top level modules:
-# 	decoder3_8_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./decoder2_4.sv 
-# -- Compiling module decoder2_4
-# -- Compiling module decoder2_4_testbench
-# 
-# Top level modules:
-# 	decoder2_4_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./datamem.sv 
-# -- Compiling module datamem
-# -- Compiling module datamem_testbench
-# 
-# Top level modules:
-# 	datamem_testbench
-# End time: 14:18:43 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:43 on Nov 20,2022
-# vlog -reportprogress 300 ./CPU_single.sv 
-# -- Compiling module CPU_single
-# -- Compiling module CPU_single_tb
-# 
-# Top level modules:
-# 	CPU_single_tb
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./and_64_bit.sv 
-# -- Compiling module and_64_bit
-# -- Compiling module and_64_bit_testbench
-# 
-# Top level modules:
-# 	and_64_bit_testbench
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./alustim.sv 
-# -- Compiling module alustim
-# 
-# Top level modules:
-# 	alustim
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./ALU.sv 
-# -- Compiling module alu
-# -- Compiling module ALUmini
-# 
-# Top level modules:
-# 	ALUmini
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./adder64_bit.sv 
-# -- Compiling module adder64_bit
-# -- Compiling module adder64_bit_testbench
-# 
-# Top level modules:
-# 	adder64_bit_testbench
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./adder_4_pc.sv 
-# -- Compiling module adder_4_pc
-# -- Compiling module adder_4_pc_tb
-# 
-# Top level modules:
-# 	adder_4_pc_tb
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./D_FF.sv 
-# -- Compiling module D_FF
-# 
-# Top level modules:
-# 	D_FF
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./reg2locMux.sv 
-# -- Compiling module reg2locMux
-# -- Compiling module reg2locMux_tb
-# 
-# Top level modules:
-# 	reg2locMux_tb
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./ALU_control_unit.sv 
-# -- Compiling module ALU_control_unit
-# -- Compiling module alu_control_unit_tb
-# 
-# Top level modules:
-# 	alu_control_unit_tb
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:18:44 on Nov 20,2022
-# vlog -reportprogress 300 ./CPU_control.sv 
-# -- Compiling module CPU_control
-# -- Compiling module CPU_control_tb
-# 
-# Top level modules:
-# 	CPU_control_tb
-# End time: 14:18:44 on Nov 20,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 14:18:45 on Nov 20,2022, Elapsed time: 0:00:31
-# Errors: 0, Warnings: 3
 # vsim -voptargs=""+acc"" -t 1ps -lib work CPU_single_tb 
-# Start time: 14:18:45 on Nov 20,2022
+# Start time: 14:30:02 on Nov 20,2022
 # Loading sv_std.std
 # Loading work.CPU_single_tb
 # Loading work.CPU_single
@@ -1170,9 +389,9 @@ do runlab.do
 # WARNING: No extended dataflow license exists
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftst6kx6".
+#           Attempting to use alternate WLF file "./wlftvcg3re".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftst6kx6
+#           Using alternate file: ./wlftvcg3re
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
@@ -1180,118 +399,118 @@ do runlab.do
 # ** Note: $stop    : ./CPU_single.sv(244)
 #    Time: 999500 ns  Iteration: 1  Instance: /CPU_single_tb
 # Break in Module CPU_single_tb at ./CPU_single.sv line 244
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/wave.do}
+
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:45 on Nov 20,2022
 # vlog -reportprogress 300 ./zeroCheck.sv 
 # -- Compiling module zeroCheck
 # -- Compiling module zeroCheck_tb
 # 
 # Top level modules:
 # 	zeroCheck_tb
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:45 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:45 on Nov 20,2022
 # vlog -reportprogress 300 ./zero_extender.sv 
 # -- Compiling module zero_extender
 # -- Compiling module zero_extender_tb
 # 
 # Top level modules:
 # 	zero_extender_tb
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:45 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:45 on Nov 20,2022
 # vlog -reportprogress 300 ./xor_64_bit.sv 
 # -- Compiling module xor_64_bit
 # -- Compiling module xor_64_bit_testbench
 # 
 # Top level modules:
 # 	xor_64_bit_testbench
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:45 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:45 on Nov 20,2022
 # vlog -reportprogress 300 ./sign_extender.sv 
 # -- Compiling module sign_extender
 # -- Compiling module se_tb
 # 
 # Top level modules:
 # 	se_tb
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:45 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:45 on Nov 20,2022
 # vlog -reportprogress 300 ./register64.sv 
 # -- Compiling module register64
 # 
 # Top level modules:
 # 	register64
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:45 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:45 on Nov 20,2022
 # vlog -reportprogress 300 ./regfile.sv 
 # -- Compiling module regfile
 # 
 # Top level modules:
 # 	regfile
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:45 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:45 on Nov 20,2022
 # vlog -reportprogress 300 ./programCounter.sv 
 # -- Compiling module programCounter
 # -- Compiling module programCounter_tb
 # 
 # Top level modules:
 # 	programCounter_tb
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:45 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./or_64_bit.sv 
 # -- Compiling module or_64_bit
 # -- Compiling module or_64_bit_testbench
 # 
 # Top level modules:
 # 	or_64_bit_testbench
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x32_1.sv 
 # -- Compiling module mux64x32_1
 # 
 # Top level modules:
 # 	mux64x32_1
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x8_1.sv 
 # -- Compiling module mux64x8_1
 # -- Compiling module mux64x8_1_testbench
 # 
 # Top level modules:
 # 	mux64x8_1_testbench
-# End time: 14:21:15 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:15 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x4_1.sv 
 # -- Compiling module mux64x4_1
 # -- Compiling module mux64x4_1_testbench
 # 
 # Top level modules:
 # 	mux64x4_1_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:01
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x2_1_2scomp.sv 
 # -- Compiling module mux64x2_1_2scomp
 # -- Compiling module mux64x2_1_2scomp_testbench
@@ -1299,65 +518,65 @@ do runlab.do
 # Top level modules:
 # 	mux64x2_1_2scomp
 # 	mux64x2_1_2scomp_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux64x2_1.sv 
 # -- Compiling module mux64x2_1
 # -- Compiling module mux64x2_1_testbench
 # 
 # Top level modules:
 # 	mux64x2_1_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux32_1.sv 
 # -- Compiling module mux32_1
 # 
 # Top level modules:
 # 	mux32_1
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux16_1.sv 
 # -- Compiling module mux16_1
 # 
 # Top level modules:
 # 	mux16_1
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux8_1.sv 
 # -- Compiling module mux8_1
 # 
 # Top level modules:
 # 	mux8_1
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux4_1.sv 
 # -- Compiling module mux4_1
 # 
 # Top level modules:
 # 	mux4_1
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./mux2_1.sv 
 # -- Compiling module mux2_1
 # 
 # Top level modules:
 # 	mux2_1
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./math.sv 
 # -- Compiling module mult
 # -- Compiling module shifter
@@ -1367,170 +586,170 @@ do runlab.do
 # Top level modules:
 # 	shifter_testbench
 # 	mult_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./instructmem.sv 
 # -- Compiling module instructmem
 # -- Compiling module instructmem_testbench
 # 
 # Top level modules:
 # 	instructmem_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./fullAdder.sv 
 # -- Compiling module fullAdder
 # -- Compiling module fullAdder_testbench
 # 
 # Top level modules:
 # 	fullAdder_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./decoder5_32.sv 
 # -- Compiling module decoder5_32
 # -- Compiling module decoder5_32_testbench
 # 
 # Top level modules:
 # 	decoder5_32_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./decoder3_8.sv 
 # -- Compiling module decoder3_8
 # -- Compiling module decoder3_8_testbench
 # 
 # Top level modules:
 # 	decoder3_8_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./decoder2_4.sv 
 # -- Compiling module decoder2_4
 # -- Compiling module decoder2_4_testbench
 # 
 # Top level modules:
 # 	decoder2_4_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:46 on Nov 20,2022
 # vlog -reportprogress 300 ./datamem.sv 
 # -- Compiling module datamem
 # -- Compiling module datamem_testbench
 # 
 # Top level modules:
 # 	datamem_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:46 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./CPU_single.sv 
 # -- Compiling module CPU_single
 # -- Compiling module CPU_single_tb
 # 
 # Top level modules:
 # 	CPU_single_tb
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./and_64_bit.sv 
 # -- Compiling module and_64_bit
 # -- Compiling module and_64_bit_testbench
 # 
 # Top level modules:
 # 	and_64_bit_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./alustim.sv 
 # -- Compiling module alustim
 # 
 # Top level modules:
 # 	alustim
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./ALU.sv 
 # -- Compiling module alu
 # -- Compiling module ALUmini
 # 
 # Top level modules:
 # 	ALUmini
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./adder64_bit.sv 
 # -- Compiling module adder64_bit
 # -- Compiling module adder64_bit_testbench
 # 
 # Top level modules:
 # 	adder64_bit_testbench
-# End time: 14:21:16 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:16 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./adder_4_pc.sv 
 # -- Compiling module adder_4_pc
 # -- Compiling module adder_4_pc_tb
 # 
 # Top level modules:
 # 	adder_4_pc_tb
-# End time: 14:21:17 on Nov 20,2022, Elapsed time: 0:00:01
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:17 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./D_FF.sv 
 # -- Compiling module D_FF
 # 
 # Top level modules:
 # 	D_FF
-# End time: 14:21:17 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:17 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./reg2locMux.sv 
 # -- Compiling module reg2locMux
 # -- Compiling module reg2locMux_tb
 # 
 # Top level modules:
 # 	reg2locMux_tb
-# End time: 14:21:17 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:17 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./ALU_control_unit.sv 
 # -- Compiling module ALU_control_unit
 # -- Compiling module alu_control_unit_tb
 # 
 # Top level modules:
 # 	alu_control_unit_tb
-# End time: 14:21:17 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:21:17 on Nov 20,2022
+# Start time: 14:31:47 on Nov 20,2022
 # vlog -reportprogress 300 ./CPU_control.sv 
 # -- Compiling module CPU_control
 # -- Compiling module CPU_control_tb
 # 
 # Top level modules:
 # 	CPU_control_tb
-# End time: 14:21:17 on Nov 20,2022, Elapsed time: 0:00:00
+# End time: 14:31:47 on Nov 20,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 14:21:18 on Nov 20,2022, Elapsed time: 0:02:33
+# End time: 14:31:49 on Nov 20,2022, Elapsed time: 0:01:47
 # Errors: 0, Warnings: 4
 # vsim -voptargs=""+acc"" -t 1ps -lib work CPU_single_tb 
-# Start time: 14:21:18 on Nov 20,2022
+# Start time: 14:31:49 on Nov 20,2022
 # Loading sv_std.std
 # Loading work.CPU_single_tb
 # Loading work.CPU_single
@@ -1573,13 +792,419 @@ do runlab.do
 # WARNING: No extended dataflow license exists
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlfte9x51t".
+#           Attempting to use alternate WLF file "./wlftk57zkc".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfte9x51t
+#           Using alternate file: ./wlftk57zkc
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
 # Running benchmark: test01_AddiB.arm
 # ** Note: $stop    : ./CPU_single.sv(244)
-#    Time: 999500 ns  Iteration: 1  Instance: /CPU_single_tb
+#    Time: 9995 us  Iteration: 1  Instance: /CPU_single_tb
+# Break in Module CPU_single_tb at ./CPU_single.sv line 244
+
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/wave.do}
+do run`
+# Cannot open macro file: run`
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./zeroCheck.sv 
+# -- Compiling module zeroCheck
+# -- Compiling module zeroCheck_tb
+# 
+# Top level modules:
+# 	zeroCheck_tb
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./zero_extender.sv 
+# -- Compiling module zero_extender
+# -- Compiling module zero_extender_tb
+# 
+# Top level modules:
+# 	zero_extender_tb
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./xor_64_bit.sv 
+# -- Compiling module xor_64_bit
+# -- Compiling module xor_64_bit_testbench
+# 
+# Top level modules:
+# 	xor_64_bit_testbench
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./sign_extender.sv 
+# -- Compiling module sign_extender
+# -- Compiling module se_tb
+# 
+# Top level modules:
+# 	se_tb
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./register64.sv 
+# -- Compiling module register64
+# 
+# Top level modules:
+# 	register64
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./programCounter.sv 
+# -- Compiling module programCounter
+# -- Compiling module programCounter_tb
+# 
+# Top level modules:
+# 	programCounter_tb
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./or_64_bit.sv 
+# -- Compiling module or_64_bit
+# -- Compiling module or_64_bit_testbench
+# 
+# Top level modules:
+# 	or_64_bit_testbench
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./mux64x32_1.sv 
+# -- Compiling module mux64x32_1
+# 
+# Top level modules:
+# 	mux64x32_1
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./mux64x8_1.sv 
+# -- Compiling module mux64x8_1
+# -- Compiling module mux64x8_1_testbench
+# 
+# Top level modules:
+# 	mux64x8_1_testbench
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./mux64x4_1.sv 
+# -- Compiling module mux64x4_1
+# -- Compiling module mux64x4_1_testbench
+# 
+# Top level modules:
+# 	mux64x4_1_testbench
+# End time: 14:33:58 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:58 on Nov 20,2022
+# vlog -reportprogress 300 ./mux64x2_1_2scomp.sv 
+# -- Compiling module mux64x2_1_2scomp
+# -- Compiling module mux64x2_1_2scomp_testbench
+# 
+# Top level modules:
+# 	mux64x2_1_2scomp
+# 	mux64x2_1_2scomp_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./mux64x2_1.sv 
+# -- Compiling module mux64x2_1
+# -- Compiling module mux64x2_1_testbench
+# 
+# Top level modules:
+# 	mux64x2_1_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./mux32_1.sv 
+# -- Compiling module mux32_1
+# 
+# Top level modules:
+# 	mux32_1
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./mux16_1.sv 
+# -- Compiling module mux16_1
+# 
+# Top level modules:
+# 	mux16_1
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./mux8_1.sv 
+# -- Compiling module mux8_1
+# 
+# Top level modules:
+# 	mux8_1
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./mux4_1.sv 
+# -- Compiling module mux4_1
+# 
+# Top level modules:
+# 	mux4_1
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./mux2_1.sv 
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./math.sv 
+# -- Compiling module mult
+# -- Compiling module shifter
+# -- Compiling module shifter_testbench
+# -- Compiling module mult_testbench
+# 
+# Top level modules:
+# 	shifter_testbench
+# 	mult_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./instructmem.sv 
+# -- Compiling module instructmem
+# -- Compiling module instructmem_testbench
+# 
+# Top level modules:
+# 	instructmem_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./fullAdder.sv 
+# -- Compiling module fullAdder
+# -- Compiling module fullAdder_testbench
+# 
+# Top level modules:
+# 	fullAdder_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./decoder5_32.sv 
+# -- Compiling module decoder5_32
+# -- Compiling module decoder5_32_testbench
+# 
+# Top level modules:
+# 	decoder5_32_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./decoder3_8.sv 
+# -- Compiling module decoder3_8
+# -- Compiling module decoder3_8_testbench
+# 
+# Top level modules:
+# 	decoder3_8_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./decoder2_4.sv 
+# -- Compiling module decoder2_4
+# -- Compiling module decoder2_4_testbench
+# 
+# Top level modules:
+# 	decoder2_4_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./datamem.sv 
+# -- Compiling module datamem
+# -- Compiling module datamem_testbench
+# 
+# Top level modules:
+# 	datamem_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./CPU_single.sv 
+# -- Compiling module CPU_single
+# -- Compiling module CPU_single_tb
+# 
+# Top level modules:
+# 	CPU_single_tb
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./and_64_bit.sv 
+# -- Compiling module and_64_bit
+# -- Compiling module and_64_bit_testbench
+# 
+# Top level modules:
+# 	and_64_bit_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./alustim.sv 
+# -- Compiling module alustim
+# 
+# Top level modules:
+# 	alustim
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./ALU.sv 
+# -- Compiling module alu
+# -- Compiling module ALUmini
+# 
+# Top level modules:
+# 	ALUmini
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./adder64_bit.sv 
+# -- Compiling module adder64_bit
+# -- Compiling module adder64_bit_testbench
+# 
+# Top level modules:
+# 	adder64_bit_testbench
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:33:59 on Nov 20,2022
+# vlog -reportprogress 300 ./adder_4_pc.sv 
+# -- Compiling module adder_4_pc
+# -- Compiling module adder_4_pc_tb
+# 
+# Top level modules:
+# 	adder_4_pc_tb
+# End time: 14:33:59 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:00 on Nov 20,2022
+# vlog -reportprogress 300 ./D_FF.sv 
+# -- Compiling module D_FF
+# 
+# Top level modules:
+# 	D_FF
+# End time: 14:34:00 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:00 on Nov 20,2022
+# vlog -reportprogress 300 ./reg2locMux.sv 
+# -- Compiling module reg2locMux
+# -- Compiling module reg2locMux_tb
+# 
+# Top level modules:
+# 	reg2locMux_tb
+# End time: 14:34:00 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:00 on Nov 20,2022
+# vlog -reportprogress 300 ./ALU_control_unit.sv 
+# -- Compiling module ALU_control_unit
+# -- Compiling module alu_control_unit_tb
+# 
+# Top level modules:
+# 	alu_control_unit_tb
+# End time: 14:34:00 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:34:00 on Nov 20,2022
+# vlog -reportprogress 300 ./CPU_control.sv 
+# -- Compiling module CPU_control
+# -- Compiling module CPU_control_tb
+# 
+# Top level modules:
+# 	CPU_control_tb
+# End time: 14:34:00 on Nov 20,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 14:34:01 on Nov 20,2022, Elapsed time: 0:02:12
+# Errors: 1, Warnings: 4
+# vsim -voptargs=""+acc"" -t 1ps -lib work CPU_single_tb 
+# Start time: 14:34:01 on Nov 20,2022
+# Loading sv_std.std
+# Loading work.CPU_single_tb
+# Loading work.CPU_single
+# Loading work.programCounter
+# Loading work.sign_extender
+# Loading work.mux64x2_1
+# Loading work.shifter
+# Loading work.adder_4_pc
+# Loading work.fullAdder
+# Loading work.adder64_bit
+# Loading work.instructmem
+# Loading work.CPU_control
+# Loading work.ALU_control_unit
+# Loading work.reg2locMux
+# Loading work.regfile
+# Loading work.decoder5_32
+# Loading work.decoder2_4
+# Loading work.decoder3_8
+# Loading work.mux64x32_1
+# Loading work.zero_extender
+# Loading work.alu
+# Loading work.mux64x2_1_2scomp
+# Loading work.and_64_bit
+# Loading work.or_64_bit
+# Loading work.xor_64_bit
+# Loading work.zeroCheck
+# Loading work.mux64x8_1
+# Loading work.mux64x4_1
+# Loading work.datamem
+# Loading work.mux2_1
+# Loading work.mux32_1
+# Loading work.mux16_1
+# Loading work.mux8_1
+# Loading work.mux4_1
+# Loading work.register64
+# Loading work.D_FF
+# ** Warning: Design size of 11229 instances exceeds ModelSim - Intel FPGA Starter Edition recommended capacity.
+# This may because you are loading cell libraries which are not recommended with
+# the ModelSim - Intel FPGA Edition. Expect performance to be adversely affected.
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
+#           Attempting to use alternate WLF file "./wlftfzg04w".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftfzg04w
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# Running benchmark: test01_AddiB.arm
+# ** Note: $stop    : ./CPU_single.sv(244)
+#    Time: 9995 us  Iteration: 1  Instance: /CPU_single_tb
 # Break in Module CPU_single_tb at ./CPU_single.sv line 244

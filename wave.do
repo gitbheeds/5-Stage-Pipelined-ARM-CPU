@@ -25,13 +25,15 @@ add wave -noupdate /CPU_single_tb/dut/flagNeg
 add wave -noupdate /CPU_single_tb/dut/flagOF
 add wave -noupdate /CPU_single_tb/dut/flagCarry
 add wave -noupdate /CPU_single_tb/dut/flagZero
+add wave -noupdate /CPU_single_tb/dut/insts/address
 add wave -noupdate /CPU_single_tb/dut/instruction
 add wave -noupdate /CPU_single_tb/dut/currPC
 add wave -noupdate /CPU_single_tb/dut/rd1
 add wave -noupdate /CPU_single_tb/dut/rd2
+add wave -noupdate /CPU_single_tb/dut/reggy/regOut
 add wave -noupdate /CPU_single_tb/dut/wd
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {83653804 ps} 0}
+WaveRestoreCursors {{Cursor 1} {97173611 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100

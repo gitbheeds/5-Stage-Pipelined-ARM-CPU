@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Sun Nov 20 14:17:56 2022
+Sun Nov 20 14:31:36 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Sun Nov 20 14:17:56 2022           ;
+; Analysis & Synthesis Status ; Failed - Sun Nov 20 14:31:36 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Nov 20 14:17:46 2022
+    Info: Processing started: Sun Nov 20 14:31:26 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -313,7 +313,7 @@ Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/Users/spbh
 Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
     Error: Peak virtual memory: 4845 megabytes
-    Error: Processing ended: Sun Nov 20 14:17:57 2022
+    Error: Processing ended: Sun Nov 20 14:31:37 2022
     Error: Elapsed time: 00:00:11
     Error: Total CPU time (on all processors): 00:00:25
 
