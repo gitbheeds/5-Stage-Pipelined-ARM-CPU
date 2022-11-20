@@ -1,9 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-<<<<<<< Updated upstream
-Sun Nov 20 13:37:52 2022
-=======
-Sun Nov 20 13:32:05 2022
->>>>>>> Stashed changes
+Sun Nov 20 14:17:56 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -42,11 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-<<<<<<< Updated upstream
-; Analysis & Synthesis Status ; Failed - Sun Nov 20 13:37:52 2022           ;
-=======
-; Analysis & Synthesis Status ; Failed - Sun Nov 20 13:32:05 2022           ;
->>>>>>> Stashed changes
+; Analysis & Synthesis Status ; Failed - Sun Nov 20 14:17:56 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -153,8 +145,8 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 16          ;
+; Maximum allowed            ; 16          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -170,113 +162,109 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-<<<<<<< Updated upstream
-    Info: Processing started: Sun Nov 20 13:37:43 2022
-=======
-    Info: Processing started: Sun Nov 20 13:31:55 2022
->>>>>>> Stashed changes
+    Info: Processing started: Sun Nov 20 14:17:46 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
-    Info (12023): Found entity 1: zeroCheck File: C:/EE469_Labs/zeroCheck.sv Line: 7
-    Info (12023): Found entity 2: zeroCheck_tb File: C:/EE469_Labs/zeroCheck.sv Line: 45
+    Info (12023): Found entity 1: zeroCheck File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zeroCheck.sv Line: 7
+    Info (12023): Found entity 2: zeroCheck_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zeroCheck.sv Line: 45
 Info (12021): Found 2 design units, including 2 entities, in source file zero_extender.sv
-    Info (12023): Found entity 1: zero_extender File: C:/EE469_Labs/zero_extender.sv Line: 4
-    Info (12023): Found entity 2: zero_extender_tb File: C:/EE469_Labs/zero_extender.sv Line: 22
+    Info (12023): Found entity 1: zero_extender File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zero_extender.sv Line: 4
+    Info (12023): Found entity 2: zero_extender_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/zero_extender.sv Line: 22
 Info (12021): Found 2 design units, including 2 entities, in source file xor_64_bit.sv
-    Info (12023): Found entity 1: xor_64_bit File: C:/EE469_Labs/xor_64_bit.sv Line: 5
-    Info (12023): Found entity 2: xor_64_bit_testbench File: C:/EE469_Labs/xor_64_bit.sv Line: 25
+    Info (12023): Found entity 1: xor_64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/xor_64_bit.sv Line: 5
+    Info (12023): Found entity 2: xor_64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/xor_64_bit.sv Line: 25
 Info (12021): Found 2 design units, including 2 entities, in source file sign_extender.sv
-    Info (12023): Found entity 1: sign_extender File: C:/EE469_Labs/sign_extender.sv Line: 5
-    Info (12023): Found entity 2: se_tb File: C:/EE469_Labs/sign_extender.sv Line: 30
+    Info (12023): Found entity 1: sign_extender File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/sign_extender.sv Line: 5
+    Info (12023): Found entity 2: se_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/sign_extender.sv Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file register64.sv
-    Info (12023): Found entity 1: register64 File: C:/EE469_Labs/register64.sv Line: 7
+    Info (12023): Found entity 1: register64 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/register64.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: C:/EE469_Labs/regfile.sv Line: 11
+    Info (12023): Found entity 1: regfile File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/regfile.sv Line: 11
 Info (12021): Found 2 design units, including 2 entities, in source file programcounter.sv
-    Info (12023): Found entity 1: programCounter File: C:/EE469_Labs/programCounter.sv Line: 4
-    Info (12023): Found entity 2: programCounter_tb File: C:/EE469_Labs/programCounter.sv Line: 72
+    Info (12023): Found entity 1: programCounter File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounter.sv Line: 4
+    Info (12023): Found entity 2: programCounter_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounter.sv Line: 72
 Info (12021): Found 2 design units, including 2 entities, in source file or_64_bit.sv
-    Info (12023): Found entity 1: or_64_bit File: C:/EE469_Labs/or_64_bit.sv Line: 5
-    Info (12023): Found entity 2: or_64_bit_testbench File: C:/EE469_Labs/or_64_bit.sv Line: 25
+    Info (12023): Found entity 1: or_64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/or_64_bit.sv Line: 5
+    Info (12023): Found entity 2: or_64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/or_64_bit.sv Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file mux64x32_1.sv
-    Info (12023): Found entity 1: mux64x32_1 File: C:/EE469_Labs/mux64x32_1.sv Line: 7
+    Info (12023): Found entity 1: mux64x32_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x32_1.sv Line: 7
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x8_1.sv
-    Info (12023): Found entity 1: mux64x8_1 File: C:/EE469_Labs/mux64x8_1.sv Line: 6
-    Info (12023): Found entity 2: mux64x8_1_testbench File: C:/EE469_Labs/mux64x8_1.sv Line: 26
+    Info (12023): Found entity 1: mux64x8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x8_1.sv Line: 6
+    Info (12023): Found entity 2: mux64x8_1_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x8_1.sv Line: 26
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x4_1.sv
-    Info (12023): Found entity 1: mux64x4_1 File: C:/EE469_Labs/mux64x4_1.sv Line: 7
-    Info (12023): Found entity 2: mux64x4_1_testbench File: C:/EE469_Labs/mux64x4_1.sv Line: 27
+    Info (12023): Found entity 1: mux64x4_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x4_1.sv Line: 7
+    Info (12023): Found entity 2: mux64x4_1_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x4_1.sv Line: 27
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x2_1_2scomp.sv
-    Info (12023): Found entity 1: mux64x2_1_2scomp File: C:/EE469_Labs/mux64x2_1_2scomp.sv Line: 4
-    Info (12023): Found entity 2: mux64x2_1_2scomp_testbench File: C:/EE469_Labs/mux64x2_1_2scomp.sv Line: 36
+    Info (12023): Found entity 1: mux64x2_1_2scomp File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1_2scomp.sv Line: 4
+    Info (12023): Found entity 2: mux64x2_1_2scomp_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1_2scomp.sv Line: 36
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x2_1.sv
-    Info (12023): Found entity 1: mux64x2_1 File: C:/EE469_Labs/mux64x2_1.sv Line: 6
-    Info (12023): Found entity 2: mux64x2_1_testbench File: C:/EE469_Labs/mux64x2_1.sv Line: 34
+    Info (12023): Found entity 1: mux64x2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1.sv Line: 6
+    Info (12023): Found entity 2: mux64x2_1_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1.sv Line: 34
 Info (12021): Found 1 design units, including 1 entities, in source file mux32_1.sv
-    Info (12023): Found entity 1: mux32_1 File: C:/EE469_Labs/mux32_1.sv Line: 6
+    Info (12023): Found entity 1: mux32_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux32_1.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file mux16_1.sv
-    Info (12023): Found entity 1: mux16_1 File: C:/EE469_Labs/mux16_1.sv Line: 5
+    Info (12023): Found entity 1: mux16_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux16_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.sv
-    Info (12023): Found entity 1: mux8_1 File: C:/EE469_Labs/mux8_1.sv Line: 5
+    Info (12023): Found entity 1: mux8_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux8_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
-    Info (12023): Found entity 1: mux4_1 File: C:/EE469_Labs/mux4_1.sv Line: 5
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux4_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.sv
-    Info (12023): Found entity 1: mux2_1 File: C:/EE469_Labs/mux2_1.sv Line: 7
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux2_1.sv Line: 7
 Info (12021): Found 4 design units, including 4 entities, in source file math.sv
-    Info (12023): Found entity 1: mult File: C:/EE469_Labs/math.sv Line: 6
-    Info (12023): Found entity 2: shifter File: C:/EE469_Labs/math.sv Line: 36
-    Info (12023): Found entity 3: shifter_testbench File: C:/EE469_Labs/math.sv Line: 51
-    Info (12023): Found entity 4: mult_testbench File: C:/EE469_Labs/math.sv Line: 71
+    Info (12023): Found entity 1: mult File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/math.sv Line: 6
+    Info (12023): Found entity 2: shifter File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/math.sv Line: 36
+    Info (12023): Found entity 3: shifter_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/math.sv Line: 51
+    Info (12023): Found entity 4: mult_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/math.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file instructmem.sv
-    Info (12023): Found entity 1: instructmem File: C:/EE469_Labs/instructmem.sv Line: 17
-    Info (12023): Found entity 2: instructmem_testbench File: C:/EE469_Labs/instructmem.sv Line: 57
+    Info (12023): Found entity 1: instructmem File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 19
+    Info (12023): Found entity 2: instructmem_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 59
 Info (12021): Found 2 design units, including 2 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: fullAdder File: C:/EE469_Labs/fullAdder.sv Line: 6
-    Info (12023): Found entity 2: fullAdder_testbench File: C:/EE469_Labs/fullAdder.sv Line: 33
+    Info (12023): Found entity 1: fullAdder File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/fullAdder.sv Line: 6
+    Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/fullAdder.sv Line: 33
 Info (12021): Found 2 design units, including 2 entities, in source file decoder5_32.sv
-    Info (12023): Found entity 1: decoder5_32 File: C:/EE469_Labs/decoder5_32.sv Line: 4
-    Info (12023): Found entity 2: decoder5_32_testbench File: C:/EE469_Labs/decoder5_32.sv Line: 27
+    Info (12023): Found entity 1: decoder5_32 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder5_32.sv Line: 4
+    Info (12023): Found entity 2: decoder5_32_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder5_32.sv Line: 27
 Info (12021): Found 2 design units, including 2 entities, in source file decoder3_8.sv
-    Info (12023): Found entity 1: decoder3_8 File: C:/EE469_Labs/decoder3_8.sv Line: 6
-    Info (12023): Found entity 2: decoder3_8_testbench File: C:/EE469_Labs/decoder3_8.sv Line: 39
+    Info (12023): Found entity 1: decoder3_8 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder3_8.sv Line: 6
+    Info (12023): Found entity 2: decoder3_8_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder3_8.sv Line: 39
 Info (12021): Found 2 design units, including 2 entities, in source file decoder2_4.sv
-    Info (12023): Found entity 1: decoder2_4 File: C:/EE469_Labs/decoder2_4.sv Line: 6
-    Info (12023): Found entity 2: decoder2_4_testbench File: C:/EE469_Labs/decoder2_4.sv Line: 31
+    Info (12023): Found entity 1: decoder2_4 File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder2_4.sv Line: 6
+    Info (12023): Found entity 2: decoder2_4_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder2_4.sv Line: 31
 Info (12021): Found 2 design units, including 2 entities, in source file datamem.sv
-    Info (12023): Found entity 1: datamem File: C:/EE469_Labs/datamem.sv Line: 12
-    Info (12023): Found entity 2: datamem_testbench File: C:/EE469_Labs/datamem.sv Line: 70
-Info (12021): Found 1 design units, including 1 entities, in source file cpu_single.sv
-    Info (12023): Found entity 1: CPU_single File: C:/EE469_Labs/CPU_single.sv Line: 5
+    Info (12023): Found entity 1: datamem File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 12
+    Info (12023): Found entity 2: datamem_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 70
+Info (12021): Found 2 design units, including 2 entities, in source file cpu_single.sv
+    Info (12023): Found entity 1: CPU_single File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 5
+    Info (12023): Found entity 2: CPU_single_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 228
 Info (12021): Found 2 design units, including 2 entities, in source file and_64_bit.sv
-    Info (12023): Found entity 1: and_64_bit File: C:/EE469_Labs/and_64_bit.sv Line: 6
-    Info (12023): Found entity 2: and_64_bit_testbench File: C:/EE469_Labs/and_64_bit.sv Line: 26
+    Info (12023): Found entity 1: and_64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/and_64_bit.sv Line: 6
+    Info (12023): Found entity 2: and_64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/and_64_bit.sv Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file alustim.sv
-    Info (12023): Found entity 1: alustim File: C:/EE469_Labs/alustim.sv Line: 21
+    Info (12023): Found entity 1: alustim File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/alustim.sv Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file alu_pass_add_sub.sv
-    Info (12023): Found entity 1: ALU File: C:/EE469_Labs/ALU_pass_add_sub.sv Line: 8
+    Info (12023): Found entity 1: ALU File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_pass_add_sub.sv Line: 8
 Info (12021): Found 2 design units, including 2 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/EE469_Labs/ALU.sv Line: 17
-    Info (12023): Found entity 2: ALUmini File: C:/EE469_Labs/ALU.sv Line: 90
+    Info (12023): Found entity 1: alu File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 17
+    Info (12023): Found entity 2: ALUmini File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 90
 Info (12021): Found 2 design units, including 2 entities, in source file adder64_bit.sv
-    Info (12023): Found entity 1: adder64_bit File: C:/EE469_Labs/adder64_bit.sv Line: 8
-    Info (12023): Found entity 2: adder64_bit_testbench File: C:/EE469_Labs/adder64_bit.sv Line: 71
+    Info (12023): Found entity 1: adder64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder64_bit.sv Line: 8
+    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder64_bit.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file adder_4_pc.sv
-    Info (12023): Found entity 1: adder_4_pc File: C:/EE469_Labs/adder_4_pc.sv Line: 3
-    Info (12023): Found entity 2: adder_4_pc_tb File: C:/EE469_Labs/adder_4_pc.sv Line: 29
+    Info (12023): Found entity 1: adder_4_pc File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder_4_pc.sv Line: 3
+    Info (12023): Found entity 2: adder_4_pc_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder_4_pc.sv Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
-    Info (12023): Found entity 1: D_FF File: C:/EE469_Labs/D_FF.sv Line: 4
+    Info (12023): Found entity 1: D_FF File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/D_FF.sv Line: 4
 Info (12021): Found 2 design units, including 2 entities, in source file reg2locmux.sv
-    Info (12023): Found entity 1: reg2locMux File: C:/EE469_Labs/reg2locMux.sv Line: 4
-    Info (12023): Found entity 2: reg2locMux_tb File: C:/EE469_Labs/reg2locMux.sv Line: 23
+    Info (12023): Found entity 1: reg2locMux File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/reg2locMux.sv Line: 4
+    Info (12023): Found entity 2: reg2locMux_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/reg2locMux.sv Line: 23
 Info (12021): Found 2 design units, including 2 entities, in source file alu_control_unit.sv
-    Info (12023): Found entity 1: ALU_control_unit File: C:/EE469_Labs/ALU_control_unit.sv Line: 1
-    Info (12023): Found entity 2: alu_control_unit_tb File: C:/EE469_Labs/ALU_control_unit.sv Line: 88
+    Info (12023): Found entity 1: ALU_control_unit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv Line: 1
+    Info (12023): Found entity 2: alu_control_unit_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv Line: 88
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_control.sv
-    Info (12023): Found entity 1: CPU_control File: C:/EE469_Labs/CPU_control.sv Line: 9
-    Info (12023): Found entity 2: CPU_control_tb File: C:/EE469_Labs/CPU_control.sv Line: 280
+    Info (12023): Found entity 1: CPU_control File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_control.sv Line: 9
+    Info (12023): Found entity 2: CPU_control_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_control.sv Line: 280
 Info (12127): Elaborating entity "CPU_single" for the top level hierarchy
-<<<<<<< Updated upstream
 Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 117
 Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounter.sv Line: 27
 Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:uncondBranch" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounter.sv Line: 29
@@ -287,9 +275,9 @@ Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounter:pc|a
 Info (12128): Elaborating entity "fullAdder" for hierarchy "programCounter:pc|adder_4_pc:add4|fullAdder:fA" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder_4_pc.sv Line: 19
 Info (12128): Elaborating entity "adder64_bit" for hierarchy "programCounter:pc|adder64_bit:branchAdd" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounter.sv Line: 48
 Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 120
-Warning (10175): Verilog HDL warning at instructmem.sv(24): ignoring unsupported system task File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 24
-Warning (10850): Verilog HDL warning at instructmem.sv(42): number of words (7) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 42
-Info (10648): Verilog HDL Display System Task info at instructmem.sv(43): Running benchmark:  File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 43
+Warning (10175): Verilog HDL warning at instructmem.sv(26): ignoring unsupported system task File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 26
+Warning (10850): Verilog HDL warning at instructmem.sv(44): number of words (7) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 44
+Info (10648): Verilog HDL Display System Task info at instructmem.sv(45): Running benchmark:  File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 45
 Info (12128): Elaborating entity "CPU_control" for hierarchy "CPU_control:control" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 125
 Info (12128): Elaborating entity "ALU_control_unit" for hierarchy "ALU_control_unit:aloo_control" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 138
 Info (12128): Elaborating entity "reg2locMux" for hierarchy "reg2locMux:regToLoc" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 144
@@ -324,35 +312,15 @@ Error (10166): SystemVerilog RTL Coding error at datamem.sv(55): always_comb con
 Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 206
 Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
-    Error: Peak virtual memory: 4835 megabytes
-    Error: Processing ended: Sun Nov 20 13:37:53 2022
-=======
-Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/EE469_Labs/CPU_single.sv Line: 117
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/EE469_Labs/programCounter.sv Line: 27
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:uncondBranch" File: C:/EE469_Labs/programCounter.sv Line: 29
-Info (12128): Elaborating entity "mux64x2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType" File: C:/EE469_Labs/programCounter.sv Line: 33
-Info (12128): Elaborating entity "mux2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType|mux2_1:muxy[0].miniboi" File: C:/EE469_Labs/mux64x2_1.sv Line: 26
-Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:pc|shifter:leftShift2" File: C:/EE469_Labs/programCounter.sv Line: 39
-Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounter:pc|adder_4_pc:add4" File: C:/EE469_Labs/programCounter.sv Line: 46
-Info (12128): Elaborating entity "fullAdder" for hierarchy "programCounter:pc|adder_4_pc:add4|fullAdder:fA" File: C:/EE469_Labs/adder_4_pc.sv Line: 19
-Info (12128): Elaborating entity "adder64_bit" for hierarchy "programCounter:pc|adder64_bit:branchAdd" File: C:/EE469_Labs/programCounter.sv Line: 48
-Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/EE469_Labs/CPU_single.sv Line: 120
-Warning (10175): Verilog HDL warning at instructmem.sv(24): ignoring unsupported system task File: C:/EE469_Labs/instructmem.sv Line: 24
-Error (10054): Verilog HDL File I/O error at instructmem.sv(42): can't open Verilog Design File "224'b01000011001110100100010101000101001101000011011000111001010111110100110001100001011000100111001100001001011001010111001101110100001100000011000101011111010000010110010001100100011010010100001000101110011000010111001001101101" File: C:/EE469_Labs/instructmem.sv Line: 42
-Info (10648): Verilog HDL Display System Task info at instructmem.sv(43): Running benchmark:  File: C:/EE469_Labs/instructmem.sv Line: 43
-Error (12152): Can't elaborate user hierarchy "instructmem:insts" File: C:/EE469_Labs/CPU_single.sv Line: 120
-Info (144001): Generated suppressed messages file C:/EE469_Labs/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4771 megabytes
-    Error: Processing ended: Sun Nov 20 13:32:05 2022
->>>>>>> Stashed changes
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:23
+    Error: Peak virtual memory: 4845 megabytes
+    Error: Processing ended: Sun Nov 20 14:17:57 2022
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/EE469_Labs/DE1_SoC.map.smsg.
+The suppressed messages can be found in C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/DE1_SoC.map.smsg.
 
 

@@ -71,7 +71,7 @@ module CPU_single(clk);
 
 	//regfile ReadRegister2
 	//output of Reg2Loc mux
-	logic[63:0] readB;
+	logic[4:0] readB;
 
 	//regfile dataout and writedata
 	logic[63:0] rd1, rd2, wd;
@@ -114,7 +114,7 @@ module CPU_single(clk);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.currPC, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4);
+	programCounter pc (.currPC, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
 	
 //instruction memory access
 	instructmem insts (.address(currPC), .instruction, .clk);
@@ -140,7 +140,7 @@ module CPU_single(clk);
 	
 	//Reg2Loc mux goes here
 	//i0 = Rd, i1 = Rm
-	//out = readB
+	//out = rd2
 	reg2locMux regToLoc(Reg2Loc, Rm, Rd, readB);
 	
 	//branch register mux here
@@ -186,7 +186,7 @@ module CPU_single(clk);
 	
 //shifter instantiation
 	
-	shifter shift(Rn, shiftDirn, shamt, shift_out);
+	shifter shift(rd1, shiftDirn, shamt, shift_out);
 	
 	
 //data memory instantiation

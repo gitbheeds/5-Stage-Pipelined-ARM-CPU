@@ -16,7 +16,7 @@ module adder_4_pc(in, out);
 	
 	genvar i;
 	generate
-		fullAdder fA(.a(in[0]), .b(four[0]), .cin(0), .sum(out[0]), .cout(c_out[0]));
+		fullAdder fA(.a(in[0]), .b(four[0]), .cin(1'b0), .sum(out[0]), .cout(c_out[0]));
 		for (i = 1; i < 64; i++) begin : pcIncrementAdder
 			fullAdder fA(.a(in[i]), .b(four[i]), .cin(c_out[i-1]), .sum(out[i]), .cout(c_out[i]));
 		end
