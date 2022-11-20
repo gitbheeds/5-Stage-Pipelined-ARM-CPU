@@ -7,81 +7,55 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Gerin/Documents/GitHub/EE469_Labs/simulation/modelsim
-vmux2_1
+Z0 dC:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/simulation/modelsim
+vALU_control_unit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1668416176
+Z2 !s110 1668939202
 !i10b 1
-!s100 ?G>K:27Q4ELkB3=ZW25Xd0
-IhI^c:M^P>`2MCNcBogIn^1
+!s100 Q5@LXi=FAGC?`9GDDXPS40
+Im1j]OlE1Kl<AN497X;fCf0
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 mux2_1_sv_unit
+Z4 !s105 ALU_control_unit_sv_unit
 S1
 R0
-w1668045104
-8C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv
-FC:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv
-L0 7
-Z4 OV;L;10.5b;63
+Z5 w1668939156
+Z6 8C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv
+Z7 FC:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv
+L0 1
+Z8 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1668416176.000000
-!s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv|
+Z9 !s108 1668939202.000000
+Z10 !s107 C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct|C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs
-Z8 tCvgOpt 0
-vreg2locMux
+Z12 o-sv -work work
+Z13 !s92 -sv -work work {+incdir+C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct}
+Z14 tCvgOpt 0
+n@a@l@u_control_unit
+valu_control_unit_tb
 R1
 R2
 !i10b 1
-!s100 h6QNXeXgG2VV`YoZzkY>Z2
-Ib:`CO2jg]h4jcYze>Uj`=3
+!s100 KIOAgQn4U0oo:0bz[1alU1
+I2MDfoiP_LEEHTQ2:a7Eg`0
 R3
-Z9 !s105 reg2locMux_sv_unit
+R4
 S1
 R0
-Z10 w1668416135
-Z11 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/reg2locMux.sv
-Z12 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/reg2locMux.sv
-L0 4
-R4
-r1
-!s85 0
-31
 R5
-Z13 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/reg2locMux.sv|
-Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/reg2locMux.sv|
-!i113 1
 R6
 R7
+L0 88
 R8
-nreg2loc@mux
-vreg2locMux_tb
-R1
-R2
-!i10b 1
-!s100 A_dXRVk6M55NYnFOc^z8m3
-IY4zL8n@mko6MUzZ0GT7TV2
-R3
+r1
+!s85 0
+31
 R9
-S1
-R0
 R10
 R11
+!i113 1
 R12
-L0 23
-R4
-r1
-!s85 0
-31
-R5
 R13
 R14
-!i113 1
-R6
-R7
-R8
-nreg2loc@mux_tb

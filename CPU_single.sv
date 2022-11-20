@@ -1,7 +1,7 @@
 //top level module for single cycle CPU
 //makes all interconnections between different
 //processing blocks
-
+`timescale 1ps/1ps
 module CPU_single();
 
 	//clock input
@@ -15,6 +15,10 @@ module CPU_single();
  
 	//ALU flags
 	logic zero, carry_out, overflow, negative;
+	
+	//displayed flags
+	logic flagZero, flagCarry, flagOF, flagNeg;
+	
 	
 //-------------instruction variable assignment--------------// 
 	
@@ -55,15 +59,15 @@ module CPU_single();
 	logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags,
 			branchReg, branchLink, compZero;
-			
-			
-			//
 	
 	logic[2:0] ALU_cntrl;
 //----------------end control signals----------------------//
 	
 	
 //-----------------module connections----------------------//
+
+	//write register
+	logic[4:0] targetReg;
 
 	//regfile ReadRegister2
 	//output of Reg2Loc mux
@@ -81,7 +85,10 @@ module CPU_single();
 	//SE - ZE mux output
 	logic[63:0] ext_out;
 	
-	//ALU_B input (output of ALU_Src mux)
+	//output of ALUsrc mux
+	logic [63:0] srcOut;
+	
+	//ALU_B input (output of zeroCompMux)
 	logic[63:0] ALU_B;
 	
 	//ALU output
@@ -96,8 +103,8 @@ module CPU_single();
 	//output of data memory
 	logic[63:0] memDataOut;
 	
-	//output of MemToReg mux
-	logic[63:0] memtoReg;
+	//memToRegMux output
+	logic[63:0] memRegMuxOut;
 	
 	//for branch link
 	logic[63:0] pc_plus4;
@@ -116,9 +123,19 @@ module CPU_single();
 	CPU_control control (.opcode, .uncondBr, .brTaken, .Reg2Loc, .ALU_Src, .RegWrite, 
 								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
 								.branchReg, .branchLink, .compZero);
+								
+								
+//flag setting
+
+	//set flags only when instructed to by CPU
+	and #(50) zeroF(flagZero, zero, set_flags);
+	and #(50) carryF(flagCarry, carry_out, set_flags);
+	and #(50) OF(flagOF, overflow, set_flags);
+	and #(50) negF(flagNeg, negative, set_flags);
+									
 	
 //ALU control unit
-	
+	ALU_control_unit aloo_control (.opcode, .ALU_on, .ALU_cntrl);
 //regfile instantiation
 	
 	//Reg2Loc mux goes here
@@ -126,9 +143,15 @@ module CPU_single();
 	//out = readB
 	reg2locMux regToLoc(Reg2Loc, Rm, Rd, readB);
 	
+	//branch register mux here
+	//i0 = Rd
+	//i1 = 5'd30 (link register)
+	//out = targetReg
+	reg2locMux branchReggy(branchReg, Rd, 5'd30, targetReg);
+	
 	
 	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
-					 .ReadRegister1(Rn), .ReadRegister2(readB), .WriteRegister(Rd),
+					 .ReadRegister1(Rn), .ReadRegister2(readB), .WriteRegister(targetReg),
 					 .RegWrite, .clk);
 	
 //Sign Extension of dAddr9
@@ -153,11 +176,11 @@ module CPU_single();
 
 	//ALU_Src mux goes here
 	//i0 = rd2, i1 = ext_out
-	//out = ALU_B
-	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, ALU_B);
+	//out = srcOut to zeroComp mux
+	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, srcOut);
 	
 	//zeroComp mux goes here
-	
+	mux64x2_1 zeroCompMux(.sel(compZero), .i0(srcOut), .i1(64'b0), .out(ALU_B));
 
 	alu aloo(.A(rd1), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	
@@ -183,15 +206,16 @@ module CPU_single();
 	//i0 = toDataMem, i1 = memDataOut
 	//out = wd
 	
-	mux64x2_1 memToRegMux(memToReg, toDataMem, memDataOut, wd);
+	mux64x2_1 memToRegMux(memToReg, toDataMem, memDataOut, memRegMuxOut);
 	
 	
 	//branchLink mux here
 	//for setting link addrs
-	//i0 = wd (change name)
+	//i0 = memRegMuxOut
 	//i1 = pc_plus4
 	//out = wd
-	//BL instruction
+	mux64x2_1 branchLinkMux(.sel(branchLink), .i0(memRegMuxOut), .i1(pc_plus4), .out(wd));
+
 
 //-----------------------end Modules-----------------------//	
 	
