@@ -1,5 +1,6 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
+add wave -noupdate /CPU_single_tb/reset
 add wave -noupdate /CPU_single_tb/clk
 add wave -noupdate /CPU_single_tb/dut/ALU_cntrl
 add wave -noupdate /CPU_single_tb/dut/compZero

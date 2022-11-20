@@ -17,6 +17,8 @@ module programCounter(clock, reset, currPC, condAddr19, brAddr26, uncondBr, brTa
 	
 	logic sub_control;
 	
+	output logic [63:0] nextPC;
+	
 	wire [63:0] branchSE, shiftedBranch;
 	
 	parameter condAddrSize = 19;
@@ -73,7 +75,6 @@ module programCounter(clock, reset, currPC, condAddr19, brAddr26, uncondBr, brTa
 	endgenerate
 	
 	
-	output logic [63:0] nextPC;
 	
 //	assign nextPC = nextOut;
 
@@ -104,6 +105,8 @@ module programCounter_tb();
 	initial begin
 		reset <= 1; @(posedge clock);
 		reset <= 0; @(posedge clock);
+		
+		repeat(20) @(posedge clock);
 	
 		currPC <= 64'h00000000000000FF; condAddr19 <= 19'b0; brAddr26 <= 26'b0; uncondBr <= 1'b1; brTaken <= 1'b0;
 		branchReg <= 1'b0; Rd <= 64'b0;
