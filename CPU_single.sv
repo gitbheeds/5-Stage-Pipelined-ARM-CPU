@@ -2,10 +2,10 @@
 //makes all interconnections between different
 //processing blocks
 `timescale 1ps/1ps
-module CPU_single();
+module CPU_single(clk);
 
 	//clock input
-	logic clk;
+	input logic clk;
 	
 	//current PC value, next PC value
 	logic [63:0] currPC, nextPC;
@@ -223,3 +223,26 @@ module CPU_single();
 //-----------------------end Modules-----------------------//	
 	
 endmodule 
+
+`timescale 1ps/1ps
+module CPU_single_tb();
+	
+	logic clk;
+	
+	parameter CLOCK_PERIOD = 1000000;
+	initial begin
+		clk <= 0;
+		// Forever toggle the clock
+		forever #(CLOCK_PERIOD/2) clk <= ~clk;
+	end
+	
+	CPU_single dut(.clk);
+	
+	initial begin
+		repeat(1000) @(posedge clk);
+		
+		$stop;
+	end
+	
+
+endmodule

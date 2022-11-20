@@ -3,7 +3,11 @@
 // two words of the address must be 0).
 //
 // To change the file that is loaded, edit the filename here:
+<<<<<<< Updated upstream
 `define BENCHMARK "test01_AddiB.arm"
+=======
+`define BENCHMARK "C:\EE469_Labs\test01_AddiB.arm"
+>>>>>>> Stashed changes
 //`define BENCHMARK "../benchmarks/test02_AddsSubs.arm"
 //`define BENCHMARK "../benchmarks/test03_CbzB.arm"
 //`define BENCHMARK "../benchmarks/test04_LdurStur.arm"

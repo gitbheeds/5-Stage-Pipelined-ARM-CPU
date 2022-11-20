@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 Analysis & Synthesis Status : Failed - Sun Nov 20 13:37:52 2022
+=======
+Analysis & Synthesis Status : Failed - Sun Nov 20 13:32:05 2022
+>>>>>>> Stashed changes
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : DE1_SoC
 Top-level Entity Name : CPU_single
