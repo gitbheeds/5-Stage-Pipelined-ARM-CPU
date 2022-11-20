@@ -8,7 +8,7 @@ module CPU_single(clk, reset);
 	input logic clk, reset;
 	
 	//current PC value, next PC value
-	logic [63:0] currPC, nextPC;
+	logic [63:0] nextPC;
 	
 	//current instruction
 	logic [31:0] instruction;
@@ -114,10 +114,10 @@ module CPU_single(clk, reset);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.clock(clk), .reset, .currPC, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
+	programCounter pc (.clock(clk), .reset, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
 	
 //instruction memory access
-	instructmem insts (.address(currPC), .instruction, .clk);
+	instructmem insts (.address(nextPC), .instruction, .clk);
 	
 //CPU control unit
 	CPU_control control (.opcode, .uncondBr, .brTaken, .Reg2Loc, .ALU_Src, .RegWrite, 

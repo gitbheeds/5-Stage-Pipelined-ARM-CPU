@@ -1,7 +1,7 @@
 `timescale 1ps/1ps
 
 
-module programCounter(clock, reset, currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+module programCounter(clock, reset, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
 
 	input logic clock, reset, uncondBr, brTaken, branchReg;
 	
@@ -54,7 +54,7 @@ module programCounter(clock, reset, currPC, condAddr19, brAddr26, uncondBr, brTa
 	
 	mux64x2_1 selNextOut(branchReg, int3, Rd, nextOut);
 	
-	input logic [63:0] currPC;
+	logic [63:0] currPC;
 	
 	assign currentOut = currPC;
 	
@@ -86,7 +86,7 @@ module programCounter_tb();
 	
 	logic clock, reset;
 
-	logic [63:0] currPC, nextPC, pc_plus4, Rd;
+	logic [63:0] nextPC, pc_plus4, Rd;
 	
 	logic [18:0] condAddr19;
 	
@@ -94,7 +94,7 @@ module programCounter_tb();
 	
 	logic uncondBr, brTaken, sub_control, branchReg;
 	
-	programCounter dut(clock, reset, currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+	programCounter dut(clock, reset, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
 	
 	parameter CLOCK_PERIOD = 10000;
 	initial begin
