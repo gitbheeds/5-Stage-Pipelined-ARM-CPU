@@ -2,10 +2,10 @@
 //makes all interconnections between different
 //processing blocks
 `timescale 1ps/1ps
-module CPU_single(clk);
+module CPU_single(clk, reset);
 
 	//clock input
-	input logic clk;
+	input logic clk, reset;
 	
 	//current PC value, next PC value
 	logic [63:0] currPC, nextPC;
@@ -114,7 +114,7 @@ module CPU_single(clk);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.currPC, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
+	programCounter pc (.clock(clk), .reset, .currPC, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
 	
 //instruction memory access
 	instructmem insts (.address(currPC), .instruction, .clk);
@@ -227,7 +227,7 @@ endmodule
 `timescale 1ps/1ps
 module CPU_single_tb();
 	
-	logic clk;
+	logic clk, reset;
 	
 	parameter CLOCK_PERIOD = 10000000;
 	initial begin
@@ -236,9 +236,13 @@ module CPU_single_tb();
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	CPU_single dut(.clk);
+	CPU_single dut(.clk, .reset);
 	
 	initial begin
+	
+		reset <= 1; @(posedge clk);
+		reset <= 0; @(posedge clk);
+		
 		repeat(1000) @(posedge clk);
 		
 		$stop;

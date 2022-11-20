@@ -1,9 +1,9 @@
 `timescale 1ps/1ps
 
 
-module programCounter(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+module programCounter(clock, reset, currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
 
-	input logic uncondBr, brTaken, branchReg;
+	input logic clock, reset, uncondBr, brTaken, branchReg;
 	
 	input logic [18:0] condAddr19;
 	
@@ -60,16 +60,30 @@ module programCounter(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, p
 	output logic [63:0] pc_plus4;
 	assign pc_plus4 = int1;
 	
+	wire [63:0] nextPCtemp;
+	
+	genvar i;
+	
+	generate 
+		for (i = 0; i < 64; i++) begin : programCounterReggy
+			D_FF duffy(.q(nextPC[i]), .d(nextOut[i]), .reset(reset), .clk(clock));
+		end
+	
+	
+	endgenerate
+	
 	
 	output logic [63:0] nextPC;
 	
-	assign nextPC = nextOut;
+//	assign nextPC = nextOut;
 
 	
 endmodule
 
 
 module programCounter_tb();
+	
+	logic clock, reset;
 
 	logic [63:0] currPC, nextPC, pc_plus4, Rd;
 	
@@ -79,30 +93,39 @@ module programCounter_tb();
 	
 	logic uncondBr, brTaken, sub_control, branchReg;
 	
-	programCounter dut(currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+	programCounter dut(clock, reset, currPC, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+	
+	parameter CLOCK_PERIOD = 10000;
+	initial begin
+		clock <= 0;
+		forever #(CLOCK_PERIOD/2) clock <= ~clock;
+	end
 	
 	initial begin
+		reset <= 1; @(posedge clock);
+		reset <= 0; @(posedge clock);
 	
-		currPC = 64'h00000000000000FF; condAddr19 = 19'b0; brAddr26 = 26'b0; uncondBr = 1'b1; brTaken = 1'b0;
-		branchReg = 1'b0; Rd = 64'b0;
-		 #800;
+		currPC <= 64'h00000000000000FF; condAddr19 <= 19'b0; brAddr26 <= 26'b0; uncondBr <= 1'b1; brTaken <= 1'b0;
+		branchReg <= 1'b0; Rd <= 64'b0;
+		 @(posedge clock);
 		
-		currPC = 64'h000000000000000F; condAddr19 = 19'd30; brAddr26 = 26'b0; uncondBr = 1'b0; brTaken = 1'b1; 
-		branchReg = 1'b0; Rd = 64'b0;
-		 #800;
+		currPC <= 64'h000000000000000F; condAddr19 <= 19'd30; brAddr26 <= 26'b0; uncondBr <= 1'b0; brTaken <= 1'b1; 
+		branchReg <= 1'b0; Rd <= 64'b0;
+		 @(posedge clock);
 		
-		currPC = 64'h0000000000000000; condAddr19 = 19'd30; brAddr26 = 26'd2; uncondBr = 1'b1; brTaken = 1'b1;
-	    branchReg = 1'b0; Rd = 64'b0;
-		 #800;
+		currPC <= 64'h0000000000000000; condAddr19 <= 19'd30; brAddr26 <= 26'd2; uncondBr <= 1'b1; brTaken <= 1'b1;
+	    branchReg <= 1'b0; Rd <= 64'b0;
+		 @(posedge clock);
 		
-		currPC = 64'd200; condAddr19 = -1; brAddr26 = -5; uncondBr = 1'b0; brTaken = 1'b1; 
-		 branchReg = 1'b0; Rd = 64'b0;
-		 #6500;
+		currPC <= 64'd200; condAddr19 <= -1; brAddr26 <= -5; uncondBr <= 1'b0; brTaken <= 1'b1; 
+		 branchReg <= 1'b0; Rd <= 64'b0;
+		 @(posedge clock);
 		 
-		 currPC = 64'h0000000000000000; condAddr19 = 19'd30; brAddr26 = 26'd2; uncondBr = 1'b1; brTaken = 1'b1;
-		branchReg = 1'b1; Rd = 64'd69;
-	   #800;
+		 currPC <= 64'h0000000000000000; condAddr19 <= 19'd30; brAddr26 <= 26'd2; uncondBr <= 1'b1; brTaken <= 1'b1;
+		branchReg <= 1'b1; Rd <= 64'd69;
+	   @(posedge clock);
 	
+		$stop;
 	end
 
 
