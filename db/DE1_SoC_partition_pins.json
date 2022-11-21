@@ -516,291 +516,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "currPC[0]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[1]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[2]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[3]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[4]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[5]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[6]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[7]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[8]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[9]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[10]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[11]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[12]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[13]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[14]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[15]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[16]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[17]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[18]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[19]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[20]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[21]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[22]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[23]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[24]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[25]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[26]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[27]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[28]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[29]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[30]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[31]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[32]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[33]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[34]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[35]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[36]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[37]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[38]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[39]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[40]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[41]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[42]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[43]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[44]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[45]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[46]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[47]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[48]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[49]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[50]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[51]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[52]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[53]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[54]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[55]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[56]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[57]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[58]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[59]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[60]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[61]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[62]",
-					"strict" : false
-				},
-				{
-					"name" : "currPC[63]",
-					"strict" : false
-				},
-				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
 					"name" : "branchReg",
 					"strict" : false
 				},
 				{
 					"name" : "Rd[0]",
-					"strict" : false
-				},
-				{
-					"name" : "brTaken",
-					"strict" : false
-				},
-				{
-					"name" : "brAddr26[25]",
-					"strict" : false
-				},
-				{
-					"name" : "uncondBr",
-					"strict" : false
-				},
-				{
-					"name" : "condAddr19[18]",
-					"strict" : false
-				},
-				{
-					"name" : "reset",
 					"strict" : false
 				},
 				{
@@ -812,7 +532,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "brTaken",
+					"strict" : false
+				},
+				{
 					"name" : "brAddr26[0]",
+					"strict" : false
+				},
+				{
+					"name" : "uncondBr",
 					"strict" : false
 				},
 				{
@@ -1032,6 +760,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "condAddr19[18]",
+					"strict" : false
+				},
+				{
 					"name" : "Rd[21]",
 					"strict" : false
 				},
@@ -1081,6 +813,10 @@
 				},
 				{
 					"name" : "Rd[27]",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[25]",
 					"strict" : false
 				},
 				{
@@ -1225,6 +961,14 @@
 				},
 				{
 					"name" : "Rd[63]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
 					"strict" : false
 				}
 			]

@@ -1,9 +1,9 @@
 `timescale 1ps/1ps
 
 
-module programCounter(clock, reset, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
 
-	input logic clock, reset, uncondBr, brTaken, branchReg;
+	input logic clk, rst, uncondBr, brTaken, branchReg;
 	
 	input logic [18:0] condAddr19;
 	
@@ -15,7 +15,7 @@ module programCounter(clock, reset, condAddr19, brAddr26, uncondBr, brTaken, nex
 	
 	logic [63:0] brAddr64;
 	
-	logic sub_control;
+	logic[63:0] currPC;
 	
 	output logic [63:0] nextPC;
 	
@@ -34,49 +34,47 @@ module programCounter(clock, reset, condAddr19, brAddr26, uncondBr, brTaken, nex
 	//select input to use in branching operation
 	mux64x2_1 branchType(uncondBr, condAddr64, brAddr64, branchSE);
 	
-	//subtract if branch is negative
-	assign sub_control = branchSE[63];
+
 	
 	//multiply by 4
 	shifter leftShift2(.value(branchSE), .direction(1'b0), .distance(6'd2), .result(shiftedBranch));
 	
 	
-	wire [63:0] currentOut, nextOut, int1, int2, int3;
+	wire [63:0] nextOut, currentOut, int1, int2, int3;
+	
 	
 	logic of_flag, co_flag;
 	
 	adder_4_pc add4(currentOut, int1);
 	
-	adder64_bit branchAdd(currentOut, shiftedBranch, sub_control, int2, of_flag, co_flag);
+	adder64_bit branchAdd(currentOut, shiftedBranch, 1'b0, int2, of_flag, co_flag);
 	
 	//select whether to use PC + branch or PC + 4
 	mux64x2_1 selBranchOrPlus4(brTaken, int1, int2, int3);
 	
-	mux64x2_1 selNextOut(branchReg, int3, Rd, nextOut);
+	mux64x2_1 selNextOut(branchReg, int3, Rd, nextPC);
 	
-	logic [63:0] currPC;
 	
 	assign currentOut = currPC;
-	
+
 	// second output for link register during BL (Branch Link) command
 	output logic [63:0] pc_plus4;
 	assign pc_plus4 = int1;
 	
-	wire [63:0] nextPCtemp;
 	
+	// generate block to handle DFFs that update nextPC
 	genvar i;
+	generate
 	
-	generate 
-		for (i = 0; i < 64; i++) begin : programCounterReggy
-			D_FF duffy(.q(nextPC[i]), .d(nextOut[i]), .reset(reset), .clk(clock));
+		for (i = 0; i < 64; i++) begin : reginald
+			D_FF duffy(.q(currPC[i]), .d(nextPC[i]), .reset(rst), .clk(clk));
+		
 		end
-	
 	
 	endgenerate
 	
 	
 	
-//	assign nextPC = nextOut;
 
 	
 endmodule
@@ -84,7 +82,7 @@ endmodule
 
 module programCounter_tb();
 	
-	logic clock, reset;
+	logic clk, rst;
 
 	logic [63:0] nextPC, pc_plus4, Rd;
 	
@@ -94,39 +92,36 @@ module programCounter_tb();
 	
 	logic uncondBr, brTaken, sub_control, branchReg;
 	
-	programCounter dut(clock, reset, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
-	
-	parameter CLOCK_PERIOD = 10000;
+	parameter CLOCK_PERIOD = 8000;
 	initial begin
-		clock <= 0;
-		forever #(CLOCK_PERIOD/2) clock <= ~clock;
+		clk <= 0;
+		// Forever toggle the clock
+		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	initial begin
-		reset <= 1; @(posedge clock);
-		reset <= 0; @(posedge clock);
-		
-		repeat(20) @(posedge clock);
+	programCounter dut(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
 	
-		currPC <= 64'h00000000000000FF; condAddr19 <= 19'b0; brAddr26 <= 26'b0; uncondBr <= 1'b1; brTaken <= 1'b0;
-		branchReg <= 1'b0; Rd <= 64'b0;
-		 @(posedge clock);
+//	input logic clk, rst, uncondBr, brTaken, branchReg;
+//	
+//	input logic [18:0] condAddr19;
+//	
+//	input logic [25:0] brAddr26;
+//	
+//	input logic [63:0] Rd;
+	
+	initial begin
+	
+		uncondBr <= 0; brTaken <= 0; branchReg <= 0;
+		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; @(posedge clk);
 		
-		currPC <= 64'h000000000000000F; condAddr19 <= 19'd30; brAddr26 <= 26'b0; uncondBr <= 1'b0; brTaken <= 1'b1; 
-		branchReg <= 1'b0; Rd <= 64'b0;
-		 @(posedge clock);
+		rst <= 1; @(posedge clk);
+		rst <= 0; @(posedge clk);
 		
-		currPC <= 64'h0000000000000000; condAddr19 <= 19'd30; brAddr26 <= 26'd2; uncondBr <= 1'b1; brTaken <= 1'b1;
-	    branchReg <= 1'b0; Rd <= 64'b0;
-		 @(posedge clock);
+		uncondBr <= 0; brTaken <= 0; branchReg <= 0;
+		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; @(posedge clk);
 		
-		currPC <= 64'd200; condAddr19 <= -1; brAddr26 <= -5; uncondBr <= 1'b0; brTaken <= 1'b1; 
-		 branchReg <= 1'b0; Rd <= 64'b0;
-		 @(posedge clock);
-		 
-		 currPC <= 64'h0000000000000000; condAddr19 <= 19'd30; brAddr26 <= 26'd2; uncondBr <= 1'b1; brTaken <= 1'b1;
-		branchReg <= 1'b1; Rd <= 64'd69;
-	   @(posedge clock);
+		repeat(20) @(posedge clk);
+		
 	
 		$stop;
 	end

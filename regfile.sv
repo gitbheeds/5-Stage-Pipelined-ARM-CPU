@@ -41,7 +41,7 @@ module regfile (ReadData1, ReadData2, WriteData,
 		
 			for(i = 0; i < 31; i++) begin : outputGen
 			
-				register64 reggy(clk, write_en[i], WriteData, regOut[i][63:0]);
+				register64 reggy(clk, write_en[31 - i], WriteData, regOut[i][63:0]);
 			
 			end
 		

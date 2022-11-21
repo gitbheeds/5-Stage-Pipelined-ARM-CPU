@@ -3,7 +3,7 @@
 // the 2:4 decoder is enabled by RegWrite, which enables an output from the entire 5:32 decoder
 module decoder5_32(RegWrite, addr, outbus);
 	input logic [4:0] addr; //register address to write to
-	output logic [0:31] outbus; //holds write_en bit 
+	output logic [31:0] outbus; //holds write_en bit 
 	
 	input logic RegWrite; // RegWrite input from the top level
 	
@@ -11,13 +11,13 @@ module decoder5_32(RegWrite, addr, outbus);
 	
 	decoder2_4 s1d0 (.en(RegWrite), .sel(addr[4:3]), .o(en[3:0])); //stage 1 2:4 decoder. Provides enables for stage 2 decoders
 	
-	decoder3_8 s2d3 (.en(en[3]), .sel(addr[2:0]), .o(outbus[0:7])); //stage 2 1st 3:8 decoder. write_en access for registers 0:7
+	decoder3_8 s2d3 (.en(en[3]), .sel(addr[2:0]), .o(outbus[31:24])); //stage 2 1st 3:8 decoder. write_en access for registers 0:7
 	
-	decoder3_8 s2d2 (.en(en[2]), .sel(addr[2:0]), .o(outbus[8:15])); //stage 2 2nd 3:8 decoder. write_en access for registers 8:15
+	decoder3_8 s2d2 (.en(en[2]), .sel(addr[2:0]), .o(outbus[23:16])); //stage 2 2nd 3:8 decoder. write_en access for registers 8:15
 	
-	decoder3_8 s2d1 (.en(en[1]), .sel(addr[2:0]), .o(outbus[16:23]));  //stage 2 3rd 3:8 decoder. write_en access for registers 16:23
+	decoder3_8 s2d1 (.en(en[1]), .sel(addr[2:0]), .o(outbus[15:8]));  //stage 2 3rd 3:8 decoder. write_en access for registers 16:23
 	
-	decoder3_8 s2d0 (.en(en[0]), .sel(addr[2:0]), .o(outbus[24:31]));   //stage 2 4th 3:8 decoder. write_en access for registers 24:31
+	decoder3_8 s2d0 (.en(en[0]), .sel(addr[2:0]), .o(outbus[7:0]));   //stage 2 4th 3:8 decoder. write_en access for registers 24:31
 
 
 
@@ -37,11 +37,11 @@ module decoder5_32_testbench();
 	int i;
 	
 	initial begin
-		RegWrite = 1'b0; addr = 5'b00100; #50; // selects register 4 to write to while RegWrite is 0
-		RegWrite = 1'b1; addr = 5'b01000; #50; // selects register 8 to write to while RegWrite is high
-		RegWrite = 1'b1; addr = 5'b00000; #50;
+		 // selects register 4 to write to while RegWrite is 0
+		RegWrite = 1'b1; #50; // selects register 8 to write to while RegWrite is high
+		
 		for (i = 0; i < 32; i++) begin
-			addr = addr + i; #50;
+			addr = i; #500;
 		end
 	end
 

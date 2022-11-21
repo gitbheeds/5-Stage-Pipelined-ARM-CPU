@@ -6,10 +6,12 @@
 // branchReg is for the BR operation and controls a mux that sets PC to the value of a register
 // branchLink is a control for a mux that sends PC+4 to the link register R[30]
 // compZero is a control for a mux that inputs 0 to the ALU for the CBZ command
-module CPU_control(opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite, 
+module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite, 
 						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink, compZero);
 						 
 	input logic [10:0] opcode;
+	
+	input logic rst;
 	
 	output logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite, ALU_SH, Imm, memToReg, memWrite, shiftDirn;
 	
@@ -36,7 +38,9 @@ module CPU_control(opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 	
 	always_comb begin
 	
-		// unconditional branch
+	if(!rst) begin
+	
+			// unconditional branch
 		if (bOp == 6'b000101) begin
 			uncondBr = 1'b1;
 			brTaken = 1'b1;
@@ -269,6 +273,29 @@ module CPU_control(opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'bz;
 			set_flags = 1'bz;
 		end
+		
+	end
+	
+	//reset condition
+	else begin
+		uncondBr = 1'b0;
+		brTaken = 1'b0;
+		branchReg = 1'b0;
+		branchLink = 1'b0;
+		compZero = 1'b0;
+		
+		Reg2Loc = 1'b0;
+		ALU_Src = 1'b0;
+		RegWrite = 1'b1;
+		ALU_SH = 1'b0;
+		Imm = 1'b0;
+		memToReg = 1'b0;
+		memWrite = 1'b0;
+		shiftDirn = 1'b0;
+		
+		ALU_on = 1'b0;
+		set_flags = 1'b0;
+	end
 	
 	
 	end

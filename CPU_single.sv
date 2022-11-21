@@ -2,13 +2,13 @@
 //makes all interconnections between different
 //processing blocks
 `timescale 1ps/1ps
-module CPU_single(clk, reset);
+module CPU_single(clk, rst);
 
 	//clock input
-	input logic clk, reset;
+	input logic clk, rst;
 	
 	//current PC value, next PC value
-	logic [63:0] nextPC;
+	logic [63:0] currPC, nextPC;
 	
 	//current instruction
 	logic [31:0] instruction;
@@ -114,13 +114,14 @@ module CPU_single(clk, reset);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.clock(clk), .reset, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
+	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
+	
 	
 //instruction memory access
 	instructmem insts (.address(nextPC), .instruction, .clk);
 	
 //CPU control unit
-	CPU_control control (.opcode, .uncondBr, .brTaken, .Reg2Loc, .ALU_Src, .RegWrite, 
+	CPU_control control (.rst, .opcode, .uncondBr, .brTaken, .Reg2Loc, .ALU_Src, .RegWrite, 
 								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
 								.branchReg, .branchLink, .compZero);
 								
@@ -147,7 +148,7 @@ module CPU_single(clk, reset);
 	//i0 = Rd
 	//i1 = 5'd30 (link register)
 	//out = targetReg
-	reg2locMux branchReggy(branchReg, Rd, 5'd30, targetReg);
+	reg2locMux branchReggy(branchReg, 5'd30, Rd, targetReg);
 	
 	
 	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
@@ -227,23 +228,23 @@ endmodule
 `timescale 1ps/1ps
 module CPU_single_tb();
 	
-	logic clk, reset;
+	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 10000000;
+	parameter CLOCK_PERIOD = 1000000;
 	initial begin
 		clk <= 0;
 		// Forever toggle the clock
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	CPU_single dut(.clk, .reset);
+	CPU_single dut(.clk, .rst);
 	
 	initial begin
 	
-		reset <= 1; @(posedge clk);
-		reset <= 0; @(posedge clk);
+		rst <= 1; @(posedge clk);
+		rst <= 0; @(posedge clk);
 		
-		repeat(1000) @(posedge clk);
+		repeat(500) @(posedge clk);
 		
 		$stop;
 	end
