@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Mon Nov 21 01:46:29 2022
+Mon Nov 21 04:08:20 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 21 01:46:29 2022           ;
+; Analysis & Synthesis Status ; Failed - Mon Nov 21 04:08:20 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Nov 21 01:46:16 2022
+    Info: Processing started: Mon Nov 21 04:08:06 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -183,7 +183,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file regfile
     Info (12023): Found entity 1: regfile File: C:/EE469_Labs/regfile.sv Line: 11
 Info (12021): Found 2 design units, including 2 entities, in source file programcounter.sv
     Info (12023): Found entity 1: programCounter File: C:/EE469_Labs/programCounter.sv Line: 4
-    Info (12023): Found entity 2: programCounter_tb File: C:/EE469_Labs/programCounter.sv Line: 97
+    Info (12023): Found entity 2: programCounter_tb File: C:/EE469_Labs/programCounter.sv Line: 107
 Info (12021): Found 2 design units, including 2 entities, in source file or_64_bit.sv
     Info (12023): Found entity 1: or_64_bit File: C:/EE469_Labs/or_64_bit.sv Line: 5
     Info (12023): Found entity 2: or_64_bit_testbench File: C:/EE469_Labs/or_64_bit.sv Line: 25
@@ -217,8 +217,8 @@ Info (12021): Found 4 design units, including 4 entities, in source file math.sv
     Info (12023): Found entity 3: shifter_testbench File: C:/EE469_Labs/math.sv Line: 51
     Info (12023): Found entity 4: mult_testbench File: C:/EE469_Labs/math.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file instructmem.sv
-    Info (12023): Found entity 1: instructmem File: C:/EE469_Labs/instructmem.sv Line: 19
-    Info (12023): Found entity 2: instructmem_testbench File: C:/EE469_Labs/instructmem.sv Line: 59
+    Info (12023): Found entity 1: instructmem File: C:/EE469_Labs/instructmem.sv Line: 18
+    Info (12023): Found entity 2: instructmem_testbench File: C:/EE469_Labs/instructmem.sv Line: 58
 Info (12021): Found 2 design units, including 2 entities, in source file fulladder.sv
     Info (12023): Found entity 1: fullAdder File: C:/EE469_Labs/fullAdder.sv Line: 6
     Info (12023): Found entity 2: fullAdder_testbench File: C:/EE469_Labs/fullAdder.sv Line: 33
@@ -236,7 +236,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file datamem
     Info (12023): Found entity 2: datamem_testbench File: C:/EE469_Labs/datamem.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_single.sv
     Info (12023): Found entity 1: CPU_single File: C:/EE469_Labs/CPU_single.sv Line: 5
-    Info (12023): Found entity 2: CPU_single_tb File: C:/EE469_Labs/CPU_single.sv Line: 229
+    Info (12023): Found entity 2: CPU_single_tb File: C:/EE469_Labs/CPU_single.sv Line: 232
 Info (12021): Found 2 design units, including 2 entities, in source file and_64_bit.sv
     Info (12023): Found entity 1: and_64_bit File: C:/EE469_Labs/and_64_bit.sv Line: 6
     Info (12023): Found entity 2: and_64_bit_testbench File: C:/EE469_Labs/and_64_bit.sv Line: 26
@@ -260,30 +260,31 @@ Info (12021): Found 2 design units, including 2 entities, in source file reg2loc
     Info (12023): Found entity 2: reg2locMux_tb File: C:/EE469_Labs/reg2locMux.sv Line: 23
 Info (12021): Found 2 design units, including 2 entities, in source file alu_control_unit.sv
     Info (12023): Found entity 1: ALU_control_unit File: C:/EE469_Labs/ALU_control_unit.sv Line: 1
-    Info (12023): Found entity 2: alu_control_unit_tb File: C:/EE469_Labs/ALU_control_unit.sv Line: 95
+    Info (12023): Found entity 2: alu_control_unit_tb File: C:/EE469_Labs/ALU_control_unit.sv Line: 105
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_control.sv
     Info (12023): Found entity 1: CPU_control File: C:/EE469_Labs/CPU_control.sv Line: 9
     Info (12023): Found entity 2: CPU_control_tb File: C:/EE469_Labs/CPU_control.sv Line: 305
 Info (12127): Elaborating entity "CPU_single" for the top level hierarchy
-Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/EE469_Labs/CPU_single.sv Line: 117
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/EE469_Labs/programCounter.sv Line: 37
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:uncondBranch" File: C:/EE469_Labs/programCounter.sv Line: 39
-Info (12128): Elaborating entity "mux64x2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType" File: C:/EE469_Labs/programCounter.sv Line: 43
+Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/EE469_Labs/CPU_single.sv Line: 119
+Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/EE469_Labs/programCounter.sv Line: 44
+Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:uncondBranch" File: C:/EE469_Labs/programCounter.sv Line: 46
+Info (12128): Elaborating entity "mux64x2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType" File: C:/EE469_Labs/programCounter.sv Line: 50
 Info (12128): Elaborating entity "mux2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType|mux2_1:muxy[0].miniboi" File: C:/EE469_Labs/mux64x2_1.sv Line: 26
-Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:pc|shifter:leftShift2" File: C:/EE469_Labs/programCounter.sv Line: 48
-Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounter:pc|adder_4_pc:add4" File: C:/EE469_Labs/programCounter.sv Line: 56
+Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:pc|shifter:leftShift2" File: C:/EE469_Labs/programCounter.sv Line: 55
+Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounter:pc|adder_4_pc:add4" File: C:/EE469_Labs/programCounter.sv Line: 63
 Info (12128): Elaborating entity "fullAdder" for hierarchy "programCounter:pc|adder_4_pc:add4|fullAdder:fA" File: C:/EE469_Labs/adder_4_pc.sv Line: 19
-Info (12128): Elaborating entity "adder64_bit" for hierarchy "programCounter:pc|adder64_bit:branchAdd" File: C:/EE469_Labs/programCounter.sv Line: 58
-Info (12128): Elaborating entity "mux64x4_1" for hierarchy "programCounter:pc|mux64x4_1:bigBranchSelect" File: C:/EE469_Labs/programCounter.sv Line: 63
-Info (12128): Elaborating entity "D_FF" for hierarchy "programCounter:pc|D_FF:reginald[0].duffy" File: C:/EE469_Labs/programCounter.sv Line: 84
-Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/EE469_Labs/CPU_single.sv Line: 121
-Warning (10175): Verilog HDL warning at instructmem.sv(26): ignoring unsupported system task File: C:/EE469_Labs/instructmem.sv Line: 26
-Warning (10850): Verilog HDL warning at instructmem.sv(44): number of words (39) in memory file does not match the number of elements in the address range [0:255] File: C:/EE469_Labs/instructmem.sv Line: 44
-Info (10648): Verilog HDL Display System Task info at instructmem.sv(45): Running benchmark:  File: C:/EE469_Labs/instructmem.sv Line: 45
-Info (12128): Elaborating entity "CPU_control" for hierarchy "CPU_control:control" File: C:/EE469_Labs/CPU_single.sv Line: 126
-Info (12128): Elaborating entity "ALU_control_unit" for hierarchy "ALU_control_unit:aloo_control" File: C:/EE469_Labs/CPU_single.sv Line: 139
-Info (12128): Elaborating entity "reg2locMux" for hierarchy "reg2locMux:regToLoc" File: C:/EE469_Labs/CPU_single.sv Line: 145
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:reggy" File: C:/EE469_Labs/CPU_single.sv Line: 156
+Info (12128): Elaborating entity "adder64_bit" for hierarchy "programCounter:pc|adder64_bit:branchAdd" File: C:/EE469_Labs/programCounter.sv Line: 65
+Info (12128): Elaborating entity "mux64x8_1" for hierarchy "programCounter:pc|mux64x8_1:bigBranchSelect" File: C:/EE469_Labs/programCounter.sv Line: 74
+Info (12128): Elaborating entity "mux64x4_1" for hierarchy "programCounter:pc|mux64x8_1:bigBranchSelect|mux64x4_1:first" File: C:/EE469_Labs/mux64x8_1.sv Line: 16
+Info (12128): Elaborating entity "D_FF" for hierarchy "programCounter:pc|D_FF:reginald[0].duffy" File: C:/EE469_Labs/programCounter.sv Line: 94
+Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/EE469_Labs/CPU_single.sv Line: 123
+Warning (10175): Verilog HDL warning at instructmem.sv(25): ignoring unsupported system task File: C:/EE469_Labs/instructmem.sv Line: 25
+Warning (10850): Verilog HDL warning at instructmem.sv(43): number of words (16) in memory file does not match the number of elements in the address range [0:255] File: C:/EE469_Labs/instructmem.sv Line: 43
+Info (10648): Verilog HDL Display System Task info at instructmem.sv(44): Running benchmark:  File: C:/EE469_Labs/instructmem.sv Line: 44
+Info (12128): Elaborating entity "CPU_control" for hierarchy "CPU_control:control" File: C:/EE469_Labs/CPU_single.sv Line: 128
+Info (12128): Elaborating entity "ALU_control_unit" for hierarchy "ALU_control_unit:aloo_control" File: C:/EE469_Labs/CPU_single.sv Line: 142
+Info (12128): Elaborating entity "reg2locMux" for hierarchy "reg2locMux:regToLoc" File: C:/EE469_Labs/CPU_single.sv Line: 148
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:reggy" File: C:/EE469_Labs/CPU_single.sv Line: 159
 Info (12128): Elaborating entity "decoder5_32" for hierarchy "regfile:reggy|decoder5_32:writeEnable" File: C:/EE469_Labs/regfile.sv Line: 34
 Info (12128): Elaborating entity "decoder2_4" for hierarchy "regfile:reggy|decoder5_32:writeEnable|decoder2_4:s1d0" File: C:/EE469_Labs/decoder5_32.sv Line: 12
 Info (12128): Elaborating entity "decoder3_8" for hierarchy "regfile:reggy|decoder5_32:writeEnable|decoder3_8:s2d3" File: C:/EE469_Labs/decoder5_32.sv Line: 14
@@ -293,27 +294,26 @@ Info (12128): Elaborating entity "mux32_1" for hierarchy "regfile:reggy|mux64x32
 Info (12128): Elaborating entity "mux16_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0" File: C:/EE469_Labs/mux32_1.sv Line: 22
 Info (12128): Elaborating entity "mux8_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0|mux8_1:mux0" File: C:/EE469_Labs/mux16_1.sv Line: 14
 Info (12128): Elaborating entity "mux4_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0|mux8_1:mux0|mux4_1:mux0" File: C:/EE469_Labs/mux8_1.sv Line: 14
-Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:daddrExtender" File: C:/EE469_Labs/CPU_single.sv Line: 161
-Info (12128): Elaborating entity "zero_extender" for hierarchy "zero_extender:immExtender" File: C:/EE469_Labs/CPU_single.sv Line: 167
-Info (12128): Elaborating entity "alu" for hierarchy "alu:aloo" File: C:/EE469_Labs/CPU_single.sv Line: 186
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:daddrExtender" File: C:/EE469_Labs/CPU_single.sv Line: 164
+Info (12128): Elaborating entity "zero_extender" for hierarchy "zero_extender:immExtender" File: C:/EE469_Labs/CPU_single.sv Line: 170
+Info (12128): Elaborating entity "alu" for hierarchy "alu:aloo" File: C:/EE469_Labs/CPU_single.sv Line: 189
 Info (12128): Elaborating entity "mux64x2_1_2scomp" for hierarchy "alu:aloo|mux64x2_1_2scomp:twos" File: C:/EE469_Labs/ALU.sv Line: 51
 Info (12128): Elaborating entity "and_64_bit" for hierarchy "alu:aloo|and_64_bit:AND" File: C:/EE469_Labs/ALU.sv Line: 63
 Info (12128): Elaborating entity "or_64_bit" for hierarchy "alu:aloo|or_64_bit:OR" File: C:/EE469_Labs/ALU.sv Line: 66
 Info (12128): Elaborating entity "xor_64_bit" for hierarchy "alu:aloo|xor_64_bit:XOR" File: C:/EE469_Labs/ALU.sv Line: 69
 Info (12128): Elaborating entity "zeroCheck" for hierarchy "alu:aloo|zeroCheck:flag" File: C:/EE469_Labs/ALU.sv Line: 80
-Info (12128): Elaborating entity "mux64x8_1" for hierarchy "alu:aloo|mux64x8_1:ALU_opSel" File: C:/EE469_Labs/ALU.sv Line: 86
-Info (12128): Elaborating entity "datamem" for hierarchy "datamem:mems" File: C:/EE469_Labs/CPU_single.sv Line: 207
+Info (12128): Elaborating entity "datamem" for hierarchy "datamem:mems" File: C:/EE469_Labs/CPU_single.sv Line: 210
 Warning (10175): Verilog HDL warning at datamem.sv(23): ignoring unsupported system task File: C:/EE469_Labs/datamem.sv Line: 23
 Info (10264): Verilog HDL Case Statement information at datamem.sv(43): all case item expressions in this case statement are onehot File: C:/EE469_Labs/datamem.sv Line: 43
 Error (10232): Verilog HDL error at datamem.sv(58): index 71 cannot fall outside the declared range [63:0] for vector "read_data" File: C:/EE469_Labs/datamem.sv Line: 58
 Error (10232): Verilog HDL error at datamem.sv(58): index 64 cannot fall outside the declared range [63:0] for vector "read_data" File: C:/EE469_Labs/datamem.sv Line: 58
 Warning (10240): Verilog HDL Always Construct warning at datamem.sv(55): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/EE469_Labs/datamem.sv Line: 55
 Error (10166): SystemVerilog RTL Coding error at datamem.sv(55): always_comb construct does not infer purely combinational logic. File: C:/EE469_Labs/datamem.sv Line: 55
-Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/EE469_Labs/CPU_single.sv Line: 207
+Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/EE469_Labs/CPU_single.sv Line: 210
 Info (144001): Generated suppressed messages file C:/EE469_Labs/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
-    Error: Peak virtual memory: 4844 megabytes
-    Error: Processing ended: Mon Nov 21 01:46:31 2022
+    Error: Peak virtual memory: 4846 megabytes
+    Error: Processing ended: Mon Nov 21 04:08:21 2022
     Error: Elapsed time: 00:00:15
     Error: Total CPU time (on all processors): 00:00:28
 

@@ -108,13 +108,15 @@ module CPU_single(clk, rst);
 	
 	//for branch link
 	logic[63:0] pc_plus4;
+	
+	logic [3:0] flags;
 
 //---------------end module connections--------------------//		
 
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd1), .flagZero, .branch);
+	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd1), .flagZero, .branch, .flagNeg, .opcode(opcode[10]));
 	
 	
 //instruction memory access
@@ -129,14 +131,15 @@ module CPU_single(clk, rst);
 //flag setting
 
 	//set flags only when instructed to by CPU
-	and #(50) zeroF(flagZero, zero, set_flags);
-	and #(50) carryF(flagCarry, carry_out, set_flags);
-	and #(50) OF(flagOF, overflow, set_flags);
-	and #(50) negF(flagNeg, negative, set_flags);
+	and #(50) zeroF(flagZero, zero, set_flags); // zero flag
+	and #(50) carryF(flagCarry, flags[3], set_flags); // carry_out flag
+	and #(50) OF(flagOF, flags[1], set_flags); // overflow flag
+	and #(50) negF(flagNeg, flags[0], set_flags); // negative flag
+	
 									
 	
 //ALU control unit
-	ALU_control_unit aloo_control (.opcode, .ALU_on, .ALU_cntrl);
+	ALU_control_unit aloo_control (.clk, .opcode, .ALU_on, .ALU_cntrl, .carry_out, .zero, .overflow, .negative, .flags);
 //regfile instantiation
 	
 	//Reg2Loc mux goes here
@@ -244,7 +247,7 @@ module CPU_single_tb();
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		repeat(1000) @(posedge clk);
+		repeat(350) @(posedge clk);
 		
 		$stop;
 	end

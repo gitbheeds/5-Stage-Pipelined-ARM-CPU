@@ -189,7 +189,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 		
 		// LDUR
 		else if (dOp == 11'b11111000010) begin
-			uncondBr = 1'bX;
+			uncondBr = 1'b0;
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
@@ -210,7 +210,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 		
 		// STUR
 		else if (dOp == 11'b11111000000) begin
-			uncondBr = 1'bX;
+			uncondBr = 1'b0;
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
@@ -231,7 +231,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 		
 		// SUBS (SUB, set flags)
 		else if (rOp == 11'b11101011000) begin
-			uncondBr = 1'bX;
+			uncondBr = 1'b0;
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;

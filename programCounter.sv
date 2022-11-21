@@ -1,9 +1,12 @@
 `timescale 1ps/1ps
 
 
-module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, branchReg, Rd, flagZero, branch);
+module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, branchReg, Rd, flagZero, branch, flagNeg, opcode);
 
-	input logic clk, rst, uncondBr, branchReg, flagZero, branch;
+	input logic clk, rst, uncondBr, branchReg, flagZero, branch, flagNeg;
+	
+	// opcode: looking specifically at the MSB of the opcode
+	input logic opcode;
 	
 	input logic [18:0] condAddr19;
 	
@@ -27,10 +30,14 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	parameter brAddrSize = 26;
 	
 	logic int4;
+	
+	logic notOp;
+	not #(50) notOpGate(notOp, opcode);
+	
 //	
-	and #(50) zeroGate(brTaken, flagZero, branch);
+	and #(50) zeroGate(brTaken, flagZero, branch, opcode);
 //	
-//	or #(50) branchTakenGate(brTaken, uncondBr, int4);
+	and #(50) negFlagGate(int4, flagNeg, branch, notOp);
 	
 		
 	//extend inputs to 64 bits
@@ -60,8 +67,11 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	//select whether to use PC + branch or PC + 4
 	//mux64x2_1 selBranchOrPlus4(branch, int1, int2, int3);
 	
-	mux64x4_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .out(int3), .sel({uncondBr, brTaken}));
 	
+	
+	//mux64x4_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .out(int3), .sel({uncondBr, brTaken}));
+	
+	mux64x8_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .in4(int2), .in5(64'b0), .in6(int2), .in7(int2), .out(int3), .sel({int4, uncondBr, brTaken}));
 
 	
 	mux64x2_1 selNextOut(branchReg, int3, Rd, nextPC);
