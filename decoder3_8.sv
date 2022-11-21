@@ -19,17 +19,17 @@ module decoder3_8 (en, sel, o);
 	not#(50) i1(inv1, sel[1]);
 	not#(50) i0(inv0, sel[0]);
 		
-	and #(50) g1(o[7], en, inv2, inv1, inv0);
-	and #(50) g2(o[6], en, inv2, inv1, sel[0]);
+	and #(50) g7(o[7], sel[2], sel[1], sel[0], en);
+	and #(50) g6(o[6], sel[2], sel[1], inv0, en);
 	
-	and #(50) g3(o[5], en, inv2, sel[1], inv0);
-	and #(50) g4(o[4], en, inv2, sel[1], sel[0]);
+	and #(50) g5(o[5], sel[2], inv1, sel[0], en);
+	and #(50) g4(o[4], sel[2], inv1, inv0, en);
 	
-	and #(50) g5(o[3], en, sel[2], inv1, inv0);
-	and #(50) g6(o[2], en, sel[2], inv1, sel[0]);
+	and #(50) g3(o[3], inv2, sel[1], sel[0], en);
+	and #(50) g2(o[2], inv2, sel[1], inv0, en);
 	
-	and #(50) g7(o[1], en, sel[2], sel[1], inv0);
-	and #(50) g8(o[0], en, sel[2], sel[1], sel[0]);
+	and #(50) g1(o[1], inv2, inv1, sel[0], en);
+	and #(50) g0(o[0], inv2, inv1, inv0, en);
 	
 	
 

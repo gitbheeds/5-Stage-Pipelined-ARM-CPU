@@ -72,7 +72,7 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
 			RegWrite = 1'b0;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'bX;
 			memToReg = 1'bX;
 			memWrite = 1'b0;
@@ -94,7 +94,7 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			Reg2Loc = 1'bX;
 			ALU_Src = 1'b0;
 			RegWrite = 1'b1;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'bX;
 			memToReg = 1'b0;
 			memWrite = 1'b0;
@@ -136,7 +136,7 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
 			RegWrite = 1'b0;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'bX;
 			memToReg = 1'b0;
 			memWrite = 1'b0;
@@ -154,14 +154,14 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			branchLink = 1'b0;
 			compZero = 1'b0;
 			
-			Reg2Loc = 1'bX;
+			Reg2Loc = 1'bZ;
 			ALU_Src = 1'b1;
 			RegWrite = 1'b1;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'b1;
 			memToReg = 1'b0;
 			memWrite = 1'b0;
-			shiftDirn = 1'bX;
+			shiftDirn = 1'b0;
 			
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
@@ -178,7 +178,7 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			Reg2Loc = 1'b1;
 			ALU_Src = 1'b0;
 			RegWrite = 1'b1;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'bX;
 			memToReg = 1'b0;
 			memWrite = 1'b0;
@@ -199,7 +199,7 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			Reg2Loc = 1'bX;
 			ALU_Src = 1'b1;
 			RegWrite = 1'b1;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'bX;
 			memToReg = 1'b1;
 			memWrite = 1'b0;
@@ -220,7 +220,7 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b1;
 			RegWrite = 1'b0;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'bX;
 			memToReg = 1'bX;
 			memWrite = 1'b1;
@@ -241,7 +241,7 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			Reg2Loc = 1'b1;
 			ALU_Src = 1'b0;
 			RegWrite = 1'b1;
-			ALU_SH = 1'bX;
+			ALU_SH = 1'b0;
 			Imm = 1'bX;
 			memToReg = 1'b0;
 			memWrite = 1'b0;

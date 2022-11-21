@@ -1,7 +1,7 @@
 `timescale 1ps/1ps
 
 
-module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, currPC, pc_plus4, branchReg, Rd);
 
 	input logic clk, rst, uncondBr, brTaken, branchReg;
 	
@@ -15,9 +15,9 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC,
 	
 	logic [63:0] brAddr64;
 	
-	logic[63:0] currPC;
+	output logic[63:0] currPC;
 	
-	output logic [63:0] nextPC;
+	logic [63:0] nextPC;
 	
 	wire [63:0] branchSE, shiftedBranch;
 	
@@ -52,6 +52,8 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC,
 	//select whether to use PC + branch or PC + 4
 	mux64x2_1 selBranchOrPlus4(brTaken, int1, int2, int3);
 	
+
+	
 	mux64x2_1 selNextOut(branchReg, int3, Rd, nextPC);
 	
 	
@@ -60,6 +62,8 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC,
 	// second output for link register during BL (Branch Link) command
 	output logic [63:0] pc_plus4;
 	assign pc_plus4 = int1;
+	
+	
 	
 	
 	// generate block to handle DFFs that update nextPC
@@ -73,7 +77,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC,
 	
 	endgenerate
 	
-	
+
 	
 
 	
@@ -84,7 +88,7 @@ module programCounter_tb();
 	
 	logic clk, rst;
 
-	logic [63:0] nextPC, pc_plus4, Rd;
+	logic [63:0] currPC, pc_plus4, Rd;
 	
 	logic [18:0] condAddr19;
 	
@@ -99,7 +103,7 @@ module programCounter_tb();
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	programCounter dut(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, nextPC, pc_plus4, branchReg, Rd);
+	programCounter dut(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, currPC, pc_plus4, branchReg, Rd);
 	
 //	input logic clk, rst, uncondBr, brTaken, branchReg;
 //	

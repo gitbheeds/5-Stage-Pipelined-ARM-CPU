@@ -68,7 +68,7 @@ module ALU_control_unit (opcode, ALU_on, ALU_cntrl);
 			//CBZ
 			else if (cbOp == 8'b10110100) begin
 			
-				ALU_cntrl = 3'b100;
+				ALU_cntrl = 3'b010;
 			
 			end
 			

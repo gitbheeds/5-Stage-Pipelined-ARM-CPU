@@ -58,7 +58,7 @@ module CPU_single(clk, rst);
 //------------------control signals------------------------//
 	logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags,
-			branchReg, branchLink, compZero;
+			branchReg, branchLink, compZero, branch;
 	
 	logic[2:0] ALU_cntrl;
 //----------------end control signals----------------------//
@@ -114,11 +114,17 @@ module CPU_single(clk, rst);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .nextPC, .pc_plus4, .Rd(rd1));
+//	wire int1;
+//	
+//	and #(50) zeroGate(int1, flagZero, branch);
+//	
+//	or #(50) branchTakenGate(brTaken, uncondBr, int1);
+
+	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .currPC, .pc_plus4, .Rd(rd1));
 	
 	
 //instruction memory access
-	instructmem insts (.address(nextPC), .instruction, .clk);
+	instructmem insts (.address(currPC), .instruction, .clk(~clk));
 	
 //CPU control unit
 	CPU_control control (.rst, .opcode, .uncondBr, .brTaken, .Reg2Loc, .ALU_Src, .RegWrite, 
@@ -153,7 +159,7 @@ module CPU_single(clk, rst);
 	
 	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
 					 .ReadRegister1(Rn), .ReadRegister2(readB), .WriteRegister(targetReg),
-					 .RegWrite, .clk);
+					 .RegWrite, .clk(~clk));
 	
 //Sign Extension of dAddr9
 
@@ -244,7 +250,7 @@ module CPU_single_tb();
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		repeat(500) @(posedge clk);
+		repeat(1000) @(posedge clk);
 		
 		$stop;
 	end

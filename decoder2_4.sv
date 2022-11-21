@@ -19,11 +19,11 @@ module decoder2_4 (sel, en, o);
 	not#(50) i0(inv0, sel[0]);
 	// since inv1 and inv0 output o[3], the MSB of output is high when sel = 00
 	// This is taken care of at the top level module
-	and #(50) out3(o[3], en ,inv1, inv0);
-	and #(50) out2(o[2], en, inv1, sel[0]);
+	and #(50) out3(o[3], sel[1], sel[0], en);
+	and #(50) out2(o[2], sel[1], inv0, en);
 	
-	and #(50) out1(o[1], en, sel[1], inv0);
-	and #(50) out0(o[0], en, sel[1], sel[0]);
+	and #(50) out1(o[1], inv1, sel[0], en);
+	and #(50) out0(o[0], inv1, inv0, en);
 	
 endmodule 
 
