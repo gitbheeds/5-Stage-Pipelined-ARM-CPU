@@ -94,7 +94,7 @@ module ALUmini ();
 	logic		[63:0]	A, B;
 	logic		[2:0]		cntrl;
 	logic		[63:0]	result;
-	logic					negative, zero, overflow, carry_out ;
+	logic					negative, zero, overflow, carry_out;
 
 	parameter ALU_PASS_B=3'b000, ALU_ADD=3'b010, ALU_SUBTRACT=3'b011, ALU_AND=3'b100, ALU_OR=3'b101, ALU_XOR=3'b110;
 	

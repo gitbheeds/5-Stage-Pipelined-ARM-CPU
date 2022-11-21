@@ -28,7 +28,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	
 	logic int4;
 //	
-//	and #(50) zeroGate(int4, flagZero, branch);
+	and #(50) zeroGate(brTaken, flagZero, branch);
 //	
 //	or #(50) branchTakenGate(brTaken, uncondBr, int4);
 	
@@ -58,7 +58,9 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	adder64_bit branchAdd(currentOut, shiftedBranch, 1'b0, int2, of_flag, co_flag);
 	
 	//select whether to use PC + branch or PC + 4
-	mux64x2_1 selBranchOrPlus4(branch, int1, int2, int3);
+	//mux64x2_1 selBranchOrPlus4(branch, int1, int2, int3);
+	
+	mux64x4_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .out(int3), .sel({uncondBr, brTaken}));
 	
 
 	

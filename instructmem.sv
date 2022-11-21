@@ -7,9 +7,9 @@
 //`define BENCHMARK "test01_AddiB.arm"
 
 //`define BENCHMARK "test02_AddsSubs.arm"
-//`define BENCHMARK "test03_CbzB.arm"
-`define BENCHMARK "test04_LdurStur.arm"
-//`define BENCHMARK "../benchmarks/test05_Blt.arm"
+`define BENCHMARK "test03_CbzB.arm"
+//`define BENCHMARK "test04_LdurStur.arm"
+//`define BENCHMARK "test05_Blt.arm"
 
 `timescale 1ns/10ps
 

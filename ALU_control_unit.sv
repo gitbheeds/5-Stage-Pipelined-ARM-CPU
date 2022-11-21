@@ -72,6 +72,13 @@ module ALU_control_unit (opcode, ALU_on, ALU_cntrl);
 			
 			end
 			
+			//B.LT
+			else if (cbOp == 8'b01010100) begin
+				
+				ALU_cntrl = 3'b000;
+				
+			end
+			
 			//unsupported inputs
 			else ALU_cntrl = 3'bX;
 		
