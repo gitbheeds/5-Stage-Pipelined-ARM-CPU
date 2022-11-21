@@ -540,19 +540,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "brTaken",
-					"strict" : false
-				},
-				{
 					"name" : "flagZero",
 					"strict" : false
 				},
 				{
-					"name" : "brAddr26[0]",
+					"name" : "branch",
 					"strict" : false
 				},
 				{
 					"name" : "uncondBr",
+					"strict" : false
+				},
+				{
+					"name" : "brAddr26[0]",
 					"strict" : false
 				},
 				{

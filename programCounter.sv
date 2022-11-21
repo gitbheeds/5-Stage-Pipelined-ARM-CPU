@@ -1,9 +1,9 @@
 `timescale 1ps/1ps
 
 
-module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, currPC, pc_plus4, branchReg, Rd);
+module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, branchReg, Rd, flagZero, branch);
 
-	input logic clk, rst, uncondBr, brTaken, branchReg;
+	input logic clk, rst, uncondBr, branchReg, flagZero, branch;
 	
 	input logic [18:0] condAddr19;
 	
@@ -15,6 +15,8 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, currPC,
 	
 	logic [63:0] brAddr64;
 	
+	logic brTaken;
+	
 	output logic[63:0] currPC;
 	
 	logic [63:0] nextPC;
@@ -23,6 +25,12 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, currPC,
 	
 	parameter condAddrSize = 19;
 	parameter brAddrSize = 26;
+	
+	logic int4;
+//	
+//	and #(50) zeroGate(int4, flagZero, branch);
+//	
+//	or #(50) branchTakenGate(brTaken, uncondBr, int4);
 	
 		
 	//extend inputs to 64 bits
@@ -50,7 +58,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, currPC,
 	adder64_bit branchAdd(currentOut, shiftedBranch, 1'b0, int2, of_flag, co_flag);
 	
 	//select whether to use PC + branch or PC + 4
-	mux64x2_1 selBranchOrPlus4(brTaken, int1, int2, int3);
+	mux64x2_1 selBranchOrPlus4(branch, int1, int2, int3);
 	
 
 	
@@ -94,7 +102,7 @@ module programCounter_tb();
 	
 	logic [25:0] brAddr26;
 	
-	logic uncondBr, brTaken, sub_control, branchReg;
+	logic uncondBr, branchReg, flagZero, branch;
 	
 	parameter CLOCK_PERIOD = 8000;
 	initial begin
@@ -103,7 +111,7 @@ module programCounter_tb();
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	programCounter dut(clk, rst, condAddr19, brAddr26, uncondBr, brTaken, currPC, pc_plus4, branchReg, Rd);
+	programCounter dut(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, branchReg, Rd, flagZero, branch);
 	
 //	input logic clk, rst, uncondBr, brTaken, branchReg;
 //	
@@ -115,17 +123,27 @@ module programCounter_tb();
 	
 	initial begin
 	
-		uncondBr <= 0; brTaken <= 0; branchReg <= 0;
-		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; @(posedge clk);
+		uncondBr <= 0; branchReg <= 0;
+		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1'b0; @(posedge clk);
 		
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		uncondBr <= 0; brTaken <= 0; branchReg <= 0;
-		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; @(posedge clk);
+		uncondBr <= 0; branchReg <= 0;
+		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1'b0; @(posedge clk);
 		
 		repeat(20) @(posedge clk);
 		
+		uncondBr <= 0; branchReg <= 0; 
+		condAddr19 <= 19'd19; brAddr26 <= 26'b0; Rd <= 64'd12; flagZero <= 1'b1; branch <= 1; @(posedge clk);
+		
+		uncondBr <= 0; branchReg <= 0; 
+		condAddr19 <= 19'd19; brAddr26 <= 26'b0; Rd <= 64'd12; flagZero <= 1'b1; branch <= 0; @(posedge clk);
+		
+		uncondBr <= 1; branchReg <= 0; 
+		condAddr19 <= 19'd19; brAddr26 <= 26'd50; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1; @(posedge clk);
+		
+		repeat(2) @(posedge clk);
 	
 		$stop;
 	end

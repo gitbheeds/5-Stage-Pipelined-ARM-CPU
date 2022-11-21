@@ -56,6 +56,7 @@ module datamem (
 		if (read_enable == 1)
 			for(i=0; i<xfer_size; i++)
 				read_data[8*i+7 -: 8] = mem[aligned_address + i]; // 8*i+7 -: 8 means "start at 8*i+7, for 8 bits total"
+		
 	end
 	
 	// Handle the writes.

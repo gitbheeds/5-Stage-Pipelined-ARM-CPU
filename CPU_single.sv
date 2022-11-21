@@ -58,7 +58,7 @@ module CPU_single(clk, rst);
 //------------------control signals------------------------//
 	logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags,
-			branchReg, branchLink, compZero, branch;
+			branchReg, branchLink, branch;
 	
 	logic[2:0] ALU_cntrl;
 //----------------end control signals----------------------//
@@ -114,22 +114,16 @@ module CPU_single(clk, rst);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-//	wire int1;
-//	
-//	and #(50) zeroGate(int1, flagZero, branch);
-//	
-//	or #(50) branchTakenGate(brTaken, uncondBr, int1);
-
-	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .brTaken, .branchReg, .currPC, .pc_plus4, .Rd(rd1));
+	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd1), .flagZero, .branch);
 	
 	
 //instruction memory access
 	instructmem insts (.address(currPC), .instruction, .clk(~clk));
 	
 //CPU control unit
-	CPU_control control (.rst, .opcode, .uncondBr, .brTaken, .Reg2Loc, .ALU_Src, .RegWrite, 
+	CPU_control control (.rst, .opcode, .uncondBr, .branch, .Reg2Loc, .ALU_Src, .RegWrite, 
 								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
-								.branchReg, .branchLink, .compZero);
+								.branchReg, .branchLink);
 								
 								
 //flag setting
@@ -184,10 +178,10 @@ module CPU_single(clk, rst);
 	//ALU_Src mux goes here
 	//i0 = rd2, i1 = ext_out
 	//out = srcOut to zeroComp mux
-	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, srcOut);
+	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, ALU_B);
 	
 	//zeroComp mux goes here
-	mux64x2_1 zeroCompMux(.sel(compZero), .i0(srcOut), .i1(64'b0), .out(ALU_B));
+	//mux64x2_1 zeroCompMux(.sel(compZero), .i0(srcOut), .i1(64'b0), .out(ALU_B));
 
 	alu aloo(.A(rd1), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	

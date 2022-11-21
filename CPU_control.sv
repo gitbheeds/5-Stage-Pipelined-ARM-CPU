@@ -6,16 +6,16 @@
 // branchReg is for the BR operation and controls a mux that sets PC to the value of a register
 // branchLink is a control for a mux that sends PC+4 to the link register R[30]
 // compZero is a control for a mux that inputs 0 to the ALU for the CBZ command
-module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite, 
-						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink, compZero);
+module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, 
+						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink);
 						 
 	input logic [10:0] opcode;
 	
 	input logic rst;
 	
-	output logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite, ALU_SH, Imm, memToReg, memWrite, shiftDirn;
+	output logic uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, ALU_SH, Imm, memToReg, memWrite, shiftDirn;
 	
-	output logic branchReg, branchLink, compZero;
+	output logic branchReg, branchLink;
 	
 	output logic ALU_on, set_flags;
 	
@@ -43,10 +43,10 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			// unconditional branch
 		if (bOp == 6'b000101) begin
 			uncondBr = 1'b1;
-			brTaken = 1'b1;
+			branch = 1'b1;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'bX;
 			ALU_Src = 1'bX;
@@ -64,10 +64,10 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// conditional branch
 		else if (cbOp == 8'b01010100)begin
 			uncondBr = 1'b0;
-			brTaken = 1'b1;
+			branch = 1'b1;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
@@ -86,10 +86,10 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// branch with link
 		else if (bOp == 6'b100101) begin
 			uncondBr = 1'b1;
-			brTaken = 1'b1;
+			branch = 1'b1;
 			branchReg = 1'b0;
 			branchLink = 1'b1;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'bX;
 			ALU_Src = 1'b0;
@@ -107,10 +107,10 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// branch to register
 		else if (rOp == 11'b11010110000) begin
 			uncondBr = 1'b1;
-			brTaken = 1'b1;
+			branch = 1'b1;
 			branchReg = 1'b1;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'bX;
 			ALU_Src = 1'b0;
@@ -128,10 +128,9 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// CBZ
 		else if (cbOp == 8'b10110100) begin
 			uncondBr = 1'b0;
-			brTaken = 1'b1;
+			branch = 1'b1;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b1;
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
@@ -143,16 +142,16 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			shiftDirn = 1'bX;
 			
 			ALU_on = 1'b1;
-			set_flags = 1'b0;
+			set_flags = 1'b1;
 		end
 		
 		// ADDI
 		else if (iOp == 10'b1001000100) begin
 			uncondBr = 1'bX;
-			brTaken = 1'b0;
+			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'bZ;
 			ALU_Src = 1'b1;
@@ -170,10 +169,10 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// ADDS (ADD, set flags)
 		else if (rOp == 11'b10101011000) begin
 			uncondBr = 1'bX;
-			brTaken = 1'b0;
+			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'b1;
 			ALU_Src = 1'b0;
@@ -191,16 +190,16 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// LDUR
 		else if (dOp == 11'b11111000010) begin
 			uncondBr = 1'bX;
-			brTaken = 1'b0;
+			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'bX;
 			ALU_Src = 1'b1;
 			RegWrite = 1'b1;
 			ALU_SH = 1'b0;
-			Imm = 1'bX;
+			Imm = 1'b0;
 			memToReg = 1'b1;
 			memWrite = 1'b0;
 			shiftDirn = 1'bX;
@@ -212,16 +211,16 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// STUR
 		else if (dOp == 11'b11111000000) begin
 			uncondBr = 1'bX;
-			brTaken = 1'b0;
+			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b1;
 			RegWrite = 1'b0;
 			ALU_SH = 1'b0;
-			Imm = 1'bX;
+			Imm = 1'b0;
 			memToReg = 1'bX;
 			memWrite = 1'b1;
 			shiftDirn = 1'bX;
@@ -233,10 +232,10 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// SUBS (SUB, set flags)
 		else if (rOp == 11'b11101011000) begin
 			uncondBr = 1'bX;
-			brTaken = 1'b0;
+			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			compZero = 1'b0;
+			
 			
 			Reg2Loc = 1'b1;
 			ALU_Src = 1'b0;
@@ -255,13 +254,12 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 		// nothing happens 
 		else begin
 			// 
-			uncondBr = 1'bz;
-			brTaken = 1'bz;
+			uncondBr = 1'b0;
+			branch = 1'b0;
 			branchReg = 1'bz;
 			branchLink = 1'bz;
-			compZero = 1'bz;
 			
-			Reg2Loc = 1'bz;
+			Reg2Loc = 1'b0;
 			ALU_Src = 1'bz;
 			RegWrite = 1'bz;
 			ALU_SH = 1'bz;
@@ -279,10 +277,10 @@ module CPU_control(rst, opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 	//reset condition
 	else begin
 		uncondBr = 1'b0;
-		brTaken = 1'b0;
+		branch = 1'b0;
 		branchReg = 1'b0;
 		branchLink = 1'b0;
-		compZero = 1'b0;
+		
 		
 		Reg2Loc = 1'b0;
 		ALU_Src = 1'b0;
@@ -307,13 +305,13 @@ endmodule
 module CPU_control_tb();
 	logic [10:0] opcode;
 	
-	logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite, ALU_SH, Imm, memToReg, memWrite, shiftDirn;
+	logic uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, ALU_SH, Imm, memToReg, memWrite, shiftDirn;
 	
 	logic branchReg, branchLink, compZero;
 	
 	logic ALU_on, set_flags;
 	
-	CPU_control dut(opcode, uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite, 
+	CPU_control dut(opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, 
 						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink, compZero);
 						 
 	initial begin
