@@ -1,7 +1,9 @@
 `timescale 1ps/1ps
 
-
-module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, branchReg, Rd, flagZero, branch, flagNeg, opcode);
+//  opcode is necessary to distinguish between CBZ and B.LT conditions
+// opcode[10] = 1 is for CBZ, and opcode[10] = 0 is for B.LT
+module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, 
+							 branchReg, Rd, flagZero, branch, flagNeg, opcode);
 
 	input logic clk, rst, uncondBr, branchReg, flagZero, branch, flagNeg;
 	
@@ -64,13 +66,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	
 	adder64_bit branchAdd(currentOut, shiftedBranch, 1'b0, int2, of_flag, co_flag);
 	
-	//select whether to use PC + branch or PC + 4
-	//mux64x2_1 selBranchOrPlus4(branch, int1, int2, int3);
-	
-	
-	
-	//mux64x4_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .out(int3), .sel({uncondBr, brTaken}));
-	
+	//select whether to use PC + branch or PC + 4	
 	mux64x8_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .in4(int2), .in5(64'b0), .in6(int2), .in7(int2), .out(int3), .sel({int4, uncondBr, brTaken}));
 
 	
@@ -103,7 +99,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	
 endmodule
 
-
+// testbench for above module
 module programCounter_tb();
 	
 	logic clk, rst;
@@ -116,6 +112,8 @@ module programCounter_tb();
 	
 	logic uncondBr, branchReg, flagZero, branch;
 	
+	logic flagNeg, opcode;
+	
 	parameter CLOCK_PERIOD = 8000;
 	initial begin
 		clk <= 0;
@@ -123,39 +121,45 @@ module programCounter_tb();
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	programCounter dut(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, branchReg, Rd, flagZero, branch);
-	
-//	input logic clk, rst, uncondBr, brTaken, branchReg;
-//	
-//	input logic [18:0] condAddr19;
-//	
-//	input logic [25:0] brAddr26;
-//	
-//	input logic [63:0] Rd;
+	programCounter dut(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4, 
+							 branchReg, Rd, flagZero, branch, flagNeg, opcode);
 	
 	initial begin
 	
-		uncondBr <= 0; branchReg <= 0;
-		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1'b0; @(posedge clk);
+		uncondBr <= 1'b0; branchReg <= 1'b0;
+		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1'b0;
+	   flagNeg <= 1'b0; opcode = 1'b0;	@(posedge clk);
 		
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		uncondBr <= 0; branchReg <= 0;
-		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1'b0; @(posedge clk);
+		uncondBr <= 1'b0; branchReg <= 1'b0;
+		condAddr19 <= 19'b0; brAddr26 = 26'b0; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1'b0;
+		flagNeg <= 1'b0; opcode = 1'b0; @(posedge clk);
 		
 		repeat(20) @(posedge clk);
 		
-		uncondBr <= 0; branchReg <= 0; 
-		condAddr19 <= 19'd19; brAddr26 <= 26'b0; Rd <= 64'd12; flagZero <= 1'b1; branch <= 1; @(posedge clk);
+		uncondBr <= 1'b0; branchReg <= 1'b0; 
+		condAddr19 <= 19'd19; brAddr26 <= 26'b0; Rd <= 64'd12; flagZero <= 1'b1; branch <= 1'b1; 
+		flagNeg <= 1'b0; opcode = 1'b0; @(posedge clk);
 		
-		uncondBr <= 0; branchReg <= 0; 
-		condAddr19 <= 19'd19; brAddr26 <= 26'b0; Rd <= 64'd12; flagZero <= 1'b1; branch <= 0; @(posedge clk);
+		uncondBr <= 1'b0; branchReg <= 1'b0; 
+		condAddr19 <= 19'd19; brAddr26 <= 26'b0; Rd <= 64'd12; flagZero <= 1'b1; branch <= 1'b1; 
+		flagNeg <= 1'b0; opcode = 1'b1; @(posedge clk);
 		
-		uncondBr <= 1; branchReg <= 0; 
-		condAddr19 <= 19'd19; brAddr26 <= 26'd50; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1; @(posedge clk);
+		uncondBr <= 1'b0; branchReg <= 1'b0; 
+		condAddr19 <= 19'd19; brAddr26 <= 26'd50; Rd <= 64'd12; flagZero <= 1'b0; branch <= 1'b1; 
+		flagNeg <= 1'b0; opcode = 1'b0; @(posedge clk);
 		
 		repeat(2) @(posedge clk);
+		
+		uncondBr <= 1'b0; branchReg <= 1'b0;
+		condAddr19 <= 19'd5; brAddr26 <= 16'd20; Rd <= 64'd10; flagZero <= 1'b0; branch <= 1'b1;
+		flagNeg <= 1'b1; opcode = 1'b0; @(posedge clk);
+		
+		uncondBr <= 1'b0; branchReg <= 1'b0;
+		condAddr19 <= 19'd5; brAddr26 <= 16'd20; Rd <= 64'd10; flagZero <= 1'b1; branch <= 1'b1;
+		flagNeg <= 1'b0; opcode = 1'b1; @(posedge clk);
 	
 		$stop;
 	end

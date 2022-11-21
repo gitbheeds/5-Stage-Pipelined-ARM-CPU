@@ -302,19 +302,26 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 endmodule
 
 
+
 module CPU_control_tb();
+	logic rst;
+
 	logic [10:0] opcode;
 	
 	logic uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, ALU_SH, Imm, memToReg, memWrite, shiftDirn;
 	
-	logic branchReg, branchLink, compZero;
+	logic branchReg, branchLink;
 	
 	logic ALU_on, set_flags;
 	
 	CPU_control dut(opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, 
-						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink, compZero);
+						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, 
+						 branchReg, branchLink);
 						 
 	initial begin
+	
+		rst = 1'b1; #10;
+		rst = 1'b0; #10;
 		
 		// unconditional branch test
 		opcode = 11'b00010111001; #10;

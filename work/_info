@@ -1077,25 +1077,25 @@ R120
 R12
 vprogramCounter
 R0
-R93
+!s110 1669070421
 !i10b 1
-!s100 Cj88Yh:fm5HM5glDGk]g?2
-Ib[Rb7gde>fNJzHdjV6@BV1
+!s100 MlcfnCBWEm2F<K0=NaIL^0
+Ie7EK;n>Tjo1Ud:ZMT_MC51
 R2
 Z122 !s105 programCounter_sv_unit
 S1
-R4
-Z123 w1669030187
-Z124 8./programCounter.sv
-Z125 F./programCounter.sv
-L0 4
+dC:/Users/gering92/Documents/GitHub/EE469_Labs
+w1669070186
+Z123 8./programCounter.sv
+Z124 F./programCounter.sv
+L0 5
 R8
 r1
 !s85 0
 31
-R94
-Z126 !s107 ./programCounter.sv|
-Z127 !s90 -reportprogress|300|./programCounter.sv|
+!s108 1669070420.000000
+!s107 ./programCounter.sv|
+Z125 !s90 -reportprogress|300|./programCounter.sv|
 !i113 1
 R12
 nprogram@counter
@@ -1109,17 +1109,17 @@ R2
 R122
 S1
 R4
+w1669030187
 R123
 R124
-R125
 L0 107
 R8
 r1
 !s85 0
 31
 R94
-R126
-R127
+!s107 ./programCounter.sv|
+R125
 !i113 1
 R12
 nprogram@counter_tb
@@ -1130,20 +1130,20 @@ R1
 !s100 h6QNXeXgG2VV`YoZzkY>Z2
 IV>NURBTkQ;QDLRo5aIiS31
 R2
-Z128 !s105 reg2locMux_sv_unit
+Z126 !s105 reg2locMux_sv_unit
 S1
 R4
 R5
-Z129 8./reg2locMux.sv
-Z130 F./reg2locMux.sv
+Z127 8./reg2locMux.sv
+Z128 F./reg2locMux.sv
 L0 4
 R8
 r1
 !s85 0
 31
 R9
-Z131 !s107 ./reg2locMux.sv|
-Z132 !s90 -reportprogress|300|./reg2locMux.sv|
+Z129 !s107 ./reg2locMux.sv|
+Z130 !s90 -reportprogress|300|./reg2locMux.sv|
 !i113 1
 R12
 nreg2loc@mux
@@ -1154,20 +1154,20 @@ R1
 !s100 A_dXRVk6M55NYnFOc^z8m3
 Igh9IVj5?[F@h9;^Tg>n@13
 R2
-R128
+R126
 S1
 R4
 R5
-R129
-R130
+R127
+R128
 L0 23
 R8
 r1
 !s85 0
 31
 R9
-R131
-R132
+R129
+R130
 !i113 1
 R12
 nreg2loc@mux_tb
@@ -1212,32 +1212,32 @@ R8
 r1
 !s85 0
 31
-Z133 !s108 1669032511.000000
+Z131 !s108 1669032511.000000
 !s107 ./register64.sv|
 !s90 -reportprogress|300|./register64.sv|
 !i113 1
 R12
 vse_tb
 R0
-Z134 !s110 1669032511
+Z132 !s110 1669032511
 !i10b 1
 !s100 cE8gKbe7bO]P32:QBjQdI0
 I^FfRY=`zELC:G2oIj<6]T0
 R2
-Z135 !s105 sign_extender_sv_unit
+Z133 !s105 sign_extender_sv_unit
 S1
 R4
 R5
-Z136 8./sign_extender.sv
-Z137 F./sign_extender.sv
+Z134 8./sign_extender.sv
+Z135 F./sign_extender.sv
 L0 30
 R8
 r1
 !s85 0
 31
-R133
-Z138 !s107 ./sign_extender.sv|
-Z139 !s90 -reportprogress|300|./sign_extender.sv|
+R131
+Z136 !s107 ./sign_extender.sv|
+Z137 !s90 -reportprogress|300|./sign_extender.sv|
 !i113 1
 R12
 vshifter
@@ -1288,164 +1288,164 @@ R92
 R12
 vsign_extender
 R0
-R134
+R132
 !i10b 1
 !s100 <U??oLX@J`m@2Z^OPS<a31
 I7f8m3_;MU79g]BgA3EMW53
 R2
-R135
+R133
 S1
 R4
 R5
-R136
-R137
+R134
+R135
 L0 5
 R8
 r1
 !s85 0
 31
-R133
-R138
-R139
+R131
+R136
+R137
 !i113 1
 R12
 vxor_64_bit
 R0
-R134
+R132
 !i10b 1
 !s100 G>6@S4E[595koG53G:ojU3
 I@VGNefoBFZX>KA=Q<C]GQ3
 R2
-Z140 !s105 xor_64_bit_sv_unit
+Z138 !s105 xor_64_bit_sv_unit
 S1
 R4
 R5
-Z141 8./xor_64_bit.sv
-Z142 F./xor_64_bit.sv
+Z139 8./xor_64_bit.sv
+Z140 F./xor_64_bit.sv
 L0 5
 R8
 r1
 !s85 0
 31
-R133
-Z143 !s107 ./xor_64_bit.sv|
-Z144 !s90 -reportprogress|300|./xor_64_bit.sv|
+R131
+Z141 !s107 ./xor_64_bit.sv|
+Z142 !s90 -reportprogress|300|./xor_64_bit.sv|
 !i113 1
 R12
 vxor_64_bit_testbench
 R0
-R134
+R132
 !i10b 1
 !s100 f>cf3d[fJ6>k==@KRQn1T2
 I<BnPb8`=LRK4UQe?b4]?B2
 R2
-R140
+R138
 S1
 R4
 R5
-R141
-R142
+R139
+R140
 R121
 R8
 r1
 !s85 0
 31
-R133
-R143
-R144
+R131
+R141
+R142
 !i113 1
 R12
 vzero_extender
 R0
-R134
+R132
 !i10b 1
 !s100 l^ZCz8SaVF]AnX1NhIYk03
 IHOnkPHH[N502FbmN;1:9O3
 R2
-Z145 !s105 zero_extender_sv_unit
+Z143 !s105 zero_extender_sv_unit
 S1
 R4
 R5
-Z146 8./zero_extender.sv
-Z147 F./zero_extender.sv
+Z144 8./zero_extender.sv
+Z145 F./zero_extender.sv
 L0 4
 R8
 r1
 !s85 0
 31
-R133
-Z148 !s107 ./zero_extender.sv|
-Z149 !s90 -reportprogress|300|./zero_extender.sv|
+R131
+Z146 !s107 ./zero_extender.sv|
+Z147 !s90 -reportprogress|300|./zero_extender.sv|
 !i113 1
 R12
 vzero_extender_tb
 R0
-R134
+R132
 !i10b 1
 !s100 N:VJ_<HZllk[oaP?WQbmX2
 IjGNoa2E]`_`hTPCHoL8X>2
 R2
-R145
+R143
 S1
 R4
 R5
-R146
-R147
+R144
+R145
 L0 22
 R8
 r1
 !s85 0
 31
-R133
-R148
-R149
+R131
+R146
+R147
 !i113 1
 R12
 vzeroCheck
 R0
-R134
+R132
 !i10b 1
 !s100 m1cm2R@`3gPfQ=MHECbob3
 IW1S7l4^8DYoANnNM:Ic?92
 R2
-Z150 !s105 zeroCheck_sv_unit
+Z148 !s105 zeroCheck_sv_unit
 S1
 R4
 R5
-Z151 8./zeroCheck.sv
-Z152 F./zeroCheck.sv
+Z149 8./zeroCheck.sv
+Z150 F./zeroCheck.sv
 L0 7
 R8
 r1
 !s85 0
 31
-R133
-Z153 !s107 ./zeroCheck.sv|
-Z154 !s90 -reportprogress|300|./zeroCheck.sv|
+R131
+Z151 !s107 ./zeroCheck.sv|
+Z152 !s90 -reportprogress|300|./zeroCheck.sv|
 !i113 1
 R12
 nzero@check
 vzeroCheck_tb
 R0
-R134
+R132
 !i10b 1
 !s100 F?IZQPMXCIVS0N=C14o?d1
 IZ_^2jTcUbRTolCdT[6_7g1
 R2
-R150
+R148
 S1
 R4
 R5
-R151
-R152
+R149
+R150
 L0 45
 R8
 r1
 !s85 0
 31
-R133
-R153
-R154
+R131
+R151
+R152
 !i113 1
 R12
 nzero@check_tb

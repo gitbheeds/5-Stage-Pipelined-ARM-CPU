@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Mon Nov 21 04:08:20 2022
+Mon Nov 21 14:50:47 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,8 +10,86 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Parameter Settings for User Entity Instance: Top-level Entity: |programCounter
+ 11. Parameter Settings for User Entity Instance: sign_extender:condBranch
+ 12. Parameter Settings for User Entity Instance: sign_extender:uncondBranch
+ 13. Parameter Settings for User Entity Instance: adder64_bit:branchAdd
+ 14. Port Connectivity Checks: "mux64x8_1:bigBranchSelect"
+ 15. Port Connectivity Checks: "adder64_bit:branchAdd"
+ 16. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[63].fA"
+ 17. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[62].fA"
+ 18. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[61].fA"
+ 19. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[60].fA"
+ 20. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[59].fA"
+ 21. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[58].fA"
+ 22. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[57].fA"
+ 23. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[56].fA"
+ 24. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[55].fA"
+ 25. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[54].fA"
+ 26. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[53].fA"
+ 27. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[52].fA"
+ 28. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[51].fA"
+ 29. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[50].fA"
+ 30. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[49].fA"
+ 31. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[48].fA"
+ 32. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[47].fA"
+ 33. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[46].fA"
+ 34. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[45].fA"
+ 35. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[44].fA"
+ 36. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[43].fA"
+ 37. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[42].fA"
+ 38. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[41].fA"
+ 39. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[40].fA"
+ 40. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[39].fA"
+ 41. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[38].fA"
+ 42. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[37].fA"
+ 43. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[36].fA"
+ 44. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[35].fA"
+ 45. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[34].fA"
+ 46. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[33].fA"
+ 47. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[32].fA"
+ 48. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[31].fA"
+ 49. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[30].fA"
+ 50. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[29].fA"
+ 51. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[28].fA"
+ 52. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[27].fA"
+ 53. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[26].fA"
+ 54. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[25].fA"
+ 55. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[24].fA"
+ 56. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[23].fA"
+ 57. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[22].fA"
+ 58. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[21].fA"
+ 59. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[20].fA"
+ 60. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[19].fA"
+ 61. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[18].fA"
+ 62. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[17].fA"
+ 63. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[16].fA"
+ 64. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[15].fA"
+ 65. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[14].fA"
+ 66. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[13].fA"
+ 67. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[12].fA"
+ 68. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[11].fA"
+ 69. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[10].fA"
+ 70. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[9].fA"
+ 71. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[8].fA"
+ 72. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[7].fA"
+ 73. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[6].fA"
+ 74. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[5].fA"
+ 75. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[4].fA"
+ 76. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[3].fA"
+ 77. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[2].fA"
+ 78. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[1].fA"
+ 79. Port Connectivity Checks: "adder_4_pc:add4|fullAdder:fA"
+ 80. Port Connectivity Checks: "shifter:leftShift2"
+ 81. Post-Synthesis Netlist Statistics for Top Partition
+ 82. Elapsed Time Per Partition
+ 83. Analysis & Synthesis Messages
+ 84. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,22 +113,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 21 04:08:20 2022           ;
-; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
-; Revision Name               ; DE1_SoC                                     ;
-; Top-level Entity Name       ; CPU_single                                  ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Mon Nov 21 14:50:47 2022       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; programCounter                              ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 64                                          ;
+; Total pins                      ; 245                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -59,7 +142,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; CPU_single         ; DE1_SoC            ;
+; Top-level entity name                                                           ; programCounter     ; DE1_SoC            ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -145,15 +228,968 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                        ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                    ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+; sign_extender.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/sign_extender.sv  ;         ;
+; programCounter.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv ;         ;
+; mux64x8_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x8_1.sv      ;         ;
+; mux64x4_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x4_1.sv      ;         ;
+; mux64x2_1.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x2_1.sv      ;         ;
+; mux2_1.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/mux2_1.sv         ;         ;
+; math.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/math.sv           ;         ;
+; fullAdder.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/fullAdder.sv      ;         ;
+; adder64_bit.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/adder64_bit.sv    ;         ;
+; adder_4_pc.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/adder_4_pc.sv     ;         ;
+; D_FF.sv                          ; yes             ; User SystemVerilog HDL File  ; C:/Users/gering92/Documents/GitHub/EE469_Labs/D_FF.sv           ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                               ;
++---------------------------------------------+-----------------------------+
+; Resource                                    ; Usage                       ;
++---------------------------------------------+-----------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 184                         ;
+;                                             ;                             ;
+; Combinational ALUT usage for logic          ; 281                         ;
+;     -- 7 input functions                    ; 13                          ;
+;     -- 6 input functions                    ; 73                          ;
+;     -- 5 input functions                    ; 52                          ;
+;     -- 4 input functions                    ; 39                          ;
+;     -- <=3 input functions                  ; 104                         ;
+;                                             ;                             ;
+; Dedicated logic registers                   ; 64                          ;
+;                                             ;                             ;
+; I/O pins                                    ; 245                         ;
+;                                             ;                             ;
+; Total DSP Blocks                            ; 0                           ;
+;                                             ;                             ;
+; Maximum fan-out node                        ; D_FF:reginald[43].duffy|q~0 ;
+; Maximum fan-out                             ; 66                          ;
+; Total fan-out                               ; 1787                        ;
+; Average fan-out                             ; 2.14                        ;
++---------------------------------------------+-----------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                    ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Entity Name    ; Library Name ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+----------------+--------------+
+; |programCounter                                ; 281 (0)             ; 64 (0)                    ; 0                 ; 0          ; 245  ; 0            ; |programCounter                                                              ; programCounter ; work         ;
+;    |D_FF:reginald[0].duffy|                    ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[0].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[10].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[10].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[11].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[11].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[12].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[12].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[13].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[13].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[14].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[14].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[15].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[15].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[16].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[16].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[17].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[17].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[18].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[18].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[19].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[19].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[1].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[1].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[20].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[20].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[21].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[21].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[22].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[22].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[23].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[23].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[24].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[24].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[25].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[25].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[26].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[26].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[27].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[27].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[28].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[28].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[29].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[29].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[2].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[2].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[30].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[30].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[31].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[31].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[32].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[32].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[33].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[33].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[34].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[34].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[35].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[35].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[36].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[36].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[37].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[37].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[38].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[38].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[39].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[39].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[3].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[3].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[40].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[40].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[41].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[41].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[42].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[42].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[43].duffy|                   ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[43].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[44].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[44].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[45].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[45].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[46].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[46].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[47].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[47].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[48].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[48].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[49].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[49].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[4].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[4].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[50].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[50].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[51].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[51].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[52].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[52].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[53].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[53].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[54].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[54].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[55].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[55].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[56].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[56].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[57].duffy|                   ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[57].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[58].duffy|                   ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[58].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[59].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[59].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[5].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[5].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[60].duffy|                   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[60].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[61].duffy|                   ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[61].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[62].duffy|                   ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[62].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[63].duffy|                   ; 3 (3)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[63].duffy                                      ; D_FF           ; work         ;
+;    |D_FF:reginald[6].duffy|                    ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[6].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[7].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[7].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[8].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[8].duffy                                       ; D_FF           ; work         ;
+;    |D_FF:reginald[9].duffy|                    ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|D_FF:reginald[9].duffy                                       ; D_FF           ; work         ;
+;    |adder64_bit:branchAdd|                     ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd                                        ; adder64_bit    ; work         ;
+;       |fullAdder:generate_64_bit_adder[10].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[10].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[12].fA| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[12].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[14].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[14].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[15].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[15].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[17].fA| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[17].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[19].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[19].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[20].fA| ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[20].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[22].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[22].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[24].fA| ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[24].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[25].fA| ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[25].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[26].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[26].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[27].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[27].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[28].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[28].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[2].fA|  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[2].fA  ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[30].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[30].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[31].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[31].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[32].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[32].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[34].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[34].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[35].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[35].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[37].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[37].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[38].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[38].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[39].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[39].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[41].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[41].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[42].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[42].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[43].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[43].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[46].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[46].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[47].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[47].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[4].fA|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[4].fA  ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[50].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[50].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[51].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[51].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[54].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[54].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[55].fA| ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[55].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[58].fA| ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[58].fA ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[5].fA|  ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[5].fA  ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[7].fA|  ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[7].fA  ; fullAdder      ; work         ;
+;       |fullAdder:generate_64_bit_adder[9].fA|  ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder64_bit:branchAdd|fullAdder:generate_64_bit_adder[9].fA  ; fullAdder      ; work         ;
+;    |adder_4_pc:add4|                           ; 81 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4                                              ; adder_4_pc     ; work         ;
+;       |fullAdder:pcIncrementAdder[10].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[10].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[11].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[11].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[12].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[12].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[13].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[13].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[14].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[14].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[15].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[15].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[16].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[16].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[17].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[17].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[18].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[18].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[19].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[19].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[20].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[20].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[21].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[21].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[22].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[22].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[23].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[23].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[24].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[24].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[25].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[25].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[26].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[26].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[27].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[27].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[28].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[28].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[29].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[29].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[30].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[30].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[31].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[31].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[32].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[32].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[33].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[33].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[34].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[34].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[35].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[35].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[36].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[36].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[37].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[37].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[38].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[38].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[39].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[39].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[3].fA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[3].fA             ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[40].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[40].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[41].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[41].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[42].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[42].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[43].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[43].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[44].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[44].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[45].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[45].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[46].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[46].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[47].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[47].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[48].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[48].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[49].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[49].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[4].fA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[4].fA             ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[50].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[50].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[51].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[51].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[52].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[52].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[53].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[53].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[54].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[54].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[55].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[55].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[56].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[56].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[57].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[57].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[58].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[58].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[59].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[59].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[5].fA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[5].fA             ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[60].fA|      ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[60].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[61].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[61].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[62].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[62].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[63].fA|      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[63].fA            ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[6].fA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[6].fA             ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[7].fA|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[7].fA             ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[8].fA|       ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[8].fA             ; fullAdder      ; work         ;
+;       |fullAdder:pcIncrementAdder[9].fA|       ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|adder_4_pc:add4|fullAdder:pcIncrementAdder[9].fA             ; fullAdder      ; work         ;
+;    |mux64x2_1:branchType|                      ; 22 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType                                         ; mux64x2_1      ; work         ;
+;       |mux2_1:muxy[0].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[0].miniboi                  ; mux2_1         ; work         ;
+;       |mux2_1:muxy[11].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[11].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[12].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[12].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[13].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[13].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[14].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[14].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[15].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[15].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[16].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[16].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[17].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[17].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[18].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[18].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[19].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[19].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[1].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[1].miniboi                  ; mux2_1         ; work         ;
+;       |mux2_1:muxy[20].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[20].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[21].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[21].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[22].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[22].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[23].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[23].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[24].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[24].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[25].miniboi|                ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[25].miniboi                 ; mux2_1         ; work         ;
+;       |mux2_1:muxy[2].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[2].miniboi                  ; mux2_1         ; work         ;
+;       |mux2_1:muxy[4].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[4].miniboi                  ; mux2_1         ; work         ;
+;       |mux2_1:muxy[6].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[6].miniboi                  ; mux2_1         ; work         ;
+;       |mux2_1:muxy[7].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[7].miniboi                  ; mux2_1         ; work         ;
+;       |mux2_1:muxy[9].miniboi|                 ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |programCounter|mux64x2_1:branchType|mux2_1:muxy[9].miniboi                  ; mux2_1         ; work         ;
++------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------+----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 64    ;
+; Number of registers using Synchronous Clear  ; 62    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |programCounter|D_FF:reginald[0].duffy|q  ;
+; 7:1                ; 62 bits   ; 248 LEs       ; 124 LEs              ; 124 LEs                ; Yes        ; |programCounter|D_FF:reginald[43].duffy|q ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |programCounter ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; condAddrSize   ; 19    ; Signed Integer                                        ;
+; brAddrSize     ; 26    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sign_extender:condBranch ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; sizeIn         ; 19    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: sign_extender:uncondBranch ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; sizeIn         ; 26    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: adder64_bit:branchAdd ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; N              ; 64    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "mux64x8_1:bigBranchSelect" ;
++------+-------+----------+-----------------------------+
+; Port ; Type  ; Severity ; Details                     ;
++------+-------+----------+-----------------------------+
+; in5  ; Input ; Info     ; Stuck at GND                ;
++------+-------+----------+-----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder64_bit:branchAdd"                                                                     ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; sub_control ; Input  ; Info     ; Stuck at GND                                                                        ;
+; of_flag     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; co_flag     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[63].fA"                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; b    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[62].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[61].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[60].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[59].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[58].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[57].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[56].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[55].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[54].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[53].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[52].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[51].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[50].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[49].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[48].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[47].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[46].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[45].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[44].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[43].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[42].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[41].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[40].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[39].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[38].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[37].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[36].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[35].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[34].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[33].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[32].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[31].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[30].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[29].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[28].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[27].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[26].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[25].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[24].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[23].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[22].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[21].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[20].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[19].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[18].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[17].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[16].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[15].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[14].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[13].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[12].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[11].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[10].fA" ;
++------+-------+----------+-----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                             ;
++------+-------+----------+-----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                        ;
++------+-------+----------+-----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[9].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[8].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[7].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[6].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[5].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[4].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[3].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[2].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:pcIncrementAdder[1].fA" ;
++------+-------+----------+----------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                            ;
++------+-------+----------+----------------------------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                                       ;
++------+-------+----------+----------------------------------------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "adder_4_pc:add4|fullAdder:fA" ;
++------+-------+----------+--------------------------------+
+; Port ; Type  ; Severity ; Details                        ;
++------+-------+----------+--------------------------------+
+; b    ; Input ; Info     ; Stuck at GND                   ;
+; cin  ; Input ; Info     ; Stuck at GND                   ;
++------+-------+----------+--------------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "shifter:leftShift2"   ;
++----------------+-------+----------+--------------+
+; Port           ; Type  ; Severity ; Details      ;
++----------------+-------+----------+--------------+
+; direction      ; Input ; Info     ; Stuck at GND ;
+; distance[5..2] ; Input ; Info     ; Stuck at GND ;
+; distance[1]    ; Input ; Info     ; Stuck at VCC ;
+; distance[0]    ; Input ; Info     ; Stuck at GND ;
++----------------+-------+----------+--------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 64                          ;
+;     ENA               ; 2                           ;
+;     SCLR              ; 62                          ;
+; arriav_lcell_comb     ; 282                         ;
+;     extend            ; 13                          ;
+;         7 data inputs ; 13                          ;
+;     normal            ; 269                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 35                          ;
+;         3 data inputs ; 69                          ;
+;         4 data inputs ; 39                          ;
+;         5 data inputs ; 52                          ;
+;         6 data inputs ; 73                          ;
+; boundary_port         ; 245                         ;
+;                       ;                             ;
+; Max LUT depth         ; 19.00                       ;
+; Average LUT depth     ; 10.33                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,165 +1198,138 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Nov 21 04:08:06 2022
+    Info: Processing started: Mon Nov 21 14:50:27 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
-    Info (12023): Found entity 1: zeroCheck File: C:/EE469_Labs/zeroCheck.sv Line: 7
-    Info (12023): Found entity 2: zeroCheck_tb File: C:/EE469_Labs/zeroCheck.sv Line: 45
+    Info (12023): Found entity 1: zeroCheck File: C:/Users/gering92/Documents/GitHub/EE469_Labs/zeroCheck.sv Line: 7
+    Info (12023): Found entity 2: zeroCheck_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/zeroCheck.sv Line: 45
 Info (12021): Found 2 design units, including 2 entities, in source file zero_extender.sv
-    Info (12023): Found entity 1: zero_extender File: C:/EE469_Labs/zero_extender.sv Line: 4
-    Info (12023): Found entity 2: zero_extender_tb File: C:/EE469_Labs/zero_extender.sv Line: 22
+    Info (12023): Found entity 1: zero_extender File: C:/Users/gering92/Documents/GitHub/EE469_Labs/zero_extender.sv Line: 4
+    Info (12023): Found entity 2: zero_extender_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/zero_extender.sv Line: 22
 Info (12021): Found 2 design units, including 2 entities, in source file xor_64_bit.sv
-    Info (12023): Found entity 1: xor_64_bit File: C:/EE469_Labs/xor_64_bit.sv Line: 5
-    Info (12023): Found entity 2: xor_64_bit_testbench File: C:/EE469_Labs/xor_64_bit.sv Line: 25
+    Info (12023): Found entity 1: xor_64_bit File: C:/Users/gering92/Documents/GitHub/EE469_Labs/xor_64_bit.sv Line: 5
+    Info (12023): Found entity 2: xor_64_bit_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/xor_64_bit.sv Line: 25
 Info (12021): Found 2 design units, including 2 entities, in source file sign_extender.sv
-    Info (12023): Found entity 1: sign_extender File: C:/EE469_Labs/sign_extender.sv Line: 5
-    Info (12023): Found entity 2: se_tb File: C:/EE469_Labs/sign_extender.sv Line: 30
+    Info (12023): Found entity 1: sign_extender File: C:/Users/gering92/Documents/GitHub/EE469_Labs/sign_extender.sv Line: 5
+    Info (12023): Found entity 2: se_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/sign_extender.sv Line: 30
 Info (12021): Found 1 design units, including 1 entities, in source file register64.sv
-    Info (12023): Found entity 1: register64 File: C:/EE469_Labs/register64.sv Line: 7
+    Info (12023): Found entity 1: register64 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/register64.sv Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: C:/EE469_Labs/regfile.sv Line: 11
+    Info (12023): Found entity 1: regfile File: C:/Users/gering92/Documents/GitHub/EE469_Labs/regfile.sv Line: 11
 Info (12021): Found 2 design units, including 2 entities, in source file programcounter.sv
-    Info (12023): Found entity 1: programCounter File: C:/EE469_Labs/programCounter.sv Line: 4
-    Info (12023): Found entity 2: programCounter_tb File: C:/EE469_Labs/programCounter.sv Line: 107
+    Info (12023): Found entity 1: programCounter File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 5
+    Info (12023): Found entity 2: programCounter_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 103
 Info (12021): Found 2 design units, including 2 entities, in source file or_64_bit.sv
-    Info (12023): Found entity 1: or_64_bit File: C:/EE469_Labs/or_64_bit.sv Line: 5
-    Info (12023): Found entity 2: or_64_bit_testbench File: C:/EE469_Labs/or_64_bit.sv Line: 25
+    Info (12023): Found entity 1: or_64_bit File: C:/Users/gering92/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 5
+    Info (12023): Found entity 2: or_64_bit_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/or_64_bit.sv Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file mux64x32_1.sv
-    Info (12023): Found entity 1: mux64x32_1 File: C:/EE469_Labs/mux64x32_1.sv Line: 7
+    Info (12023): Found entity 1: mux64x32_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x32_1.sv Line: 7
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x8_1.sv
-    Info (12023): Found entity 1: mux64x8_1 File: C:/EE469_Labs/mux64x8_1.sv Line: 6
-    Info (12023): Found entity 2: mux64x8_1_testbench File: C:/EE469_Labs/mux64x8_1.sv Line: 26
+    Info (12023): Found entity 1: mux64x8_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 6
+    Info (12023): Found entity 2: mux64x8_1_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 26
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x4_1.sv
-    Info (12023): Found entity 1: mux64x4_1 File: C:/EE469_Labs/mux64x4_1.sv Line: 7
-    Info (12023): Found entity 2: mux64x4_1_testbench File: C:/EE469_Labs/mux64x4_1.sv Line: 27
+    Info (12023): Found entity 1: mux64x4_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x4_1.sv Line: 7
+    Info (12023): Found entity 2: mux64x4_1_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x4_1.sv Line: 27
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x2_1_2scomp.sv
-    Info (12023): Found entity 1: mux64x2_1_2scomp File: C:/EE469_Labs/mux64x2_1_2scomp.sv Line: 4
-    Info (12023): Found entity 2: mux64x2_1_2scomp_testbench File: C:/EE469_Labs/mux64x2_1_2scomp.sv Line: 36
+    Info (12023): Found entity 1: mux64x2_1_2scomp File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x2_1_2scomp.sv Line: 4
+    Info (12023): Found entity 2: mux64x2_1_2scomp_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x2_1_2scomp.sv Line: 36
 Info (12021): Found 2 design units, including 2 entities, in source file mux64x2_1.sv
-    Info (12023): Found entity 1: mux64x2_1 File: C:/EE469_Labs/mux64x2_1.sv Line: 6
-    Info (12023): Found entity 2: mux64x2_1_testbench File: C:/EE469_Labs/mux64x2_1.sv Line: 34
+    Info (12023): Found entity 1: mux64x2_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 6
+    Info (12023): Found entity 2: mux64x2_1_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 34
 Info (12021): Found 1 design units, including 1 entities, in source file mux32_1.sv
-    Info (12023): Found entity 1: mux32_1 File: C:/EE469_Labs/mux32_1.sv Line: 6
+    Info (12023): Found entity 1: mux32_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux32_1.sv Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file mux16_1.sv
-    Info (12023): Found entity 1: mux16_1 File: C:/EE469_Labs/mux16_1.sv Line: 5
+    Info (12023): Found entity 1: mux16_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux16_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux8_1.sv
-    Info (12023): Found entity 1: mux8_1 File: C:/EE469_Labs/mux8_1.sv Line: 5
+    Info (12023): Found entity 1: mux8_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux8_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_1.sv
-    Info (12023): Found entity 1: mux4_1 File: C:/EE469_Labs/mux4_1.sv Line: 5
+    Info (12023): Found entity 1: mux4_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux4_1.sv Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file mux2_1.sv
-    Info (12023): Found entity 1: mux2_1 File: C:/EE469_Labs/mux2_1.sv Line: 7
+    Info (12023): Found entity 1: mux2_1 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux2_1.sv Line: 7
 Info (12021): Found 4 design units, including 4 entities, in source file math.sv
-    Info (12023): Found entity 1: mult File: C:/EE469_Labs/math.sv Line: 6
-    Info (12023): Found entity 2: shifter File: C:/EE469_Labs/math.sv Line: 36
-    Info (12023): Found entity 3: shifter_testbench File: C:/EE469_Labs/math.sv Line: 51
-    Info (12023): Found entity 4: mult_testbench File: C:/EE469_Labs/math.sv Line: 71
+    Info (12023): Found entity 1: mult File: C:/Users/gering92/Documents/GitHub/EE469_Labs/math.sv Line: 6
+    Info (12023): Found entity 2: shifter File: C:/Users/gering92/Documents/GitHub/EE469_Labs/math.sv Line: 36
+    Info (12023): Found entity 3: shifter_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/math.sv Line: 51
+    Info (12023): Found entity 4: mult_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/math.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file instructmem.sv
-    Info (12023): Found entity 1: instructmem File: C:/EE469_Labs/instructmem.sv Line: 18
-    Info (12023): Found entity 2: instructmem_testbench File: C:/EE469_Labs/instructmem.sv Line: 58
+    Info (12023): Found entity 1: instructmem File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 18
+    Info (12023): Found entity 2: instructmem_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 58
 Info (12021): Found 2 design units, including 2 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: fullAdder File: C:/EE469_Labs/fullAdder.sv Line: 6
-    Info (12023): Found entity 2: fullAdder_testbench File: C:/EE469_Labs/fullAdder.sv Line: 33
+    Info (12023): Found entity 1: fullAdder File: C:/Users/gering92/Documents/GitHub/EE469_Labs/fullAdder.sv Line: 6
+    Info (12023): Found entity 2: fullAdder_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/fullAdder.sv Line: 33
 Info (12021): Found 2 design units, including 2 entities, in source file decoder5_32.sv
-    Info (12023): Found entity 1: decoder5_32 File: C:/EE469_Labs/decoder5_32.sv Line: 4
-    Info (12023): Found entity 2: decoder5_32_testbench File: C:/EE469_Labs/decoder5_32.sv Line: 27
+    Info (12023): Found entity 1: decoder5_32 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder5_32.sv Line: 4
+    Info (12023): Found entity 2: decoder5_32_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder5_32.sv Line: 27
 Info (12021): Found 2 design units, including 2 entities, in source file decoder3_8.sv
-    Info (12023): Found entity 1: decoder3_8 File: C:/EE469_Labs/decoder3_8.sv Line: 6
-    Info (12023): Found entity 2: decoder3_8_testbench File: C:/EE469_Labs/decoder3_8.sv Line: 39
+    Info (12023): Found entity 1: decoder3_8 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder3_8.sv Line: 6
+    Info (12023): Found entity 2: decoder3_8_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder3_8.sv Line: 39
 Info (12021): Found 2 design units, including 2 entities, in source file decoder2_4.sv
-    Info (12023): Found entity 1: decoder2_4 File: C:/EE469_Labs/decoder2_4.sv Line: 6
-    Info (12023): Found entity 2: decoder2_4_testbench File: C:/EE469_Labs/decoder2_4.sv Line: 31
+    Info (12023): Found entity 1: decoder2_4 File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder2_4.sv Line: 6
+    Info (12023): Found entity 2: decoder2_4_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder2_4.sv Line: 31
 Info (12021): Found 2 design units, including 2 entities, in source file datamem.sv
-    Info (12023): Found entity 1: datamem File: C:/EE469_Labs/datamem.sv Line: 12
-    Info (12023): Found entity 2: datamem_testbench File: C:/EE469_Labs/datamem.sv Line: 71
+    Info (12023): Found entity 1: datamem File: C:/Users/gering92/Documents/GitHub/EE469_Labs/datamem.sv Line: 12
+    Info (12023): Found entity 2: datamem_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/datamem.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_single.sv
-    Info (12023): Found entity 1: CPU_single File: C:/EE469_Labs/CPU_single.sv Line: 5
-    Info (12023): Found entity 2: CPU_single_tb File: C:/EE469_Labs/CPU_single.sv Line: 232
+    Info (12023): Found entity 1: CPU_single File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 5
+    Info (12023): Found entity 2: CPU_single_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 232
 Info (12021): Found 2 design units, including 2 entities, in source file and_64_bit.sv
-    Info (12023): Found entity 1: and_64_bit File: C:/EE469_Labs/and_64_bit.sv Line: 6
-    Info (12023): Found entity 2: and_64_bit_testbench File: C:/EE469_Labs/and_64_bit.sv Line: 26
+    Info (12023): Found entity 1: and_64_bit File: C:/Users/gering92/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 6
+    Info (12023): Found entity 2: and_64_bit_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file alustim.sv
-    Info (12023): Found entity 1: alustim File: C:/EE469_Labs/alustim.sv Line: 21
+    Info (12023): Found entity 1: alustim File: C:/Users/gering92/Documents/GitHub/EE469_Labs/alustim.sv Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file alu_pass_add_sub.sv
-    Info (12023): Found entity 1: ALU File: C:/EE469_Labs/ALU_pass_add_sub.sv Line: 8
+    Info (12023): Found entity 1: ALU File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_pass_add_sub.sv Line: 8
 Info (12021): Found 2 design units, including 2 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/EE469_Labs/ALU.sv Line: 17
-    Info (12023): Found entity 2: ALUmini File: C:/EE469_Labs/ALU.sv Line: 90
+    Info (12023): Found entity 1: alu File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU.sv Line: 17
+    Info (12023): Found entity 2: ALUmini File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU.sv Line: 90
 Info (12021): Found 2 design units, including 2 entities, in source file adder64_bit.sv
-    Info (12023): Found entity 1: adder64_bit File: C:/EE469_Labs/adder64_bit.sv Line: 8
-    Info (12023): Found entity 2: adder64_bit_testbench File: C:/EE469_Labs/adder64_bit.sv Line: 71
+    Info (12023): Found entity 1: adder64_bit File: C:/Users/gering92/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 8
+    Info (12023): Found entity 2: adder64_bit_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/adder64_bit.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file adder_4_pc.sv
-    Info (12023): Found entity 1: adder_4_pc File: C:/EE469_Labs/adder_4_pc.sv Line: 3
-    Info (12023): Found entity 2: adder_4_pc_tb File: C:/EE469_Labs/adder_4_pc.sv Line: 29
+    Info (12023): Found entity 1: adder_4_pc File: C:/Users/gering92/Documents/GitHub/EE469_Labs/adder_4_pc.sv Line: 3
+    Info (12023): Found entity 2: adder_4_pc_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/adder_4_pc.sv Line: 29
 Info (12021): Found 1 design units, including 1 entities, in source file d_ff.sv
-    Info (12023): Found entity 1: D_FF File: C:/EE469_Labs/D_FF.sv Line: 4
+    Info (12023): Found entity 1: D_FF File: C:/Users/gering92/Documents/GitHub/EE469_Labs/D_FF.sv Line: 4
 Info (12021): Found 2 design units, including 2 entities, in source file reg2locmux.sv
-    Info (12023): Found entity 1: reg2locMux File: C:/EE469_Labs/reg2locMux.sv Line: 4
-    Info (12023): Found entity 2: reg2locMux_tb File: C:/EE469_Labs/reg2locMux.sv Line: 23
+    Info (12023): Found entity 1: reg2locMux File: C:/Users/gering92/Documents/GitHub/EE469_Labs/reg2locMux.sv Line: 4
+    Info (12023): Found entity 2: reg2locMux_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/reg2locMux.sv Line: 23
 Info (12021): Found 2 design units, including 2 entities, in source file alu_control_unit.sv
-    Info (12023): Found entity 1: ALU_control_unit File: C:/EE469_Labs/ALU_control_unit.sv Line: 1
-    Info (12023): Found entity 2: alu_control_unit_tb File: C:/EE469_Labs/ALU_control_unit.sv Line: 105
+    Info (12023): Found entity 1: ALU_control_unit File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 1
+    Info (12023): Found entity 2: alu_control_unit_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 105
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_control.sv
-    Info (12023): Found entity 1: CPU_control File: C:/EE469_Labs/CPU_control.sv Line: 9
-    Info (12023): Found entity 2: CPU_control_tb File: C:/EE469_Labs/CPU_control.sv Line: 305
-Info (12127): Elaborating entity "CPU_single" for the top level hierarchy
-Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/EE469_Labs/CPU_single.sv Line: 119
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/EE469_Labs/programCounter.sv Line: 44
-Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:uncondBranch" File: C:/EE469_Labs/programCounter.sv Line: 46
-Info (12128): Elaborating entity "mux64x2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType" File: C:/EE469_Labs/programCounter.sv Line: 50
-Info (12128): Elaborating entity "mux2_1" for hierarchy "programCounter:pc|mux64x2_1:branchType|mux2_1:muxy[0].miniboi" File: C:/EE469_Labs/mux64x2_1.sv Line: 26
-Info (12128): Elaborating entity "shifter" for hierarchy "programCounter:pc|shifter:leftShift2" File: C:/EE469_Labs/programCounter.sv Line: 55
-Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounter:pc|adder_4_pc:add4" File: C:/EE469_Labs/programCounter.sv Line: 63
-Info (12128): Elaborating entity "fullAdder" for hierarchy "programCounter:pc|adder_4_pc:add4|fullAdder:fA" File: C:/EE469_Labs/adder_4_pc.sv Line: 19
-Info (12128): Elaborating entity "adder64_bit" for hierarchy "programCounter:pc|adder64_bit:branchAdd" File: C:/EE469_Labs/programCounter.sv Line: 65
-Info (12128): Elaborating entity "mux64x8_1" for hierarchy "programCounter:pc|mux64x8_1:bigBranchSelect" File: C:/EE469_Labs/programCounter.sv Line: 74
-Info (12128): Elaborating entity "mux64x4_1" for hierarchy "programCounter:pc|mux64x8_1:bigBranchSelect|mux64x4_1:first" File: C:/EE469_Labs/mux64x8_1.sv Line: 16
-Info (12128): Elaborating entity "D_FF" for hierarchy "programCounter:pc|D_FF:reginald[0].duffy" File: C:/EE469_Labs/programCounter.sv Line: 94
-Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/EE469_Labs/CPU_single.sv Line: 123
-Warning (10175): Verilog HDL warning at instructmem.sv(25): ignoring unsupported system task File: C:/EE469_Labs/instructmem.sv Line: 25
-Warning (10850): Verilog HDL warning at instructmem.sv(43): number of words (16) in memory file does not match the number of elements in the address range [0:255] File: C:/EE469_Labs/instructmem.sv Line: 43
-Info (10648): Verilog HDL Display System Task info at instructmem.sv(44): Running benchmark:  File: C:/EE469_Labs/instructmem.sv Line: 44
-Info (12128): Elaborating entity "CPU_control" for hierarchy "CPU_control:control" File: C:/EE469_Labs/CPU_single.sv Line: 128
-Info (12128): Elaborating entity "ALU_control_unit" for hierarchy "ALU_control_unit:aloo_control" File: C:/EE469_Labs/CPU_single.sv Line: 142
-Info (12128): Elaborating entity "reg2locMux" for hierarchy "reg2locMux:regToLoc" File: C:/EE469_Labs/CPU_single.sv Line: 148
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:reggy" File: C:/EE469_Labs/CPU_single.sv Line: 159
-Info (12128): Elaborating entity "decoder5_32" for hierarchy "regfile:reggy|decoder5_32:writeEnable" File: C:/EE469_Labs/regfile.sv Line: 34
-Info (12128): Elaborating entity "decoder2_4" for hierarchy "regfile:reggy|decoder5_32:writeEnable|decoder2_4:s1d0" File: C:/EE469_Labs/decoder5_32.sv Line: 12
-Info (12128): Elaborating entity "decoder3_8" for hierarchy "regfile:reggy|decoder5_32:writeEnable|decoder3_8:s2d3" File: C:/EE469_Labs/decoder5_32.sv Line: 14
-Info (12128): Elaborating entity "register64" for hierarchy "regfile:reggy|register64:outputGen[0].reggy" File: C:/EE469_Labs/regfile.sv Line: 44
-Info (12128): Elaborating entity "mux64x32_1" for hierarchy "regfile:reggy|mux64x32_1:read1" File: C:/EE469_Labs/regfile.sv Line: 51
-Info (12128): Elaborating entity "mux32_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi" File: C:/EE469_Labs/mux64x32_1.sv Line: 42
-Info (12128): Elaborating entity "mux16_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0" File: C:/EE469_Labs/mux32_1.sv Line: 22
-Info (12128): Elaborating entity "mux8_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0|mux8_1:mux0" File: C:/EE469_Labs/mux16_1.sv Line: 14
-Info (12128): Elaborating entity "mux4_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0|mux8_1:mux0|mux4_1:mux0" File: C:/EE469_Labs/mux8_1.sv Line: 14
-Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:daddrExtender" File: C:/EE469_Labs/CPU_single.sv Line: 164
-Info (12128): Elaborating entity "zero_extender" for hierarchy "zero_extender:immExtender" File: C:/EE469_Labs/CPU_single.sv Line: 170
-Info (12128): Elaborating entity "alu" for hierarchy "alu:aloo" File: C:/EE469_Labs/CPU_single.sv Line: 189
-Info (12128): Elaborating entity "mux64x2_1_2scomp" for hierarchy "alu:aloo|mux64x2_1_2scomp:twos" File: C:/EE469_Labs/ALU.sv Line: 51
-Info (12128): Elaborating entity "and_64_bit" for hierarchy "alu:aloo|and_64_bit:AND" File: C:/EE469_Labs/ALU.sv Line: 63
-Info (12128): Elaborating entity "or_64_bit" for hierarchy "alu:aloo|or_64_bit:OR" File: C:/EE469_Labs/ALU.sv Line: 66
-Info (12128): Elaborating entity "xor_64_bit" for hierarchy "alu:aloo|xor_64_bit:XOR" File: C:/EE469_Labs/ALU.sv Line: 69
-Info (12128): Elaborating entity "zeroCheck" for hierarchy "alu:aloo|zeroCheck:flag" File: C:/EE469_Labs/ALU.sv Line: 80
-Info (12128): Elaborating entity "datamem" for hierarchy "datamem:mems" File: C:/EE469_Labs/CPU_single.sv Line: 210
-Warning (10175): Verilog HDL warning at datamem.sv(23): ignoring unsupported system task File: C:/EE469_Labs/datamem.sv Line: 23
-Info (10264): Verilog HDL Case Statement information at datamem.sv(43): all case item expressions in this case statement are onehot File: C:/EE469_Labs/datamem.sv Line: 43
-Error (10232): Verilog HDL error at datamem.sv(58): index 71 cannot fall outside the declared range [63:0] for vector "read_data" File: C:/EE469_Labs/datamem.sv Line: 58
-Error (10232): Verilog HDL error at datamem.sv(58): index 64 cannot fall outside the declared range [63:0] for vector "read_data" File: C:/EE469_Labs/datamem.sv Line: 58
-Warning (10240): Verilog HDL Always Construct warning at datamem.sv(55): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/EE469_Labs/datamem.sv Line: 55
-Error (10166): SystemVerilog RTL Coding error at datamem.sv(55): always_comb construct does not infer purely combinational logic. File: C:/EE469_Labs/datamem.sv Line: 55
-Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/EE469_Labs/CPU_single.sv Line: 210
-Info (144001): Generated suppressed messages file C:/EE469_Labs/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
-    Error: Peak virtual memory: 4846 megabytes
-    Error: Processing ended: Mon Nov 21 04:08:21 2022
-    Error: Elapsed time: 00:00:15
-    Error: Total CPU time (on all processors): 00:00:28
+    Info (12023): Found entity 1: CPU_control File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_control.sv Line: 9
+    Info (12023): Found entity 2: CPU_control_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_control.sv Line: 306
+Info (12127): Elaborating entity "programCounter" for the top level hierarchy
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:condBranch" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 46
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:uncondBranch" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 48
+Info (12128): Elaborating entity "mux64x2_1" for hierarchy "mux64x2_1:branchType" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 52
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux64x2_1:branchType|mux2_1:muxy[0].miniboi" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x2_1.sv Line: 26
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:leftShift2" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 57
+Info (12128): Elaborating entity "adder_4_pc" for hierarchy "adder_4_pc:add4" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 65
+Info (12128): Elaborating entity "fullAdder" for hierarchy "adder_4_pc:add4|fullAdder:fA" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/adder_4_pc.sv Line: 19
+Info (12128): Elaborating entity "adder64_bit" for hierarchy "adder64_bit:branchAdd" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 67
+Info (12128): Elaborating entity "mux64x8_1" for hierarchy "mux64x8_1:bigBranchSelect" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 70
+Info (12128): Elaborating entity "mux64x4_1" for hierarchy "mux64x8_1:bigBranchSelect|mux64x4_1:first" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 16
+Info (12128): Elaborating entity "D_FF" for hierarchy "D_FF:reginald[0].duffy" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounter.sv Line: 90
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/gering92/Documents/GitHub/EE469_Labs/DE1_SoC.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 526 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 117 input pins
+    Info (21059): Implemented 128 output pins
+    Info (21061): Implemented 281 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Mon Nov 21 14:50:47 2022
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:40
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/EE469_Labs/DE1_SoC.map.smsg.
+The suppressed messages can be found in C:/Users/gering92/Documents/GitHub/EE469_Labs/DE1_SoC.map.smsg.
 
 
