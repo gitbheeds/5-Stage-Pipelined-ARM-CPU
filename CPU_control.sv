@@ -91,7 +91,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branchLink = 1'b1;
 			
 			
-			Reg2Loc = 1'bX;
+			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
 			RegWrite = 1'b1;
 			ALU_SH = 1'b0;
@@ -106,22 +106,22 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 		
 		// branch to register
 		else if (rOp == 11'b11010110000) begin
-			uncondBr = 1'b1;
-			branch = 1'b1;
+			uncondBr = 1'b0;
+			branch = 1'b0;
 			branchReg = 1'b1;
 			branchLink = 1'b0;
 			
 			
-			Reg2Loc = 1'bX;
+			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
 			RegWrite = 1'b0;
-			ALU_SH = 1'bX;
-			Imm = 1'bX;
+			ALU_SH = 1'b0;
+			Imm = 1'b0;
 			memToReg = 1'b0;
 			memWrite = 1'b0;
 			shiftDirn = 1'bX;
 			
-			ALU_on = 1'b0;
+			ALU_on = 1'b1;
 			set_flags = 1'b0;
 		end
 		

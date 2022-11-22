@@ -14,6 +14,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	
 	input logic [25:0] brAddr26;
 	
+	//data at register for branch to register inst
 	input logic [63:0] Rd;
 	
 	logic [63:0] condAddr64;
@@ -57,7 +58,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	shifter leftShift2(.value(branchSE), .direction(1'b0), .distance(6'd2), .result(shiftedBranch));
 	
 	
-	wire [63:0] nextOut, currentOut, int1, int2, int3;
+	logic [63:0] nextOut, currentOut, int1, int2, int3, pcReg;
 	
 	
 	logic of_flag, co_flag;
@@ -65,6 +66,7 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	adder_4_pc add4(currentOut, int1);
 	
 	adder64_bit branchAdd(currentOut, shiftedBranch, 1'b0, int2, of_flag, co_flag);
+	
 	
 	//select whether to use PC + branch or PC + 4	
 	mux64x8_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .in4(int2), .in5(64'b0), .in6(int2), .in7(int2), .out(int3), .sel({int4, uncondBr, brTaken}));

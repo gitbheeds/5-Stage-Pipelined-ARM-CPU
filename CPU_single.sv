@@ -88,8 +88,8 @@ module CPU_single(clk, rst);
 	//output of ALUsrc mux
 	logic [63:0] srcOut;
 	
-	//ALU_B input (output of zeroCompMux)
-	logic[63:0] ALU_B;
+	//ALU inputs 
+	logic[63:0] ALU_A, ALU_B;
 	
 	//ALU output
 	logic[63:0] ALU_out;
@@ -116,7 +116,7 @@ module CPU_single(clk, rst);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd1), .flagZero, .branch, .flagNeg, .opcode(opcode[10]));
+	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd2), .flagZero, .branch, .flagNeg, .opcode(opcode[10]));
 	
 	
 //instruction memory access
@@ -144,7 +144,7 @@ module CPU_single(clk, rst);
 	
 	//Reg2Loc mux goes here
 	//i0 = Rd, i1 = Rm
-	//out = rd2
+	//out = readB
 	reg2locMux regToLoc(Reg2Loc, Rm, Rd, readB);
 	
 	//branch register mux here
@@ -152,8 +152,7 @@ module CPU_single(clk, rst);
 	//i1 = 5'd30 (link register)
 	//out = targetReg
 	reg2locMux branchReggy(branchReg, 5'd30, Rd, targetReg);
-	
-	
+		
 	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
 					 .ReadRegister1(Rn), .ReadRegister2(readB), .WriteRegister(targetReg),
 					 .RegWrite, .clk(~clk));
@@ -180,13 +179,17 @@ module CPU_single(clk, rst);
 
 	//ALU_Src mux goes here
 	//i0 = rd2, i1 = ext_out
-	//out = srcOut to zeroComp mux
-	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, ALU_B);
-	
-	//zeroComp mux goes here
-	//mux64x2_1 zeroCompMux(.sel(compZero), .i0(srcOut), .i1(64'b0), .out(ALU_B));
+	//out = srcOut to linkDataB mux
+	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, srcOut);
 
-	alu aloo(.A(rd1), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
+	//branch link, add pc+4 to x30
+	//set ALU_B to zero for this
+
+	mux64x2_1 linkDataA(.sel(branchLink), .i0(rd1), .i1(pc_plus4), .out(ALU_A));
+	
+	mux64x2_1 linkDataB(.sel(branchLink), .i0(srcOut), .i1(64'b0), .out(ALU_B));
+
+	alu aloo(.A(ALU_A), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	
 //shifter instantiation
 	
@@ -207,7 +210,7 @@ module CPU_single(clk, rst);
 	
 	assign xfer_size = 4'b1000;
 
-	datamem mems(.address(toDataMem), .write_enable(memWrite), .read_enable(1'b1), .write_data(rd2), .clk, .xfer_size, .read_data(memDataOut));
+	datamem mems(.address(toDataMem), .write_enable(memWrite), .read_enable(1'b1), .write_data(rd2), .clk(clk), .xfer_size, .read_data(memDataOut));
 
 	//MemToReg mux here
 	//i0 = toDataMem, i1 = memDataOut
@@ -233,7 +236,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 1000000;
+	parameter CLOCK_PERIOD = 10000;
 	initial begin
 		clk <= 0;
 		// Forever toggle the clock

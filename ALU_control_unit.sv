@@ -68,6 +68,13 @@ module ALU_control_unit (clk, opcode, ALU_on, ALU_cntrl, carry_out, zero, overfl
 			//BL
 			else if (opcode[10:5] == 6'b100101)begin
 				
+				ALU_cntrl = 3'b010;
+				
+			end
+			
+			//BR
+			else if (rOp == 11'b11010110000) begin
+			
 				ALU_cntrl = 3'b000;
 				
 			end
