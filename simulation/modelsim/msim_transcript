@@ -1,5 +1,4 @@
-# Reading C:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
-# ERROR: No extended dataflow license exists
+# Reading C:/Users/Gerin/Desktop/Quartus Complete Folder/modelsim_ase/tcl/vsim/pref.tcl
 # do DE1_SoC_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -8,32 +7,170 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/intelFPGA/17.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/Users/Gerin/Desktop/Quartus Complete Folder/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/spbhi/OneDrive/Documents/SV\ files/EE469_Labs_correct {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv}
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:13:22 on Nov 20,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct" C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv 
-# -- Compiling module ALU_control_unit
-# -- Compiling module alu_control_unit_tb
+# Start time: 18:02:38 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv 
+# -- Compiling module sign_extender
+# -- Compiling module se_tb
 # 
 # Top level modules:
-# 	alu_control_unit_tb
-# End time: 02:13:22 on Nov 20,2022, Elapsed time: 0:00:00
+# 	se_tb
+# End time: 18:02:38 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:38 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv 
+# -- Compiling module programCounter
+# -- Compiling module programCounter_tb
+# 
+# Top level modules:
+# 	programCounter_tb
+# End time: 18:02:38 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:38 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv 
+# -- Compiling module mux64x8_1
+# -- Compiling module mux64x8_1_testbench
+# 
+# Top level modules:
+# 	mux64x8_1_testbench
+# End time: 18:02:38 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:38 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv 
+# -- Compiling module mux64x4_1
+# -- Compiling module mux64x4_1_testbench
+# 
+# Top level modules:
+# 	mux64x4_1_testbench
+# End time: 18:02:38 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:38 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv 
+# -- Compiling module mux64x2_1
+# -- Compiling module mux64x2_1_testbench
+# 
+# Top level modules:
+# 	mux64x2_1_testbench
+# End time: 18:02:38 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:38 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv 
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# End time: 18:02:39 on Nov 21,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/math.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:39 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/math.sv 
+# -- Compiling module mult
+# -- Compiling module shifter
+# -- Compiling module shifter_testbench
+# -- Compiling module mult_testbench
+# 
+# Top level modules:
+# 	shifter_testbench
+# 	mult_testbench
+# End time: 18:02:39 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:39 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv 
+# -- Compiling module fullAdder
+# -- Compiling module fullAdder_testbench
+# 
+# Top level modules:
+# 	fullAdder_testbench
+# End time: 18:02:39 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:39 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv 
+# -- Compiling module adder64_bit
+# -- Compiling module adder64_bit_testbench
+# 
+# Top level modules:
+# 	adder64_bit_testbench
+# End time: 18:02:39 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder_4_pc.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:39 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder_4_pc.sv 
+# -- Compiling module adder_4_pc
+# -- Compiling module adder_4_pc_tb
+# 
+# Top level modules:
+# 	adder_4_pc_tb
+# End time: 18:02:39 on Nov 21,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:02:39 on Nov 21,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv 
+# -- Compiling module D_FF
+# 
+# Top level modules:
+# 	D_FF
+# End time: 18:02:39 on Nov 21,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim -gui -l msim_transcript work.alu_control_unit_tb
-# vsim -gui -l msim_transcript work.alu_control_unit_tb 
-# Start time: 02:14:31 on Nov 20,2022
+vsim work.programCounter_tb
+# vsim work.programCounter_tb 
+# Start time: 18:02:49 on Nov 21,2022
 # Loading sv_std.std
-# Loading work.alu_control_unit_tb
-# Loading work.ALU_control_unit
+# Loading work.programCounter_tb
+# Loading work.programCounter
+# Loading work.sign_extender
+# Loading work.mux64x2_1
+# Loading work.shifter
+# Loading work.adder_4_pc
+# Loading work.fullAdder
+# Loading work.adder64_bit
+# Loading work.mux64x8_1
+# Loading work.mux64x4_1
+# Loading work.mux2_1
+# Loading work.D_FF
+add wave -position end  sim:/programCounter_tb/uncondBr
+add wave -position end  sim:/programCounter_tb/rst
+add wave -position end  sim:/programCounter_tb/pc_plus4
+add wave -position end  sim:/programCounter_tb/opcode
+add wave -position end  sim:/programCounter_tb/flagZero
+add wave -position end  sim:/programCounter_tb/flagNeg
+add wave -position end  sim:/programCounter_tb/currPC
+add wave -position end  sim:/programCounter_tb/condAddr19
+add wave -position end  sim:/programCounter_tb/clk
+add wave -position end  sim:/programCounter_tb/branchReg
+add wave -position end  sim:/programCounter_tb/branch
+add wave -position end  sim:/programCounter_tb/brAddr26
+add wave -position end  sim:/programCounter_tb/Rd
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Gerin  Hostname: ULTRA-PC  ProcessID: 41564
-#           Attempting to use alternate WLF file "./wlftnfbkkb".
+#           Attempting to use alternate WLF file "./wlfthjxqna".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftnfbkkb
+#           Using alternate file: ./wlfthjxqna
 run -all
-# End time: 03:14:03 on Nov 20,2022, Elapsed time: 0:59:32
-# Errors: 0, Warnings: 2
+# ** Note: $stop    : C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv(164)
+#    Time: 244 ns  Iteration: 1  Instance: /programCounter_tb
+# Break in Module programCounter_tb at C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv line 164
+# wrong # args: should be "load file ?pkg? ?interp?"
+# End time: 18:04:48 on Nov 21,2022, Elapsed time: 0:01:59
+# Errors: 1, Warnings: 2
