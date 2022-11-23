@@ -318,11 +318,13 @@ module CPU_control_tb();
 	
 	logic branchReg, branchLink;
 	
+	logic memRead;
+	
 	logic ALU_on, set_flags;
 	
 	CPU_control dut(opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, 
 						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, 
-						 branchReg, branchLink);
+						 branchReg, branchLink, memRead);
 						 
 	initial begin
 	
