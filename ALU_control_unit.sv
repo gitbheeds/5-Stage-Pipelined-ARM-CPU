@@ -1,5 +1,5 @@
-module ALU_control_unit (clk, opcode, ALU_on, ALU_cntrl, carry_out, zero, overflow, negative, flags);
-	input logic clk;
+module ALU_control_unit (clk, opcode, ALU_on, ALU_cntrl, carry_out, zero, overflow, negative, flags, sign);
+	input logic clk, sign;
 
 	input logic [10:0] opcode;
 	
@@ -54,7 +54,7 @@ module ALU_control_unit (clk, opcode, ALU_on, ALU_cntrl, carry_out, zero, overfl
 			//STUR + LDUR
 			else if(dOp == 11'b11111000000 || dOp == 11'b11111000010) begin
 			
-				ALU_cntrl = 3'b010;
+				ALU_cntrl = {2'b01, sign};
 			
 			end
 			
@@ -116,6 +116,8 @@ module alu_control_unit_tb();
 	logic[10:0] opcode;
 	
 	logic ALU_on;
+	
+	logic sign;
 	
 	logic [2:0] ALU_cntrl;
 	

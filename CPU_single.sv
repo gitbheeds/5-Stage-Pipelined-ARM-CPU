@@ -58,7 +58,7 @@ module CPU_single(clk, rst);
 //------------------control signals------------------------//
 	logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
 			ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags,
-			branchReg, branchLink, branch;
+			branchReg, branchLink, branch, memRead;
 	
 	logic[2:0] ALU_cntrl;
 //----------------end control signals----------------------//
@@ -71,13 +71,13 @@ module CPU_single(clk, rst);
 
 	//regfile ReadRegister2
 	//output of Reg2Loc mux
-	logic[4:0] readB;
+	logic[4:0] readA, readB;
 
 	//regfile dataout and writedata
 	logic[63:0] rd1, rd2, wd;
 	
 	//sign extender output
-	logic[63:0] SE9_out;
+	logic[63:0] SE9_out, SE64, tempSE;
 	
 	//immediate zero extender output
 	logic[63:0] ZE12_out;
@@ -125,7 +125,7 @@ module CPU_single(clk, rst);
 //CPU control unit
 	CPU_control control (.rst, .opcode, .uncondBr, .branch, .Reg2Loc, .ALU_Src, .RegWrite, 
 								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
-								.branchReg, .branchLink);
+								.branchReg, .branchLink, .memRead);
 								
 								
 //flag setting
@@ -139,7 +139,7 @@ module CPU_single(clk, rst);
 									
 	
 //ALU control unit
-	ALU_control_unit aloo_control (.clk, .opcode, .ALU_on, .ALU_cntrl, .carry_out, .zero, .overflow, .negative, .flags);
+	ALU_control_unit aloo_control (.clk, .opcode, .ALU_on, .ALU_cntrl, .carry_out, .zero, .overflow, .negative, .flags, .sign(SE9_out[63]));
 //regfile instantiation
 	
 	//Reg2Loc mux goes here
@@ -147,20 +147,28 @@ module CPU_single(clk, rst);
 	//out = readB
 	reg2locMux regToLoc(Reg2Loc, Rm, Rd, readB);
 	
-	//branch register mux here
+	//branch link mux here
 	//i0 = Rd
 	//i1 = 5'd30 (link register)
 	//out = targetReg
-	reg2locMux branchReggy(branchReg, 5'd30, Rd, targetReg);
+	reg2locMux branchLinky1(branchLink, 5'd30, Rd, targetReg);
+	
+	reg2locMux branchLinky2(branchLink, 5'd30, Rn, readA);
 		
 	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
-					 .ReadRegister1(Rn), .ReadRegister2(readB), .WriteRegister(targetReg),
+					 .ReadRegister1(readA), .ReadRegister2(readB), .WriteRegister(targetReg),
 					 .RegWrite, .clk(~clk));
 	
 //Sign Extension of dAddr9
 
 	parameter daddr9Size = 9;
 	sign_extender #(daddr9Size) daddrExtender(dAddr9, SE9_out);
+	
+	mux64x2_1_2scomp flipOffset(.sel(SE9_out[63]), .i0(SE9_out), .i1(SE9_out), .out(tempSE));
+	
+	logic co_temp, of_temp;
+	
+	adder64_bit offsetAdd(.input1(tempSE), .input2(0), .sub_control(SE9_out[63]), .out(SE64), .of_flag(of_temp), .co_flag(co_temp));
 
 //Zero Extension of ALU_Imm
 
@@ -172,7 +180,7 @@ module CPU_single(clk, rst);
 	//i0 = SE9_Out, i1 = ZE12_out
 	//out = ext_out
 	
-	mux64x2_1 ImmMux(Imm, SE9_out, ZE12_out, ext_out); 
+	mux64x2_1 ImmMux(Imm, SE64, ZE12_out, ext_out); 
 	
 	
 //ALU instantiation
@@ -185,11 +193,11 @@ module CPU_single(clk, rst);
 	//branch link, add pc+4 to x30
 	//set ALU_B to zero for this
 
-	mux64x2_1 linkDataA(.sel(branchLink), .i0(rd1), .i1(pc_plus4), .out(ALU_A));
+	//mux64x2_1 linkDataA(.sel(branchLink), .i0(rd1), .i1(pc_plus4), .out(ALU_A));
 	
-	mux64x2_1 linkDataB(.sel(branchLink), .i0(srcOut), .i1(64'b0), .out(ALU_B));
+	mux64x2_1 linkDataB(.sel(branchLink), .i0(srcOut), .i1(pc_plus4), .out(ALU_B));
 
-	alu aloo(.A(ALU_A), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
+	alu aloo(.A(rd1), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	
 //shifter instantiation
 	
@@ -210,7 +218,7 @@ module CPU_single(clk, rst);
 	
 	assign xfer_size = 4'b1000;
 
-	datamem mems(.address(toDataMem), .write_enable(memWrite), .read_enable(1'b1), .write_data(rd2), .clk(clk), .xfer_size, .read_data(memDataOut));
+	datamem mems(.address(toDataMem), .write_enable(memWrite), .read_enable(memRead), .write_data(rd2), .clk(clk), .xfer_size, .read_data(memDataOut));
 
 	//MemToReg mux here
 	//i0 = toDataMem, i1 = memDataOut
@@ -236,7 +244,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 10000;
+	parameter CLOCK_PERIOD = 100000;
 	initial begin
 		clk <= 0;
 		// Forever toggle the clock
@@ -250,7 +258,7 @@ module CPU_single_tb();
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		repeat(350) @(posedge clk);
+		repeat(1000) @(posedge clk);
 		
 		$stop;
 	end

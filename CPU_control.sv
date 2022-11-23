@@ -7,7 +7,7 @@
 // branchLink is a control for a mux that sends PC+4 to the link register R[30]
 // compZero is a control for a mux that inputs 0 to the ALU for the CBZ command
 module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, 
-						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink);
+						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink, memRead);
 						 
 	input logic [10:0] opcode;
 	
@@ -16,6 +16,8 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 	output logic uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, ALU_SH, Imm, memToReg, memWrite, shiftDirn;
 	
 	output logic branchReg, branchLink;
+	
+	output logic memRead;
 	
 	output logic ALU_on, set_flags;
 	
@@ -46,6 +48,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
+			memRead = 1'b0;
 			
 			
 			Reg2Loc = 1'bX;
@@ -67,7 +70,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b1;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			
+			memRead = 1'b0;
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
@@ -89,7 +92,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b1;
 			branchReg = 1'b0;
 			branchLink = 1'b1;
-			
+			memRead = 1'b0;
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
@@ -110,7 +113,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'b1;
 			branchLink = 1'b0;
-			
+			memRead = 1'b0;
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
@@ -131,6 +134,8 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b1;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
+			memRead = 1'b0;
+			
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b0;
@@ -151,7 +156,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			
+			memRead = 1'b0;
 			
 			Reg2Loc = 1'bZ;
 			ALU_Src = 1'b1;
@@ -172,7 +177,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			
+			memRead = 1'b0;
 			
 			Reg2Loc = 1'b1;
 			ALU_Src = 1'b0;
@@ -193,7 +198,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			
+			memRead = 1'b1;
 			
 			Reg2Loc = 1'bX;
 			ALU_Src = 1'b1;
@@ -214,7 +219,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			
+			memRead = 1'b0;
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'b1;
@@ -235,7 +240,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'b0;
 			branchLink = 1'b0;
-			
+			memRead = 1'b0;
 			
 			Reg2Loc = 1'b1;
 			ALU_Src = 1'b0;
@@ -258,6 +263,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			branch = 1'b0;
 			branchReg = 1'bz;
 			branchLink = 1'bz;
+			memRead = 1'bz;
 			
 			Reg2Loc = 1'b0;
 			ALU_Src = 1'bz;
@@ -280,7 +286,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 		branch = 1'b0;
 		branchReg = 1'b0;
 		branchLink = 1'b0;
-		
+		memRead = 1'b0;
 		
 		Reg2Loc = 1'b0;
 		ALU_Src = 1'b0;
