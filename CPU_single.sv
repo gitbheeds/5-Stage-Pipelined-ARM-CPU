@@ -242,7 +242,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 100000;
+	parameter CLOCK_PERIOD = 15000;
 	initial begin
 		clk <= 0;
 		// Forever toggle the clock
