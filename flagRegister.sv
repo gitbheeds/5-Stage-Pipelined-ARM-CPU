@@ -1,12 +1,11 @@
 //flag register to hold flags for use in S type insts and branching
-module flagRegister (clk, set_flags, flagsALU, flagsOut);
+module flagRegister (clk, rst, set_flags, flagsALU, flagsOut);
 	input logic clk; // instantiates clock
 	input logic set_flags; // control to write new flags
 	input logic [3:0] flagsALU; // flags from ALU
 	output logic [3:0] flagsOut; // flags to hold for CPU ops
 	
-	logic rst;
-	assign rst = 1'b0; // sets reset to 0 for proper DFF functionality
+	input logic rst;
 	
 	logic [3:0] flagData; // 4 bit value that goes into a register from the 2:1 mux
 	

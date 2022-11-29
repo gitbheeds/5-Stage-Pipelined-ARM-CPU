@@ -116,7 +116,7 @@ module CPU_single(clk, rst);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation
-	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd2), .flagZero, .branch, .flagNeg, .opcode(opcode[10]));
+	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd2), .flagZero(flags[2]), .branch, .flagNeg(flags[0]), .opcode(opcode[10]));
 	
 	
 //instruction memory access
@@ -135,7 +135,7 @@ module CPU_single(clk, rst);
 	//flag[2] zero
 	//flag[1] overflow
 	//flag[0] negative
-	flagRegister flagsflagsflags (.clk, .set_flags, .flagsALU({carry_out, zero, overflow, negative}), .flagsOut(flags));
+	flagRegister flagsflagsflags (.clk, .rst, .set_flags, .flagsALU({carry_out, zero, overflow, negative}), .flagsOut(flags));
 									
 									
 //ALU control unit

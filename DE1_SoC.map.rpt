@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Mon Nov 28 21:28:47 2022
+Tue Nov 29 13:16:16 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 28 21:28:47 2022           ;
+; Analysis & Synthesis Status ; Failed - Tue Nov 29 13:16:16 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Nov 28 21:28:35 2022
+    Info: Processing started: Tue Nov 29 13:16:07 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -281,15 +281,15 @@ Info (12128): Elaborating entity "mux64x4_1" for hierarchy "programCounter:pc|mu
 Info (12128): Elaborating entity "D_FF" for hierarchy "programCounter:pc|D_FF:reginald[0].duffy" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounter.sv Line: 92
 Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 123
 Warning (10175): Verilog HDL warning at instructmem.sv(29): ignoring unsupported system task File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 29
-Error (10170): Verilog HDL syntax error at test12_Fibonacci.arm(72) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/test12_Fibonacci.arm Line: 72
+Error (10170): Verilog HDL syntax error at test11_Sort.arm(65) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/test11_Sort.arm Line: 65
 Info (10648): Verilog HDL Display System Task info at instructmem.sv(48): Running benchmark:  File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 48
 Error (12152): Can't elaborate user hierarchy "instructmem:insts" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 123
 Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
-    Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Mon Nov 28 21:28:47 2022
-    Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:21
+    Error: Peak virtual memory: 4793 megabytes
+    Error: Processing ended: Tue Nov 29 13:16:16 2022
+    Error: Elapsed time: 00:00:09
+    Error: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+
