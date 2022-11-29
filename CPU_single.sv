@@ -129,17 +129,17 @@ module CPU_single(clk, rst);
 								
 								
 //flag setting
-
-	//set flags only when instructed to by CPU
-	and #(50) zeroF(flagZero, zero, set_flags); // zero flag
-	and #(50) carryF(flagCarry, flags[3], set_flags); // carry_out flag
-	and #(50) OF(flagOF, flags[1], set_flags); // overflow flag
-	and #(50) negF(flagNeg, flags[0], set_flags); // negative flag
 	
+	//flag register
+	//flag[3] carry out
+	//flag[2] zero
+	//flag[1] overflow
+	//flag[0] negative
+	flagRegister flagsflagsflags (.clk, .set_flags, .flagsALU({carry_out, zero, overflow, negative}), .flagsOut(flags));
 									
-	
+									
 //ALU control unit
-	ALU_control_unit aloo_control (.clk, .opcode, .ALU_on, .ALU_cntrl, .carry_out, .zero, .overflow, .negative, .flags, .sign(SE9_out[63]));
+	ALU_control_unit aloo_control (.clk, .opcode, .ALU_on, .ALU_cntrl, .sign(SE9_out[63]));
 //regfile instantiation
 	
 	//Reg2Loc mux goes here
@@ -192,8 +192,6 @@ module CPU_single(clk, rst);
 
 	//branch link, add pc+4 to x30
 	//set ALU_B to zero for this
-
-	//mux64x2_1 linkDataA(.sel(branchLink), .i0(rd1), .i1(pc_plus4), .out(ALU_A));
 	
 	mux64x2_1 linkDataB(.sel(branchLink), .i0(srcOut), .i1(pc_plus4), .out(ALU_B));
 

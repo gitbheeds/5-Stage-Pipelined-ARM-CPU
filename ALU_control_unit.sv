@@ -1,17 +1,13 @@
-module ALU_control_unit (clk, opcode, ALU_on, ALU_cntrl, carry_out, zero, overflow, negative, flags, sign);
+module ALU_control_unit (clk, opcode, ALU_on, ALU_cntrl, sign);
 	input logic clk, sign;
 
 	input logic [10:0] opcode;
 	
-	input logic ALU_on, carry_out, zero, overflow, negative;
-	
-	logic [3:0] flagsTemp;
-	
-	assign flagsTemp = {carry_out, zero, overflow, negative};
+	input logic ALU_on;
 	
 	output logic [2:0] ALU_cntrl;
 	
-	output logic [3:0] flags;
+
 	
 	//D-type insts 11b
 	logic[10:0] dOp;
@@ -100,10 +96,6 @@ module ALU_control_unit (clk, opcode, ALU_on, ALU_cntrl, carry_out, zero, overfl
 	
 	
 	
-	end
-	
-	always_ff @(negedge clk) begin
-		flags <= flagsTemp;
 	end
 
 endmodule 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Mon Nov 28 18:08:15 2022
+Mon Nov 28 21:28:47 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Nov 28 18:08:15 2022           ;
+; Analysis & Synthesis Status ; Failed - Mon Nov 28 21:28:47 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Nov 28 18:08:07 2022
+    Info: Processing started: Mon Nov 28 21:28:35 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -236,7 +236,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file datamem
     Info (12023): Found entity 2: datamem_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_single.sv
     Info (12023): Found entity 1: CPU_single File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 5
-    Info (12023): Found entity 2: CPU_single_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 243
+    Info (12023): Found entity 2: CPU_single_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 241
 Info (12021): Found 2 design units, including 2 entities, in source file and_64_bit.sv
     Info (12023): Found entity 1: and_64_bit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/and_64_bit.sv Line: 6
     Info (12023): Found entity 2: and_64_bit_testbench File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/and_64_bit.sv Line: 26
@@ -260,10 +260,12 @@ Info (12021): Found 2 design units, including 2 entities, in source file reg2loc
     Info (12023): Found entity 2: reg2locMux_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/reg2locMux.sv Line: 23
 Info (12021): Found 2 design units, including 2 entities, in source file alu_control_unit.sv
     Info (12023): Found entity 1: ALU_control_unit File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv Line: 1
-    Info (12023): Found entity 2: alu_control_unit_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv Line: 112
+    Info (12023): Found entity 2: alu_control_unit_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv Line: 104
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_control.sv
     Info (12023): Found entity 1: CPU_control File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_control.sv Line: 9
     Info (12023): Found entity 2: CPU_control_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_control.sv Line: 312
+Info (12021): Found 1 design units, including 1 entities, in source file flagregister.sv
+    Info (12023): Found entity 1: flagRegister File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/flagRegister.sv Line: 2
 Info (12127): Elaborating entity "CPU_single" for the top level hierarchy
 Info (12128): Elaborating entity "programCounter" for hierarchy "programCounter:pc" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 119
 Info (12128): Elaborating entity "sign_extender" for hierarchy "programCounter:pc|sign_extender:condBranch" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounter.sv Line: 47
@@ -285,8 +287,8 @@ Error (12152): Can't elaborate user hierarchy "instructmem:insts" File: C:/Users
 Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4779 megabytes
-    Error: Processing ended: Mon Nov 28 18:08:15 2022
-    Error: Elapsed time: 00:00:08
+    Error: Processing ended: Mon Nov 28 21:28:47 2022
+    Error: Elapsed time: 00:00:12
     Error: Total CPU time (on all processors): 00:00:21
 
 

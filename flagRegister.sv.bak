@@ -5,7 +5,6 @@ module flagRegister (clk, set_flags, flagsALU, flagsOut);
 	input logic [3:0] flagsALU; // flags from ALU
 	output logic [3:0] flagsOut; // flags to hold for CPU ops
 	
-	logic rst;
 	assign rst = 1'b0; // sets reset to 0 for proper DFF functionality
 	
 	logic [3:0] flagData; // 4 bit value that goes into a register from the 2:1 mux
