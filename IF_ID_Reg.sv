@@ -23,10 +23,13 @@ module IF_ID_Reg(clk, IF_ID_flush, instruction, currPC, pc_plus4, opcode, Rn, Rm
 	assign registerIn [95:32] = currPC;
 	assign registerIn [159:96] = pc_plus4;
 	
+	logic not_clk;
+	not #(50) (not_clk, clk);
+	
 	genvar i;
 	generate
 		for(i = 0; i < 160; i++) begin : IF_ID
-			D_FF dffs (.clk, .reset(IF_ID_flush), .d(registerIn[i]), .q(registerOut[i]));
+			D_FF dffs (.clk(not_clk), .reset(IF_ID_flush), .d(registerIn[i]), .q(registerOut[i]));
 		end
 	endgenerate
 	
