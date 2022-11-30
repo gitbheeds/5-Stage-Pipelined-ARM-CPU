@@ -5,3 +5,4 @@ Warning (10273): Verilog HDL warning at ALU.sv(85): extended using "x" or "z" Fi
 Warning (10273): Verilog HDL warning at ALU.sv(86): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU.sv Line: 86
 Warning (10273): Verilog HDL warning at ALU_control_unit.sv(35): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 35
 Warning (10273): Verilog HDL warning at ALU_control_unit.sv(93): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 93
+Warning (10030): Net "registerOut[287..277]" at ID_EX_Reg.sv(44) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv Line: 44

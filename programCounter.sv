@@ -37,9 +37,11 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	logic notOp;
 	not #(50) notOpGate(notOp, opcode);
 	
-//	
+
+	// AND gate for CBZ	
 	and #(50) zeroGate(brTaken, flagZero, branch, opcode);
-//	
+	
+	//	 AND gate for B.LT
 	and #(50) negFlagGate(int4, flagNeg, branch, notOp);
 	
 		
@@ -69,7 +71,8 @@ module programCounter(clk, rst, condAddr19, brAddr26, uncondBr, currPC, pc_plus4
 	
 	
 	//select whether to use PC + branch or PC + 4	
-	mux64x8_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .in4(int2), .in5(64'b0), .in6(int2), .in7(int2), .out(int3), .sel({int4, uncondBr, brTaken}));
+	mux64x8_1 bigBranchSelect(.in0(int1), .in1(int2), .in2(int2), .in3(int2), .in4(int2), .in5(64'b0), 
+									  .in6(int2), .in7(int2), .out(int3), .sel({int4, uncondBr, brTaken}));
 
 	
 	mux64x2_1 selNextOut(branchReg, int3, Rd, nextPC);

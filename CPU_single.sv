@@ -7,8 +7,8 @@ module CPU_single(clk, rst);
 	//clock input
 	input logic clk, rst;
 	
-	//current PC value, next PC value
-	logic [63:0] currPC;
+	//current PC value, currPC value to go through registers
+	logic [63:0] currPC, currPC_reg;
 	
 	//current instruction
 	logic [31:0] instruction;
@@ -60,11 +60,23 @@ module CPU_single(clk, rst);
 //----------end instruction variable assignment------------//
 	
 //------------------control signals------------------------//
-	logic uncondBr, brTaken, Reg2Loc, ALU_Src, RegWrite,
-			ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags,
-			branchReg, branchLink, branch, memRead;
+	// used instantly
+	logic uncondBr;
 	
+	// Used before the ID/EX pipeline register
+	logic Reg2Loc;
+	
+	// Used before the EX/MEM pipeline register
+	logic ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branchReg, branch;
 	logic[2:0] ALU_cntrl;
+	
+	// used before the MEM/WB pipeline register
+	logic memToReg, memWrite, memRead;
+	
+	// Carried through all pipeline registers
+	logic branchLink, RegWrite;
+	
+	
 //----------------end control signals----------------------//
 	
 	
@@ -111,7 +123,7 @@ module CPU_single(clk, rst);
 	logic[63:0] memRegMuxOut;
 	
 	//for branch link
-	logic[63:0] pc_plus4, pc_plus4_reg;
+	logic[63:0] pc_plus4;
 	
 	
 
@@ -119,15 +131,19 @@ module CPU_single(clk, rst);
 
 //--------------------Pipeline Registers------------------//
 
-	IF_ID_Reg IF_ID (.clk, .IF_ID_flush, .instruction, .pc_plus4, .opcode, .Rn, 
+	IF_ID_Reg IF_ID (.clk, .IF_ID_flush, .instruction, .currPC, .opcode, .Rn, 
 						  .Rm, .Rd, .shamt, .dAddr9, .ALU_Imm, .condAddr19, 
-						  .brAddr26, .pc_plus4_out(pc_plus4_reg));
+						  .brAddr26, .currPC_out(currPC_reg));
 
 //--------------------End Pipeline Registers---------------//
 
-//----------------Pipeline Control Signals----------------//
+//------------Pipeline Control Units & Signals------------//
 
+	// Flushes the IF/ID pipeline register
 	logic IF_ID_flush;
+	
+	// used to control muxes for forwarding
+	logic [1:0] FWDA, FWDB;
 
 //--------------End Pipeline Control Signals--------------//		
 
