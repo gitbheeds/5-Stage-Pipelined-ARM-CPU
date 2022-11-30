@@ -119,11 +119,17 @@ module CPU_single(clk, rst);
 
 //--------------------Pipeline Registers------------------//
 
-	IF_ID_Reg IF_ID (.clk, .instruction, .pc_plus4, .opcode, .Rn, 
+	IF_ID_Reg IF_ID (.clk, .IF_ID_flush, .instruction, .pc_plus4, .opcode, .Rn, 
 						  .Rm, .Rd, .shamt, .dAddr9, .ALU_Imm, .condAddr19, 
 						  .brAddr26, .pc_plus4_out(pc_plus4_reg));
 
-//--------------------End Pipeline Registers---------------//		
+//--------------------End Pipeline Registers---------------//
+
+//----------------Pipeline Control Signals----------------//
+
+	logic IF_ID_flush;
+
+//--------------End Pipeline Control Signals--------------//		
 
 //-------------------------Modules------------------------//
 	

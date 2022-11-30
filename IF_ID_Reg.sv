@@ -1,8 +1,8 @@
 // IF/ID pipeline register
 // Essentially 96 bits, since it takes in a 32 bit instruction signal and a 64 bit pc_plus4 value
 `timescale 1ps/1ps
-module IF_ID_Reg(clk, instruction, pc_plus4, opcode, Rn, Rm, Rd, shamt, dAddr9, ALU_Imm, condAddr19, brAddr26, pc_plus4_out);
-	input logic clk; // 2 bits
+module IF_ID_Reg(clk, IF_ID_flush, instruction, pc_plus4, opcode, Rn, Rm, Rd, shamt, dAddr9, ALU_Imm, condAddr19, brAddr26, pc_plus4_out);
+	input logic clk, IF_ID_flush; // 2 bits
 	input logic [31:0] instruction; // 32 bits
 	input logic [63:0] pc_plus4; // 64 bits
 	output logic [10:0] opcode;
@@ -22,7 +22,7 @@ module IF_ID_Reg(clk, instruction, pc_plus4, opcode, Rn, Rm, Rd, shamt, dAddr9, 
 	genvar i;
 	generate
 		for(i = 0; i < 96; i++) begin : IF_ID
-			D_FF dffs (.clk, .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
+			D_FF dffs (.clk, .reset(IF_ID_flush), .d(registerIn[i]), .q(registerOut[i]));
 		end
 	endgenerate
 	
@@ -50,7 +50,7 @@ endmodule
 module IF_ID_Reg_tb();
 	
 	// inputs
-	logic clk;
+	logic clk, IF_ID_flush;
 	logic [31:0] instruction;
 	logic [63:0] pc_plus4;
 	
@@ -73,17 +73,18 @@ module IF_ID_Reg_tb();
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	IF_ID_Reg dut(.clk, .instruction, .pc_plus4, .opcode, 
+	IF_ID_Reg dut(.clk, .IF_ID_flush, .instruction, .pc_plus4, .opcode, 
 					  .Rn, .Rm, .Rd, .shamt, .dAddr9, .ALU_Imm, 
 					  .condAddr19, .brAddr26, .pc_plus4_out);
 					  
 	initial begin
 	
-//		rst <= 1; @(posedge clk);
-//		rst <= 0; @(posedge clk);
 		
 		// LDUR X7, [X4,#5]
-		instruction <= 32'b11111000010000000101000010000111; pc_plus4 <= 64'd200; @(posedge clk);
+		IF_ID_flush <= 0; instruction <= 32'b11111000010000000101000010000111; pc_plus4 <= 64'd200; @(posedge clk);
+		repeat(1) @(posedge clk);
+		
+		IF_ID_flush <= 1; @(posedge clk);
 		repeat(1) @(posedge clk);
 		$stop;
 	end
