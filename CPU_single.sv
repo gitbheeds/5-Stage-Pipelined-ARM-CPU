@@ -8,7 +8,7 @@ module CPU_single(clk, rst);
 	input logic clk, rst;
 	
 	//current PC value, next PC value
-	logic [63:0] currPC, nextPC;
+	logic [63:0] currPC;
 	
 	//current instruction
 	logic [31:0] instruction;
@@ -16,41 +16,45 @@ module CPU_single(clk, rst);
 	//ALU flags
 	logic zero, carry_out, overflow, negative;
 	
-	//displayed flags
-	logic flagZero, flagCarry, flagOF, flagNeg;
-	
+	// output flags
+	//flag register
+	//flag[3] carry out
+	//flag[2] zero
+	//flag[1] overflow
+	//flag[0] negative
+	logic [3:0] flags;
 	
 //-------------instruction variable assignment--------------// 
 	
 	//maximum opcode length
 	logic [10:0] opcode;
-	assign opcode = instruction[31:21];
+	//assign opcode = instruction[31:21];
 	
 	//registers accessed in instructions
 	logic [4:0] Rn, Rm, Rd;
-	assign Rn = instruction[9:5];
-	assign Rm = instruction[20:16];
-	assign Rd = instruction[4:0];
+	//assign Rn = instruction[9:5];
+	//assign Rm = instruction[20:16];
+	//assign Rd = instruction[4:0];
 	
 	//shift amount for R-type instructions
 	logic [5:0] shamt;
-	assign shamt = instruction[15:10];
+	//assign shamt = instruction[15:10];
 	
 	//variable to hold offset amount for D type instructions
 	logic [8:0] dAddr9;
-	assign dAddr9 = instruction[20:12];
+	//assign dAddr9 = instruction[20:12];
 	
 	//hold 12 bit immediate from I-type instructions
 	logic [11:0] ALU_Imm;
-	assign ALU_Imm = instruction[21:10];
+	//assign ALU_Imm = instruction[21:10];
 	
 	//conditional branch address for CB-type instructions
 	logic [18:0] condAddr19;
-	assign condAddr19 = instruction[23:5];
+	//assign condAddr19 = instruction[23:5];
 	
 	//branch address for B-type instructions
 	logic [25:0] brAddr26;
-	assign brAddr26 = instruction[25:0];
+	//assign brAddr26 = instruction[25:0];
 	
 	
 //----------end instruction variable assignment------------//
@@ -107,11 +111,19 @@ module CPU_single(clk, rst);
 	logic[63:0] memRegMuxOut;
 	
 	//for branch link
-	logic[63:0] pc_plus4;
+	logic[63:0] pc_plus4, pc_plus4_reg;
 	
-	logic [3:0] flags;
+	
 
-//---------------end module connections--------------------//		
+//---------------end module connections--------------------//
+
+//--------------------Pipeline Registers------------------//
+
+	IF_ID_Reg IF_ID (.clk, .instruction, .pc_plus4, .opcode, .Rn, 
+						  .Rm, .Rd, .shamt, .dAddr9, .ALU_Imm, .condAddr19, 
+						  .brAddr26, .pc_plus4_out(pc_plus4_reg));
+
+//--------------------End Pipeline Registers---------------//		
 
 //-------------------------Modules------------------------//
 	
@@ -242,7 +254,8 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 15000;
+	parameter CLOCK_PERIOD = 16000;
+	//parameter CLOCK_PERIOD = 100000;
 	initial begin
 		clk <= 0;
 		// Forever toggle the clock

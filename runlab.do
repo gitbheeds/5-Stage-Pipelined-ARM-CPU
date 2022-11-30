@@ -41,7 +41,7 @@ vlog "./reg2locMux.sv"
 vlog "./ALU_control_unit.sv"
 vlog "./CPU_control.sv"
 vlog "./flagRegister.sv"
-
+vlog "./IF_ID_Reg.sv"
 
 
 
