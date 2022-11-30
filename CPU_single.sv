@@ -76,8 +76,34 @@ module CPU_single(clk, rst);
 	// Carried through all pipeline registers
 	logic branchLink, RegWrite;
 	
-	
 //----------------end control signals----------------------//
+
+//------------------ID/EX output signals-------------------//
+
+	logic ALU_Src_EX, ALU_SH_EX, Imm_EX, shiftDirn_EX, ALU_on_EX, set_flags_EX, branchReg_EX, branch_EX;
+	
+	logic [2:0] ALU_cntrl_EX;
+	
+	logic memToReg_EX, memWrite_EX, memRead_EX;
+	
+	logic branchLink_EX, RegWrite_EX;
+	
+	logic [63:0] currPC_reg_EX, rd1_EX, rd2_EX;
+	
+	logic [4:0] targetReg_EX;
+	
+	logic [10:0] opcode_EX;
+	
+	logic [63:0] ext_out_EX;
+	
+	logic uncondBr_EX;
+	
+	logic [63:0] pc_plus4_EX;
+	
+	logic [5:0] shamt_EX;
+	
+
+//----------------end ID/EX output signals-----------------//
 	
 	
 //-----------------module connections----------------------//
@@ -123,17 +149,31 @@ module CPU_single(clk, rst);
 	logic[63:0] memRegMuxOut;
 	
 	//for branch link
-	logic[63:0] pc_plus4;
+	logic[63:0] pc_plus4, pc_plus4_out;
 	
+	
+	// uncondbr, branchreg, no flags, branch, opcode, 
 	
 
 //---------------end module connections--------------------//
 
 //--------------------Pipeline Registers------------------//
 
-	IF_ID_Reg IF_ID (.clk, .IF_ID_flush, .instruction, .currPC, .opcode, .Rn, 
+	IF_ID_Reg IF_ID (.clk, .IF_ID_flush, .instruction, .currPC, .pc_plus4, .opcode, .Rn, 
 						  .Rm, .Rd, .shamt, .dAddr9, .ALU_Imm, .condAddr19, 
-						  .brAddr26, .currPC_out(currPC_reg));
+						  .brAddr26, .currPC_out(currPC_reg), .pc_plus4_out);
+						  
+						  
+	ID_EX_Reg ID_EX (.clk, .ALU_Src, .ALU_SH, .Imm, .shiftDirn, .ALU_on, .set_flags, .branchReg,
+						  .branch, .ALU_cntrl, .memToReg, .memWrite, .memRead, .branchLink, .RegWrite,
+						  .currPC_reg, .rd1, .rd2, .targetReg, .opcode, .ext_out, .uncondBr, .pc_plus4_out,
+						  .shamt,
+						  
+						  // ID/EX register outputs below
+						  .ALU_Src_EX, .ALU_SH_EX, .Imm_EX, .shiftDirn_EX, .ALU_on_EX, .set_flags_EX, .branchReg_EX,
+						  .branch_EX, .ALU_cntrl_EX, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
+						  .currPC_reg_EX, .rd1_EX, .rd2_EX, .targetReg_EX, .opcode_EX, .ext_out_EX, 
+						  .uncondBr_EX, .pc_plus4_EX, .shamt_EX);
 
 //--------------------End Pipeline Registers---------------//
 
@@ -169,11 +209,11 @@ module CPU_single(clk, rst);
 	//flag[2] zero
 	//flag[1] overflow
 	//flag[0] negative
-	flagRegister flagsflagsflags (.clk, .rst, .set_flags, .flagsALU({carry_out, zero, overflow, negative}), .flagsOut(flags));
+	flagRegister flagsflagsflags (.clk, .rst, .set_flags(set_flags_EX), .flagsALU({carry_out, zero, overflow, negative}), .flagsOut(flags));
 									
 									
 //ALU control unit
-	ALU_control_unit aloo_control (.clk, .opcode, .ALU_on, .ALU_cntrl, .sign(SE9_out[63]));
+	ALU_control_unit aloo_control (.clk, .opcode(opcode_EX), .ALU_on(ALU_on_EX), .ALU_cntrl(ALU_cntrl_EX), .sign(SE9_out[63]));
 //regfile instantiation
 	
 	//Reg2Loc mux goes here
@@ -222,20 +262,21 @@ module CPU_single(clk, rst);
 	//ALU_Src mux goes here
 	//i0 = rd2, i1 = ext_out
 	//out = srcOut to linkDataB mux
-	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, srcOut);
+	mux64x2_1 ALUSrcMux(ALU_Src_EX, rd2_EX, ext_out_EX, srcOut);
 
 	//branch link, add pc+4 to x30
 	//set ALU_B to zero for this
 	
-	mux64x2_1 linkDataB(.sel(branchLink), .i0(srcOut), .i1(pc_plus4), .out(ALU_B));
+	mux64x2_1 linkDataB(.sel(branchLink_EX), .i0(srcOut), .i1(pc_plus4_EX), .out(ALU_B));
 
-	alu aloo(.A(rd1), .B(ALU_B), .cntrl(ALU_cntrl), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
+	alu aloo(.A(rd1_EX), .B(ALU_B), .cntrl(ALU_cntrl_EX), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	
 //shifter instantiation
 	
-	shifter shift(rd1, shiftDirn, shamt, shift_out);
+	shifter shift(rd1_EX, shiftDirn_EX, shamt_EX, shift_out);
 	
-	
+
+//********Everything below is after EX/MEM pipeline register (pretty sure) ***********//	
 //data memory instantiation
 
 	//ALU_SH mux goes here

@@ -1,10 +1,12 @@
 // IF/ID pipeline register
 // Essentially 96 bits, since it takes in a 32 bit instruction signal and a 64 bit pc_plus4 value
 `timescale 1ps/1ps
-module IF_ID_Reg(clk, IF_ID_flush, instruction, currPC, opcode, Rn, Rm, Rd, shamt, dAddr9, ALU_Imm, condAddr19, brAddr26, currPC_out);
+module IF_ID_Reg(clk, IF_ID_flush, instruction, currPC, pc_plus4, opcode, Rn, Rm, Rd, shamt, 
+					  dAddr9, ALU_Imm, condAddr19, brAddr26, currPC_out, pc_plus4_out);
 	input logic clk, IF_ID_flush; // 2 bits
 	input logic [31:0] instruction; // 32 bits
 	input logic [63:0] currPC; // 64 bits
+	input logic [63:0] pc_plus4;
 	output logic [10:0] opcode;
 	output logic [4:0] Rn, Rm, Rd;
 	output logic [5:0] shamt;
@@ -13,15 +15,17 @@ module IF_ID_Reg(clk, IF_ID_flush, instruction, currPC, opcode, Rn, Rm, Rd, sham
 	output logic [18:0] condAddr19;
 	output logic [25:0] brAddr26;
 	output logic [63:0] currPC_out;
+	output logic [63:0] pc_plus4_out;
 	
-	logic [95:0] registerIn, registerOut;
+	logic [159:0] registerIn, registerOut;
 	
 	assign registerIn [31:0] = instruction;
 	assign registerIn [95:32] = currPC;
+	assign registerIn [159:96] = pc_plus4;
 	
 	genvar i;
 	generate
-		for(i = 0; i < 96; i++) begin : IF_ID
+		for(i = 0; i < 160; i++) begin : IF_ID
 			D_FF dffs (.clk, .reset(IF_ID_flush), .d(registerIn[i]), .q(registerOut[i]));
 		end
 	endgenerate
@@ -42,6 +46,8 @@ module IF_ID_Reg(clk, IF_ID_flush, instruction, currPC, opcode, Rn, Rm, Rd, sham
 	assign brAddr26 = registerOut[25:0];
 	
 	assign currPC_out = registerOut[95:32];
+	
+	assign pc_plus4_out = registerOut[159:96];
 
 
 endmodule
@@ -53,6 +59,7 @@ module IF_ID_Reg_tb();
 	logic clk, IF_ID_flush;
 	logic [31:0] instruction;
 	logic [63:0] currPC;
+	logic [63:0] pc_plus4;
 	
 	// outputs
 	logic [10:0] opcode;
@@ -65,6 +72,7 @@ module IF_ID_Reg_tb();
 	logic [18:0] condAddr19;
 	logic [25:0] brAddr26;
 	logic [63:0] currPC_out;
+	logic [63:0] pc_plus4_out;
 	
 	parameter CLOCK_PERIOD = 1000;
 	initial begin
@@ -73,15 +81,16 @@ module IF_ID_Reg_tb();
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-	IF_ID_Reg dut(.clk, .IF_ID_flush, .instruction, .currPC, .opcode, 
+	IF_ID_Reg dut(.clk, .IF_ID_flush, .instruction, .currPC, .pc_plus4, .opcode, 
 					  .Rn, .Rm, .Rd, .shamt, .dAddr9, .ALU_Imm, 
-					  .condAddr19, .brAddr26, .currPC_out);
+					  .condAddr19, .brAddr26, .currPC_out, .pc_plus4_out);
 					  
 	initial begin
 	
 		
 		// LDUR X7, [X4,#5]
-		IF_ID_flush <= 0; instruction <= 32'b11111000010000000101000010000111; currPC <= 64'd200; @(posedge clk);
+		IF_ID_flush <= 0; instruction <= 32'b11111000010000000101000010000111; currPC <= 64'd200; 
+		pc_plus4 <= 64'd204; @(posedge clk);
 		repeat(1) @(posedge clk);
 		
 		IF_ID_flush <= 1; @(posedge clk);

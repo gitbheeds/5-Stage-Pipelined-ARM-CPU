@@ -8,113 +8,13 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/Gerin/Documents/GitHub/EE469_Labs/simulation/modelsim
-vadder64_bit
-Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1669082559
-!i10b 1
-!s100 4Cb2`bKN:gla4dkISmf>]0
-IZBTc1W<`UZP^VD=<TI@CM0
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-Z4 !s105 adder64_bit_sv_unit
-S1
-R0
-Z5 w1668051265
-Z6 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv
-Z7 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv
-L0 8
-Z8 OV;L;10.5b;63
-r1
-!s85 0
-31
-Z9 !s108 1669082559.000000
-Z10 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
-Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder64_bit.sv|
-!i113 1
-Z12 o-sv -work work
-Z13 !s92 -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs
-Z14 tCvgOpt 0
-vadder64_bit_testbench
-R1
-R2
-!i10b 1
-!s100 E@]]RiIY=N0XMQ]5J[fWg3
-IN5UAW]:]_40BeAfmUL?ON0
-R3
-R4
-S1
-R0
-R5
-R6
-R7
-Z15 L0 71
-R8
-r1
-!s85 0
-31
-R9
-R10
-R11
-!i113 1
-R12
-R13
-R14
-vadder_4_pc
-R1
-R2
-!i10b 1
-!s100 m2[`<0dSiC?z89L?NP7k80
-IN0G=IkTcfgPBaD8CRRHff3
-R3
-Z16 !s105 adder_4_pc_sv_unit
-S1
-R0
-Z17 w1669082467
-Z18 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder_4_pc.sv
-Z19 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/adder_4_pc.sv
-L0 3
-R8
-r1
-!s85 0
-31
-R9
-Z20 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder_4_pc.sv|
-Z21 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/adder_4_pc.sv|
-!i113 1
-R12
-R13
-R14
-vadder_4_pc_tb
-R1
-R2
-!i10b 1
-!s100 mDJRAhJX=Q4b6<T@ICH^`0
-IRngCF4]DgkZ@2XKg5:E6D1
-R3
-R16
-S1
-R0
-R17
-R18
-R19
-L0 29
-R8
-r1
-!s85 0
-31
-R9
-R20
-R21
-!i113 1
-R12
-R13
-R14
 vD_FF
-R1
-R2
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1669798194
 !i10b 1
 !s100 A7;z??EmkT2@@AVA[oeD@3
 I5^Nj^E1a_i26SPGlmXG1[1
-R3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 D_FF_sv_unit
 S1
 R0
@@ -122,444 +22,67 @@ w1668218937
 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv
 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv
 L0 4
-R8
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-R9
+Z5 !s108 1669798194.000000
 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv|
 !i113 1
-R12
-R13
-R14
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs
+Z8 tCvgOpt 0
 n@d_@f@f
-vfullAdder
+vID_EX_Reg
 R1
 R2
 !i10b 1
-!s100 jV::9F0g@@dh]OBa^bn?N3
-IA[6LC80MB:YfYU1W69:YL3
+!s100 kY9]U]zWX8E[m^h_PH]CX0
+IHoH@Za2NUY<DYdT]G7b7>0
 R3
-Z22 !s105 fullAdder_sv_unit
+Z9 !s105 ID_EX_Reg_sv_unit
 S1
 R0
-Z23 w1667005379
-Z24 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv
-Z25 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv
-L0 6
-R8
+Z10 w1669798179
+Z11 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv
+Z12 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv
+L0 2
+R4
 r1
 !s85 0
 31
+R5
+Z13 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv|
+Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv|
+!i113 1
+R6
+R7
+R8
+n@i@d_@e@x_@reg
+vID_EX_Reg_tb
+R1
+R2
+!i10b 1
+!s100 N[0Q_n6>2e60]O3NP3NW=1
+IPNGQL<GVgn5UHO:XLk4Rj3
+R3
 R9
-Z26 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv|
-Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/fullAdder.sv|
-!i113 1
-R12
-R13
-R14
-nfull@adder
-vfullAdder_testbench
-R1
-R2
-!i10b 1
-!s100 EX[z2H58blCQjzEEDYaS_1
-I30KZTR5>`j91E]]lI;EM;3
-R3
-R22
 S1
 R0
-R23
-R24
-R25
-L0 33
-R8
+R10
+R11
+R12
+L0 101
+R4
 r1
 !s85 0
 31
-R9
-R26
-R27
-!i113 1
-R12
+R5
 R13
 R14
-nfull@adder_testbench
-vmult
-R1
-R2
-!i10b 1
-!s100 GXKH7=Dd6>8PPhOJoBXnk2
-I:L?=WcTJNB^i^ikb^N7Pk1
-R3
-Z28 !s105 math_sv_unit
-S1
-R0
-Z29 w1667967505
-Z30 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/math.sv
-Z31 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/math.sv
-L0 6
+!i113 1
+R6
+R7
 R8
-r1
-!s85 0
-31
-R9
-Z32 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/math.sv|
-Z33 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/math.sv|
-!i113 1
-R12
-R13
-R14
-vmult_testbench
-R1
-R2
-!i10b 1
-!s100 [`TDzVleKUY`28_9YAZmo2
-IC@A^kdL6KcKTO5_z;95H63
-R3
-R28
-S1
-R0
-R29
-R30
-R31
-R15
-R8
-r1
-!s85 0
-31
-R9
-R32
-R33
-!i113 1
-R12
-R13
-R14
-vmux2_1
-R1
-R2
-!i10b 1
-!s100 ?G>K:27Q4ELkB3=ZW25Xd0
-IhI^c:M^P>`2MCNcBogIn^1
-R3
-!s105 mux2_1_sv_unit
-S1
-R0
-Z34 w1668045104
-8C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv
-FC:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv
-L0 7
-R8
-r1
-!s85 0
-31
-Z35 !s108 1669082558.000000
-!s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux2_1.sv|
-!i113 1
-R12
-R13
-R14
-vmux64x2_1
-R1
-Z36 !s110 1669082558
-!i10b 1
-!s100 VEJ07HX_?Q34LRGHh^B^f1
-Ij3oIS[8UWoVkM`7jL;Ok80
-R3
-Z37 !s105 mux64x2_1_sv_unit
-S1
-R0
-R23
-Z38 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv
-Z39 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv
-L0 6
-R8
-r1
-!s85 0
-31
-R35
-Z40 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv|
-Z41 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x2_1.sv|
-!i113 1
-R12
-R13
-R14
-vmux64x2_1_testbench
-R1
-R36
-!i10b 1
-!s100 nlzIk55fj_1=O1IO3?I<b0
-Ic:=_Wd85j0<fOG=TY<R5V0
-R3
-R37
-S1
-R0
-R23
-R38
-R39
-L0 34
-R8
-r1
-!s85 0
-31
-R35
-R40
-R41
-!i113 1
-R12
-R13
-R14
-vmux64x4_1
-R1
-R36
-!i10b 1
-!s100 L4H9zhfT94>72U3h<7Hl;0
-ISkb<@2;3Ficg4HNn;FePY2
-R3
-Z42 !s105 mux64x4_1_sv_unit
-S1
-R0
-R23
-Z43 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv
-Z44 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv
-L0 7
-R8
-r1
-!s85 0
-31
-R35
-Z45 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv|
-Z46 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x4_1.sv|
-!i113 1
-R12
-R13
-R14
-vmux64x4_1_testbench
-R1
-R36
-!i10b 1
-!s100 6iHMkT:bjR8eg9^ZAdia21
-I;CNDabidLVbkmd0QkS:km0
-R3
-R42
-S1
-R0
-R23
-R43
-R44
-L0 27
-R8
-r1
-!s85 0
-31
-R35
-R45
-R46
-!i113 1
-R12
-R13
-R14
-vmux64x8_1
-R1
-R36
-!i10b 1
-!s100 KoYaUf29Mb9bW^znZ3`SH3
-IOODd;ad^Zm;z6g7;GikJ@0
-R3
-Z47 !s105 mux64x8_1_sv_unit
-S1
-R0
-R23
-Z48 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv
-Z49 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv
-L0 6
-R8
-r1
-!s85 0
-31
-R35
-Z50 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv|
-Z51 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/mux64x8_1.sv|
-!i113 1
-R12
-R13
-R14
-vmux64x8_1_testbench
-R1
-R36
-!i10b 1
-!s100 jib3NHOU@W[oAfM0TblD=2
-I69f?UneXPi[CLM^RGYhId0
-R3
-R47
-S1
-R0
-R23
-R48
-R49
-L0 26
-R8
-r1
-!s85 0
-31
-R35
-R50
-R51
-!i113 1
-R12
-R13
-R14
-vprogramCounter
-R1
-R36
-!i10b 1
-!s100 MlcfnCBWEm2F<K0=NaIL^0
-I54APaKLnhCRnCloZJROD?1
-R3
-Z52 !s105 programCounter_sv_unit
-S1
-R0
-R17
-Z53 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv
-Z54 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv
-L0 5
-R8
-r1
-!s85 0
-31
-R35
-Z55 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv|
-Z56 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/programCounter.sv|
-!i113 1
-R12
-R13
-R14
-nprogram@counter
-vprogramCounter_tb
-R1
-R36
-!i10b 1
-!s100 ^ZR1UWFiEYm`[dcLd:Bg^3
-IiFnV3^?`_JmNAKgd_:gY;0
-R3
-R52
-S1
-R0
-R17
-R53
-R54
-L0 103
-R8
-r1
-!s85 0
-31
-R35
-R55
-R56
-!i113 1
-R12
-R13
-R14
-nprogram@counter_tb
-vse_tb
-R1
-R36
-!i10b 1
-!s100 cE8gKbe7bO]P32:QBjQdI0
-IDI7V:4zg_S[d>5[7LCnAe1
-R3
-Z57 !s105 sign_extender_sv_unit
-S1
-R0
-R34
-Z58 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv
-Z59 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv
-L0 30
-R8
-r1
-!s85 0
-31
-R35
-Z60 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv|
-Z61 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/sign_extender.sv|
-!i113 1
-R12
-R13
-R14
-vshifter
-R1
-R2
-!i10b 1
-!s100 fF6[o=WNId^cLKiX>j88L1
-I3bJ4UnSO1kolEGM`BG9<30
-R3
-R28
-S1
-R0
-R29
-R30
-R31
-L0 36
-R8
-r1
-!s85 0
-31
-R9
-R32
-R33
-!i113 1
-R12
-R13
-R14
-vshifter_testbench
-R1
-R2
-!i10b 1
-!s100 Ug=jWUW][Q=Y1iBVN3h1o3
-IXD;n3P0b^V<H8>;Wgl;K62
-R3
-R28
-S1
-R0
-R29
-R30
-R31
-L0 51
-R8
-r1
-!s85 0
-31
-R9
-R32
-R33
-!i113 1
-R12
-R13
-R14
-vsign_extender
-R1
-R36
-!i10b 1
-!s100 <U??oLX@J`m@2Z^OPS<a31
-IMHzi[3]k3RihhmjVmozfQ3
-R3
-R57
-S1
-R0
-R34
-R58
-R59
-L0 5
-R8
-r1
-!s85 0
-31
-R35
-R60
-R61
-!i113 1
-R12
-R13
-R14
+n@i@d_@e@x_@reg_tb
