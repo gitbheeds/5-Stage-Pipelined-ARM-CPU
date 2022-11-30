@@ -42,6 +42,7 @@ vlog "./ALU_control_unit.sv"
 vlog "./CPU_control.sv"
 vlog "./flagRegister.sv"
 vlog "./IF_ID_Reg.sv"
+vlog "./ID_EX_Reg.sv"
 
 
 

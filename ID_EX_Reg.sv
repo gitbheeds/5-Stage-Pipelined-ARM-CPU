@@ -81,11 +81,13 @@ module ID_EX_Reg (clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branc
 	assign registerIn [352:289] = pc_plus4_out;
 	assign registerIn [358:353] = shamt;
 	
+	logic not_clk;
+	not #(50) (not_clk, clk);
 	
 	genvar i;
 	generate
 		for(i = 0; i < 359; i++) begin : ID_EX
-			D_FF dffs (.clk, .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
+			D_FF dffs (.clk(not_clk), .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
 		end
 	endgenerate
 

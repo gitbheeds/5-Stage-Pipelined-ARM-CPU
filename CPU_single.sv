@@ -157,6 +157,17 @@ module CPU_single(clk, rst);
 
 //---------------end module connections--------------------//
 
+//------------Pipeline Control Units & Signals------------//
+
+	// Flushes the IF/ID pipeline register
+	logic IF_ID_flush;
+	
+	// used to control muxes for forwarding
+	logic [1:0] FWDA, FWDB;
+
+//--------------End Pipeline Control Signals--------------//		
+
+
 //--------------------Pipeline Registers------------------//
 
 	IF_ID_Reg IF_ID (.clk, .IF_ID_flush, .instruction, .currPC, .pc_plus4, .opcode, .Rn, 
@@ -177,15 +188,6 @@ module CPU_single(clk, rst);
 
 //--------------------End Pipeline Registers---------------//
 
-//------------Pipeline Control Units & Signals------------//
-
-	// Flushes the IF/ID pipeline register
-	logic IF_ID_flush;
-	
-	// used to control muxes for forwarding
-	logic [1:0] FWDA, FWDB;
-
-//--------------End Pipeline Control Signals--------------//		
 
 //-------------------------Modules------------------------//
 	

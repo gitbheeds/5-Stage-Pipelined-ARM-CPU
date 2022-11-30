@@ -94,7 +94,10 @@ module IF_ID_Reg_tb();
 		// LDUR X7, [X4,#5]
 		IF_ID_flush <= 0; instruction <= 32'b11111000010000000101000010000111; currPC <= 64'd200; 
 		pc_plus4 <= 64'd204; @(posedge clk);
-		repeat(1) @(posedge clk);
+		
+		// LDUR X6, [X2, #5]
+		IF_ID_flush <= 0; instruction <= 32'b11111000010000000101000001000110; currPC <= 64'd204;
+		pc_plus4 <= 64'd208; @(posedge clk);
 		
 		IF_ID_flush <= 1; @(posedge clk);
 		repeat(1) @(posedge clk);
