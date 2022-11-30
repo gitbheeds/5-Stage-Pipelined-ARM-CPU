@@ -43,14 +43,14 @@
 1001000100_000000000000_11111_11111 // ADDI X31, X31, #0    // NOOP
                // BACKWARD_B:       // Target for a backwards branch
 1001000100_000000000010_00100_00100 // ADDI X4, X4, #2      // 2nd branch succeeded
-10110100_0000000000000010100_11111  // CBZ X31, FORWARD_CBZ // 3rd taken branch (+20)
+10110100_0000000000000010100_11111  // CBZ X31, FORWARD_CBZ // 3rd taken branch (+20) 52
 1001000100_000000000001_00010_00010 // ADDI X2, X2, #1      // delay_slot++
 1001000100_000000000001_00101_00101 // ADDI X5, X5, 1       // Should never reach here
 000101_11111111111111111111111001   // B ERROR              // Should never reach here (-7)
 1001000100_000000000000_11111_11111 // ADDI X31, X31, 0     // NOOP
                // FORWARD_B:
-1001000100_000000000001_00100_00100 // ADDI X4, X4, 1       // 1st branch succeeded.
-000101_11111111111111111111111001   // B BACKWARD_B         // 2nd taken branch (-7)
+1001000100_000000000001_00100_00100 // ADDI X4, X4, 1       // 1st branch succeeded. 72
+000101_11111111111111111111111001   // B BACKWARD_B         // 2nd taken branch (-7) 76
 1001000100_000000000001_00010_00010 // ADDI X2, X2, 1       // delay_slot++
 1001000100_000000000001_00101_00101 // ADDI X5, X5, 1       // Should never reach here
 000101_11111111111111111111110011   // B ERROR              // Should never reach here (-13)
