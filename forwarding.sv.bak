@@ -1,4 +1,4 @@
-module forwarding (EX_MEM_Rd, MEM_WB_Rd, ID_EX_Rn, ID_EX_Rm, EX_MEM_FWD, MEM_WB_FWD, IF_ID_flush, ID_EX_flush);
+module forwarding (EX_MEM_Rd, MEM_WB_Rd, ID_EX_Rn, ID_EX_Rm, EX_MEM_FWD, MEM_WB_FWD);
 
 	//Rd saved in EX/MEM pipeline register
 	input logic [4:0] EX_MEM_Rd; 
@@ -11,8 +11,5 @@ module forwarding (EX_MEM_Rd, MEM_WB_Rd, ID_EX_Rn, ID_EX_Rm, EX_MEM_FWD, MEM_WB_
 	
 	//mux control signals 
 	output logic EX_MEM_FWD, MEM_WB_FWD;
-	
-	//flushing control signals for pipeline
-	output logic IF_ID_flush, ID_EX_flush;
 
 endmodule 
