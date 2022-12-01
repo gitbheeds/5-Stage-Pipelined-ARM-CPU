@@ -51,7 +51,7 @@ module programCounterFix(clk, rst, currPC, calcBranch, pc_plus4, PCSrc);
 	
 endmodule 
 
-
+`timescale 1ps/1ps
 module PCF_tb();
 
 	//clocking and resets
@@ -75,6 +75,23 @@ module PCF_tb();
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
+	initial begin
+		
+		
+		PCSrc <= 0;
+		calcBranch <= 300;
+		rst <= 1; @(posedge clk);
+		rst <= 0; @(posedge clk);
+		
+		repeat(40) @(posedge clk);
+		
+		PCSrc <= 1; @(posedge clk);
+		PCSrc <= 0; @(posedge clk);
+		
+		repeat(10) @(posedge clk);
+		
 	
+	$stop;
+	end
 
 endmodule 

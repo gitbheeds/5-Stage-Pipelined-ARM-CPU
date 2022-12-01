@@ -1,301 +1,318 @@
 # Reading C:/intelFPGA/17.0/modelsim_ase/tcl/vsim/pref.tcl
-do fwdtest.do
+do calctest.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:09:37 on Nov 30,2022
-# vlog -reportprogress 300 ./forwarding.sv 
-# -- Compiling module forwarding
-# -- Compiling module fwd_tb
+# Start time: 15:32:18 on Dec 01,2022
+# vlog -reportprogress 300 ./branchCalcs.sv 
+# -- Compiling module branchCalcs
+# -- Compiling module bc_tb
 # 
 # Top level modules:
-# 	fwd_tb
-# End time: 06:09:37 on Nov 30,2022, Elapsed time: 0:00:00
+# 	bc_tb
+# End time: 15:32:18 on Dec 01,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps -lib work fwd_tb 
-# Start time: 06:09:37 on Nov 30,2022
+# vsim -voptargs=""+acc"" -t 1ps -lib work bc_tb 
+# Start time: 15:32:18 on Dec 01,2022
 # Loading sv_std.std
-# Loading work.fwd_tb
-# Loading work.forwarding
-# WARNING: No extended dataflow license exists
-# ** Error: Cannot open macro file: fwdwave.do
-# Error in macro ./fwdtest.do line 18
-# Cannot open macro file: fwdwave.do
-#     while executing
-# "do fwdwave.do"
-add wave -position end  sim:/fwd_tb/EX_MEM_Rd
-add wave -position end  sim:/fwd_tb/EX_MEM_regWrite
-add wave -position end  sim:/fwd_tb/MEM_WB_regWrite
-add wave -position end  sim:/fwd_tb/MEM_WB_Rd
-add wave -position end  sim:/fwd_tb/ID_EX_Rn
-add wave -position end  sim:/fwd_tb/ID_EX_Rm
-add wave -position end  sim:/fwd_tb/FWDA
-add wave -position end  sim:/fwd_tb/FWDB
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftb7gryw".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftb7gryw
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/fwdwave.do}
-do fwd
-# Cannot open macro file: fwd
-do fwdtest.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:10:11 on Nov 30,2022
-# vlog -reportprogress 300 ./forwarding.sv 
-# -- Compiling module forwarding
-# -- Compiling module fwd_tb
-# 
-# Top level modules:
-# 	fwd_tb
-# End time: 06:10:12 on Nov 30,2022, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# End time: 06:10:13 on Nov 30,2022, Elapsed time: 0:00:36
-# Errors: 4, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work fwd_tb 
-# Start time: 06:10:13 on Nov 30,2022
-# Loading sv_std.std
-# Loading work.fwd_tb
-# Loading work.forwarding
+# Loading work.bc_tb
+# Loading work.branchCalcs
+# Loading work.shifter
+# Loading work.adder64_bit
+# Loading work.fullAdder
+# Loading work.mux64x2_1
+# Loading work.mux2_1
 # WARNING: No extended dataflow license exists
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftrrfvym".
+#           Attempting to use alternate WLF file "./wlft0dvdat".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftrrfvym
+#           Using alternate file: ./wlft0dvdat
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# testing EX/MEM cases
-# No FWDING
-# FWDA output = 00FWDB output = 00EX/MEM FWD on A
-# FWDA output = 10FWDB output = 00EX/MEM FWD on B
-# FWDA output = 00FWDB output = 10disable write
-# FWDA output = 00FWDB output = 01Rd = X31
-# FWDA output = 00FWDB output = 00testing MEM/WB cases
-# No FWDING
-# FWDA output = 00FWDB output = 00MEM/WB FWD on A
-# FWDA output = 00FWDB output = 00EX/MEM FWD on B
-# FWDA output = 00FWDB output = 00Rd = X31
-# FWDA output = 00FWDB output = 00disable write
-FWDA output = 00FWDB output = 00do fwdtest.do
+# initial value setup 
+# 
+# PCSrc = x calcBranch =                    xunconditional branch 
+# 
+# PCSrc = 0 calcBranch =                 2020no branch 
+# 
+# PCSrc = 1 calcBranch =                 2020CBZ true 
+# 
+# PCSrc = 0 calcBranch =                 2020B.LT true 
+# 
+# PCSrc = 1calcBranch =                 2020branch to register true 
+# 
+# PCSrc = 1 calcBranch =                 2020unconditional to negative 
+# 
+PCSrc = 1 calcBranch =                   32
+do calctest.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:15:30 on Nov 30,2022
-# vlog -reportprogress 300 ./forwarding.sv 
-# -- Compiling module forwarding
-# -- Compiling module fwd_tb
+# Start time: 15:40:59 on Dec 01,2022
+# vlog -reportprogress 300 ./branchCalcs.sv 
+# -- Compiling module branchCalcs
+# -- Compiling module bc_tb
 # 
 # Top level modules:
-# 	fwd_tb
-# End time: 06:15:30 on Nov 30,2022, Elapsed time: 0:00:00
+# 	bc_tb
+# End time: 15:41:00 on Dec 01,2022, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# End time: 06:15:31 on Nov 30,2022, Elapsed time: 0:05:18
+# End time: 15:41:01 on Dec 01,2022, Elapsed time: 0:08:43
 # Errors: 0, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work fwd_tb 
-# Start time: 06:15:32 on Nov 30,2022
+# vsim -voptargs=""+acc"" -t 1ps -lib work bc_tb 
+# Start time: 15:41:01 on Dec 01,2022
 # Loading sv_std.std
-# Loading work.fwd_tb
-# Loading work.forwarding
+# Loading work.bc_tb
+# Loading work.branchCalcs
+# Loading work.shifter
+# Loading work.adder64_bit
+# Loading work.fullAdder
+# Loading work.mux64x2_1
+# Loading work.mux2_1
 # WARNING: No extended dataflow license exists
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlftm61nfr".
+#           Attempting to use alternate WLF file "./wlft22jcze".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftm61nfr
+#           Using alternate file: ./wlft22jcze
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# testing EX/MEM cases 
+# initial value setup 
 # 
-# No FWDING
-# FWDA output = 00 
-# FWDB output = 00 
-# EX/MEM FWD on A 
+# PCSrc = x calcBranch =                    x
+# unconditional branch 
 # 
-# FWDA output = 10 
-# FWDB output = 00 
-# EX/MEM FWD on B 
+# PCSrc = 0 calcBranch =                 2020
+# no branch 
 # 
-# FWDA output = 00 
-# FWDB output = 10 
-# disable write 
+# PCSrc = 1 calcBranch =                 2020
+# CBZ true 
 # 
-# FWDA output = 00 
-# FWDB output = 01 
-# Rd = X31 
+# PCSrc = 0 calcBranch =                 2020
+# B.LT true 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# testing MEM/WB cases 
+# PCSrc = 1calcBranch =                 2020
+# branch to register true 
 # 
-# No FWDING 
+# PCSrc = 1 calcBranch =                 2020
+# unconditional to negative 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# MEM/WB FWD on A 
+# PCSrc = 1 calcBranch =                   32
+do calctest.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:43:47 on Dec 01,2022
+# vlog -reportprogress 300 ./branchCalcs.sv 
+# -- Compiling module branchCalcs
+# -- Compiling module bc_tb
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# EX/MEM FWD on B 
+# Top level modules:
+# 	bc_tb
+# End time: 15:43:47 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:43:48 on Dec 01,2022, Elapsed time: 0:02:47
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work bc_tb 
+# Start time: 15:43:48 on Dec 01,2022
+# Loading sv_std.std
+# Loading work.bc_tb
+# Loading work.branchCalcs
+# Loading work.shifter
+# Loading work.adder64_bit
+# Loading work.fullAdder
+# Loading work.mux64x2_1
+# Loading work.mux2_1
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
+#           Attempting to use alternate WLF file "./wlft48bvze".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft48bvze
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# initial value setup 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# Rd = X31 
+# PCSrc = x calcBranch =                    x
+# unconditional branch 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# disable write 
+# PCSrc = 0 calcBranch =                 2020
+# no branch 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
+# PCSrc = 1 calcBranch =                 2020
+# CBZ true 
+# 
+# PCSrc = 0 calcBranch =                 2020
+# B.LT true 
+# 
+# PCSrc = 1calcBranch =                 2020
+# branch to register true 
+# 
+# PCSrc = 1 calcBranch =                 2020
+# unconditional to negative 
+# 
+# PCSrc = 1 calcBranch =                   32
+do calctest.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:44:34 on Dec 01,2022
+# vlog -reportprogress 300 ./branchCalcs.sv 
+# -- Compiling module branchCalcs
+# -- Compiling module bc_tb
+# 
+# Top level modules:
+# 	bc_tb
+# End time: 15:44:34 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:44:35 on Dec 01,2022, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work bc_tb 
+# Start time: 15:44:35 on Dec 01,2022
+# Loading sv_std.std
+# Loading work.bc_tb
+# Loading work.branchCalcs
+# Loading work.shifter
+# Loading work.adder64_bit
+# Loading work.fullAdder
+# Loading work.mux64x2_1
+# Loading work.mux2_1
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
+#           Attempting to use alternate WLF file "./wlfte2hsts".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlfte2hsts
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# initial value setup 
+# 
+# PCSrc = x calcBranch =                    x
+# unconditional branch 
+# 
+# PCSrc = 0 calcBranch =                 2020
+# no branch 
+# 
+# PCSrc = 1 calcBranch =                 2020
+# CBZ true 
+# 
+# PCSrc = 0 calcBranch =                 2020
+# B.LT true 
+# 
+# PCSrc = 1calcBranch =                 2020
+# branch to register true 
+# 
+# PCSrc = 1 calcBranch =                 2020
+# unconditional to negative 
+# 
+# PCSrc = 1 calcBranch =                   32
+do calctest.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:46:28 on Dec 01,2022
+# vlog -reportprogress 300 ./branchCalcs.sv 
+# -- Compiling module branchCalcs
+# -- Compiling module bc_tb
+# 
+# Top level modules:
+# 	bc_tb
+# End time: 15:46:28 on Dec 01,2022, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 15:46:30 on Dec 01,2022, Elapsed time: 0:01:55
+# Errors: 0, Warnings: 3
+# vsim -voptargs=""+acc"" -t 1ps -lib work bc_tb 
+# Start time: 15:46:30 on Dec 01,2022
+# Loading sv_std.std
+# Loading work.bc_tb
+# Loading work.branchCalcs
+# Loading work.shifter
+# Loading work.adder64_bit
+# Loading work.fullAdder
+# Loading work.mux64x2_1
+# Loading work.mux2_1
+# WARNING: No extended dataflow license exists
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
+#           Attempting to use alternate WLF file "./wlftdnkawm".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdnkawm
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# initial value setup 
+# 
+# PCSrc = x calcBranch =                    x
+# unconditional branch 
+# 
+# PCSrc = 0 calcBranch =                 2020
+# no branch 
+# 
+# PCSrc = 1 calcBranch =                 2020
+# CBZ true 
+# 
+# PCSrc = 0 calcBranch =                 2020
+# B.LT true 
+# 
+# PCSrc = 1calcBranch =                 2020
+# branch to register true 
+# 
+# PCSrc = 1 calcBranch =                 2020
+# unconditional to negative 
+# 
+# PCSrc = 1 calcBranch =                   32
 
-do fwdtest.do
+do calctest.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:17:43 on Nov 30,2022
-# vlog -reportprogress 300 ./forwarding.sv 
-# -- Compiling module forwarding
-# -- Compiling module fwd_tb
+# Start time: 15:48:10 on Dec 01,2022
+# vlog -reportprogress 300 ./branchCalcs.sv 
+# -- Compiling module branchCalcs
+# -- Compiling module bc_tb
 # 
 # Top level modules:
-# 	fwd_tb
-# End time: 06:17:43 on Nov 30,2022, Elapsed time: 0:00:00
+# 	bc_tb
+# End time: 15:48:10 on Dec 01,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# End time: 06:17:44 on Nov 30,2022, Elapsed time: 0:02:12
+# End time: 15:48:12 on Dec 01,2022, Elapsed time: 0:01:42
 # Errors: 0, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work fwd_tb 
-# Start time: 06:17:44 on Nov 30,2022
+# vsim -voptargs=""+acc"" -t 1ps -lib work bc_tb 
+# Start time: 15:48:12 on Dec 01,2022
 # Loading sv_std.std
-# Loading work.fwd_tb
-# Loading work.forwarding
+# Loading work.bc_tb
+# Loading work.branchCalcs
+# Loading work.shifter
+# Loading work.adder64_bit
+# Loading work.fullAdder
+# Loading work.mux64x2_1
+# Loading work.mux2_1
 # WARNING: No extended dataflow license exists
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlft3ry9gy".
+#           Attempting to use alternate WLF file "./wlftvzgdih".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft3ry9gy
+#           Using alternate file: ./wlftvzgdih
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-# testing EX/MEM cases 
+# initial value setup 
 # 
-# No FWDING
-# FWDA output = 00 
-# FWDB output = 00 
-# EX/MEM FWD on A 
+# PCSrc = 0 calcBranch =                 2020
+# unconditional branch 
 # 
-# FWDA output = 10 
-# FWDB output = 00 
-# EX/MEM FWD on B 
+# PCSrc = 1 calcBranch =                 2020
+# no branch 
 # 
-# FWDA output = 00 
-# FWDB output = 10 
-# disable write 
+# PCSrc = 0 calcBranch =                 2020
+# CBZ true 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# Rd = X31 
+# PCSrc = 1 calcBranch =                 2020
+# B.LT true 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# testing MEM/WB cases 
+# PCSrc = 1calcBranch =                 2020
+# branch to register true 
 # 
-# No FWDING 
+# PCSrc = 1 calcBranch =                   32
+# unconditional to negative 
 # 
-# FWDA output = 00 
-# FWDB output = 00 
-# MEM/WB FWD on A 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-# EX/MEM FWD on B 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-# Rd = X31 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-# disable write 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-
-do fwdtest.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 06:20:19 on Nov 30,2022
-# vlog -reportprogress 300 ./forwarding.sv 
-# -- Compiling module forwarding
-# -- Compiling module fwd_tb
-# 
-# Top level modules:
-# 	fwd_tb
-# End time: 06:20:19 on Nov 30,2022, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 06:20:20 on Nov 30,2022, Elapsed time: 0:02:36
-# Errors: 0, Warnings: 3
-# vsim -voptargs=""+acc"" -t 1ps -lib work fwd_tb 
-# Start time: 06:20:20 on Nov 30,2022
-# Loading sv_std.std
-# Loading work.fwd_tb
-# Loading work.forwarding
-# WARNING: No extended dataflow license exists
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: spbhi  Hostname: KEYSMASH  ProcessID: 25516
-#           Attempting to use alternate WLF file "./wlft403yr2".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft403yr2
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# testing EX/MEM cases 
-# 
-# No FWDING
-# FWDA output = 00 
-# FWDB output = 00 
-# EX/MEM FWD on A 
-# 
-# FWDA output = 10 
-# FWDB output = 00 
-# EX/MEM FWD on B 
-# 
-# FWDA output = 00 
-# FWDB output = 10 
-# disable write 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-# Rd = X31 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-# testing MEM/WB cases 
-# 
-# No FWDING 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-# MEM/WB FWD on A 
-# 
-# FWDA output = 01 
-# FWDB output = 00 
-# EX/MEM FWD on B 
-# 
-# FWDA output = 00 
-# FWDB output = 01 
-# Rd = X31 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-# disable write 
-# 
-# FWDA output = 00 
-# FWDB output = 00 
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/fwdwave.do}
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf {C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/fwdwave.do}
-# End time: 06:21:24 on Nov 30,2022, Elapsed time: 0:01:04
-# Errors: 0, Warnings: 3
+# PCSrc = 1 calcBranch =                  380
