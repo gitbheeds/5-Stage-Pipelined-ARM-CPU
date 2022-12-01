@@ -1,11 +1,11 @@
 // EX_MEM pipeline register implementation
 `timescale 1ps/1ps
 module EX_MEM_Reg(clk, memToReg_EX, memWrite_EX, memRead_EX, branchLink_EX, RegWrite_EX,
-						targetReg_EX, toDataMem, rd2_EX,
+						targetReg_EX, toDataMem, ALU_B,
 						
 						
 						memToReg_MEM, memWrite_MEM, memRead_MEM, branchLink_MEM, RegWrite_MEM,
-						targetReg_MEM, toDataMem_MEM, rd2_MEM);
+						targetReg_MEM, toDataMem_MEM, ALU_B_MEM);
 
 	input logic clk;
 	
@@ -13,7 +13,7 @@ module EX_MEM_Reg(clk, memToReg_EX, memWrite_EX, memRead_EX, branchLink_EX, RegW
 	
 	input logic [4:0] targetReg_EX;
 	
-	input logic [63:0] toDataMem, rd2_EX;
+	input logic [63:0] toDataMem, ALU_B;
 	
 	// 5 + 5 + (64 * 2) = 138 bits
 	
@@ -21,13 +21,13 @@ module EX_MEM_Reg(clk, memToReg_EX, memWrite_EX, memRead_EX, branchLink_EX, RegW
 	
 	output logic [4:0] targetReg_MEM;
 	
-	output logic [63:0] toDataMem_MEM, rd2_MEM;
+	output logic [63:0] toDataMem_MEM, ALU_B_MEM;
 	
 	logic [137:0] registerIn, registerOut;
 	
 	// assigns register inputs to the input signals
 	assign registerIn[63:0] = toDataMem;
-	assign registerIn[127:64] = rd2_EX;
+	assign registerIn[127:64] = ALU_B;
 	assign registerIn[132:128] = targetReg_EX;
 	assign registerIn[133] = memToReg_EX;
 	assign registerIn[134] = memWrite_EX;
@@ -48,7 +48,7 @@ module EX_MEM_Reg(clk, memToReg_EX, memWrite_EX, memRead_EX, branchLink_EX, RegW
 	
 	// assigns output signals to the register output
 	assign toDataMem_MEM = registerOut[63:0];
-	assign rd2_MEM = registerOut[127:64];
+	assign ALU_B_MEM = registerOut[127:64];
 	assign targetReg_MEM = registerOut[132:128];
 	assign memToReg_MEM = registerOut[133];
 	assign memWrite_MEM = registerOut[134];
@@ -67,14 +67,14 @@ module EX_MEM_Reg_tb();
 	
 	logic [4:0] targetReg_EX;
 	
-	logic [63:0] toDataMem, rd2_EX;
+	logic [63:0] toDataMem, ALU_B;
 	
 	// output logics
 	logic memToReg_MEM, memWrite_MEM, memRead_MEM, branchLink_MEM, RegWrite_MEM;
 	
 	logic [4:0] targetReg_MEM;
 	
-	logic [63:0] toDataMem_MEM, rd2_MEM;
+	logic [63:0] toDataMem_MEM, ALU_B_MEM;
 	
 	parameter CLOCK_PERIOD = 100;
 	initial begin
@@ -84,14 +84,14 @@ module EX_MEM_Reg_tb();
 	end
 	
 	EX_MEM_Reg dut(.clk, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
-						.targetReg_EX, .toDataMem, .rd2_EX,
+						.targetReg_EX, .toDataMem, .ALU_B,
 						
 						.memToReg_MEM, .memWrite_MEM, .memRead_MEM, .branchLink_MEM, .RegWrite_MEM,
-						.targetReg_MEM, .toDataMem_MEM, .rd2_MEM);
+						.targetReg_MEM, .toDataMem_MEM, .ALU_B_MEM);
 	
 	initial begin
 		memToReg_EX <= 1'b1; memWrite_EX <= 1'b1; memRead_EX <= 1'b0; branchLink_EX <= 1'b0;
-		RegWrite_EX <= 1'b1; targetReg_EX <= 5'd20; toDataMem <= 64'd420; rd2_EX <= 64'd69; @(posedge clk);
+		RegWrite_EX <= 1'b1; targetReg_EX <= 5'd20; toDataMem <= 64'd420; ALU_B <= 64'd69; @(posedge clk);
 		
 		repeat(2) @(posedge clk);
 		

@@ -4,20 +4,20 @@
 //10: EX/MEM forwarding
 //11: unused 
 
-module forwarding (EX_MEM_regWrite, MEM_WB_regWrite, EX_MEM_Rd, MEM_WB_Rd, 
-						 ID_EX_Rn, ID_EX_Rm, FWDA, FWDB);
+module forwarding (RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB, 
+						 Rn_EX, Rm_EX, FWDA, FWDB);
 
 	//Rd saved in EX/MEM pipeline register
-	input logic [4:0] EX_MEM_Rd; 
+	input logic [4:0] targetReg_MEM; 
 	
 	//is the register being written to?
-	input logic EX_MEM_regWrite, MEM_WB_regWrite;
+	input logic RegWrite_MEM, RegWrite_WB;
 
 	//Rd saved in MEM/WB pipeline register
-	input logic [4:0] MEM_WB_Rd;
+	input logic [4:0] targetReg_WB;
 	
 	//operands for next instruction
-	input logic [4:0] ID_EX_Rn, ID_EX_Rm;
+	input logic [4:0] Rn_EX, Rm_EX;
 	
 	//mux control signals for Rn (A), Rm (B)
 	output logic [1:0] FWDA, FWDB;
@@ -28,10 +28,10 @@ module forwarding (EX_MEM_regWrite, MEM_WB_regWrite, EX_MEM_Rd, MEM_WB_Rd,
 	//EX HAZARDS
 		//Confirm that the inst is writing
 		//Confirm that target reg is not X31(cannot write to X31)
-		if((EX_MEM_regWrite) & (EX_MEM_Rd != 31)) begin
+		if((RegWrite_MEM) & (targetReg_MEM != 31)) begin
 		
 		//Confirm if target is used as Rn operand in next instruction (ID/EX)
-			if(EX_MEM_Rd == ID_EX_Rn)begin
+			if(targetReg_MEM == Rn_EX)begin
 				
 				FWDA = 2'b10; //EX/MEM FWDING
 				FWDB = 2'b00; //pass
@@ -39,7 +39,7 @@ module forwarding (EX_MEM_regWrite, MEM_WB_regWrite, EX_MEM_Rd, MEM_WB_Rd,
 			end
 			
 		//Confirm if target is used as Rm operand in next instruction (ID/EX)	
-			else if(EX_MEM_Rd == ID_EX_Rm) begin
+			else if(targetReg_MEM == Rn_EX) begin
 			
 				FWDA = 2'b00; //pass
 				FWDB = 2'b10; //EX/MEM FWDING
@@ -57,10 +57,10 @@ module forwarding (EX_MEM_regWrite, MEM_WB_regWrite, EX_MEM_Rd, MEM_WB_Rd,
 	//MEM HAZARDS
 		//Confirm that the inst is writing
 		//Confirm that target reg is not X31(cannot write to X31)
-		else if((MEM_WB_regWrite) & (MEM_WB_Rd != 31)) begin
+		else if((RegWrite_WB) & (targetReg_WB!= 31)) begin
 		
 		//Confirm if target is used as Rn operand in next instruction (ID/EX)
-			if(MEM_WB_Rd == ID_EX_Rn)begin
+			if(targetReg_WB == Rn_EX)begin
 				
 				FWDA = 2'b01; //MEM/WB FWDING
 				FWDB = 2'b00; //pass
@@ -68,7 +68,7 @@ module forwarding (EX_MEM_regWrite, MEM_WB_regWrite, EX_MEM_Rd, MEM_WB_Rd,
 			end
 			
 		//Confirm if target is used as Rm operand in next instruction (ID/EX)	
-			else if(MEM_WB_Rd == ID_EX_Rm) begin
+			else if(targetReg_WB == Rm_EX) begin
 			
 				FWDA = 2'b00; //pass
 				FWDB = 2'b01; //MEM/WB FWDING
@@ -99,16 +99,16 @@ endmodule
 module fwd_tb();
 
 	//Rd saved in EX/MEM pipeline register
-	logic [4:0] EX_MEM_Rd; 
+	logic [4:0] targetReg_MEM; 
 	
 	//is the register being written to?
-	logic EX_MEM_regWrite, MEM_WB_regWrite;
+	logic RegWrite_MEM, RegWrite_WB;
 
 	//Rd saved in MEM/WB pipeline register
-	logic [4:0] MEM_WB_Rd;
+	logic [4:0] targetReg_WB;
 	
 	//operands for next instruction
-	logic [4:0] ID_EX_Rn, ID_EX_Rm;
+	logic [4:0] Rn_EX, Rm_EX;
 	
 	//mux control signals for Rn (A), Rm (B)
 	logic [1:0] FWDA, FWDB;
@@ -117,12 +117,12 @@ module fwd_tb();
 	
 	initial begin
 	
-		EX_MEM_Rd = 5'd22;
-		MEM_WB_Rd = 5'd16;
-		EX_MEM_regWrite = 1'b1;
-		MEM_WB_regWrite = 1'b1;
-		ID_EX_Rn = 5'd0;
-		ID_EX_Rm = 5'd3;
+		targetReg_MEM = 5'd22;
+		targetReg_WB = 5'd16;
+		RegWrite_MEM = 1'b1;
+		RegWrite_WB = 1'b1;
+		Rn_EX = 5'd0;
+		Rm_EX = 5'd3;
 		
 		
 		$display("testing EX/MEM cases \n");
@@ -131,31 +131,31 @@ module fwd_tb();
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		ID_EX_Rn = 5'd22; 
+		Rn_EX = 5'd22; 
 		$display("EX/MEM FWD on A \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		ID_EX_Rn = 5'd21;
-		ID_EX_Rm = 5'd22;
+		Rn_EX = 5'd21;
+		Rm_EX = 5'd22;
 		$display("EX/MEM FWD on B \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		EX_MEM_regWrite = 1'b0;
-		ID_EX_Rn = 5'd12;
-		ID_EX_Rm = 5'd26;
+		RegWrite_MEM = 1'b0;
+		Rn_EX = 5'd12;
+		Rm_EX = 5'd26;
 		$display("disable write \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		EX_MEM_regWrite = 1'b1;
-		EX_MEM_Rd = 5'd31;
-		ID_EX_Rn = 5'd12;
-		ID_EX_Rm = 5'd22;
+		RegWrite_MEM = 1'b1;
+		targetReg_MEM = 5'd31;
+		Rn_EX = 5'd12;
+		Rm_EX = 5'd22;
 		$display("Rd = X31 \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
@@ -163,35 +163,35 @@ module fwd_tb();
 		
 		
 		$display("testing MEM/WB cases \n");
-		MEM_WB_Rd = 5'd16;
-		ID_EX_Rn = 5'd12;
-		ID_EX_Rm = 5'd22;
+		targetReg_WB = 5'd16;
+		Rn_EX = 5'd12;
+		Rm_EX = 5'd22;
 		$display("No FWDING \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		ID_EX_Rn = 5'd16;
-		ID_EX_Rm = 5'd22;
+		Rn_EX = 5'd16;
+		Rm_EX = 5'd22;
 		$display("MEM/WB FWD on A \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		ID_EX_Rn = 5'd25;
-		ID_EX_Rm = 5'd16;
+		Rn_EX = 5'd25;
+		Rm_EX = 5'd16;
 		$display("EX/MEM FWD on B \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		MEM_WB_Rd = 5'd31; 
+		targetReg_WB = 5'd31; 
 		$display("Rd = X31 \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);
 		$write("FWDB output = %2b \n", FWDB);
 		
-		MEM_WB_regWrite = 1'b0;
+		RegWrite_WB = 1'b0;
 		$display("disable write \n");
 		#10; 
 		$write("FWDA output = %2b \n", FWDA);

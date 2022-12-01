@@ -104,6 +104,8 @@ module CPU_single(clk, rst);
 	
 	logic [63:0] branchSE_EX;
 	
+	logic [4:0] Rn_EX, Rm_EX;
+	
 
 //----------------end ID/EX output signals-----------------//
 
@@ -113,7 +115,7 @@ module CPU_single(clk, rst);
 	
 	logic [4:0] targetReg_MEM;
 	
-	logic [63:0] toDataMem_MEM, rd2_MEM;
+	logic [63:0] toDataMem_MEM, ALU_B_MEM;
 
 
 //----------------end EX/MEM output signals----------------//
@@ -168,6 +170,9 @@ module CPU_single(clk, rst);
 	//output of ALUsrc mux
 	logic [63:0] srcOut;
 	
+	// output of linkData Mux, is the standard input to ALU_B without any forwarding
+	logic [63:0] standardALU_B;
+	
 	//ALU inputs 
 	logic[63:0] ALU_A, ALU_B;
 	
@@ -216,22 +221,22 @@ module CPU_single(clk, rst);
 	ID_EX_Reg ID_EX (.clk, .ALU_Src, .ALU_SH, .Imm, .shiftDirn, .ALU_on, .set_flags, .branchReg,
 						  .branch, .ALU_cntrl, .memToReg, .memWrite, .memRead, .branchLink, .RegWrite,
 						  .currPC_reg, .rd1, .rd2, .targetReg, .opcode, .ext_out, .uncondBr, .pc_plus4_out,
-						  .shamt, .branchSE,
+						  .shamt, .branchSE, .Rn, .Rm,
 						  
 						  // ID/EX register outputs below (signals end in _EX)
 						  .ALU_Src_EX, .ALU_SH_EX, .Imm_EX, .shiftDirn_EX, .ALU_on_EX, .set_flags_EX, .branchReg_EX,
 						  .branch_EX, .ALU_cntrl_EX, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
 						  .currPC_reg_EX, .rd1_EX, .rd2_EX, .targetReg_EX, .opcode_EX, .ext_out_EX, 
-						  .uncondBr_EX, .pc_plus4_EX, .shamt_EX, .branchSE_EX);
+						  .uncondBr_EX, .pc_plus4_EX, .shamt_EX, .branchSE_EX, .Rn_EX, .Rm_EX);
 						  
 						  
 	EX_MEM_Reg EX_MEM (.clk, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
-							 .targetReg_EX, .toDataMem, .rd2_EX,
+							 .targetReg_EX, .toDataMem, .ALU_B,
 							 
 							 
 							 // EX/MEM register outputs below (signals end in _MEM)
 							 .memToReg_MEM, .memWrite_MEM, .memRead_MEM, .branchLink_MEM, .RegWrite_MEM,
-							 .targetReg_MEM, .toDataMem_MEM, .rd2_MEM);
+							 .targetReg_MEM, .toDataMem_MEM, .ALU_B_MEM);
 							 
 							 
 	MEM_WB_Reg MEM_WB (.clk, .memToReg_MEM, .RegWrite_MEM, .targetReg_MEM, .toDataMem_MEM, .memDataOut,
@@ -323,9 +328,24 @@ module CPU_single(clk, rst);
 	//branch link, add pc+4 to x30
 	//set ALU_B to zero for this
 	
-	mux64x2_1 linkDataB(.sel(branchLink_EX), .i0(srcOut), .i1(pc_plus4_EX), .out(ALU_B));
+	mux64x2_1 linkDataB(.sel(branchLink_EX), .i0(srcOut), .i1(pc_plus4_EX), .out(standardALU_B));
 
-	alu aloo(.A(rd1_EX), .B(ALU_B), .cntrl(ALU_cntrl_EX), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
+	alu aloo(.A(ALU_A), .B(ALU_B), .cntrl(ALU_cntrl_EX), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
+	
+//------------------BigBoy Forwarding-------------------//
+
+	forwarding magicJohnson(.RegWrite_MEM, .RegWrite_WB, .targetReg_MEM, .targetReg_WB, 
+						         .Rn_EX, .Rm_EX, .FWDA, .FWDB);
+	
+	// ALU input A
+	// rd1_EX is standard without forwarding, memRegMuxOut is mem/wb forwarding, toDataMem_MEM is ex/mem forwarding
+	mux64x4_1 forwardA(.in0(rd1_EX), .in1(memRegMuxOut), .in2(toDataMem_MEM), .in3(64'bX), .out(ALU_A), .sel(FWDA));
+	
+	
+	mux64x4_1 forwardB(.in0(standardALU_B), .in1(memRegMuxOut), .in2(toDataMem_MEM), .in3(64'bX), .out(ALU_B), .sel(FWDB));
+									
+
+//----------------End BigBoy Forwarding-----------------//
 	
 //shifter instantiation
 	
@@ -347,7 +367,7 @@ module CPU_single(clk, rst);
 	
 	assign xfer_size = 4'b1000;
 
-	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(rd2_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
+	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(ALU_B_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
 
 	//MemToReg mux here
 	//i0 = toDataMem, i1 = memDataOut
