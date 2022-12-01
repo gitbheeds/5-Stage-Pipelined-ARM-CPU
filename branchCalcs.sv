@@ -97,3 +97,99 @@ module branchCalcs (branchSE_EX, currPC_reg_EX, resultALU,
 	
 
 endmodule
+
+`timescale 1ps/1ps
+module bc_tb ();
+
+	//Sign extended branch to take (determined in ID stage)
+	logic [63:0] branchSE_EX;
+	
+	//Value of a register to use for BR insts
+	logic [63:0] resultALU;
+	
+	//Current value of PC to use for calculating PC + Branch
+	logic [63:0] currPC_reg_EX;
+	
+	//Mux control signals for determining which branch to take
+	logic uncondBr_EX, branchReg_EX, branch_EX, zeroFlag, negFlag, opcode;
+	
+	//PCSrc control signal is calculated in here and passed to PC
+	//to determine branching vs pc + 4
+	logic PCSrc;
+	
+	//Calculated PC + Branch to pass to PC
+	logic [63:0] calcBranch;
+	
+	branchCalcs dut(.*);
+	
+	initial begin
+	
+		$display("initial value setup \n");
+		branchSE_EX = 400;
+		resultALU = 32;
+		currPC_reg_EX = 420;
+		uncondBr_EX = 0;
+		branchReg_EX = 0;
+		branch_EX = 0;
+		zeroFlag = 0;
+		negFlag = 0;
+		opcode = 0;
+		#1500;
+		$write("PCSrc = %b", PCSrc, " ");
+		$write("calcBranch = %d", calcBranch, "\n");	
+		
+		
+		$display("unconditional branch \n");
+		uncondBr_EX = 1;
+		#1500;
+		$write("PCSrc = %b", PCSrc, " ");
+		$write("calcBranch = %d", calcBranch, "\n");
+		
+		$display("no branch \n");
+		uncondBr_EX = 0;
+		#1500;
+		$write("PCSrc = %b", PCSrc, " ");
+		$write("calcBranch = %d", calcBranch, "\n");
+		
+		$display("CBZ true \n");
+		opcode = 1;
+		zeroFlag = 1;
+		branch_EX = 1; 
+		uncondBr_EX = 0;
+		#1500;
+		$write("PCSrc = %b", PCSrc, " ");
+		$write("calcBranch = %d", calcBranch, "\n");
+		
+		$display("B.LT true \n");
+		opcode = 0;
+		negFlag = 1;
+		branch_EX = 1; 
+		uncondBr_EX = 0;
+		#1500;
+		$write("PCSrc = %b", PCSrc);
+		$write("calcBranch = %d", calcBranch, "\n");
+		
+		$display("branch to register true \n");
+		opcode = 1;
+		zeroFlag = 1;
+		branch_EX = 0;
+		branchReg_EX = 1;
+		uncondBr_EX = 1;
+		#1500;
+		$write("PCSrc = %b", PCSrc, " ");
+		$write("calcBranch = %d", calcBranch, "\n");
+	
+		$display("unconditional to negative \n");
+		branchSE_EX = -10;
+		opcode = 1;
+		zeroFlag = 1;
+		branch_EX = 0;
+		branchReg_EX = 0;
+		uncondBr_EX = 1;
+		#6500;
+		$write("PCSrc = %b", PCSrc, " ");
+		$write("calcBranch = %d", calcBranch, "\n");
+	
+	end
+
+endmodule 
