@@ -216,13 +216,13 @@ module CPU_single(clk, rst);
 	ID_EX_Reg ID_EX (.clk, .ALU_Src, .ALU_SH, .Imm, .shiftDirn, .ALU_on, .set_flags, .branchReg,
 						  .branch, .ALU_cntrl, .memToReg, .memWrite, .memRead, .branchLink, .RegWrite,
 						  .currPC_reg, .rd1, .rd2, .targetReg, .opcode, .ext_out, .uncondBr, .pc_plus4_out,
-						  .shamt,
+						  .shamt, .branchSE,
 						  
 						  // ID/EX register outputs below (signals end in _EX)
 						  .ALU_Src_EX, .ALU_SH_EX, .Imm_EX, .shiftDirn_EX, .ALU_on_EX, .set_flags_EX, .branchReg_EX,
 						  .branch_EX, .ALU_cntrl_EX, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
 						  .currPC_reg_EX, .rd1_EX, .rd2_EX, .targetReg_EX, .opcode_EX, .ext_out_EX, 
-						  .uncondBr_EX, .pc_plus4_EX, .shamt_EX);
+						  .uncondBr_EX, .pc_plus4_EX, .shamt_EX, .branchSE_EX);
 						  
 						  
 	EX_MEM_Reg EX_MEM (.clk, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
