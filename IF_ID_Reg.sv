@@ -23,6 +23,7 @@ module IF_ID_Reg(clk, IF_ID_flush, instruction, currPC, pc_plus4, opcode, Rn, Rm
 	assign registerIn [95:32] = currPC;
 	assign registerIn [159:96] = pc_plus4;
 	
+	// uses an ~clk signal to ensure reading from pipeline register on the negative edge of the main clock
 	logic not_clk;
 	not #(50) (not_clk, clk);
 	

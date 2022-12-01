@@ -102,8 +102,46 @@ module CPU_single(clk, rst);
 	
 	logic [5:0] shamt_EX;
 	
+	logic [63:0] branchSE_EX;
+	
 
 //----------------end ID/EX output signals-----------------//
+
+//------------------EX/MEM output signals------------------//
+
+	logic memToReg_MEM, memWrite_MEM, memRead_MEM, branchLink_MEM, RegWrite_MEM;
+	
+	logic [4:0] targetReg_MEM;
+	
+	logic [63:0] toDataMem_MEM, rd2_MEM;
+
+
+//----------------end EX/MEM output signals----------------//
+
+
+//------------------MEM/WB output signals------------------//
+
+	logic memToReg_WB, RegWrite_WB; 
+	
+	logic [4:0] targetReg_WB; 
+	
+	logic [63:0] toDataMem_WB, memDataOut_WB;
+
+//----------------End MEM/WB output signals----------------//
+
+//--------------------Branch Extensions-------------------//
+	// 64 bit variables to hold the 64 bit branch values
+	logic [63:0] condAddr64, brAddr64, branchSE;
+	
+	// extends 19 bit condAddr19 to 64 bit condAddr64
+	sign_extender #(19) condBranch(.in(condAddr19), .out(condAddr64));
+	
+	// extends 26 bit brAddr26 to 64 bit brAddr64
+	sign_extender #(26) uncondBranch(.in(brAddr26), .out(brAddr64));
+	
+	mux64x2_1 branchType(.sel(uncondBr), .i0(condAddr64), .i1(brAddr64), .out(branchSE));
+	
+//------------------End Branch Extensions------------------//
 	
 	
 //-----------------module connections----------------------//
@@ -180,11 +218,26 @@ module CPU_single(clk, rst);
 						  .currPC_reg, .rd1, .rd2, .targetReg, .opcode, .ext_out, .uncondBr, .pc_plus4_out,
 						  .shamt,
 						  
-						  // ID/EX register outputs below
+						  // ID/EX register outputs below (signals end in _EX)
 						  .ALU_Src_EX, .ALU_SH_EX, .Imm_EX, .shiftDirn_EX, .ALU_on_EX, .set_flags_EX, .branchReg_EX,
 						  .branch_EX, .ALU_cntrl_EX, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
 						  .currPC_reg_EX, .rd1_EX, .rd2_EX, .targetReg_EX, .opcode_EX, .ext_out_EX, 
 						  .uncondBr_EX, .pc_plus4_EX, .shamt_EX);
+						  
+						  
+	EX_MEM_Reg EX_MEM (.clk, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
+							 .targetReg_EX, .toDataMem, .rd2_EX,
+							 
+							 
+							 // EX/MEM register outputs below (signals end in _MEM)
+							 .memToReg_MEM, .memWrite_MEM, .memRead_MEM, .branchLink_MEM, .RegWrite_MEM,
+							 .targetReg_MEM, .toDataMem_MEM, .rd2_MEM);
+							 
+							 
+	MEM_WB_Reg MEM_WB (.clk, .memToReg_MEM, .RegWrite_MEM, .targetReg_MEM, .toDataMem_MEM, .memDataOut,
+
+							 // MEM/WB register outputs below (Signals end in _WB)
+							 .memToReg_WB, .RegWrite_WB, .targetReg_WB, .toDataMem_WB, .memDataOut_WB);
 
 //--------------------End Pipeline Registers---------------//
 
@@ -229,11 +282,11 @@ module CPU_single(clk, rst);
 	//out = targetReg
 	reg2locMux branchLinky1(branchLink, 5'd30, Rd, targetReg);
 	
-	reg2locMux branchLinky2(branchLink, 5'd30, Rn, readA);
+	reg2locMux branchLinky2(branchLink, 5'd31, Rn, readA);
 		
 	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
-					 .ReadRegister1(readA), .ReadRegister2(readB), .WriteRegister(targetReg),
-					 .RegWrite, .clk(~clk));
+					 .ReadRegister1(readA), .ReadRegister2(readB), .WriteRegister(targetReg_WB),
+					 .RegWrite(RegWrite_WB), .clk(~clk));
 	
 //Sign Extension of dAddr9
 
@@ -257,7 +310,8 @@ module CPU_single(clk, rst);
 	//out = ext_out
 	
 	mux64x2_1 ImmMux(Imm, SE64, ZE12_out, ext_out); 
-	
+
+
 	
 //ALU instantiation
 
@@ -293,13 +347,13 @@ module CPU_single(clk, rst);
 	
 	assign xfer_size = 4'b1000;
 
-	datamem mems(.address(toDataMem), .write_enable(memWrite), .read_enable(memRead), .write_data(rd2), .clk(clk), .xfer_size, .read_data(memDataOut));
+	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(rd2_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
 
 	//MemToReg mux here
 	//i0 = toDataMem, i1 = memDataOut
 	//out = wd
 	
-	mux64x2_1 memToRegMux(memToReg, toDataMem, memDataOut, memRegMuxOut);
+	mux64x2_1 memToRegMux(memToReg_WB, toDataMem_WB, memDataOut_WB, memRegMuxOut);
 	
 	
 	//branchLink mux here

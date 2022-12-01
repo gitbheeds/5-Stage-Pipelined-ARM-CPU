@@ -6,5 +6,5 @@ vlib rtl_work
 vmap work rtl_work
 
 vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv}
-vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv}
+vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv}
 

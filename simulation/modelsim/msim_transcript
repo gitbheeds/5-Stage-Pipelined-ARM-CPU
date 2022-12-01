@@ -12,84 +12,51 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:49:54 on Nov 30,2022
+# Start time: 01:09:37 on Dec 01,2022
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv 
 # -- Compiling module D_FF
 # 
 # Top level modules:
 # 	D_FF
-# End time: 00:49:54 on Nov 30,2022, Elapsed time: 0:00:00
+# End time: 01:09:37 on Dec 01,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv}
+# vlog -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs {C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:49:54 on Nov 30,2022
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv 
-# -- Compiling module ID_EX_Reg
-# -- Compiling module ID_EX_Reg_tb
+# Start time: 01:09:37 on Dec 01,2022
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs" C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv 
+# -- Compiling module MEM_WB_Reg
+# -- Compiling module MEM_WB_Reg_tb
 # 
 # Top level modules:
-# 	ID_EX_Reg_tb
-# End time: 00:49:54 on Nov 30,2022, Elapsed time: 0:00:00
+# 	MEM_WB_Reg_tb
+# End time: 01:09:37 on Dec 01,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-vsim work.ID_EX_Reg_tb
-# vsim work.ID_EX_Reg_tb 
-# Start time: 00:49:58 on Nov 30,2022
+vsim work.MEM_WB_Reg_tb
+# vsim work.MEM_WB_Reg_tb 
+# Start time: 01:09:51 on Dec 01,2022
 # Loading sv_std.std
-# Loading work.ID_EX_Reg_tb
-# Loading work.ID_EX_Reg
+# Loading work.MEM_WB_Reg_tb
+# Loading work.MEM_WB_Reg
 # Loading work.D_FF
-add wave -position end  sim:/ID_EX_Reg_tb/targetReg_EX
-add wave -position end  sim:/ID_EX_Reg_tb/targetReg
-add wave -position end  sim:/ID_EX_Reg_tb/shiftDirn_EX
-add wave -position end  sim:/ID_EX_Reg_tb/shiftDirn
-add wave -position end  sim:/ID_EX_Reg_tb/set_flags_EX
-add wave -position end  sim:/ID_EX_Reg_tb/set_flags
-add wave -position end  sim:/ID_EX_Reg_tb/rd2_EX
-add wave -position end  sim:/ID_EX_Reg_tb/rd2
-add wave -position end  sim:/ID_EX_Reg_tb/rd1_EX
-add wave -position end  sim:/ID_EX_Reg_tb/rd1
-add wave -position end  sim:/ID_EX_Reg_tb/opcode_EX
-add wave -position end  sim:/ID_EX_Reg_tb/opcode
-add wave -position end  sim:/ID_EX_Reg_tb/memWrite_EX
-add wave -position end  sim:/ID_EX_Reg_tb/memWrite
-add wave -position end  sim:/ID_EX_Reg_tb/memToReg_EX
-add wave -position end  sim:/ID_EX_Reg_tb/memToReg
-add wave -position end  sim:/ID_EX_Reg_tb/memRead_EX
-add wave -position end  sim:/ID_EX_Reg_tb/memRead
-add wave -position end  sim:/ID_EX_Reg_tb/ext_out_EX
-add wave -position end  sim:/ID_EX_Reg_tb/ext_out
-add wave -position end  sim:/ID_EX_Reg_tb/currPC_reg_EX
-add wave -position end  sim:/ID_EX_Reg_tb/currPC_reg
-add wave -position end  sim:/ID_EX_Reg_tb/clk
-add wave -position end  sim:/ID_EX_Reg_tb/branch_EX
-add wave -position end  sim:/ID_EX_Reg_tb/branchReg_EX
-add wave -position end  sim:/ID_EX_Reg_tb/branchReg
-add wave -position end  sim:/ID_EX_Reg_tb/branchLink_EX
-add wave -position end  sim:/ID_EX_Reg_tb/branchLink
-add wave -position end  sim:/ID_EX_Reg_tb/branch
-add wave -position end  sim:/ID_EX_Reg_tb/RegWrite_EX
-add wave -position end  sim:/ID_EX_Reg_tb/RegWrite
-add wave -position end  sim:/ID_EX_Reg_tb/Imm_EX
-add wave -position end  sim:/ID_EX_Reg_tb/Imm
-add wave -position end  sim:/ID_EX_Reg_tb/CLOCK_PERIOD
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_on_EX
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_on
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_cntrl_EX
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_cntrl
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_Src_EX
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_Src
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_SH_EX
-add wave -position end  sim:/ID_EX_Reg_tb/ALU_SH
+add wave -position end  sim:/MEM_WB_Reg_tb/targetReg_WB
+add wave -position end  sim:/MEM_WB_Reg_tb/targetReg_MEM
+add wave -position end  sim:/MEM_WB_Reg_tb/rd2_WB
+add wave -position end  sim:/MEM_WB_Reg_tb/rd2_MEM
+add wave -position end  sim:/MEM_WB_Reg_tb/memToReg_WB
+add wave -position end  sim:/MEM_WB_Reg_tb/memToReg_MEM
+add wave -position end  sim:/MEM_WB_Reg_tb/RegWrite_WB
+add wave -position end  sim:/MEM_WB_Reg_tb/RegWrite_MEM
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Gerin  Hostname: ULTRA-PC  ProcessID: 41564
-#           Attempting to use alternate WLF file "./wlftn24f13".
+#           Attempting to use alternate WLF file "./wlft07180i".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftn24f13
+#           Using alternate file: ./wlft07180i
+add wave -position 0  sim:/MEM_WB_Reg_tb/clk
 run -all
-# ** Note: $stop    : C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv(155)
-#    Time: 150 ps  Iteration: 1  Instance: /ID_EX_Reg_tb
-# Break in Module ID_EX_Reg_tb at C:/Users/Gerin/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv line 155
+# ** Note: $stop    : C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv(89)
+#    Time: 250 ps  Iteration: 1  Instance: /MEM_WB_Reg_tb
+# Break in Module MEM_WB_Reg_tb at C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv line 89
 # wrong # args: should be "load file ?pkg? ?interp?"
-# End time: 00:50:34 on Nov 30,2022, Elapsed time: 0:00:36
+# End time: 01:10:36 on Dec 01,2022, Elapsed time: 0:00:45
 # Errors: 1, Warnings: 2

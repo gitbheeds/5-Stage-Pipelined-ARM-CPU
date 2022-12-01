@@ -1,0 +1,67 @@
+module MEM_WB_Reg();
+	
+	input logic clk;
+	
+	input logic memToReg_MEM, RegWrite_MEM;
+	
+	input logic [4:0] targetReg_MEM;
+	
+	input logic [63:0] rd2_MEM;
+	
+	// 2 + 5 + 64 = 71
+	
+	
+	output logic memToReg_WB, RegWrite_WB;
+	
+	output logic [4:0] targetReg_WB;
+	
+	output logic [63:0] rd2_WB;
+	
+	
+	logic [70:0] registerIn, registerOut;
+	
+	assign registerIn[63:0] = rd2_MEM;
+	assign registerIn[68:64] = targetReg_MEM;
+	assign registerIn[69] = memToReg_MEM;
+	assign registerIn[70] = RegWrite_MEM;
+	
+	
+	logic not_clk;
+	not #(50) (not_clk, clk);
+	
+	genvar i;
+	generate
+		for(i = 0; i < 71; i++) begin : Felina
+			D_FF dffs (.clk(not_clk), .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
+		end
+	endgenerate
+
+	
+	assign rd2_WB = registerOut[63:0];
+	assign targetReg_WB = registerOut[68:64];
+	assign memToReg_WB = registerOut[69];
+	assign RegWrite_WB = registerOut[70];
+	
+endmodule
+
+
+module MEM_WB_tb();
+
+	logic clk;
+	
+	// input logic signals
+	logic memToReg_MEM, RegWrite_MEM;
+	
+	logic [4:0] targetReg_MEM;
+	
+	logic [63:0] rd2_MEM;
+	
+	
+	// output logic signals
+	logic memToReg_WB, RegWrite_WB;
+	
+	logic [4:0] targetReg_WB;
+	
+	logic [63:0] rd2_WB;
+	
+endmodule
