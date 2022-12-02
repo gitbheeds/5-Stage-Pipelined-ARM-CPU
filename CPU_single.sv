@@ -360,7 +360,7 @@ module CPU_single(clk, rst);
 
 //-----------------branch calculations------------------//
 
-	branchCalcs calcifer(.branchSE_EX, .currPC_reg_EX, .resultALU(ALU_out), 
+	branchCalcs calcifer(.branchSE_EX, .currPC_reg_EX, .resultALU(rd2_EX), 
 					.uncondBr_EX, .branchReg_EX, .branch_EX, .zeroFlag(zero), .negFlag(flags[0]), .opcode(opcode_EX[10]), 
 			   	.calcBranch, .PCSrc, .IF_ID_flush);
 
