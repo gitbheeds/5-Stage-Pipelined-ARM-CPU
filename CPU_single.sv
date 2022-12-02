@@ -126,6 +126,8 @@ module CPU_single(clk, rst);
 	logic [4:0] targetReg_MEM;
 	
 	logic [63:0] toDataMem_MEM, ALU_B_MEM;
+	
+	logic [63:0] rd2_MEM;
 
 
 //----------------end EX/MEM output signals----------------//
@@ -255,12 +257,12 @@ module CPU_single(clk, rst);
 						  
 						  
 	EX_MEM_Reg EX_MEM (.clk, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
-							 .targetReg_EX, .toDataMem, .ALU_B, 
+							 .targetReg_EX, .toDataMem, .ALU_B, .rd2_EX,
 							 
 							 
 							 // EX/MEM register outputs below (signals end in _MEM)
 							 .memToReg_MEM, .memWrite_MEM, .memRead_MEM, .branchLink_MEM, .RegWrite_MEM,
-							 .targetReg_MEM, .toDataMem_MEM, .ALU_B_MEM);
+							 .targetReg_MEM, .toDataMem_MEM, .ALU_B_MEM, .rd2_MEM);
 							 
 							 
 	MEM_WB_Reg MEM_WB (.clk, .memToReg_MEM, .RegWrite_MEM, .targetReg_MEM, .toDataMem_MEM, .memDataOut,
@@ -385,7 +387,7 @@ module CPU_single(clk, rst);
 	
 	assign xfer_size = 4'b1000;
 
-	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(ALU_B_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
+	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(rd2_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
 
 	//MemToReg mux here
 	//i0 = toDataMem, i1 = memDataOut

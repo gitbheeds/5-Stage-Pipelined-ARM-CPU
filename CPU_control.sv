@@ -230,7 +230,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
-			fwdEn = 2'b00;
+			fwdEn = 2'b10;
 			
 		end
 		
@@ -253,7 +253,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
-			fwdEn = 2'b00;
+			fwdEn = 2'b10;
 			
 		end
 		

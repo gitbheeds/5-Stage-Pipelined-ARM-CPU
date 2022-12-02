@@ -1,6 +1,6 @@
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Warning (10273): Verilog HDL warning at CPU_single.sv(351): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 351
-Warning (10273): Verilog HDL warning at CPU_single.sv(354): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 354
+Warning (10273): Verilog HDL warning at CPU_single.sv(353): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 353
+Warning (10273): Verilog HDL warning at CPU_single.sv(356): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 356
 Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(65): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_pass_add_sub.sv Line: 65
 Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(66): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_pass_add_sub.sv Line: 66
 Warning (10273): Verilog HDL warning at ALU.sv(85): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU.sv Line: 85
@@ -10,4 +10,3 @@ Warning (10273): Verilog HDL warning at ALU_control_unit.sv(93): extended using 
 Warning (10030): Net "mem.data_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
 Warning (10030): Net "mem.waddr_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
 Warning (10030): Net "mem.we_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
-Warning (10034): Output port "outbus[31]" at decoder5_32.sv(6) has no driver File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder5_32.sv Line: 6
