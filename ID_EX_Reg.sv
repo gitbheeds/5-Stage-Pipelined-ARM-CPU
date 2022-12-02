@@ -2,12 +2,12 @@
 module ID_EX_Reg (clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branchReg, 
 						branch, ALU_cntrl, memToReg, memWrite, memRead, branchLink, RegWrite, 
 						currPC_reg, rd1, rd2, targetReg, opcode, ext_out, uncondBr, pc_plus4_out, shamt,
-						branchSE, Rn, Rm,
+						branchSE, Rn, Rm, fwdEn,
 						
 						ALU_Src_EX, ALU_SH_EX, Imm_EX, shiftDirn_EX, ALU_on_EX, set_flags_EX,
 						branchReg_EX, branch_EX, ALU_cntrl_EX, memToReg_EX, memWrite_EX, memRead_EX,
 						branchLink_EX, RegWrite_EX, currPC_reg_EX, rd1_EX, rd2_EX, targetReg_EX,
-						opcode_EX, ext_out_EX, uncondBr_EX, pc_plus4_EX, shamt_EX, branchSE_EX, Rn_EX, Rm_EX);
+						opcode_EX, ext_out_EX, uncondBr_EX, pc_plus4_EX, shamt_EX, branchSE_EX, Rn_EX, Rm_EX, fwdEn_EX);
 						
 	input logic clk;
 	input logic ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branchReg, branch;
@@ -36,8 +36,10 @@ module ID_EX_Reg (clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branc
 	
 	input logic [4:0] Rn, Rm;
 	
+	input logic [1:0] fwdEn;
+	
 	// total input bits: 
-	// 13 + 3 + (64 * 4) + 5 + 11 + 1 + 64 + 6 + 64 + 5 + 5 = 433 bits
+	// 13 + 3 + (64 * 4) + 5 + 11 + 1 + 64 + 6 + 64 + 5 + 5 + 2 = 435 bits
 	
 	
 	// output logic instantiations:
@@ -63,7 +65,9 @@ module ID_EX_Reg (clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branc
 	
 	output logic [4:0] Rn_EX, Rm_EX;
 	
-	logic [432:0] registerIn, registerOut;
+	output logic [1:0] fwdEn_EX;
+	
+	logic [434:0] registerIn, registerOut;
 	
 	
 	assign registerIn [4:0] = targetReg;
@@ -92,6 +96,7 @@ module ID_EX_Reg (clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branc
 	assign registerIn [422:359] = branchSE;
 	assign registerIn [427:423] = Rn;
 	assign registerIn [432:428] = Rm;
+	assign registerIn [434: 433] = fwdEn;
 	
 	// uses an ~clk signal to ensure reading from pipeline register on the negative edge of the main clock
 	logic not_clk;
@@ -130,6 +135,7 @@ module ID_EX_Reg (clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branc
 	assign branchSE_EX = registerOut[422:359];
 	assign Rn_EX = registerOut[427:423];
 	assign Rm_EX = registerOut[432:428];
+	assign fwdEn_EX = registerOut[434:433];
 	
 
 endmodule
@@ -158,6 +164,8 @@ module ID_EX_Reg_tb();
 	
 	logic [4:0] Rn, Rm;
 	
+	logic [1:0] fwdEn;
+	
 	// output control signals for next stage
 	logic ALU_Src_EX, ALU_SH_EX, Imm_EX, shiftDirn_EX, ALU_on_EX, set_flags_EX,
 			branchReg_EX, branch_EX, memToReg_EX, memWrite_EX, memRead_EX,
@@ -184,6 +192,8 @@ module ID_EX_Reg_tb();
 	
 	logic [4:0] Rn_EX, Rm_EX;
 	
+	logic [1:0] fwdEn_EX;
+	
 
 	parameter CLOCK_PERIOD = 100;
 	initial begin
@@ -195,13 +205,13 @@ module ID_EX_Reg_tb();
 	ID_EX_Reg dut(clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branchReg, 
 					  branch, ALU_cntrl, memToReg, memWrite, memRead, branchLink, RegWrite, currPC_reg, 
 					  rd1, rd2, targetReg, opcode, ext_out, uncondBr, pc_plus4_out, shamt, branchSE,
-					  Rn, Rm,
+					  Rn, Rm, fwdEn,
 					  
 					  ALU_Src_EX, ALU_SH_EX, Imm_EX, shiftDirn_EX, ALU_on_EX, set_flags_EX,
 					  branchReg_EX, branch_EX, ALU_cntrl_EX, memToReg_EX, memWrite_EX, memRead_EX,
 					  branchLink_EX, RegWrite_EX, currPC_reg_EX, 
 					  rd1_EX, rd2_EX, targetReg_EX, opcode_EX, ext_out_EX, uncondBr_EX, pc_plus4_EX,
-					  shamt_EX, branchSE_EX, Rn_EX, Rm_EX);
+					  shamt_EX, branchSE_EX, Rn_EX, Rm_EX, fwdEn_EX);
 					  
 	initial begin
 		
@@ -209,7 +219,7 @@ module ID_EX_Reg_tb();
 		branchReg <= 1'b0; branch <= 1'b0; ALU_cntrl = 3'b011; memToReg <= 1'b1; memWrite <= 1'b0;
 		memRead <= 1'b0; branchLink <= 1'b0; RegWrite <= 1'b0; currPC_reg = 64'd200; rd1 <= 64'd20;
 		rd2 <= 64'd40; targetReg <= 5'd20; opcode <= 11'd20; ext_out <= 64'd300; uncondBr <= 1; 
-		pc_plus4_out <= 64'd204; shamt = 6'd10; branchSE = 64'd13; @(posedge clk);
+		pc_plus4_out <= 64'd204; shamt <= 6'd10; branchSE <= 64'd13; Rn <= 5'd20; Rm <= 5'd10; fwdEn <= 2'b10; @(posedge clk);
 		
 		repeat(1) @(posedge clk);
 		
