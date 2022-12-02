@@ -30,7 +30,7 @@ module IF_ID_Reg(clk, IF_ID_flush, instruction, currPC, pc_plus4, opcode, Rn, Rm
 	genvar i;
 	generate
 		for(i = 0; i < 160; i++) begin : IF_ID
-			D_FF dffs (.clk(not_clk), .reset(IF_ID_flush), .d(registerIn[i]), .q(registerOut[i]));
+			D_FF dffs (.clk(not_clk), .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
 		end
 	endgenerate
 	

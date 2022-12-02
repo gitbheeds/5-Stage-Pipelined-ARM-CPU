@@ -255,7 +255,7 @@ module CPU_single(clk, rst);
 						  
 						  
 	EX_MEM_Reg EX_MEM (.clk, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
-							 .targetReg_EX, .toDataMem, .ALU_B,
+							 .targetReg_EX, .toDataMem, .ALU_B, 
 							 
 							 
 							 // EX/MEM register outputs below (signals end in _MEM)
@@ -411,7 +411,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 14000;
+	parameter CLOCK_PERIOD = 20000;
 	//parameter CLOCK_PERIOD = 100000;
 	initial begin
 		clk <= 0;
