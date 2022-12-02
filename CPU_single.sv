@@ -259,7 +259,7 @@ module CPU_single(clk, rst);
 //-------------------------Modules------------------------//
 	
 //program counter instantiation	
-	programCounterFix pcf(.clk(~clk), .rst, .currPC, .calcBranch, .pc_plus4, .PCSrc);
+	programCounterFix pcf(.clk(clk), .rst, .currPC, .calcBranch, .pc_plus4, .PCSrc);
 	
 //instruction memory access
 	instructmem insts (.address(currPC), .instruction, .clk(clk));
@@ -376,7 +376,7 @@ module CPU_single(clk, rst);
 	//i0 = ALU_out, i1 = shift_out
 	//out = toDataMem
 	
-	mux64x2_1 ALU_ShiftMux(ALU_SH, ALU_out, shift_out, toDataMem);
+	mux64x2_1 ALU_ShiftMux(ALU_SH_EX, ALU_out, shift_out, toDataMem);
 
 
 	//DW transfer

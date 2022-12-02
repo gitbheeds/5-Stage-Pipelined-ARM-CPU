@@ -304,7 +304,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 		
 		Reg2Loc = 1'b0;
 		ALU_Src = 1'b0;
-		RegWrite = 1'b1;
+		RegWrite = 1'b0;
 		ALU_SH = 1'b0;
 		Imm = 1'b0;
 		memToReg = 1'b0;
