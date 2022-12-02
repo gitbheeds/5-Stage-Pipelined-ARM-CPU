@@ -36,3 +36,7 @@ db/DE1_SoC.map.qmsg
 DE1_SoC.flow.rpt
 DE1_SoC.map.rpt
 DE1_SoC.map.summary
+*.summary
+*.rpt
+*.qmsg
+*.db_info

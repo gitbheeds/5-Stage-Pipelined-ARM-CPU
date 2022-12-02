@@ -1,5 +1,9 @@
 Analysis & Synthesis report for DE1_SoC
+<<<<<<< Updated upstream
 Thu Dec 01 20:12:54 2022
+=======
+Thu Dec 01 20:26:59 2022
+>>>>>>> Stashed changes
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +42,11 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status ; Failed - Thu Dec 01 20:12:54 2022           ;
+=======
+; Analysis & Synthesis Status ; Failed - Thu Dec 01 20:26:59 2022           ;
+>>>>>>> Stashed changes
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +170,11 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
+<<<<<<< Updated upstream
     Info: Processing started: Thu Dec 01 20:12:43 2022
+=======
+    Info: Processing started: Thu Dec 01 20:26:48 2022
+>>>>>>> Stashed changes
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -273,8 +285,13 @@ Info (12021): Found 2 design units, including 2 entities, in source file id_ex_r
     Info (12023): Found entity 1: ID_EX_Reg File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv Line: 2
     Info (12023): Found entity 2: ID_EX_Reg_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv Line: 144
 Info (12021): Found 2 design units, including 2 entities, in source file forwarding.sv
+<<<<<<< Updated upstream
     Info (12023): Found entity 1: forwarding File: C:/Users/gering92/Documents/GitHub/EE469_Labs/forwarding.sv Line: 7
     Info (12023): Found entity 2: fwd_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/forwarding.sv Line: 45
+=======
+    Info (12023): Found entity 1: forwarding File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/forwarding.sv Line: 7
+    Info (12023): Found entity 2: fwd_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/forwarding.sv Line: 87
+>>>>>>> Stashed changes
 Info (12021): Found 2 design units, including 2 entities, in source file ex_mem_reg.sv
     Info (12023): Found entity 1: EX_MEM_Reg File: C:/Users/gering92/Documents/GitHub/EE469_Labs/EX_MEM_Reg.sv Line: 3
     Info (12023): Found entity 2: EX_MEM_Reg_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/EX_MEM_Reg.sv Line: 62
@@ -285,6 +302,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file branchc
     Info (12023): Found entity 1: branchCalcs File: C:/Users/gering92/Documents/GitHub/EE469_Labs/branchCalcs.sv Line: 6
     Info (12023): Found entity 2: bc_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/branchCalcs.sv Line: 102
 Info (12021): Found 2 design units, including 2 entities, in source file programcounterfix.sv
+<<<<<<< Updated upstream
     Info (12023): Found entity 1: programCounterFix File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounterFix.sv Line: 6
     Info (12023): Found entity 2: PCF_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounterFix.sv Line: 55
 Error (10897): SystemVerilog error at forwarding.sv(62): can't implicitly connect port "fwdEn_EX" on instance "dut" of module "forwarding" - no such object is visible in the present scope File: C:/Users/gering92/Documents/GitHub/EE469_Labs/forwarding.sv Line: 62
@@ -294,6 +312,69 @@ Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
     Error: Processing ended: Thu Dec 01 20:12:54 2022
     Error: Elapsed time: 00:00:11
     Error: Total CPU time (on all processors): 00:00:25
+=======
+    Info (12023): Found entity 1: programCounterFix File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounterFix.sv Line: 6
+    Info (12023): Found entity 2: PCF_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounterFix.sv Line: 55
+Info (12127): Elaborating entity "CPU_single" for the top level hierarchy
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:condBranch" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 142
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:uncondBranch" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 145
+Info (12128): Elaborating entity "mux64x2_1" for hierarchy "mux64x2_1:branchType" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 147
+Info (12128): Elaborating entity "mux2_1" for hierarchy "mux64x2_1:branchType|mux2_1:muxy[0].miniboi" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x2_1.sv Line: 26
+Info (12128): Elaborating entity "IF_ID_Reg" for hierarchy "IF_ID_Reg:IF_ID" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 220
+Info (12128): Elaborating entity "D_FF" for hierarchy "IF_ID_Reg:IF_ID|D_FF:IF_ID[0].dffs" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/IF_ID_Reg.sv Line: 33
+Info (12128): Elaborating entity "ID_EX_Reg" for hierarchy "ID_EX_Reg:ID_EX" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 232
+Info (12128): Elaborating entity "EX_MEM_Reg" for hierarchy "EX_MEM_Reg:EX_MEM" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 241
+Info (12128): Elaborating entity "MEM_WB_Reg" for hierarchy "MEM_WB_Reg:MEM_WB" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 247
+Info (12128): Elaborating entity "programCounterFix" for hierarchy "programCounterFix:pcf" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 255
+Info (12128): Elaborating entity "adder_4_pc" for hierarchy "programCounterFix:pcf|adder_4_pc:adding" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/programCounterFix.sv Line: 33
+Info (12128): Elaborating entity "fullAdder" for hierarchy "programCounterFix:pcf|adder_4_pc:adding|fullAdder:fA" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/adder_4_pc.sv Line: 19
+Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 258
+Warning (10175): Verilog HDL warning at instructmem.sv(29): ignoring unsupported system task File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 29
+Warning (10850): Verilog HDL warning at instructmem.sv(47): number of words (7) in memory file does not match the number of elements in the address range [0:255] File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 47
+Info (10648): Verilog HDL Display System Task info at instructmem.sv(48): Running benchmark:  File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 48
+Info (12128): Elaborating entity "CPU_control" for hierarchy "CPU_control:control" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 263
+Info (12128): Elaborating entity "flagRegister" for hierarchy "flagRegister:flagsflagsflags" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 273
+Info (12128): Elaborating entity "ALU_control_unit" for hierarchy "ALU_control_unit:aloo_control" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 277
+Info (12128): Elaborating entity "reg2locMux" for hierarchy "reg2locMux:regToLoc" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 283
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:reggy" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 295
+Info (12128): Elaborating entity "decoder5_32" for hierarchy "regfile:reggy|decoder5_32:writeEnable" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/regfile.sv Line: 34
+Info (12128): Elaborating entity "decoder2_4" for hierarchy "regfile:reggy|decoder5_32:writeEnable|decoder2_4:s1d0" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder5_32.sv Line: 12
+Info (12128): Elaborating entity "decoder3_8" for hierarchy "regfile:reggy|decoder5_32:writeEnable|decoder3_8:s2d3" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/decoder5_32.sv Line: 14
+Info (12128): Elaborating entity "register64" for hierarchy "regfile:reggy|register64:outputGen[0].reggy" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/regfile.sv Line: 44
+Info (12128): Elaborating entity "mux64x32_1" for hierarchy "regfile:reggy|mux64x32_1:read1" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/regfile.sv Line: 51
+Info (12128): Elaborating entity "mux32_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x32_1.sv Line: 42
+Info (12128): Elaborating entity "mux16_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux32_1.sv Line: 22
+Info (12128): Elaborating entity "mux8_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0|mux8_1:mux0" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux16_1.sv Line: 14
+Info (12128): Elaborating entity "mux4_1" for hierarchy "regfile:reggy|mux64x32_1:read1|mux32_1:bitLevel[0].bigboi|mux16_1:mux0|mux8_1:mux0|mux4_1:mux0" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux8_1.sv Line: 14
+Info (12128): Elaborating entity "sign_extender" for hierarchy "sign_extender:daddrExtender" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 300
+Info (12128): Elaborating entity "mux64x2_1_2scomp" for hierarchy "mux64x2_1_2scomp:flipOffset" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 302
+Info (12128): Elaborating entity "adder64_bit" for hierarchy "adder64_bit:offsetAdd" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 306
+Info (12128): Elaborating entity "zero_extender" for hierarchy "zero_extender:immExtender" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 312
+Info (12128): Elaborating entity "alu" for hierarchy "alu:aloo" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 334
+Info (12128): Elaborating entity "and_64_bit" for hierarchy "alu:aloo|and_64_bit:AND" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 63
+Info (12128): Elaborating entity "or_64_bit" for hierarchy "alu:aloo|or_64_bit:OR" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 66
+Info (12128): Elaborating entity "xor_64_bit" for hierarchy "alu:aloo|xor_64_bit:XOR" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 69
+Info (12128): Elaborating entity "zeroCheck" for hierarchy "alu:aloo|zeroCheck:flag" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 80
+Info (12128): Elaborating entity "mux64x8_1" for hierarchy "alu:aloo|mux64x8_1:ALU_opSel" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 86
+Info (12128): Elaborating entity "mux64x4_1" for hierarchy "alu:aloo|mux64x8_1:ALU_opSel|mux64x4_1:first" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/mux64x8_1.sv Line: 16
+Info (12128): Elaborating entity "forwarding" for hierarchy "forwarding:magicJohnson" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 339
+Info (12128): Elaborating entity "branchCalcs" for hierarchy "branchCalcs:calcifer" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 355
+Info (12128): Elaborating entity "shifter" for hierarchy "branchCalcs:calcifer|shifter:leftShift2" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/branchCalcs.sv Line: 48
+Info (12128): Elaborating entity "datamem" for hierarchy "datamem:mems" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 380
+Warning (10175): Verilog HDL warning at datamem.sv(23): ignoring unsupported system task File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 23
+Info (10264): Verilog HDL Case Statement information at datamem.sv(43): all case item expressions in this case statement are onehot File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 43
+Error (10232): Verilog HDL error at datamem.sv(58): index 71 cannot fall outside the declared range [63:0] for vector "read_data" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 58
+Error (10232): Verilog HDL error at datamem.sv(58): index 64 cannot fall outside the declared range [63:0] for vector "read_data" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 58
+Warning (10240): Verilog HDL Always Construct warning at datamem.sv(55): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 55
+Error (10166): SystemVerilog RTL Coding error at datamem.sv(55): always_comb construct does not infer purely combinational logic. File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/datamem.sv Line: 55
+Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 380
+Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/DE1_SoC.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
+    Error: Peak virtual memory: 4860 megabytes
+    Error: Processing ended: Thu Dec 01 20:26:59 2022
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:26
+>>>>>>> Stashed changes
 
 
 +------------------------------------------+
