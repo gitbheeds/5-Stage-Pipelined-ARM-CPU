@@ -4,11 +4,13 @@
 //10: EX/MEM forwarding
 //11: unused 
 
-module forwarding (fwdEN, RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB, 
+module forwarding (fwdEn_EX, RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB, 
 						 Rn_EX, Rm_EX, FWDA, FWDB);
 					 
 	//enable fwding
-	input logic fwdEN;
+	//10: i-type insts (no need to check Rm)
+	//11: r-type inst (need to check Rn and Rm)
+	input logic[1:0] fwdEn_EX;
 	
 	//Rd saved in EX/MEM pipeline register
 	input logic [4:0] targetReg_MEM; 
@@ -28,15 +30,55 @@ module forwarding (fwdEN, RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB
 	
 	always_comb begin
 	
-		//EX hazard case 1
-		if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rn_EX)) FWDA = 2'b10; //EX FWDING on Rn
+		if(fwdEn_EX[1] == 1'b1) begin
 		
-		else FWDA = 2'b00; //pass
+			//check hazards at Rn
+			
+			//EX hazard case 1a: write use hazard at Rn
+			if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rn_EX)) begin
+			
+				FWDA = 2'b10; //EX/MEM FWDING
+			
+			end
+			
+			else begin
+				
+				FWDA = 2'b00; //pass
+			
+			end
+			
+			//check hazards at Rm only for
+			//R-type insts
+			if(fwdEn_EX[0] == 1'b1) begin 
+			
+				//check hazards at Rm
+				//EX hazard case 1b: write-use hazard at Rm
+				if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rm_EX)) begin
+					
+					FWDB = 2'b10; //EX/MEM FWDING
+				
+				end
+				
+				else begin
+				
+					FWDB = 2'b00; //pass
+				
+				end
+				
+			
+			end 
+			
+			else FWDB = 2'b00; //pass for I type insts
 		
-		//EX hazard case 2
-		if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rm_EX)) FWDB = 2'b10; //EX FWDING on Rn
 		
-		else FWDB = 2'b00; //pass
+		end
+		//if fwdEn is disabled, fwding unit is not needed
+		else begin
+		
+			FWDA = 2'b00;
+			FWDB = 2'b00;
+		
+		end
 		
 	end
 
@@ -58,6 +100,8 @@ module fwd_tb();
 	
 	//mux control signals for Rn (A), Rm (B)
 	logic [1:0] FWDA, FWDB;
+	
+	logic [1:0] fwdEn_EX;
 	
 	forwarding dut (.*);
 	
