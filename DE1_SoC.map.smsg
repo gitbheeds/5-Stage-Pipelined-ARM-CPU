@@ -10,3 +10,4 @@ Warning (10273): Verilog HDL warning at ALU_control_unit.sv(93): extended using 
 Warning (10030): Net "mem.data_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
 Warning (10030): Net "mem.waddr_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
 Warning (10030): Net "mem.we_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
+Warning (10034): Output port "outbus[31]" at decoder5_32.sv(6) has no driver File: C:/Users/gering92/Documents/GitHub/EE469_Labs/decoder5_32.sv Line: 6

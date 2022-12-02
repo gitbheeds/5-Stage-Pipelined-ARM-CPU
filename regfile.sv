@@ -28,7 +28,7 @@ module regfile (ReadData1, ReadData2, WriteData,
 		assign regOut[31] = 64'b0; // Sets register 31 to be 0
 		
 		logic [31:0] write_en; //output of decoder, enables writing for a specific register
-		
+				
 		// instantiation of the 5:32 decoder that outputs write_en, which selects the specific register
 		// to write to
 		decoder5_32 writeEnable (RegWrite, WriteRegister, write_en);

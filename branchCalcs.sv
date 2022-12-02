@@ -5,7 +5,7 @@
 
 module branchCalcs (branchSE_EX, currPC_reg_EX, resultALU, 
 						  uncondBr_EX, branchReg_EX, branch_EX, zeroFlag, negFlag, opcode, 
-						  calcBranch, PCSrc);
+						  calcBranch, PCSrc, IF_ID_flush);
 
 //------------------fields------------------//
 
@@ -24,6 +24,9 @@ module branchCalcs (branchSE_EX, currPC_reg_EX, resultALU,
 	//PCSrc control signal is calculated in here and passed to PC
 	//to determine branching vs pc + 4
 	output logic PCSrc;
+	
+	//determine whether IF/ID needs to be flushed
+	output logic IF_ID_flush;
 	
 	//Calculated PC + Branch to pass to PC
 	output logic [63:0] calcBranch;
@@ -91,6 +94,8 @@ module branchCalcs (branchSE_EX, currPC_reg_EX, resultALU,
 	//output PCSrc
 	or #(50) PCSrcCheck(PCSrc, condSelected, uncondBr_EX);
 
+	//flush when conditional branching is true
+	assign IF_ID_flush = condSelected;
 
 
 //-------------------PCSrc------------------//		
@@ -116,6 +121,9 @@ module bc_tb ();
 	//PCSrc control signal is calculated in here and passed to PC
 	//to determine branching vs pc + 4
 	logic PCSrc;
+	
+	//determine whether IF/ID needs to be flushed
+	logic IF_ID_flush;
 	
 	//Calculated PC + Branch to pass to PC
 	logic [63:0] calcBranch;

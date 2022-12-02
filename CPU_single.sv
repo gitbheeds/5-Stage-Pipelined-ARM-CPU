@@ -233,7 +233,7 @@ module CPU_single(clk, rst);
 //CPU control unit
 	CPU_control control (.rst, .opcode, .uncondBr, .branch, .Reg2Loc, .ALU_Src, .RegWrite, 
 								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
-								.branchReg, .branchLink, .memRead, .fwdEn, .IF_ID_flush);
+								.branchReg, .branchLink, .memRead, .fwdEn);
 								
 //--------------------Pipeline Registers------------------//
 
@@ -359,8 +359,8 @@ module CPU_single(clk, rst);
 //-----------------branch calculations------------------//
 
 	branchCalcs calcifer(.branchSE_EX, .currPC_reg_EX, .resultALU(ALU_out), 
-					.uncondBr_EX, .branchReg_EX, .branch_EX, .zeroFlag(flags[2]), .negFlag(flags[0]), .opcode(opcode_EX[10]), 
-			   	.calcBranch, .PCSrc);
+					.uncondBr_EX, .branchReg_EX, .branch_EX, .zeroFlag(zero), .negFlag(flags[0]), .opcode(opcode_EX[10]), 
+			   	.calcBranch, .PCSrc, .IF_ID_flush);
 
 //---------------end branch calculations----------------//
 
@@ -411,7 +411,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 12000;
+	parameter CLOCK_PERIOD = 14000;
 	//parameter CLOCK_PERIOD = 100000;
 	initial begin
 		clk <= 0;

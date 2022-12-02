@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Thu Dec 01 23:30:50 2022
+Fri Dec 02 00:54:03 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Dec 01 23:30:50 2022           ;
+; Analysis & Synthesis Status ; Failed - Fri Dec 02 00:54:03 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Dec 01 23:30:33 2022
+    Info: Processing started: Fri Dec 02 00:53:46 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -263,7 +263,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file alu_con
     Info (12023): Found entity 2: alu_control_unit_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 104
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_control.sv
     Info (12023): Found entity 1: CPU_control File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_control.sv Line: 9
-    Info (12023): Found entity 2: CPU_control_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_control.sv Line: 342
+    Info (12023): Found entity 2: CPU_control_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_control.sv Line: 341
 Info (12021): Found 1 design units, including 1 entities, in source file flagregister.sv
     Info (12023): Found entity 1: flagRegister File: C:/Users/gering92/Documents/GitHub/EE469_Labs/flagRegister.sv Line: 2
 Info (12021): Found 2 design units, including 2 entities, in source file if_id_reg.sv
@@ -283,7 +283,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file mem_wb_
     Info (12023): Found entity 2: MEM_WB_Reg_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv Line: 54
 Info (12021): Found 2 design units, including 2 entities, in source file branchcalcs.sv
     Info (12023): Found entity 1: branchCalcs File: C:/Users/gering92/Documents/GitHub/EE469_Labs/branchCalcs.sv Line: 6
-    Info (12023): Found entity 2: bc_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/branchCalcs.sv Line: 102
+    Info (12023): Found entity 2: bc_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/branchCalcs.sv Line: 107
 Info (12021): Found 2 design units, including 2 entities, in source file programcounterfix.sv
     Info (12023): Found entity 1: programCounterFix File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounterFix.sv Line: 6
     Info (12023): Found entity 2: PCF_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounterFix.sv Line: 55
@@ -331,7 +331,7 @@ Info (12128): Elaborating entity "mux64x8_1" for hierarchy "alu:aloo|mux64x8_1:A
 Info (12128): Elaborating entity "mux64x4_1" for hierarchy "alu:aloo|mux64x8_1:ALU_opSel|mux64x4_1:first" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/mux64x8_1.sv Line: 16
 Info (12128): Elaborating entity "forwarding" for hierarchy "forwarding:magicJohnson" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 347
 Info (12128): Elaborating entity "branchCalcs" for hierarchy "branchCalcs:calcifer" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 363
-Info (12128): Elaborating entity "shifter" for hierarchy "branchCalcs:calcifer|shifter:leftShift2" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/branchCalcs.sv Line: 48
+Info (12128): Elaborating entity "shifter" for hierarchy "branchCalcs:calcifer|shifter:leftShift2" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/branchCalcs.sv Line: 51
 Info (12128): Elaborating entity "datamem" for hierarchy "datamem:mems" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 388
 Warning (10175): Verilog HDL warning at datamem.sv(23): ignoring unsupported system task File: C:/Users/gering92/Documents/GitHub/EE469_Labs/datamem.sv Line: 23
 Info (10264): Verilog HDL Case Statement information at datamem.sv(43): all case item expressions in this case statement are onehot File: C:/Users/gering92/Documents/GitHub/EE469_Labs/datamem.sv Line: 43
@@ -342,9 +342,9 @@ Error (10166): SystemVerilog RTL Coding error at datamem.sv(55): always_comb con
 Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 388
 Info (144001): Generated suppressed messages file C:/Users/gering92/Documents/GitHub/EE469_Labs/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
-    Error: Peak virtual memory: 4855 megabytes
-    Error: Processing ended: Thu Dec 01 23:30:51 2022
-    Error: Elapsed time: 00:00:18
+    Error: Peak virtual memory: 4856 megabytes
+    Error: Processing ended: Fri Dec 02 00:54:05 2022
+    Error: Elapsed time: 00:00:19
     Error: Total CPU time (on all processors): 00:00:33
 
 
