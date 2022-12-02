@@ -84,6 +84,9 @@ module CPU_single(clk, rst);
 	// 2'b11 = R type
 	logic [1:0] fwdEn;
 	
+	// Used for the STUR EX/MEM forwarding special case
+	logic STUR_sel;
+	
 //----------------end control signals----------------------//
 
 //------------------ID/EX output signals-------------------//
@@ -103,6 +106,8 @@ module CPU_single(clk, rst);
 	logic [10:0] opcode_EX;
 	
 	logic [63:0] ext_out_EX;
+	
+	logic [63:0] srcOut_EX;
 	
 	logic uncondBr_EX;
 	
@@ -128,6 +133,8 @@ module CPU_single(clk, rst);
 	logic [63:0] toDataMem_MEM, ALU_B_MEM;
 	
 	logic [63:0] rd2_MEM;
+	
+	logic [63:0] memData_MEM;
 
 
 //----------------end EX/MEM output signals----------------//
@@ -209,6 +216,7 @@ module CPU_single(clk, rst);
 	//calculated branch value to pass to PC
 	logic[63:0] calcBranch;	
 
+	logic [63:0] memData;
 //---------------end module connections--------------------//
 
 //------------Pipeline Control Units & Signals------------//
@@ -246,23 +254,23 @@ module CPU_single(clk, rst);
 						  
 	ID_EX_Reg ID_EX (.clk, .ALU_Src, .ALU_SH, .Imm, .shiftDirn, .ALU_on, .set_flags, .branchReg,
 						  .branch, .ALU_cntrl, .memToReg, .memWrite, .memRead, .branchLink, .RegWrite,
-						  .currPC_reg, .rd1, .rd2, .targetReg, .opcode, .ext_out, .uncondBr, .pc_plus4_out,
+						  .currPC_reg, .rd1, .rd2, .targetReg, .opcode, .ext_out(srcOut), .uncondBr, .pc_plus4_out,
 						  .shamt, .branchSE, .Rn, .Rm, .fwdEn,
 						  
 						  // ID/EX register outputs below (signals end in _EX)
 						  .ALU_Src_EX, .ALU_SH_EX, .Imm_EX, .shiftDirn_EX, .ALU_on_EX, .set_flags_EX, .branchReg_EX,
 						  .branch_EX, .ALU_cntrl_EX, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
-						  .currPC_reg_EX, .rd1_EX, .rd2_EX, .targetReg_EX, .opcode_EX, .ext_out_EX, 
+						  .currPC_reg_EX, .rd1_EX, .rd2_EX, .targetReg_EX, .opcode_EX, .ext_out_EX(srcOut_EX), 
 						  .uncondBr_EX, .pc_plus4_EX, .shamt_EX, .branchSE_EX, .Rn_EX, .Rm_EX, .fwdEn_EX);
 						  
 						  
 	EX_MEM_Reg EX_MEM (.clk, .memToReg_EX, .memWrite_EX, .memRead_EX, .branchLink_EX, .RegWrite_EX,
-							 .targetReg_EX, .toDataMem, .ALU_B, .rd2_EX,
+							 .targetReg_EX, .toDataMem, .ALU_B, .rd2_EX, .memData,
 							 
 							 
 							 // EX/MEM register outputs below (signals end in _MEM)
 							 .memToReg_MEM, .memWrite_MEM, .memRead_MEM, .branchLink_MEM, .RegWrite_MEM,
-							 .targetReg_MEM, .toDataMem_MEM, .ALU_B_MEM, .rd2_MEM);
+							 .targetReg_MEM, .toDataMem_MEM, .ALU_B_MEM, .rd2_MEM, .memData_MEM);
 							 
 							 
 	MEM_WB_Reg MEM_WB (.clk, .memToReg_MEM, .RegWrite_MEM, .targetReg_MEM, .toDataMem_MEM, .memDataOut,
@@ -334,26 +342,26 @@ module CPU_single(clk, rst);
 	//ALU_Src mux goes here
 	//i0 = rd2, i1 = ext_out
 	//out = srcOut to linkDataB mux
-	mux64x2_1 ALUSrcMux(ALU_Src_EX, rd2_EX, ext_out_EX, srcOut);
+	mux64x2_1 ALUSrcMux(ALU_Src, rd2, ext_out, srcOut);
 
 	//branch link, add pc+4 to x30
 	//set ALU_B to zero for this
 	
-	mux64x2_1 linkDataB(.sel(branchLink_EX), .i0(srcOut), .i1(pc_plus4_EX), .out(standardALU_B));
+	mux64x2_1 linkDataB(.sel(branchLink_EX), .i0(srcOut_EX), .i1(pc_plus4_EX), .out(standardALU_B));
 
 	alu aloo(.A(ALU_A), .B(ALU_B), .cntrl(ALU_cntrl_EX), .result(ALU_out), .overflow, .negative, .zero, .carry_out);
 	
 //------------------BigBoy Forwarding-------------------//
 
-	forwarding magicJohnson(.fwdEn_EX, .RegWrite_MEM, .RegWrite_WB, .targetReg_MEM, .targetReg_WB, 
-						         .Rn_EX, .Rm_EX, .FWDA, .FWDB);
+	forwarding magicJohnson(.fwdEn_EX, .RegWrite_EX, .RegWrite_MEM, .RegWrite_WB, .targetReg_EX, .targetReg_MEM, .targetReg_WB, 
+						         .Rn_EX, .Rm_EX, .FWDA, .FWDB, .STUR_sel);
 	
 	// ALU input A
 	// rd1_EX is standard without forwarding, memRegMuxOut is mem/wb forwarding, toDataMem_MEM is ex/mem forwarding
 	mux64x4_1 forwardA(.in0(rd1_EX), .in1(memRegMuxOut), .in2(toDataMem_MEM), .in3(64'bX), .out(ALU_A), .sel(FWDA));
 	
 	
-	mux64x4_1 forwardB(.in0(standardALU_B), .in1(memRegMuxOut), .in2(toDataMem_MEM), .in3(64'bX), .out(ALU_B), .sel(FWDB));
+	mux64x4_1 forwardB(.in0(standardALU_B), .in1(memRegMuxOut), .in2(toDataMem_MEM), .in3(standardALU_B), .out(ALU_B), .sel(FWDB));
 									
 
 //----------------End BigBoy Forwarding-----------------//
@@ -370,10 +378,6 @@ module CPU_single(clk, rst);
 //shifter instantiation
 	
 	shifter shift(rd1_EX, shiftDirn_EX, shamt_EX, shift_out);
-	
-
-//********Everything below is after EX/MEM pipeline register (pretty sure) ***********//	
-//data memory instantiation
 
 	//ALU_SH mux goes here
 	//i0 = ALU_out, i1 = shift_out
@@ -381,13 +385,18 @@ module CPU_single(clk, rst);
 	
 	mux64x2_1 ALU_ShiftMux(ALU_SH_EX, ALU_out, shift_out, toDataMem);
 
-
+//********Everything below is after EX/MEM pipeline register (pretty sure) ***********//
+	
+//data memory instantiation
 	//DW transfer
 	logic[3:0] xfer_size;
 	
 	assign xfer_size = 4'b1000;
+	
+	
+	mux64x2_1 STURsel(.sel(STUR_sel), .i0(rd2_EX), .i1(toDataMem_MEM), .out(memData));
 
-	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(rd2_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
+	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(memData_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
 
 	//MemToReg mux here
 	//i0 = toDataMem, i1 = memDataOut
@@ -413,7 +422,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 20000;
+	parameter CLOCK_PERIOD = 16000;
 	//parameter CLOCK_PERIOD = 100000;
 	initial begin
 		clk <= 0;
@@ -428,7 +437,7 @@ module CPU_single_tb();
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		repeat(250) @(posedge clk);
+		repeat(200) @(posedge clk);
 		
 		$stop;
 	end
