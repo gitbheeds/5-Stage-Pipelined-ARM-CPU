@@ -5,7 +5,7 @@
 //11: unused 
 
 module forwarding (fwdEn_EX, RegWrite_EX, RegWrite_MEM, RegWrite_WB, targetReg_EX, targetReg_MEM, targetReg_WB, 
-						 Rn_EX, Rm_EX, FWDA, FWDB, STUR_sel);
+						 Rn_EX, Rm_EX, FWDA, FWDB, STUR_sel, STUR_WB);
 					 
 	//enable fwding
 	//10: i-type insts (no need to check Rm)
@@ -30,9 +30,11 @@ module forwarding (fwdEn_EX, RegWrite_EX, RegWrite_MEM, RegWrite_WB, targetReg_E
 	//mux control signals for Rn (A), Rm (B)
 	output logic [1:0] FWDA, FWDB;
 	
-	output logic STUR_sel;
+	output logic STUR_sel, STUR_WB;
 	
 	assign STUR_sel = ((fwdEn_EX == 2'b01) && (FWDB == 2'b11));
+	
+	assign STUR_WB = ((fwdEn_EX == 2'b01) && (FWDB == 2'b01));
 	
 	always_comb begin
 		// we are going to forward
@@ -119,15 +121,27 @@ module forwarding (fwdEn_EX, RegWrite_EX, RegWrite_MEM, RegWrite_WB, targetReg_E
 					end
 				end
 				
-				//NOW check Rm EX/MEM hazards
-				if(((RegWrite_MEM == 1'b1) && (RegWrite_EX == 1'b0)) && (targetReg_MEM != 5'd31) && (targetReg_MEM == targetReg_EX)) begin
-					//EX/MEM fwding required
-					FWDB = 2'b11;
+				// NOW check Rm MEM/WB hazards
+				if(((RegWrite_WB == 1'b1) && (RegWrite_EX == 1'b0)) && (targetReg_WB != 5'd31) && (targetReg_WB == targetReg_EX)) begin
+					//NOW check Rm EX/MEM hazards
+					if(((RegWrite_MEM == 1'b1) && (RegWrite_EX == 1'b0)) && (targetReg_MEM != 5'd31) && (targetReg_MEM == targetReg_EX)) begin
+						//EX/MEM fwding required
+						FWDB = 2'b11;
+					end
+					else begin
+						FWDB = 2'b01;
+					end
 				end
 				
 				else begin
-					FWDB = 2'b00;//PASS
+					if(((RegWrite_MEM == 1'b1) && (RegWrite_EX == 1'b0)) && (targetReg_MEM != 5'd31) && (targetReg_MEM == targetReg_EX)) begin
+						FWDB = 2'b11;
+					end
+					else begin
+						FWDB = 2'b00;//PASS
+					end
 				end
+				
 			
 			end
 			//not STUR command
@@ -166,7 +180,7 @@ module fwd_tb();
 	
 	logic [1:0] fwdEn_EX;
 	
-	logic STUR_sel;
+	logic STUR_sel, STUR_WB;
 	
 	forwarding dut (.*);
 	

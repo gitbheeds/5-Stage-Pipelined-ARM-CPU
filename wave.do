@@ -89,6 +89,14 @@ add wave -noupdate -radix unsigned /CPU_single_tb/dut/rd2_MEM
 add wave -noupdate /CPU_single_tb/dut/STUR_sel
 add wave -noupdate -radix ufixed /CPU_single_tb/dut/memData
 add wave -noupdate -radix sfixed /CPU_single_tb/dut/memData_MEM
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[32]}
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[31]}
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[30]}
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[29]}
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[28]}
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[27]}
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[26]}
+add wave -noupdate -radix sfixed {/CPU_single_tb/dut/mems/mem[25]}
 add wave -noupdate -radix unsigned {/CPU_single_tb/dut/mems/mem[24]}
 add wave -noupdate -radix unsigned {/CPU_single_tb/dut/mems/mem[23]}
 add wave -noupdate -radix unsigned {/CPU_single_tb/dut/mems/mem[22]}
@@ -116,8 +124,8 @@ add wave -noupdate -radix unsigned {/CPU_single_tb/dut/mems/mem[1]}
 add wave -noupdate -radix unsigned {/CPU_single_tb/dut/mems/mem[0]}
 add wave -noupdate -radix sfixed -childformat {{{/CPU_single_tb/dut/reggy/regOut[31]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[30]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[29]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[28]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[27]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[26]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[25]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[24]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[23]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[22]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[21]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[20]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[19]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[18]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[17]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[16]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[15]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[14]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[13]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[12]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[11]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[10]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[9]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[8]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[7]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[6]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[5]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[4]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[3]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[2]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[1]} -radix sfixed} {{/CPU_single_tb/dut/reggy/regOut[0]} -radix sfixed}} -expand -subitemconfig {{/CPU_single_tb/dut/reggy/regOut[31]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[30]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[29]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[28]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[27]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[26]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[25]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[24]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[23]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[22]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[21]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[20]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[19]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[18]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[17]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[16]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[15]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[14]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[13]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[12]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[11]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[10]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[9]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[8]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[7]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[6]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[5]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[4]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[3]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[2]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[1]} {-height 15 -radix sfixed} {/CPU_single_tb/dut/reggy/regOut[0]} {-height 15 -radix sfixed}} /CPU_single_tb/dut/reggy/regOut
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{inst 16} {45415 ps} 1} {{inst 12} {36444 ps} 1} {{inst 8} {24249 ps} 1} {error {343536 ps} 1} {{Cursor 5} {392550 ps} 1}
-quietly wave cursor active 5
+WaveRestoreCursors {{inst 16} {45415 ps} 1} {{inst 12} {36444 ps} 1} {{inst 8} {24249 ps} 1} {error {343536 ps} 1} {{Cursor 5} {392550 ps} 1} {{Cursor 6} {206954 ps} 0}
+quietly wave cursor active 6
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 102
 configure wave -justifyvalue left
@@ -132,4 +140,4 @@ configure wave -griddelta 2
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {175854 ps} {1220640 ps}
+WaveRestoreZoom {0 ps} {1110150 ps}

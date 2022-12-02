@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Fri Dec 02 08:16:16 2022
+Fri Dec 02 10:06:53 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Fri Dec 02 08:16:16 2022           ;
+; Analysis & Synthesis Status ; Failed - Fri Dec 02 10:06:53 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Dec 02 08:16:04 2022
+    Info: Processing started: Fri Dec 02 10:06:41 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -236,7 +236,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file datamem
     Info (12023): Found entity 2: datamem_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/datamem.sv Line: 71
 Info (12021): Found 2 design units, including 2 entities, in source file cpu_single.sv
     Info (12023): Found entity 1: CPU_single File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 5
-    Info (12023): Found entity 2: CPU_single_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 421
+    Info (12023): Found entity 2: CPU_single_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 425
 Info (12021): Found 2 design units, including 2 entities, in source file and_64_bit.sv
     Info (12023): Found entity 1: and_64_bit File: C:/Users/gering92/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 6
     Info (12023): Found entity 2: and_64_bit_testbench File: C:/Users/gering92/Documents/GitHub/EE469_Labs/and_64_bit.sv Line: 26
@@ -274,7 +274,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file id_ex_r
     Info (12023): Found entity 2: ID_EX_Reg_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ID_EX_Reg.sv Line: 144
 Info (12021): Found 2 design units, including 2 entities, in source file forwarding.sv
     Info (12023): Found entity 1: forwarding File: C:/Users/gering92/Documents/GitHub/EE469_Labs/forwarding.sv Line: 7
-    Info (12023): Found entity 2: fwd_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/forwarding.sv Line: 146
+    Info (12023): Found entity 2: fwd_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/forwarding.sv Line: 164
 Info (12021): Found 2 design units, including 2 entities, in source file ex_mem_reg.sv
     Info (12023): Found entity 1: EX_MEM_Reg File: C:/Users/gering92/Documents/GitHub/EE469_Labs/EX_MEM_Reg.sv Line: 3
     Info (12023): Found entity 2: EX_MEM_Reg_tb File: C:/Users/gering92/Documents/GitHub/EE469_Labs/EX_MEM_Reg.sv Line: 75
@@ -298,14 +298,14 @@ Info (12128): Elaborating entity "fullAdder" for hierarchy "programCounterFix:pc
 Info (12128): Elaborating entity "D_FF" for hierarchy "programCounterFix:pcf|D_FF:reginald[0].duffy" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/programCounterFix.sv Line: 46
 Info (12128): Elaborating entity "instructmem" for hierarchy "instructmem:insts" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 241
 Warning (10175): Verilog HDL warning at instructmem.sv(30): ignoring unsupported system task File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 30
-Error (10170): Verilog HDL syntax error at test10_forwarding.arm(73) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/gering92/Documents/GitHub/EE469_Labs/test10_forwarding.arm Line: 73
+Error (10170): Verilog HDL syntax error at test12_Fibonacci.arm(72) near text: _. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/gering92/Documents/GitHub/EE469_Labs/test12_Fibonacci.arm Line: 72
 Info (10648): Verilog HDL Display System Task info at instructmem.sv(49): Running benchmark:  File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 49
 Error (12152): Can't elaborate user hierarchy "instructmem:insts" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 241
 Info (144001): Generated suppressed messages file C:/Users/gering92/Documents/GitHub/EE469_Labs/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 1 warning
     Error: Peak virtual memory: 4772 megabytes
-    Error: Processing ended: Fri Dec 02 08:16:17 2022
-    Error: Elapsed time: 00:00:13
+    Error: Processing ended: Fri Dec 02 10:06:53 2022
+    Error: Elapsed time: 00:00:12
     Error: Total CPU time (on all processors): 00:00:26
 
 

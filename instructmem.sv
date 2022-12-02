@@ -10,9 +10,9 @@
 //`define BENCHMARK "test04_LdurStur.arm"
 //`define BENCHMARK "test05_Blt.arm"
 //`define BENCHMARK "test06_BlBr.arm"
-`define BENCHMARK "test10_forwarding.arm"
+//`define BENCHMARK "test10_forwarding.arm"
 //`define BENCHMARK "test11_Sort.arm"
-//`define BENCHMARK "test12_Fibonacci.arm"
+`define BENCHMARK "test12_Fibonacci.arm"
 
 
 `timescale 1ps/1ps

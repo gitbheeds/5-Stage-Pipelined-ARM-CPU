@@ -85,7 +85,7 @@ module CPU_single(clk, rst);
 	logic [1:0] fwdEn;
 	
 	// Used for the STUR EX/MEM forwarding special case
-	logic STUR_sel;
+	logic STUR_sel, STUR_WB;
 	
 //----------------end control signals----------------------//
 
@@ -353,15 +353,19 @@ module CPU_single(clk, rst);
 	
 //------------------BigBoy Forwarding-------------------//
 
+	
 	forwarding magicJohnson(.fwdEn_EX, .RegWrite_EX, .RegWrite_MEM, .RegWrite_WB, .targetReg_EX, .targetReg_MEM, .targetReg_WB, 
-						         .Rn_EX, .Rm_EX, .FWDA, .FWDB, .STUR_sel);
+						         .Rn_EX, .Rm_EX, .FWDA, .FWDB, .STUR_sel, .STUR_WB);
 	
 	// ALU input A
 	// rd1_EX is standard without forwarding, memRegMuxOut is mem/wb forwarding, toDataMem_MEM is ex/mem forwarding
 	mux64x4_1 forwardA(.in0(rd1_EX), .in1(memRegMuxOut), .in2(toDataMem_MEM), .in3(64'bX), .out(ALU_A), .sel(FWDA));
 	
+	logic[63:0] transfer;
 	
-	mux64x4_1 forwardB(.in0(standardALU_B), .in1(memRegMuxOut), .in2(toDataMem_MEM), .in3(standardALU_B), .out(ALU_B), .sel(FWDB));
+	mux64x2_1 inSel(.sel(STUR_WB), .i0(memRegMuxOut), .i1(standardALU_B), .out(transfer));
+	
+	mux64x4_1 forwardB(.in0(standardALU_B), .in1(transfer), .in2(toDataMem_MEM), .in3(standardALU_B), .out(ALU_B), .sel(FWDB));
 									
 
 //----------------End BigBoy Forwarding-----------------//
@@ -394,7 +398,7 @@ module CPU_single(clk, rst);
 	assign xfer_size = 4'b1000;
 	
 	
-	mux64x2_1 STURsel(.sel(STUR_sel), .i0(rd2_EX), .i1(toDataMem_MEM), .out(memData));
+	mux64x4_1 STURsel(.sel({STUR_WB, STUR_sel}), .in0(rd2_EX), .in1(toDataMem_MEM), .in2(toDataMem_WB), .in3(64'bX), .out(memData));
 
 	datamem mems(.address(toDataMem_MEM), .write_enable(memWrite_MEM), .read_enable(memRead_MEM), .write_data(memData_MEM), .clk(clk), .xfer_size, .read_data(memDataOut));
 
@@ -437,7 +441,7 @@ module CPU_single_tb();
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		repeat(200) @(posedge clk);
+		repeat(750) @(posedge clk);
 		
 		$stop;
 	end
