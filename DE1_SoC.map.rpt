@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Thu Dec 01 18:20:30 2022
+Thu Dec 01 19:46:53 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Dec 01 18:20:30 2022           ;
+; Analysis & Synthesis Status ; Failed - Thu Dec 01 19:46:53 2022           ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; DE1_SoC                                     ;
 ; Top-level Entity Name       ; CPU_single                                  ;
@@ -162,7 +162,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Thu Dec 01 18:20:19 2022
+    Info: Processing started: Thu Dec 01 19:46:42 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12021): Found 2 design units, including 2 entities, in source file zerocheck.sv
@@ -274,7 +274,7 @@ Info (12021): Found 2 design units, including 2 entities, in source file id_ex_r
     Info (12023): Found entity 2: ID_EX_Reg_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ID_EX_Reg.sv Line: 138
 Info (12021): Found 2 design units, including 2 entities, in source file forwarding.sv
     Info (12023): Found entity 1: forwarding File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/forwarding.sv Line: 7
-    Info (12023): Found entity 2: fwd_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/forwarding.sv Line: 93
+    Info (12023): Found entity 2: fwd_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/forwarding.sv Line: 42
 Info (12021): Found 2 design units, including 2 entities, in source file ex_mem_reg.sv
     Info (12023): Found entity 1: EX_MEM_Reg File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/EX_MEM_Reg.sv Line: 3
     Info (12023): Found entity 2: EX_MEM_Reg_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/EX_MEM_Reg.sv Line: 62
@@ -342,10 +342,10 @@ Error (10166): SystemVerilog RTL Coding error at datamem.sv(55): always_comb con
 Error (12152): Can't elaborate user hierarchy "datamem:mems" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 380
 Info (144001): Generated suppressed messages file C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/DE1_SoC.map.smsg
 Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
-    Error: Peak virtual memory: 4859 megabytes
-    Error: Processing ended: Thu Dec 01 18:20:31 2022
+    Error: Peak virtual memory: 4861 megabytes
+    Error: Processing ended: Thu Dec 01 19:46:54 2022
     Error: Elapsed time: 00:00:12
-    Error: Total CPU time (on all processors): 00:00:26
+    Error: Total CPU time (on all processors): 00:00:25
 
 
 +------------------------------------------+

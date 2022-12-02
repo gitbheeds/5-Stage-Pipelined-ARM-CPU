@@ -4,9 +4,12 @@
 //10: EX/MEM forwarding
 //11: unused 
 
-module forwarding (RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB, 
+module forwarding (fwdEN, RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB, 
 						 Rn_EX, Rm_EX, FWDA, FWDB);
-
+					 
+	//enable fwding
+	input logic fwdEN;
+	
 	//Rd saved in EX/MEM pipeline register
 	input logic [4:0] targetReg_MEM; 
 	
@@ -25,54 +28,15 @@ module forwarding (RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB,
 	
 	always_comb begin
 	
-	//EX HAZARDS
-		//Confirm that the inst is writing
-		//Confirm that target reg is not X31(cannot write to X31)
-		//EX hazard for Rn
-		if((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM == Rn_EX)) begin
+		//EX hazard case 1
+		if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rn_EX)) FWDA = 2'b10; //EX FWDING on Rn
 		
-			FWDA = 2'b10; //EX/MEM FWDING
-			FWDB = 2'b00; //pass	
-			
-		end
+		else FWDA = 2'b00; //pass
 		
-		//EX hazard for Rm
-		else if((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM == Rm_EX)) begin
+		//EX hazard case 2
+		if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rm_EX)) FWDB = 2'b10; //EX FWDING on Rn
 		
-			FWDA = 2'b00; //pass
-			FWDB = 2'b10; //EX/MEM FWDING
-			
-		end
-		
-		
-	//MEM HAZARDS
-		//Confirm that the inst is writing
-		//Confirm that target reg is not X31(cannot write to X31)
-		//MEM Hazard for Rn
-		if((RegWrite_WB) && (targetReg_WB != 31) && !((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM != Rn_EX)) && (targetReg_WB == Rn_EX)) begin
-			
-			//MEM hazard for Rn
-			FWDA = 2'b01; //MEM/WB FWDING
-			FWDB = 2'b00; //pass
-			
-		end
-
-		//MEM Hazard for Rm
-		else if((RegWrite_WB) && (targetReg_WB != 31) && !((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM != Rm_EX)) && (targetReg_WB == Rm_EX)) begin
-			
-			//MEM hazard for Rm
-			FWDA = 2'b00; //pass
-			FWDB = 2'b01; //MEM/WB FWDING
-			
-		end
-
-		//no hazards, no forwarding
-		else begin
-			
-			FWDA = 2'b00; //pass
-			FWDB = 2'b00; //pass
-		
-		end		
+		else FWDB = 2'b00; //pass
 		
 	end
 
