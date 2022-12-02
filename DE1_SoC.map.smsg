@@ -1,15 +1,13 @@
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Warning (10273): Verilog HDL warning at CPU_single.sv(342): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 342
-Warning (10273): Verilog HDL warning at CPU_single.sv(345): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 345
-Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(65): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_pass_add_sub.sv Line: 65
-Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(66): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_pass_add_sub.sv Line: 66
-Warning (10273): Verilog HDL warning at ALU.sv(85): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU.sv Line: 85
-Warning (10273): Verilog HDL warning at ALU.sv(86): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU.sv Line: 86
-Warning (10273): Verilog HDL warning at ALU_control_unit.sv(35): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 35
-Warning (10273): Verilog HDL warning at ALU_control_unit.sv(93): extended using "x" or "z" File: C:/Users/gering92/Documents/GitHub/EE469_Labs/ALU_control_unit.sv Line: 93
-Warning (10030): Net "ALU_cntrl" at CPU_single.sv(71) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 71
-Warning (10030): Net "IF_ID_flush" at CPU_single.sv(206) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/CPU_single.sv Line: 206
-Warning (10030): Net "registerOut[134..71]" at MEM_WB_Reg.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv Line: 25
-Warning (10030): Net "mem.data_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
-Warning (10030): Net "mem.waddr_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
-Warning (10030): Net "mem.we_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/gering92/Documents/GitHub/EE469_Labs/instructmem.sv Line: 43
+Warning (10273): Verilog HDL warning at CPU_single.sv(343): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 343
+Warning (10273): Verilog HDL warning at CPU_single.sv(346): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 346
+Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(65): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_pass_add_sub.sv Line: 65
+Warning (10273): Verilog HDL warning at ALU_pass_add_sub.sv(66): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_pass_add_sub.sv Line: 66
+Warning (10273): Verilog HDL warning at ALU.sv(85): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 85
+Warning (10273): Verilog HDL warning at ALU.sv(86): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU.sv Line: 86
+Warning (10273): Verilog HDL warning at ALU_control_unit.sv(35): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv Line: 35
+Warning (10273): Verilog HDL warning at ALU_control_unit.sv(93): extended using "x" or "z" File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/ALU_control_unit.sv Line: 93
+Warning (10030): Net "IF_ID_flush" at CPU_single.sv(208) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/CPU_single.sv Line: 208
+Warning (10030): Net "mem.data_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 43
+Warning (10030): Net "mem.waddr_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 43
+Warning (10030): Net "mem.we_a" at instructmem.sv(43) has no driver or initial value, using a default initial value '0' File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/instructmem.sv Line: 43

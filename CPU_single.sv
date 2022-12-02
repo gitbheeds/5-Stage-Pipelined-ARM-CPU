@@ -76,6 +76,9 @@ module CPU_single(clk, rst);
 	// Carried through all pipeline registers
 	logic branchLink, RegWrite;
 	
+	// PC selection between pc + 4 and calcBranch
+	logic PCSrc;
+	
 //----------------end control signals----------------------//
 
 //------------------ID/EX output signals-------------------//
@@ -194,9 +197,8 @@ module CPU_single(clk, rst);
 	//for branch link
 	logic[63:0] pc_plus4, pc_plus4_out;
 	
-	
-	// uncondbr, branchreg, no flags, branch, opcode, 
-	
+	//calculated branch value to pass to PC
+	logic[63:0] calcBranch;	
 
 //---------------end module connections--------------------//
 
@@ -249,12 +251,11 @@ module CPU_single(clk, rst);
 
 //-------------------------Modules------------------------//
 	
-//program counter instantiation
-	programCounter pc (.clk(~clk), .rst, .condAddr19, .brAddr26, .uncondBr, .branchReg, .currPC, .pc_plus4, .Rd(rd2), .flagZero(flags[2]), .branch, .flagNeg(flags[0]), .opcode(opcode[10]));
-	
+//program counter instantiation	
+	programCounterFix pcf(.clk(~clk), .rst, .currPC, .calcBranch, .pc_plus4, .PCSrc);
 	
 //instruction memory access
-	instructmem insts (.address(currPC), .instruction, .clk(~clk));
+	instructmem insts (.address(currPC), .instruction, .clk(clk));
 	
 //CPU control unit
 	CPU_control control (.rst, .opcode, .uncondBr, .branch, .Reg2Loc, .ALU_Src, .RegWrite, 
@@ -273,7 +274,7 @@ module CPU_single(clk, rst);
 									
 									
 //ALU control unit
-	ALU_control_unit aloo_control (.clk, .opcode(opcode_EX), .ALU_on(ALU_on_EX), .ALU_cntrl(ALU_cntrl_EX), .sign(SE9_out[63]));
+	ALU_control_unit aloo_control (.clk, .opcode(opcode), .ALU_on(ALU_on), .ALU_cntrl(ALU_cntrl), .sign(SE9_out[63]));
 //regfile instantiation
 	
 	//Reg2Loc mux goes here
@@ -289,9 +290,9 @@ module CPU_single(clk, rst);
 	
 	reg2locMux branchLinky2(branchLink, 5'd31, Rn, readA);
 		
-	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(wd), 
+	regfile reggy(.ReadData1(rd1), .ReadData2(rd2), .WriteData(memRegMuxOut), 
 					 .ReadRegister1(readA), .ReadRegister2(readB), .WriteRegister(targetReg_WB),
-					 .RegWrite(RegWrite_WB), .clk(~clk));
+					 .RegWrite(RegWrite_WB), .clk(clk));
 	
 //Sign Extension of dAddr9
 
@@ -302,7 +303,7 @@ module CPU_single(clk, rst);
 	
 	logic co_temp, of_temp;
 	
-	adder64_bit offsetAdd(.input1(tempSE), .input2(0), .sub_control(SE9_out[63]), .out(SE64), .of_flag(of_temp), .co_flag(co_temp));
+	adder64_bit offsetAdd(.input1(tempSE), .input2(64'b0), .sub_control(SE9_out[63]), .out(SE64), .of_flag(of_temp), .co_flag(co_temp));
 
 //Zero Extension of ALU_Imm
 
@@ -346,6 +347,15 @@ module CPU_single(clk, rst);
 									
 
 //----------------End BigBoy Forwarding-----------------//
+
+//-----------------branch calculations------------------//
+
+	branchCalcs calcifer(.branchSE_EX, .currPC_reg_EX, .resultALU(ALU_out), 
+					.uncondBr_EX, .branchReg_EX, .branch_EX, .zeroFlag(flags[2]), .negFlag(flags[0]), .opcode(opcode_EX[10]), 
+			   	.calcBranch, .PCSrc);
+
+//---------------end branch calculations----------------//
+
 	
 //shifter instantiation
 	
@@ -381,7 +391,7 @@ module CPU_single(clk, rst);
 	//i0 = memRegMuxOut
 	//i1 = pc_plus4
 	//out = wd
-	mux64x2_1 branchLinkMux(.sel(branchLink), .i0(memRegMuxOut), .i1(pc_plus4), .out(wd));
+	//mux64x2_1 branchLinkMux(.sel(branchLink), .i0(memRegMuxOut), .i1(pc_plus4), .out(wd));
 
 
 //-----------------------end Modules-----------------------//	
@@ -393,7 +403,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 16000;
+	parameter CLOCK_PERIOD = 10000;
 	//parameter CLOCK_PERIOD = 100000;
 	initial begin
 		clk <= 0;

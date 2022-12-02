@@ -28,69 +28,51 @@ module forwarding (RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg_WB,
 	//EX HAZARDS
 		//Confirm that the inst is writing
 		//Confirm that target reg is not X31(cannot write to X31)
-		if((RegWrite_MEM) & (targetReg_MEM != 31)) begin
+		//EX hazard for Rn
+		if((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM == Rn_EX)) begin
 		
-		//Confirm if target is used as Rn operand in next instruction (ID/EX)
-			if(targetReg_MEM == Rn_EX)begin
-				
-				FWDA = 2'b10; //EX/MEM FWDING
-				FWDB = 2'b00; //pass
+			FWDA = 2'b10; //EX/MEM FWDING
+			FWDB = 2'b00; //pass	
 			
-			end
-			
-		//Confirm if target is used as Rm operand in next instruction (ID/EX)	
-			else if(targetReg_MEM == Rn_EX) begin
-			
-				FWDA = 2'b00; //pass
-				FWDB = 2'b10; //EX/MEM FWDING
-				
-			end
-			
-		//no dependencies, no forwarding
-			else begin
-				
-				FWDA = 2'b00; //pass
-				FWDB = 2'b00; //pass
-			
-			end
 		end
+		
+		//EX hazard for Rm
+		else if((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM == Rm_EX)) begin
+		
+			FWDA = 2'b00; //pass
+			FWDB = 2'b10; //EX/MEM FWDING
+			
+		end
+		
+		
 	//MEM HAZARDS
 		//Confirm that the inst is writing
 		//Confirm that target reg is not X31(cannot write to X31)
-		else if((RegWrite_WB) & (targetReg_WB!= 31)) begin
-		
-		//Confirm if target is used as Rn operand in next instruction (ID/EX)
-			if(targetReg_WB == Rn_EX)begin
-				
-				FWDA = 2'b01; //MEM/WB FWDING
-				FWDB = 2'b00; //pass
+		//MEM Hazard for Rn
+		if((RegWrite_WB) && (targetReg_WB != 31) && !((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM != Rn_EX)) && (targetReg_WB == Rn_EX)) begin
 			
-			end
+			//MEM hazard for Rn
+			FWDA = 2'b01; //MEM/WB FWDING
+			FWDB = 2'b00; //pass
 			
-		//Confirm if target is used as Rm operand in next instruction (ID/EX)	
-			else if(targetReg_WB == Rm_EX) begin
+		end
+
+		//MEM Hazard for Rm
+		else if((RegWrite_WB) && (targetReg_WB != 31) && !((RegWrite_MEM) && (targetReg_MEM != 31) && (targetReg_MEM != Rm_EX)) && (targetReg_WB == Rm_EX)) begin
 			
-				FWDA = 2'b00; //pass
-				FWDB = 2'b01; //MEM/WB FWDING
-				
-			end
+			//MEM hazard for Rm
+			FWDA = 2'b00; //pass
+			FWDB = 2'b01; //MEM/WB FWDING
 			
-		//no dependencies, no forwarding
-			else begin
-				
-				FWDA = 2'b00; //pass
-				FWDB = 2'b00; //pass
-			
-			end
-			
-		end	
-	//no hazards, no forwarding
+		end
+
+		//no hazards, no forwarding
 		else begin
 			
 			FWDA = 2'b00; //pass
 			FWDB = 2'b00; //pass
 		
-		end
+		end		
 		
 	end
 

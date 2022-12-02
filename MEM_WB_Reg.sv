@@ -24,9 +24,9 @@ module MEM_WB_Reg(clk, memToReg_MEM, RegWrite_MEM, targetReg_MEM, toDataMem_MEM,
 	
 	logic [134:0] registerIn, registerOut;
 	
-	assign registerIn[63:0] = toDataMem_WB;
-	assign registerIn[127:64] = memDataOut_WB;
-	assign registerIn[132:127] = targetReg_MEM;
+	assign registerIn[63:0] = toDataMem_MEM;
+	assign registerIn[127:64] = memDataOut;
+	assign registerIn[132:128] = targetReg_MEM;
 	assign registerIn[133] = memToReg_MEM;
 	assign registerIn[134] = RegWrite_MEM;
 	
@@ -36,7 +36,7 @@ module MEM_WB_Reg(clk, memToReg_MEM, RegWrite_MEM, targetReg_MEM, toDataMem_MEM,
 	
 	genvar i;
 	generate
-		for(i = 0; i < 71; i++) begin : Felina
+		for(i = 0; i < 135; i++) begin : Felina
 			D_FF dffs (.clk(not_clk), .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
 		end
 	endgenerate
