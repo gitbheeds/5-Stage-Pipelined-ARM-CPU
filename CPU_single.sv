@@ -267,7 +267,7 @@ module CPU_single(clk, rst);
 //CPU control unit
 	CPU_control control (.rst, .opcode, .uncondBr, .branch, .Reg2Loc, .ALU_Src, .RegWrite, 
 								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
-								.branchReg, .branchLink, .memRead);
+								.branchReg, .branchLink, .memRead, .fwdEn);
 								
 								
 //flag setting

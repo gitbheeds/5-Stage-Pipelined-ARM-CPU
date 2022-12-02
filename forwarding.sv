@@ -29,47 +29,55 @@ module forwarding (fwdEn_EX, RegWrite_MEM, RegWrite_WB, targetReg_MEM, targetReg
 	
 	
 	always_comb begin
-	
+		// we are going to forward
 		if(fwdEn_EX[1] == 1'b1) begin
-		
-			//check hazards at Rn
-			
-			//EX hazard case 1a: write use hazard at Rn
-			if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rn_EX)) begin
-			
-				FWDA = 2'b10; //EX/MEM FWDING
-			
+			//first check if MEM/WB fwding is true
+			if((RegWrite_WB) && (targetReg_WB != 5'd31) && (targetReg_WB == Rn_EX)) begin
+				//determine if MEM/WB fwding needs to be disabled
+				if ((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rn_EX)) begin
+					FWDA = 2'b10; // EX/MEM FWDA
+				end
+				//MEM/WB required
+				else begin
+					FWDA = 2'b01; // MEM/WB FWDA
+				end
 			end
-			
+			//if MEM/WB fwding is not required, check for EX/MEM fwding
 			else begin
 				
-				FWDA = 2'b00; //pass
-			
+				if ((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rn_EX)) begin
+					FWDA = 2'b10; // EX/MEM FWDA
+				end
+				
+				else FWDA = 2'b00; // PASS
 			end
 			
 			//check hazards at Rm only for
 			//R-type insts
 			if(fwdEn_EX[0] == 1'b1) begin 
-			
-				//check hazards at Rm
-				//EX hazard case 1b: write-use hazard at Rm
-				if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rm_EX)) begin
-					
-					FWDB = 2'b10; //EX/MEM FWDING
 				
+				//first check if MEM/WB fwding is needed
+				if((RegWrite_WB) && (targetReg_WB != 5'd31) && (targetReg_WB == Rm_EX)) begin
+					//determine if MEM/WB needs to be disabled
+					if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rm_EX)) begin
+						FWDB = 2'b10; //EX/MEM FWDB
+					end
+					//MEM/WB required
+					else begin
+						FWDB = 2'b01; //MEM/WB FWDB
+					end
 				end
-				
+				//if MEM/WB fwding is not required, check for EX/MEM fwding
 				else begin
-				
-					FWDB = 2'b00; //pass
-				
-				end
-				
-			
-			end 
-			
-			else FWDB = 2'b00; //pass for I type insts
-		
+					if((RegWrite_MEM) && (targetReg_MEM != 5'd31) && (targetReg_MEM == Rm_EX)) begin
+						FWDB = 2'b10; //EX/MEM FWDB
+					end
+					else FWDB = 2'b00; //PASS
+				end		
+			end
+			else begin
+				FWDB = 2'b00; //pass for I type insts
+			end
 		
 		end
 		//if fwdEn is disabled, fwding unit is not needed

@@ -46,12 +46,14 @@ add wave -noupdate -radix unsigned /CPU_single_tb/dut/forwardA/in0
 add wave -noupdate -radix unsigned /CPU_single_tb/dut/forwardA/in1
 add wave -noupdate -radix unsigned /CPU_single_tb/dut/forwardA/in2
 add wave -noupdate -radix unsigned /CPU_single_tb/dut/forwardA/in3
+add wave -noupdate /CPU_single_tb/dut/fwdEn
 add wave -noupdate /CPU_single_tb/dut/magicJohnson/RegWrite_MEM
 add wave -noupdate /CPU_single_tb/dut/magicJohnson/RegWrite_WB
 add wave -noupdate -radix unsigned /CPU_single_tb/dut/magicJohnson/Rm_EX
 add wave -noupdate -radix unsigned /CPU_single_tb/dut/magicJohnson/Rn_EX
 add wave -noupdate -radix unsigned /CPU_single_tb/dut/magicJohnson/targetReg_MEM
 add wave -noupdate -radix unsigned /CPU_single_tb/dut/magicJohnson/targetReg_WB
+add wave -noupdate /CPU_single_tb/dut/fwdEn_EX
 add wave -noupdate /CPU_single_tb/dut/FWDA
 add wave -noupdate /CPU_single_tb/dut/FWDB
 add wave -noupdate -radix sfixed /CPU_single_tb/dut/aloo/A

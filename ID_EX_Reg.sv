@@ -104,7 +104,7 @@ module ID_EX_Reg (clk, ALU_Src, ALU_SH, Imm, shiftDirn, ALU_on, set_flags, branc
 	
 	genvar i;
 	generate
-		for(i = 0; i < 433; i++) begin : ID_EX
+		for(i = 0; i < 435; i++) begin : ID_EX
 			D_FF dffs (.clk(not_clk), .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
 		end
 	endgenerate
