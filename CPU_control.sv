@@ -7,7 +7,8 @@
 // branchLink is a control for a mux that sends PC+4 to the link register R[30]
 // compZero is a control for a mux that inputs 0 to the ALU for the CBZ command
 module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, 
-						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, branchReg, branchLink, memRead, fwdEn);
+						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, 
+						 branchReg, branchLink, memRead, fwdEn, IF_ID_flush);
 						 
 	input logic [10:0] opcode;
 	
@@ -22,6 +23,8 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 	output logic ALU_on, set_flags;
 	
 	output logic [1:0] fwdEn;
+	
+	output logic IF_ID_flush;
 	
 	// Opcode slices
 	logic [5:0] bOp;
@@ -65,6 +68,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b0;
 			set_flags = 1'b0;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b0;
 			
 		end
 		// conditional branch
@@ -87,6 +91,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b1;
 		
 		end
 		
@@ -110,6 +115,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b0;
 			
 		end
 		
@@ -133,6 +139,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b1;
 		end
 		
 		// CBZ
@@ -156,6 +163,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b1;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b1;
 		end
 		
 		// ADDI
@@ -178,6 +186,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
 			fwdEn = 2'b10;
+			IF_ID_flush = 1'b0;
 		end
 		
 		// ADDS (ADD, set flags)
@@ -200,6 +209,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b1;
 			fwdEn = 2'b11;
+			IF_ID_flush = 1'b0;
 		end
 		
 		// LDUR
@@ -222,6 +232,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b0;
 		end
 		
 		// STUR
@@ -244,6 +255,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b0;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b0;
 		end
 		
 		// SUBS (SUB, set flags)
@@ -266,6 +278,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			ALU_on = 1'b1;
 			set_flags = 1'b1;
 			fwdEn = 2'b11;
+			IF_ID_flush = 1'b0;
 	
 		end
 		
@@ -288,8 +301,9 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 			shiftDirn = 1'bz;
 			
 			ALU_on = 1'bz;
-			set_flags = 1'bz;
+			set_flags = 1'b0;
 			fwdEn = 2'b00;
+			IF_ID_flush = 1'b0;
 		end
 		
 	end
@@ -314,6 +328,7 @@ module CPU_control(rst, opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite,
 		ALU_on = 1'b0;
 		set_flags = 1'b0;
 		fwdEn = 2'b00;
+		IF_ID_flush = 1'b0;
 	end
 	
 	
@@ -339,9 +354,11 @@ module CPU_control_tb();
 	
 	logic [1:0] fwdEn;
 	
+	logic IF_ID_flush;
+	
 	CPU_control dut(opcode, uncondBr, branch, Reg2Loc, ALU_Src, RegWrite, 
 						 ALU_SH, Imm, memToReg, memWrite, shiftDirn, ALU_on, set_flags, 
-						 branchReg, branchLink, memRead, fwdEn);
+						 branchReg, branchLink, memRead, fwdEn, IF_ID_flush);
 						 
 	initial begin
 	

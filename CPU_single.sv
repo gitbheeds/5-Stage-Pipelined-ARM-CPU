@@ -220,6 +220,21 @@ module CPU_single(clk, rst);
 //--------------End Pipeline Control Signals--------------//		
 
 
+
+
+//-------------------------Modules------------------------//
+	
+//program counter instantiation	
+	programCounterFix pcf(.clk(clk), .rst, .currPC, .calcBranch, .pc_plus4, .PCSrc);
+	
+//instruction memory access
+	instructmem insts (.address(currPC), .instruction, .clk(clk));
+	
+//CPU control unit
+	CPU_control control (.rst, .opcode, .uncondBr, .branch, .Reg2Loc, .ALU_Src, .RegWrite, 
+								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
+								.branchReg, .branchLink, .memRead, .fwdEn, .IF_ID_flush);
+								
 //--------------------Pipeline Registers------------------//
 
 	IF_ID_Reg IF_ID (.clk, .IF_ID_flush, .instruction, .currPC, .pc_plus4, .opcode, .Rn, 
@@ -255,20 +270,6 @@ module CPU_single(clk, rst);
 
 //--------------------End Pipeline Registers---------------//
 
-
-//-------------------------Modules------------------------//
-	
-//program counter instantiation	
-	programCounterFix pcf(.clk(clk), .rst, .currPC, .calcBranch, .pc_plus4, .PCSrc);
-	
-//instruction memory access
-	instructmem insts (.address(currPC), .instruction, .clk(clk));
-	
-//CPU control unit
-	CPU_control control (.rst, .opcode, .uncondBr, .branch, .Reg2Loc, .ALU_Src, .RegWrite, 
-								.ALU_SH, .Imm, .memToReg, .memWrite, .shiftDirn, .ALU_on, .set_flags, 
-								.branchReg, .branchLink, .memRead, .fwdEn);
-								
 								
 //flag setting
 	
@@ -410,7 +411,7 @@ module CPU_single_tb();
 	
 	logic clk, rst;
 	
-	parameter CLOCK_PERIOD = 10000;
+	parameter CLOCK_PERIOD = 12000;
 	//parameter CLOCK_PERIOD = 100000;
 	initial begin
 		clk <= 0;
@@ -425,7 +426,7 @@ module CPU_single_tb();
 		rst <= 1; @(posedge clk);
 		rst <= 0; @(posedge clk);
 		
-		repeat(1000) @(posedge clk);
+		repeat(250) @(posedge clk);
 		
 		$stop;
 	end
