@@ -1,6 +1,10 @@
 Flow report for DE1_SoC
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Thu Dec 01 20:12:54 2022
+=======
+Thu Dec 01 20:26:59 2022
+>>>>>>> Stashed changes
 =======
 Thu Dec 01 20:26:59 2022
 >>>>>>> Stashed changes
@@ -46,7 +50,11 @@ agreement for further details.
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Flow Status                 ; Flow Failed - Thu Dec 01 20:12:54 2022      ;
+=======
+; Flow Status                 ; Flow Failed - Thu Dec 01 20:26:59 2022      ;
+>>>>>>> Stashed changes
 =======
 ; Flow Status                 ; Flow Failed - Thu Dec 01 20:26:59 2022      ;
 >>>>>>> Stashed changes
@@ -72,7 +80,11 @@ agreement for further details.
 ; Option            ; Setting             ;
 +-------------------+---------------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Start date & time ; 12/01/2022 20:12:43 ;
+=======
+; Start date & time ; 12/01/2022 20:26:48 ;
+>>>>>>> Stashed changes
 =======
 ; Start date & time ; 12/01/2022 20:26:48 ;
 >>>>>>> Stashed changes
@@ -87,7 +99,11 @@ agreement for further details.
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; COMPILER_SIGNATURE_ID               ; 109952949375565.166995436302720        ; --            ; --          ; --             ;
+=======
+; COMPILER_SIGNATURE_ID               ; 88974384408331.166995520813172         ; --            ; --          ; --             ;
+>>>>>>> Stashed changes
 =======
 ; COMPILER_SIGNATURE_ID               ; 88974384408331.166995520813172         ; --            ; --          ; --             ;
 >>>>>>> Stashed changes
@@ -110,7 +126,11 @@ agreement for further details.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4764 MB             ; 00:00:25                           ;
+=======
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4860 MB             ; 00:00:25                           ;
+>>>>>>> Stashed changes
 =======
 ; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4860 MB             ; 00:00:25                           ;
 >>>>>>> Stashed changes

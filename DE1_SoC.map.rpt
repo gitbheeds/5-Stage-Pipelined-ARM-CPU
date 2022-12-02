@@ -1,6 +1,10 @@
 Analysis & Synthesis report for DE1_SoC
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Thu Dec 01 20:12:54 2022
+=======
+Thu Dec 01 20:26:59 2022
+>>>>>>> Stashed changes
 =======
 Thu Dec 01 20:26:59 2022
 >>>>>>> Stashed changes
@@ -43,7 +47,11 @@ agreement for further details.
 ; Analysis & Synthesis Summary                                              ;
 +-----------------------------+---------------------------------------------+
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status ; Failed - Thu Dec 01 20:12:54 2022           ;
+=======
+; Analysis & Synthesis Status ; Failed - Thu Dec 01 20:26:59 2022           ;
+>>>>>>> Stashed changes
 =======
 ; Analysis & Synthesis Status ; Failed - Thu Dec 01 20:26:59 2022           ;
 >>>>>>> Stashed changes
@@ -171,7 +179,11 @@ Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     Info: Processing started: Thu Dec 01 20:12:43 2022
+=======
+    Info: Processing started: Thu Dec 01 20:26:48 2022
+>>>>>>> Stashed changes
 =======
     Info: Processing started: Thu Dec 01 20:26:48 2022
 >>>>>>> Stashed changes
@@ -291,6 +303,9 @@ Info (12021): Found 2 design units, including 2 entities, in source file forward
 =======
     Info (12023): Found entity 1: forwarding File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/forwarding.sv Line: 7
     Info (12023): Found entity 2: fwd_tb File: C:/Users/spbhi/OneDrive/Documents/SV files/EE469_Labs_correct/forwarding.sv Line: 87
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 Info (12021): Found 2 design units, including 2 entities, in source file ex_mem_reg.sv
     Info (12023): Found entity 1: EX_MEM_Reg File: C:/Users/gering92/Documents/GitHub/EE469_Labs/EX_MEM_Reg.sv Line: 3
@@ -374,6 +389,9 @@ Error: Quartus Prime Analysis & Synthesis was unsuccessful. 4 errors, 4 warnings
     Error: Processing ended: Thu Dec 01 20:26:59 2022
     Error: Elapsed time: 00:00:11
     Error: Total CPU time (on all processors): 00:00:26
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
