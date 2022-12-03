@@ -1,0 +1,18 @@
+
+module zero_extender(imm12, dataOut);
+
+	input logic [11:0] imm12;
+	output logic [63:0] dataOut;
+	
+	reg [63:0] large_boy;
+	
+	
+	assign large_boy[11:0] = imm12;
+	
+	assign large_boy[63:12] = 0;
+	
+	assign dataOut = large_boy;
+	
+
+
+endmodule
