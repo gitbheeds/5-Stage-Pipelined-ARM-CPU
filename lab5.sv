@@ -258,15 +258,26 @@ module lab5_testbench ();
 		
 			// Do 20 random reads.
 			//where are they found in L2 vs in DM
-		for (i=1; i<90; i = i+2) begin
-			addr = (i*8); // *8 to doubleword-align the access.
-			readMem(addr, dummy_data, delay);
-			$display("%t Read middle at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
-			
-//			$display("%t Read2 took %d cycles", $time, delay);
-
+//		for (i=1; i<90; i = i+2) begin
+//			addr = (i*8); // *8 to doubleword-align the access.
+//			readMem(addr, dummy_data, delay);
+//			$display("%t Read middle at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
+//			
+////			$display("%t Read2 took %d cycles", $time, delay);
+//
+//		end
+		for(i = 0; i < 8; i++)begin
+			readMem(20'd168, dummy_data, delay);
+			$display("%t Read 168 took %d cycles",  $time, delay);
+			readMem(20'd424, dummy_data, delay);
+			$display("%t Read 424 took %d cycles",  $time, delay);	
+			readMem(20'd680, dummy_data, delay);
+			$display("%t Read 680 took %d cycles",  $time, delay);
+			readMem(20'd936, dummy_data, delay);
+			$display("%t Read 936 took %d cycles",  $time, delay);
+			readMem(20'd1192, dummy_data, delay);
+			$display("%t Read 1192 took %d cycles",  $time, delay);
 		end
-	
 		
 //		//Assuming 8 bits for tag, 8 bits for CI, confirmed 4 bits for BS
 //		//     20'b00000000 00000000 1000;
