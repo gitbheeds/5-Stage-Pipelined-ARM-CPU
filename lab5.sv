@@ -247,20 +247,22 @@ module lab5_testbench ();
 		
 		// Do 20 random reads.
 		for (i=0; i<20; i++) begin
-			addr = i*8; // *8 to doubleword-align the access.
+			addr = i*32; // *8 to doubleword-align the access.
 			readMem(addr, dummy_data, delay);
-			$display("%t Read %d took %d cycles", $time, addr, delay);
+			$display("%t Read32 at addr %d took %d cycles", $time, addr, delay);
 //			readMem(addr, dummy_data, delay);
 //			$display("%t Read2 took %d cycles", $time, delay);
 
 		end
 		
+		
 			// Do 20 random reads.
-		for (i=0; i<20; i++) begin
-			addr = i*16; // *8 to doubleword-align the access.
+			//where are they found in L2 vs in DM
+		for (i=0; i<60; i++) begin
+			addr = ((i*8) + 16); // *8 to doubleword-align the access.
 			readMem(addr, dummy_data, delay);
-			$display("%t Read16 %d took %d cycles", $time, addr, delay);
-//			readMem(addr, dummy_data, delay);
+			$display("%t Read middle at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
+			
 //			$display("%t Read2 took %d cycles", $time, delay);
 
 		end
