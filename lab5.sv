@@ -241,96 +241,103 @@ module lab5_testbench ();
 	logic	[DATA_WIDTH-1:0][7:0]	dummy_data;
 	logic [ADDRESS_WIDTH-1:0]		addr;
 	int	i, delay, minval, maxval;
-	
 	initial begin
 		dummy_data <= '0;
 		resetMem();				// Initialize the memory.
 		
 		// Do 20 random reads.
-		/*for (i=0; i<32; i++) begin
-			//addr = $random()*8; // *8 to doubleword-align the access.
-			addr = (20'd1 * (16*i));
-			//addr = 20'd256;
+		for (i=0; i<20; i++) begin
+			addr = i*8; // *8 to doubleword-align the access.
 			readMem(addr, dummy_data, delay);
-			$display("%t Read took %d cycles", $time, delay);
+			$display("%t Read %d took %d cycles", $time, addr, delay);
 //			readMem(addr, dummy_data, delay);
 //			$display("%t Read2 took %d cycles", $time, delay);
 
-		end*/
+		end
 		
+			// Do 20 random reads.
+		for (i=0; i<20; i++) begin
+			addr = i*16; // *8 to doubleword-align the access.
+			readMem(addr, dummy_data, delay);
+			$display("%t Read16 %d took %d cycles", $time, addr, delay);
+//			readMem(addr, dummy_data, delay);
+//			$display("%t Read2 took %d cycles", $time, delay);
+
+		end
+	
 		
-		//Assuming 8 bits for tag, 8 bits for CI, confirmed 4 bits for BS
-		//     20'b00000000 00000000 1000;
-		addr = 20'b00000000000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		
-		//     20'b00000001 00000000 1000;
-		addr = 20'b00000001000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		//     20'b00000010 00000000 1000;
-		addr = 20'b00000010000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		//     20'b00000011 00000000 1000;
-		addr = 20'b00000011000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		//     20'b00000100 00000000 1000;
-		addr = 20'b00000100000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		//     20'b00000000 00000000 1000;
-		addr = 20'b00000000000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		
-		//     20'b00000001 00000000 1000;
-		addr = 20'b00000001000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		//     20'b00000010 00000000 1000;
-		addr = 20'b00000010000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		//     20'b00000011 00000000 1000;
-		addr = 20'b00000011000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		
-		//     20'b00000100 00000000 1000;
-		addr = 20'b00000100000000001000;
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
-		readMem(addr, dummy_data, delay);
-		$display("%t Read took %d cycles", $time, delay);
+//		//Assuming 8 bits for tag, 8 bits for CI, confirmed 4 bits for BS
+//		//     20'b00000000 00000000 1000;
+//		addr = 20'b00000000000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		
+//		//     20'b00000001 00000000 1000;
+//		addr = 20'b00000001000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		//     20'b00000010 00000000 1000;
+//		addr = 20'b00000010000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		//     20'b00000011 00000000 1000;
+//		addr = 20'b00000011000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		//     20'b00000100 00000000 1000;
+//		addr = 20'b00000100000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		//     20'b00000000 00000000 1000;
+//		addr = 20'b00000000000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		
+//		//     20'b00000001 00000000 1000;
+//		addr = 20'b00000001000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		//     20'b00000010 00000000 1000;
+//		addr = 20'b00000010000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		//     20'b00000011 00000000 1000;
+//		addr = 20'b00000011000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		
+//		//     20'b00000100 00000000 1000;
+//		addr = 20'b00000100000000001000;
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
+//		readMem(addr, dummy_data, delay);
+//		$display("%t Read took %d cycles", $time, delay);
 		
 		/*
 		// Assuming 12 bit tag, 4 bit CI, BS = 4 bits
