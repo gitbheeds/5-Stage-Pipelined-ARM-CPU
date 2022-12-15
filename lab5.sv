@@ -290,6 +290,25 @@ module lab5_testbench ();
 			$display("%t Read 3 at 12228 took %d cycles", $time, delay);			
 			readMem(20'd14336, dummy_data, delay);
 			$display("%t Read 3 at 14336 took %d cycles", $time, delay);
+			readMem(20'd16384, dummy_data, delay);
+			$display("%t Read 3 at 16384 took %d cycles", $time, delay);
+			
+			readMem(20'd0, dummy_data, delay);
+			$display("%t Read 4 at 0 took %d cycles", $time, delay);	
+			readMem(20'd2048, dummy_data, delay);
+			$display("%t Read 4 at 2048 took %d cycles", $time, delay);	
+			readMem(20'd4096, dummy_data, delay);
+			$display("%t Read 4 at 4096 took %d cycles", $time, delay);
+			readMem(20'd6144, dummy_data, delay);
+			$display("%t Read 4 at 6144 took %d cycles", $time, delay);		
+			readMem(20'd8192, dummy_data, delay);
+			$display("%t Read 4 at 8192 took %d cycles", $time, delay);
+			readMem(20'd10240, dummy_data, delay);
+			$display("%t Read 4 at 10240 took %d cycles", $time, delay);			
+			readMem(20'd12288, dummy_data, delay);
+			$display("%t Read 4 at 12228 took %d cycles", $time, delay);			
+			readMem(20'd14336, dummy_data, delay);
+			$display("%t Read 4 at 14336 took %d cycles", $time, delay);
 		
 //			// Do 20 random reads.
 //			//where are they found in L2 vs in DM
