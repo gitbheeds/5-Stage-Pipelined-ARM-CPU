@@ -245,39 +245,103 @@ module lab5_testbench ();
 		dummy_data <= '0;
 		resetMem();				// Initialize the memory.
 		
-		// Do 20 random reads.
-		for (i=0; i<20; i++) begin
-			addr = i*32; // *8 to doubleword-align the access.
-			readMem(addr, dummy_data, delay);
-			$display("%t Read32 at addr %d took %d cycles", $time, addr, delay);
+//		// Do 20 random reads.
+//		for (i=0; i<17; i++) begin
+//			addr = i*32; // *8 to doubleword-align the access.
 //			readMem(addr, dummy_data, delay);
-//			$display("%t Read2 took %d cycles", $time, delay);
-
-		end
+//			$display("%t Read 1 at addr %d took %d cycles", $time, addr, delay);
+////			readMem(addr, dummy_data, delay);
+////			$display("%t Read2 took %d cycles", $time, delay);
+//
+//		end
+			
+			readMem(20'd0, dummy_data, delay);
+			$display("%t Read 2 at 0 took %d cycles", $time, delay);			
+			readMem(20'd2048, dummy_data, delay);
+			$display("%t Read 2 at 2048 took %d cycles", $time, delay);
+			readMem(20'd4096, dummy_data, delay);
+			$display("%t Read 2 at 4096 took %d cycles", $time, delay);
+			readMem(20'd6144, dummy_data, delay);
+			$display("%t Read 2 at 6144 took %d cycles", $time, delay);		
+			readMem(20'd8192, dummy_data, delay);
+			$display("%t Read 2 at 8192 took %d cycles", $time, delay);
+			readMem(20'd10240, dummy_data, delay);
+			$display("%t Read 2 at 10240 took %d cycles", $time, delay);			
+			readMem(20'd12288, dummy_data, delay);
+			$display("%t Read 2 at 12228 took %d cycles", $time, delay);			
+			readMem(20'd14336, dummy_data, delay);
+			$display("%t Read 2 at 14336 took %d cycles", $time, delay);			
+			readMem(20'd16384, dummy_data, delay);
+			$display("%t Read 2 at 16384 took %d cycles", $time, delay);			
 		
+			readMem(20'd0, dummy_data, delay);
+			$display("%t Read 3 at 0 took %d cycles", $time, delay);	
+			readMem(20'd2048, dummy_data, delay);
+			$display("%t Read 3 at 2048 took %d cycles", $time, delay);	
+			readMem(20'd4096, dummy_data, delay);
+			$display("%t Read 3 at 4096 took %d cycles", $time, delay);
+			readMem(20'd6144, dummy_data, delay);
+			$display("%t Read 3 at 6144 took %d cycles", $time, delay);		
+			readMem(20'd8192, dummy_data, delay);
+			$display("%t Read 3 at 8192 took %d cycles", $time, delay);
+			readMem(20'd10240, dummy_data, delay);
+			$display("%t Read 3 at 10240 took %d cycles", $time, delay);			
+			readMem(20'd12288, dummy_data, delay);
+			$display("%t Read 3 at 12228 took %d cycles", $time, delay);			
+			readMem(20'd14336, dummy_data, delay);
+			$display("%t Read 3 at 14336 took %d cycles", $time, delay);
 		
-			// Do 20 random reads.
-			//where are they found in L2 vs in DM
-//		for (i=1; i<90; i = i+2) begin
-//			addr = (i*8); // *8 to doubleword-align the access.
+//			// Do 20 random reads.
+//			//where are they found in L2 vs in DM
+//		for (i=0; i<17; i++) begin
+//			addr = (i* 32); // *8 to doubleword-align the access.
 //			readMem(addr, dummy_data, delay);
-//			$display("%t Read middle at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
+//			$display("%t Read 2 at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
 //			
 ////			$display("%t Read2 took %d cycles", $time, delay);
 //
 //		end
-		for(i = 0; i < 8; i++)begin
-			readMem(20'd168, dummy_data, delay);
-			$display("%t Read 168 took %d cycles",  $time, delay);
-			readMem(20'd424, dummy_data, delay);
-			$display("%t Read 424 took %d cycles",  $time, delay);	
-			readMem(20'd680, dummy_data, delay);
-			$display("%t Read 680 took %d cycles",  $time, delay);
-			readMem(20'd936, dummy_data, delay);
-			$display("%t Read 936 took %d cycles",  $time, delay);
-			readMem(20'd1192, dummy_data, delay);
-			$display("%t Read 1192 took %d cycles",  $time, delay);
-		end
+//		
+//			//where are they found in L2 vs in DM
+//		for (i=0; i<17; i++) begin
+//			addr = (i* 32); // *8 to doubleword-align the access.
+//			readMem(addr, dummy_data, delay);
+//			$display("%t Read 3 at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
+//			
+////			$display("%t Read2 took %d cycles", $time, delay);
+//
+//		end
+//		
+//			//where are they found in L2 vs in DM
+//		for (i=0; i<17; i++) begin
+//			addr = (i* 32); // *8 to doubleword-align the access.
+//			readMem(addr, dummy_data, delay);
+//			$display("%t Read 4 at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
+//			
+////			$display("%t Read2 took %d cycles", $time, delay);
+//
+//		end
+//			//where are they found in L2 vs in DM
+//		for (i=0; i<17; i++) begin
+//			addr = (i* 32); // *8 to doubleword-align the access.
+//			readMem(addr, dummy_data, delay);
+//			$display("%t Read 5 at addr %d took %d cycles", $time, addr, delay); //middles will indicate when a value is in L2
+			
+//			$display("%t Read2 took %d cycles", $time, delay);
+
+//		end
+//		for(i = 0; i < 8; i++)begin
+//			readMem(20'd168, dummy_data, delay);
+//			$display("%t Read 168 took %d cycles",  $time, delay);
+//			readMem(20'd424, dummy_data, delay);
+//			$display("%t Read 424 took %d cycles",  $time, delay);	
+//			readMem(20'd680, dummy_data, delay);
+//			$display("%t Read 680 took %d cycles",  $time, delay);
+//			readMem(20'd936, dummy_data, delay);
+//			$display("%t Read 936 took %d cycles",  $time, delay);
+//			readMem(20'd1192, dummy_data, delay);
+//			$display("%t Read 1192 took %d cycles",  $time, delay);
+//		end
 		
 //		//Assuming 8 bits for tag, 8 bits for CI, confirmed 4 bits for BS
 //		//     20'b00000000 00000000 1000;
