@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Gerin/Documents/GitHub/EE469_Labs/simulation/modelsim
+vD_FF
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1669885777
+!i10b 1
+!s100 A7;z??EmkT2@@AVA[oeD@3
+I5^Nj^E1a_i26SPGlmXG1[1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 D_FF_sv_unit
+S1
+R0
+w1668218937
+8C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv
+FC:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv
+L0 4
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1669885777.000000
+!s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/D_FF.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs
+Z8 tCvgOpt 0
+n@d_@f@f
+vMEM_WB_Reg
+R1
+R2
+!i10b 1
+!s100 9aIRPBA:Yk4T2ZmOLoB6B0
+IN_6fIfLG3]4bNf=U3M<iY1
+R3
+Z9 !s105 MEM_WB_Reg_sv_unit
+S1
+R0
+Z10 w1669885708
+Z11 8C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv
+Z12 FC:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+Z13 !s107 C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv|
+Z14 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Gerin/Documents/GitHub/EE469_Labs|C:/Users/Gerin/Documents/GitHub/EE469_Labs/MEM_WB_Reg.sv|
+!i113 1
+R6
+R7
+R8
+n@m@e@m_@w@b_@reg
+vMEM_WB_Reg_tb
+R1
+R2
+!i10b 1
+!s100 ;=lALVSHA[mWDV?Z_`0mj1
+IHG?UbjjTM]683I25KIJFY0
+R3
+R9
+S1
+R0
+R10
+R11
+R12
+L0 52
+R4
+r1
+!s85 0
+31
+R5
+R13
+R14
+!i113 1
+R6
+R7
+R8
+n@m@e@m_@w@b_@reg_tb
