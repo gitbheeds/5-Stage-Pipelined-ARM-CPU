@@ -1,0 +1,22 @@
+`timescale 1ps/1ps
+
+module adder_4_pc(pc_in, pc_out);
+	
+	input logic [9:0] pc_in; // 10 bit pc count value
+	
+	output logic [9:0] pc_out; // 10 bit pc output with + 4 added
+	
+	logic [9:0] four;
+
+	assign four = 10'b0000000100;
+	
+	
+	fullAdder
+
+endmodule
+
+
+module adder_4_pc_tb();
+
+
+endmodule

@@ -1,0 +1,26 @@
+//sign extender
+//based on extension parameter
+//extends a given input to 64 bits while preserving the sign
+
+module sign_extender #(parameter sizeIn = 9) (in, out);
+
+	input logic [sizeIn - 1:0] in;
+	
+	output logic [63:0] out;
+	
+	integer i;
+	
+	assign out[sizeIn - 1:0] = in[sizeIn - 1:-0];
+	
+	always_comb begin
+	
+		for(i = sizeIn; i < 64; i++) begin
+		
+			out[i] = in[sizeIn-1];
+		
+		end
+	
+	end
+
+
+endmodule 

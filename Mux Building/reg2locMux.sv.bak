@@ -1,0 +1,7 @@
+module reg2locMux(sel, Rm, Rd, Ab)
+
+	input logic [4:0] Rm, Rd;
+	
+	output logic [4:0] Ab;
+
+endmodule

@@ -1,0 +1,81 @@
+`timescale 1ps/1ps
+module EX_MEM_Reg(memToReg_EX, memWrite_EX, memRead_EX, branchLink_EX, RegWrite_EX,
+						targetReg_EX, toDataMem, rd2_EX,
+						
+						
+						memToReg_MEM, memWrite_MEM, memRead_MEM, branchLink_MEM, RegWrite_MEM,
+						targetReg_MEM, toDataMem_MEM, rd2_MEM);
+
+	input logic memToReg_EX, memWrite_EX, memRead_EX, branchLink_EX, RegWrite_EX;
+	
+	input logic [4:0] targetReg_EX;
+	
+	input logic [63:0] toDataMem, rd2_EX;
+	
+	// 5 + 5 + (64 * 2) = 138 bits
+	
+	output logic memToReg_MEM, memWrite_MEM, memRead_MEM, branchLink_MEM, RegWrite_MEM;
+	
+	output logic [4:0] targetReg_MEM;
+	
+	output logic [63:0] toDataMem_MEM, rd2_MEM;
+	
+	logic [137:0] registerIn, registerOut;
+	
+	
+	assign registerIn[63:0] = toDataMem;
+	assign registerIn[127:64] = rd2_EX;
+	assign registerIn[132:128] = targetReg_EX;
+	assign registerIn[133] = memToReg_EX;
+	assign registerIn[134] = memWrite_EX;
+	assign registerIn[135] = memRead_EX;
+	assign registerIn[136] = branchLink_EX;
+	assign registerIn[137] = RegWrite_EX;
+	
+	// uses an ~clk signal to ensure reading from pipeline register on the negative edge of the main clock
+	logic not_clk;
+	not #(50) (not_clk, clk);
+	
+	genvar i;
+	generate
+		for(i = 0; i < 138; i++) begin : ginerva
+			D_FF dffs (.clk(not_clk), .reset(1'b0), .d(registerIn[i]), .q(registerOut[i]));
+		end
+	endgenerate
+	
+	assign toDataMem_MEM = registerOut[63:0];
+	assign rd2_MEM = registerOut[127:64];
+	assign targetReg_MEM = registerOut[132:28];
+	assign memToReg_MEM = registerOut[133];
+	assign memWrite_MEM = registerOut[134];
+	assign memRead_MEM = registerOut[135];
+	assign branchLink_MEM = registerOut[136];
+	assign RegWrite_MEM = registerOut[137];
+
+
+endmodule
+
+module EX_MEM_Reg_tb();
+
+	// input logics 
+	logic memToReg_EX, memWrite_EX, memRead_EX, branchLink_EX, RegWrite_EX;
+	
+	logic [4:0] targetReg_EX;
+	
+	logic [63:0] toDataMem, rd2_EX;
+	
+	// output logics
+	logic memToReg_MEM, memWrite_MEM, memRead_MEM, branchLink_MEM, RegWrite_MEM;
+	
+	logic [4:0] targetReg_MEM;
+	
+	logic [63:0] toDataMem_MEM, rd2_MEM;
+	
+	parameter CLOCK_PERIOD = 100;
+	initial begin
+		clk <= 0;
+		// Forever toggle the clock
+		forever #(CLOCK_PERIOD/2) clk <= ~clk;
+	end
+
+endmodule
